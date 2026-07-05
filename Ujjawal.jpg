@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 | Education</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7ff;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#0A3D91,#1E90FF);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+.hero{
+padding:120px 8% 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.left{
+max-width:600px;
+}
+
+.left h1{
+font-size:55px;
+color:#0A3D91;
+}
+
+.left h2{
+margin:10px 0;
+color:#FFD700;
+}
+
+.left p{
+margin:20px 0;
+line-height:30px;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+margin-right:15px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#c40000;
+}
+
+.btn2{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#0A3D91;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+}
+
+.right img{
+width:350px;
+height:350px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid #FFD700;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+}
+
+.right{
+margin-top:40px;
+width:100%;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.left h1{
+font-size:40px;
+}
+
+.right img{
+width:250px;
+height:250px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">U.K.P NO1</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Notes</a>
+
+<a href="#">Videos</a>
+
+<a href="#">PYQs</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h1>Welcome To U.K.P NO1</h1>
+
+<h2>Ujjawal Kumar Pandey</h2>
+
+<h3>Founder - U.K.P NO1</h3>
+
+<p>
+
+All Classes Study Materials
+
+Notes • PYQs • Important Questions
+
+MCQs • Practice Sets • Exam Preparation
+
+</p>
+
+<a href="#" class="btn">🔴 Subscribe Now</a>
+
+<a href="#" class="btn2">📚 Study Notes</a>
+
+</div>
+
+<div class="right">
+
+<img src="ujjawal.jpg" alt="Ujjawal Kumar Pandey">
+
+</div>
+
+</section><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 | Education</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7ff;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#0A3D91,#1E90FF);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+.hero{
+padding:120px 8% 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.left{
+max-width:600px;
+}
+
+.left h1{
+font-size:55px;
+color:#0A3D91;
+}
+
+.left h2{
+margin:10px 0;
+color:#FFD700;
+}
+
+.left p{
+margin:20px 0;
+line-height:30px;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+margin-right:15px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#c40000;
+}
+
+.btn2{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#0A3D91;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+}
+
+.right img{
+width:350px;
+height:350px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid #FFD700;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+}
+
+.right{
+margin-top:40px;
+width:100%;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.left h1{
+font-size:40px;
+}
+
+.right img{
+width:250px;
+height:250px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">U.K.P NO1</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Notes</a>
+
+<a href="#">Videos</a>
+
+<a href="#">PYQs</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h1>Welcome To U.K.P NO1</h1>
+
+<h2>Ujjawal Kumar Pandey</h2>
+
+<h3>Founder - U.K.P NO1</h3>
+
+<p>
+
+All Classes Study Materials
+
+Notes • PYQs • Important Questions
+
+MCQs • Practice Sets • Exam Preparation
+
+</p>
+
+<a href="#" class="btn">🔴 Subscribe Now</a>
+
+<a href="#" class="btn2">📚 Study Notes</a>
+
+</div>
+
+<div class="right">
+
+<img src="ujjawal.jpg" alt="Ujjawal Kumar Pandey">
+
+</div>
+
+</section>
