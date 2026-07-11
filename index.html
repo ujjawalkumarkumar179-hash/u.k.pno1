@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>U.K.P NO1 | Education</title>
+<title>U.K.P NO1 Education</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,33 +16,49 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#f5f7ff;
+background:#f7f9ff;
 color:#222;
 }
 
+/* Top Slogan */
+
+.top-bar{
+background:#FFD700;
+color:#0A3D91;
+text-align:center;
+padding:10px;
+font-weight:700;
+font-size:16px;
+}
+
+/* Header */
+
 header{
-background:linear-gradient(90deg,#0A3D91,#1E90FF);
-padding:18px 8%;
+background:#0A3D91;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:fixed;
-width:100%;
+padding:18px 8%;
+position:sticky;
 top:0;
 z-index:999;
-box-shadow:0 4px 15px rgba(0,0,0,.2);
+box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#FFD700;
 }
 
 nav a{
-color:#fff;
 text-decoration:none;
+color:white;
 margin-left:25px;
 font-weight:600;
 transition:.3s;
@@ -51,11 +68,13 @@ nav a:hover{
 color:#FFD700;
 }
 
+/* Hero */
+
 .hero{
-padding:120px 8% 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:80px 8%;
 flex-wrap:wrap;
 }
 
@@ -66,55 +85,64 @@ max-width:600px;
 .left h1{
 font-size:55px;
 color:#0A3D91;
+margin-bottom:10px;
 }
 
 .left h2{
-margin:10px 0;
 color:#FFD700;
+margin-bottom:15px;
 }
 
 .left p{
-margin:20px 0;
-line-height:30px;
 font-size:18px;
+line-height:32px;
+margin-bottom:30px;
 }
 
-.btn{
+.subscribe{
 display:inline-block;
-padding:15px 35px;
 background:red;
 color:white;
+padding:15px 35px;
 text-decoration:none;
-border-radius:40px;
+border-radius:50px;
 font-weight:bold;
 margin-right:15px;
 transition:.3s;
 }
 
-.btn:hover{
-background:#c40000;
+.subscribe:hover{
+background:#cc0000;
 }
 
-.btn2{
+.notes{
 display:inline-block;
-padding:15px 35px;
 background:#FFD700;
 color:#0A3D91;
+padding:15px 35px;
 text-decoration:none;
-border-radius:40px;
+border-radius:50px;
 font-weight:bold;
 }
 
 .right img{
-width:350px;
-height:350px;
+width:340px;
+height:340px;
 border-radius:50%;
 object-fit:cover;
 border:8px solid #FFD700;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
 @media(max-width:900px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
 
 .hero{
 text-align:center;
@@ -125,39 +153,40 @@ margin-top:40px;
 width:100%;
 }
 
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:15px;
+.right img{
+width:260px;
+height:260px;
 }
 
 .left h1{
-font-size:40px;
-}
-
-.right img{
-width:250px;
-height:250px;
+font-size:38px;
 }
 
 }
+
 </style>
 
 </head>
 
 <body>
 
+<div class="top-bar">
+🌟 Learn Smart • Score Better • Every Day One Step Closer To Success 🚀
+</div>
+
 <header>
 
-<div class="logo">U.K.P NO1</div>
+<div class="logo">
+U.K.P NO1
+</div>
 
 <nav>
 
 <a href="#">Home</a>
 
 <a href="#">Notes</a>
+
+<a href="#">MCQ</a>
 
 <a href="#">Videos</a>
 
@@ -173,235 +202,173 @@ height:250px;
 
 <div class="left">
 
-<h1>Welcome To U.K.P NO1</h1>
+<h1>Welcome To U.K.P NO1 Education</h1>
 
-<h2>Ujjawal Kumar Pandey</h2>
-
-<h3>Founder - U.K.P NO1</h3>
+<h2>Founder – Ujjawal Kumar Pandey</h2>
 
 <p>
 
-All Classes Study Materials
-
-Notes • PYQs • Important Questions
-
-MCQs • Practice Sets • Exam Preparation
+All Classes Study Materials,
+Daily MCQs,
+Important Questions,
+PYQs,
+Notes,
+Free Learning Resources
+and Board Exam Preparation.
 
 </p>
 
-<a href="#" class="btn">🔴 Subscribe Now</a>
+<a href="https://youtube.com/@theujjawalkumar" class="subscribe">
 
-<a href="#" class="btn2">📚 Study Notes</a>
+🔴 Subscribe Now
+
+</a>
+
+<a href="#notes" class="notes">
+
+📚 Start Learning
+
+</a>
 
 </div>
 
 <div class="right">
 
-<img src="ujjawal.jpg" alt="Ujjawal Kumar Pandey">
+<img src="Ujjawal.jpg" alt="Ujjawal Kumar Pandey">
 
 </div>
 
-</section><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>U.K.P NO1 | Education</title>
+</section><!-- ================= PART 2 START ================= -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<section id="notes" style="padding:70px 8%;background:#ffffff;">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<h2 style="text-align:center;color:#0A3D91;font-size:40px;">
+📚 Study Materials
+</h2>
 
-body{
-background:#f5f7ff;
-color:#222;
-}
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;">
 
-header{
-background:linear-gradient(90deg,#0A3D91,#1E90FF);
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:999;
-box-shadow:0 4px 15px rgba(0,0,0,.2);
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#FFD700;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:25px;
-font-weight:600;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFD700;
-}
-
-.hero{
-padding:120px 8% 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.left{
-max-width:600px;
-}
-
-.left h1{
-font-size:55px;
-color:#0A3D91;
-}
-
-.left h2{
-margin:10px 0;
-color:#FFD700;
-}
-
-.left p{
-margin:20px 0;
-line-height:30px;
-font-size:18px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:red;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-margin-right:15px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#c40000;
-}
-
-.btn2{
-display:inline-block;
-padding:15px 35px;
-background:#FFD700;
-color:#0A3D91;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-}
-
-.right img{
-width:350px;
-height:350px;
-border-radius:50%;
-object-fit:cover;
-border:8px solid #FFD700;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-@media(max-width:900px){
-
-.hero{
-text-align:center;
-}
-
-.right{
-margin-top:40px;
-width:100%;
-}
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:15px;
-}
-
-.left h1{
-font-size:40px;
-}
-
-.right img{
-width:250px;
-height:250px;
-}
-
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">U.K.P NO1</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">Notes</a>
-
-<a href="#">Videos</a>
-
-<a href="#">PYQs</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="left">
-
-<h1>Welcome To U.K.P NO1</h1>
-
-<h2>Ujjawal Kumar Pandey</h2>
-
-<h3>Founder - U.K.P NO1</h3>
-
-<p>
-
-All Classes Study Materials
-
-Notes • PYQs • Important Questions
-
-MCQs • Practice Sets • Exam Preparation
-
-</p>
-
-<a href="#" class="btn">🔴 Subscribe Now</a>
-
-<a href="#" class="btn2">📚 Study Notes</a>
-
+<div style="background:#fff;border:2px solid #FFD700;padding:25px;border-radius:18px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,.1);">
+<h3>📘 Notes</h3>
+<p>Chapter Wise Notes for All Classes</p>
 </div>
 
-<div class="right">
+<div style="background:#fff;border:2px solid #FFD700;padding:25px;border-radius:18px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,.1);">
+<h3>📝 Daily MCQ Test</h3>
+<p>Practice 50 Questions Every Day</p>
+</div>
 
-<img src="ujjawal.jpg" alt="Ujjawal Kumar Pandey">
+<div style="background:#fff;border:2px solid #FFD700;padding:25px;border-radius:18px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,.1);">
+<h3>📄 PYQs</h3>
+<p>Previous Year Question Papers</p>
+</div>
+
+<div style="background:#fff;border:2px solid #FFD700;padding:25px;border-radius:18px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,.1);">
+<h3>🎥 Video Classes</h3>
+<p>Free YouTube Learning Videos</p>
+</div>
 
 </div>
 
 </section>
+
+<section style="padding:70px 8%;background:#f5f7ff;">
+
+<h2 style="text-align:center;color:#0A3D91;font-size:38px;">
+🏆 Daily Topper
+</h2>
+
+<div style="max-width:700px;margin:auto;background:#fff;border-radius:18px;padding:30px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,.1);">
+
+<h3>Today's Top Performer</h3>
+
+<p style="font-size:20px;font-weight:bold;color:#0A3D91;">
+🥇 Coming Soon
+</p>
+
+<p>
+After the MCQ system is launched, the daily topper will be displayed here.
+</p>
+
+</div>
+
+</section>
+
+<section style="padding:70px 8%;background:white;">
+
+<h2 style="text-align:center;color:#0A3D91;font-size:38px;">
+👨‍🏫 About U.K.P NO1
+</h2>
+
+<p style="max-width:900px;margin:30px auto;text-align:center;font-size:18px;line-height:30px;">
+
+U.K.P NO1 Education provides free study materials,
+MCQs, Notes, PYQs, Important Questions,
+and Board Exam Preparation for students from Class 6 to 12.
+
+</p>
+
+</section>
+
+<!-- ================= PART 3 START ================= -->
+
+<section id="videos" style="padding:70px 8%;background:#0A3D91;color:white;text-align:center;">
+
+<h2 style="font-size:40px;color:#FFD700;">🎥 YouTube Channel</h2>
+
+<p style="margin:20px 0;font-size:18px;">
+Subscribe to U.K.P NO1 Education for Free Classes, MCQs, Notes & Board Preparation.
+</p>
+
+<a href="https://youtube.com/@theujjawalkumar"
+target="_blank"
+style="display:inline-block;background:red;color:white;
+padding:16px 40px;border-radius:50px;
+text-decoration:none;font-size:20px;font-weight:bold;">
+
+🔴 Subscribe Now
+
+</a>
+
+</section>
+
+<section id="contact" style="padding:70px 8%;background:white;">
+
+<h2 style="text-align:center;color:#0A3D91;font-size:38px;">
+📞 Contact Us
+</h2>
+
+<div style="max-width:700px;margin:40px auto;text-align:center;line-height:35px;font-size:18px;">
+
+<p><strong>Founder:</strong> Ujjawal Kumar Pandey</p>
+
+<p><strong>Website:</strong> U.K.P NO1 Education</p>
+
+<p><strong>YouTube:</strong> @theujjawalkumar</p>
+
+<p><strong>Email:</strong> Coming Soon</p>
+
+</div>
+
+</section>
+
+<footer style="background:#0A3D91;color:white;padding:30px;text-align:center;">
+
+<h2 style="color:#FFD700;">U.K.P NO1 Education</h2>
+
+<p style="margin-top:15px;">
+Learn Smart • Score Better • Every Day One Step Closer To Success
+</p>
+
+<p style="margin-top:15px;">
+© 2026 U.K.P NO1 Education. All Rights Reserved.
+</p>
+
+<p style="margin-top:10px;">
+Designed by Ujjawal Kumar Pandey
+</p>
+
+</footer>
+
+</body>
+</html>
