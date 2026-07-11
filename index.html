@@ -634,3 +634,76 @@ Next
 <!-- ================= PART 6.2 END ================= -->
 
 <!-- ================= PART 5 END ================= -->
+<!-- ================= PART 6.3 FINAL ================= -->
+
+<br><br>
+
+<button onclick="showResult()"
+style="background:green;color:white;padding:15px 35px;
+border:none;border-radius:8px;font-size:18px;cursor:pointer;">
+
+Submit Test
+
+</button>
+
+<div id="resultBox"
+style="display:none;margin-top:30px;
+background:#f8f9ff;
+padding:25px;
+border-radius:15px;
+text-align:center;">
+
+<h2 style="color:#0A3D91;">🎉 Test Completed</h2>
+
+<h3 id="studentResult"></h3>
+
+<p id="scoreText" style="font-size:22px;font-weight:bold;"></p>
+
+<p id="percentageText"></p>
+
+<button onclick="location.reload()"
+style="background:red;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:8px;
+cursor:pointer;">
+
+🔄 Retry Test
+
+</button>
+
+</div>
+
+<script>
+
+function showResult(){
+
+let score=0;
+
+if(document.querySelector('input[name="q1"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q2"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q3"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q4"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q5"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q6"][data-answer]:checked')) score++;
+if(document.querySelector('input[name="q7"][data-answer]:checked')) score++;
+
+let percent=(score/7)*100;
+
+document.getElementById("resultBox").style.display="block";
+
+document.getElementById("studentResult").innerHTML=
+"👤 Student : "+document.getElementById("studentName").value;
+
+document.getElementById("scoreText").innerHTML=
+"🏆 Score : "+score+" / 7";
+
+document.getElementById("percentageText").innerHTML=
+"📊 Percentage : "+percent.toFixed(2)+" %";
+
+}
+
+</script>
+
+<!-- ================= END ================= -->
