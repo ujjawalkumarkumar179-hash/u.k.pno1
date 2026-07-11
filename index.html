@@ -456,7 +456,78 @@ Select your class and start learning.
 <h3>Class 9</h3>
 <p>Notes • MCQs • Videos</p>
 </div>
+<!-- ================= PART 6.1 START ================= -->
 
+<section id="mcq" style="padding:70px 8%;background:#ffffff;">
+
+<h2 style="text-align:center;color:#0A3D91;font-size:40px;">
+📝 Daily MCQ Test
+</h2>
+
+<p style="text-align:center;">
+Class 10 Biology • Chapter 1
+</p>
+
+<div style="max-width:700px;margin:30px auto;background:#f8f9ff;padding:25px;border-radius:15px;">
+
+<label><b>👤 Student Name</b></label><br><br>
+
+<input type="text" id="studentName"
+placeholder="Enter Your Name"
+style="width:100%;padding:14px;border:2px solid #FFD700;border-radius:8px;">
+
+<br><br>
+
+<p><b>⏱️ Time:</b> 60 Minutes</p>
+
+<button onclick="startQuiz()"
+style="background:#0A3D91;color:white;padding:14px 30px;border:none;border-radius:8px;font-size:18px;cursor:pointer;">
+Start Test
+</button>
+
+</div>
+
+<div id="quizBox" style="display:none;max-width:800px;margin:auto;">
+
+<h3>Q1. पौधों में जल का परिवहन किस ऊतक द्वारा होता है?</h3>
+
+<input type="radio" name="q1"> A. फ्लोएम<br>
+<input type="radio" name="q1" data-answer="true"> B. जाइलम<br>
+<input type="radio" name="q1"> C. एपिडर्मिस<br>
+<input type="radio" name="q1"> D. कॉर्टेक्स
+
+<br><br>
+
+<h3>Q2. प्रकाश संश्लेषण मुख्य रूप से कहाँ होता है?</h3>
+
+<input type="radio" name="q2"> A. जड़<br>
+<input type="radio" name="q2"> B. तना<br>
+<input type="radio" name="q2" data-answer="true"> C. पत्ती<br>
+<input type="radio" name="q2"> D. फूल
+
+<br><br>
+
+<button onclick="alert('बाकी प्रश्न Part 6.2 में जोड़ेंगे।')"
+style="background:#FFD700;color:#0A3D91;padding:14px 30px;border:none;border-radius:8px;font-size:18px;cursor:pointer;">
+Next
+</button>
+
+</div>
+
+<script>
+function startQuiz(){
+const name=document.getElementById("studentName").value;
+
+if(name==""){
+alert("Please Enter Your Name");
+return;
+}
+
+document.getElementById("quizBox").style.display="block";
+}
+</script>
+
+<!-- ================= PART 6.1 END ================= -->
 <div style="background:#FFD700;color:#0A3D91;padding:25px;border-radius:15px;text-align:center;font-weight:bold;">
 <h3>⭐ Class 10</h3>
 <p>Board Special</p>
