@@ -755,3 +755,38 @@ style="text-align:center;margin-top:20px;color:green;font-weight:bold;">
 </section>
 
 <!-- ================= PART 7.1 END ================= -->
+<!-- ================= PART 7.2 START ================= -->
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+GoogleAuthProvider,
+signInWithPopup
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyDv1tOYiuQAYAtOa85-9gZvM-fCrjWow6E",
+authDomain: "ukp-no1-education.firebaseapp.com",
+projectId: "ukp-no1-education",
+storageBucket: "ukp-no1-education.firebasestorage.app",
+messagingSenderId: "983226412948",
+appId: "1:983226412948:web:5a9f5ecbc2af1a395ca981"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.auth = auth;
+window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+window.GoogleAuthProvider = GoogleAuthProvider;
+window.signInWithPopup = signInWithPopup;
+
+</script>
+
+<!-- ================= PART 7.2 END ================= -->
