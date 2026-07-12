@@ -830,16 +830,7 @@ const auth = getAuth(app);
 window.auth = auth;
 window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
 window.signInWithEmailAndPassword = signInWithEmailAndPassword;
-window.GoogleAuthProvider = GoogleAuthProvider;
-window.signInWithPopup = signInWithPopup;
-
-</script><script src="questions.js"></script>
-</body>
-</html>
-
-<!-- ================= PART 7.2 END ================= -->
-<!-- ================= PART 7.3 START ================= -->
-
+window.GoogleAuthProvider = GoogleAuthProvider;Ritik raj
 <script type="module">
 
 const signupBtn = document.getElementById("signupBtn");
@@ -887,6 +878,14 @@ status.innerHTML="❌ "+e.message;
 }
 
 const questions = [
-  // सारे questions यहाँ
-];
-mcq designer Ritik Raj
+    // ... आपका पुराना कोड (जैसे googleBtn.addEventListener वगैरह) ...
+
+  const questions = [ 
+    // आपके सारे questions यहाँ रहेंगे
+  ];
+
+</script> <!-- लाइन 843 वाला स्क्रिप्ट टैग यहाँ बंद होगा -->
+<script src="questions.js"></script>
+</body>
+</html>
+  
