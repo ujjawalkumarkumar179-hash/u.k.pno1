@@ -581,106 +581,6 @@ document.getElementById("quizBox").style.display="block";
 
 <hr style="margin:40px 0;">
 
-<h3>Q3. पौधों में भोजन का परिवहन किस ऊतक द्वारा होता है?</h3>const questions = [
-{
-question: "1. पौधों में जल का परिवहन किस ऊतक द्वारा होता है?",
-options: ["फ्लोएम", "जाइलम", "कॉर्टेक्स", "एपिडर्मिस"],
-answer: 1
-},
-{
-question: "2. भोजन का परिवहन किस ऊतक द्वारा होता है?",
-options: ["जाइलम", "फ्लोएम", "कैंबियम", "एपिडर्मिस"],
-answer: 1
-},
-{
-question: "3. प्रकाश संश्लेषण के लिए आवश्यक गैस कौन-सी है?",
-options: ["ऑक्सीजन", "कार्बन डाइऑक्साइड", "नाइट्रोजन", "हाइड्रोजन"],
-answer: 1
-},
-{
-question: "4. पौधों में वाष्पोत्सर्जन मुख्यतः कहाँ से होता है?",
-options: ["जड़", "रंध्र (Stomata)", "तना", "फूल"],
-answer: 1
-},
-{
-question: "5. क्लोरोफिल का मुख्य कार्य क्या है?",
-options: ["जल का परिवहन", "भोजन का परिवहन", "प्रकाश ऊर्जा को अवशोषित करना", "श्वसन कराना"],
-answer: 2
-},
-{
-question: "6. मनुष्य में रक्त का तरल भाग क्या कहलाता है?",
-options: ["RBC", "WBC", "प्लाज्मा", "प्लेटलेट"],
-answer: 2
-},
-{
-question: "7. लाल रक्त कणिकाओं का मुख्य कार्य क्या है?",
-options: ["ऑक्सीजन का परिवहन", "रोगों से रक्षा", "रक्त का थक्का बनाना", "हार्मोन बनाना"],
-answer: 0
-},
-{
-question: "8. रक्त का थक्का बनाने में कौन सहायता करता है?",
-options: ["RBC", "WBC", "प्लेटलेट्स", "प्लाज्मा"],
-answer: 2
-},
-{
-question: "9. हृदय में कितने कक्ष होते हैं?",
-options: ["2", "3", "4", "5"],
-answer: 2
-},
-{
-question: "10. धमनियाँ सामान्यतः किस प्रकार का रक्त ले जाती हैं?",
-options: ["ऑक्सीजन युक्त", "ऑक्सीजन रहित", "दोनों", "कोई नहीं"],
-answer: 0
-}
-];
-
-<input type="radio" name="q3"> A. जाइलम<br>
-<input type="radio" name="q3" data-answer="true"> B. फ्लोएम<br>
-<input type="radio" name="q3"> C. कॉर्टेक्स<br>
-<input type="radio" name="q3"> D. एपिडर्मिस
-
-<br><br>
-
-<h3>Q4. प्रकाश संश्लेषण के लिए आवश्यक गैस कौन-सी है?</h3>
-
-<input type="radio" name="q4"> A. ऑक्सीजन<br>
-<input type="radio" name="q4" data-answer="true"> B. कार्बन डाइऑक्साइड<br>
-<input type="radio" name="q4"> C. नाइट्रोजन<br>
-<input type="radio" name="q4"> D. हाइड्रोजन
-
-<br><br>
-
-<h3>Q5. पौधों में वाष्पोत्सर्जन मुख्यतः कहाँ से होता है?</h3>
-
-<input type="radio" name="q5"> A. जड़<br>
-<input type="radio" name="q5" data-answer="true"> B. रंध्र (Stomata)<br>
-<input type="radio" name="q5"> C. तना<br>
-<input type="radio" name="q5"> D. फूल
-
-<br><br>
-
-<h3>Q6. क्लोरोफिल का मुख्य कार्य क्या है?<
-
-<br><br>
-
-<h3>Q7. पौधों में जल और खनिज किस दिशा में जाते हैं?</h3>
-
-<input type="radio" name="q7"> A. पत्ती से जड़<br>
-<input type="radio" name="q7" data-answer="true"> B. जड़ से पत्ती<br>
-<input type="radio" name="q7"> C. फूल से तना<br>
-<input type="radio" name="q7"> D. फल से जड़
-
-<br><br>
-
-<button onclick="alert('Part 6.3 में Score और Result जोड़ेंगे।')"
-style="background:#0A3D91;color:white;padding:14px 30px;border:none;border-radius:8px;">
-Next
-</button>
-
-<!-- ================= PART 6.2 END ================= -->
-
-<!-- ================= PART 5 END ================= -->
-<!-- ================= PART 6.3 FINAL ================= -->
 
 <br><br>
 
@@ -712,30 +612,7 @@ style="background:red;
 color:white;
 padding:12px 30px;
 border:none;
-border-radius:8px;
-cursor:pointer;">
-
-🔄 Retry Test
-
-</button>
-
-</div>
-
-<script>
-
-function showResult(){
-
-let score=0;
-
-if(document.querySelector('input[name="q1"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q2"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q3"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q4"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q5"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q6"][data-answer]:checked')) score++;
-if(document.querySelector('input[name="q7"][data-answer]:checked')) score++;
-
-let percent=(score/7)*100;
+bord
 
 document.getElementById("resultBox").style.display="block";
 
@@ -884,7 +761,7 @@ const questions = [
     // आपके सारे questions यहाँ रहेंगे
   ];
 
-</script> <!-- लाइन 843 वाला स्क्रिप्ट टैग यहाँ बंद होगा -->
+
 <script src="questions.js"></script>
 </body>
 </html>
