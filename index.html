@@ -145,9 +145,15 @@ style="width:100%;padding:15px;background:#0A3D91;color:white;border:none;border
 <h3 id="timer" style="text-align:center;color:red;">
 ⏱️ Time Left: 60:00
 </h3>
-<div id="quiz" style="display:none;"></div>
+<div id="quiz" style="display:none;"></div><div id="quiz" style="display:none;"></div>
+
+<script>
+
 let time = 60 * 60;
 let timer;
+
+let currentQuestion = 0;
+let score = 0;
 </section><script>
 let currentQuestion = 0;
 let score = 0;
@@ -159,10 +165,9 @@ function startQuiz() {
         alert("Please Enter Your Name");
         return;
     }
-
-    document.getElementById("quiz").style.display = "block";
-    showQuestion();
-}
+document.getElementById("quiz").style.display = "block";
+startTimer();
+showQuestion();
 
 function showQuestion() {
     const q = questions[currentQuestion];
