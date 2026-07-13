@@ -145,23 +145,67 @@ style="width:100%;padding:15px;background:#0A3D91;color:white;border:none;border
 
 <div id="quiz" style="display:none;"></div>
 
-</section>
+</section><script>
+let currentQuestion = 0;
+let score = 0;
 
-<script>
-function startQuiz(){
+function startQuiz() {
+    const name = document.getElementById("studentName").value;
 
-const name=document.getElementById("studentName").value;
+    if (name.trim() === "") {
+        alert("Please Enter Your Name");
+        return;
+    }
 
-if(name===""){
-alert("Please Enter Your Name");
-return;
+    document.getElementById("quiz").style.display = "block";
+    showQuestion();
 }
 
-document.getElementById("quiz").style.display="block";
+function showQuestion() {
+    const q = questions[currentQuestion];
 
-document.getElementById("quiz").innerHTML=
-"<h2 style='text-align:center;'>✅ MCQ System Ready</h2>";
+    document.getElementById("quiz").innerHTML = `
+        <h2>Question ${currentQuestion + 1}</h2>
+        <h3>${q.question}</h3>
 
+        ${q.options.map((option, index) => `
+            <p>
+                <label>
+                    <input type="radio" name="answer" value="${index}">
+                    ${option}
+                </label>
+            </p>
+        `).join("")}
+
+        <br>
+
+        <button onclick="nextQuestion()">
+            ${currentQuestion === questions.length - 1 ? "Submit Test" : "Next"}
+        </button>
+    `;
+}
+
+function nextQuestion() {
+    const selected = document.querySelector('input[name="answer"]:checked');
+
+    if (!selected) {
+        alert("Please select an answer.");
+        return;
+    }
+
+    if (Number(selected.value) === questions[currentQuestion].answer) {
+        score++;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        document.getElementById("quiz").innerHTML = `
+            <h2>🎉 Test Completed</h2>
+            <h3>Your Score: ${score} / ${questions.length}</h3>
+        `;
+    }
 }
 </script>
-</html>
