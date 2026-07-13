@@ -215,5 +215,32 @@ function nextQuestion() {
             <h3>Your Score: ${score} / ${questions.length}</h3>
         `;
     }
+}function startTimer() {
+
+timer = setInterval(function(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+document.getElementById("timer").innerHTML =
+"⏱️ Time Left: " + minutes + ":" + String(seconds).padStart(2,"0");
+
+if(time <= 0){
+
+clearInterval(timer);
+
+alert("Time Over!");
+
+document.getElementById("quiz").innerHTML =
+"<h2>⏰ Time Over</h2><h3>Your Score : " + score + " / " + questions.length + "</h3>";
+
+return;
+
+}
+
+time--;
+
+},1000);
+
 }
 </script>
