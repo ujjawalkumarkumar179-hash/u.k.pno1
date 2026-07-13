@@ -166,10 +166,15 @@ function startQuiz() {
         return;
     }
 document.getElementById("quiz").style.display = "block";
-startTimer();
-showQuestion();
+function startQuiz() {
+    ...
+    startTimer();
+    showQuestion();
+}
 
 function showQuestion() {
+    ...
+}
     const q = questions[currentQuestion];
 
     document.getElementById("quiz").innerHTML = `
@@ -238,12 +243,6 @@ return;
 
 }
 time--;
-
-},1000);
-
-
-</script>
-},1000);
 
 }
 </script>
