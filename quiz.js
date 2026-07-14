@@ -1,4 +1,4 @@
-let currentQuestion = 0;
+loadQuestion();
 let score = 0;
 
 const questionBox = document.getElementById("question");
@@ -53,5 +53,6 @@ nextBtn.onclick = function(){
         nextBtn.style.display = "none";
     }
 };
+
 
 loadQuestion();
