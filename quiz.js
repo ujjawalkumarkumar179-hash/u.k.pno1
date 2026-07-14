@@ -1,4 +1,4 @@
-loadQuestion();
+<button onclick="loadQuestion()">Start Test</button>
 let score = 0;
 
 const questionBox = document.getElementById("question");
