@@ -9,4 +9,15 @@ const firebaseConfig = {
   authDomain: "ukp-no1-education.firebaseapp.com",
   projectId: "ukp-no1-education",
   storageBucket: "ukp-no1-education.firebasestorage.app",
-  messagingSenderId: "9661556950"
+  messagingSenderId: "983226412948
+    "
+  appId: "1:983226412948:web:7d332914d26850085ca981"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+export { auth, db };
