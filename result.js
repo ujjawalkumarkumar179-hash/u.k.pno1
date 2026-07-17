@@ -40,3 +40,51 @@ export async function saveResult(studentName, score, totalQuestions) {
   }
 
 }
+// ===============================
+// Leaderboard - Part 2
+// ===============================
+
+import {
+  getDocs,
+  query,
+  collection,
+  orderBy
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+export async function loadLeaderboard() {
+
+  const leaderboardBody =
+    document.getElementById("leaderboardBody");
+
+  leaderboardBody.innerHTML = "";
+
+  const q = query(
+    collection(db, "results"),
+    orderBy("score", "desc")
+  );
+
+  const snapshot = await getDocs(q);
+
+  let rank = 1;
+
+  snapshot.forEach((doc) => {
+
+    const data = doc.data();
+
+    leaderboardBody.innerHTML += `
+      <tr>
+        <td>#${rank}</td>
+        <td>${data.name}</td>
+        <td>${data.score}/${data.total}</td>
+        <td>${data.percentage}%</td>
+      </tr>
+    `;
+
+    rank++;
+
+  });
+
+}
+
+// Page Load होते ही Leaderboard दिखाओ
+loadLeaderboard();
