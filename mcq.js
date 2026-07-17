@@ -134,6 +134,17 @@ nextBtn.addEventListener("click", () => {
             <h2>🎉 टेस्ट पूरा हुआ!</h2>
             <h3>आपका स्कोर: ${score} / ${questions.length}</h3>
         `;
+        // Certificate Show
+
+import { showCertificate } from "./certificate.js";
+
+showCertificate(
+    studentName,
+    "Biology",
+    "Chapter 1 Test",
+    score,
+    questions.length
+);
 
         optionsBox.innerHTML = "";
         nextBtn.style.display = "none";
