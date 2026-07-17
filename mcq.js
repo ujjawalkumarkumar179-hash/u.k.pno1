@@ -109,6 +109,42 @@ window.selectOption = function(index) {
     buttons[index].style.color = "#ffffff";
 
 }
+// ===============================
+// MCQ System - Part 3
+// ===============================
+
+// Next Button
+nextBtn.addEventListener("click", () => {
+
+    // Answer Check
+    if (selectedAnswer === questions[currentQuestion].answer) {
+        score++;
+    }
+
+    // Reset Selection
+    selectedAnswer = -1;
+
+    // Next Question
+    currentQuestion++;
+
+    // Quiz End
+    if (currentQuestion >= questions.length) {
+
+        questionBox.innerHTML = `
+            <h2>🎉 टेस्ट पूरा हुआ!</h2>
+            <h3>आपका स्कोर: ${score} / ${questions.length}</h3>
+        `;
+
+        optionsBox.innerHTML = "";
+        nextBtn.style.display = "none";
+
+        return;
+    }
+
+    // Load Next Question
+    loadQuestion();
+
+});
 
 // पहला Question दिखाओ
 loadQuestion();
