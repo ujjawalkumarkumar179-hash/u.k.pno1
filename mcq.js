@@ -66,3 +66,49 @@ answer: 0
 }
 
 ];
+// ===============================
+// MCQ System - Part 2
+// ===============================
+
+// Question दिखाने का Function
+function loadQuestion() {
+
+    const q = questions[currentQuestion];
+
+    questionBox.innerHTML =
+        `<h3>प्रश्न ${currentQuestion + 1}: ${q.question}</h3>`;
+
+    optionsBox.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+
+        optionsBox.innerHTML += `
+            <button class="optionBtn"
+                onclick="selectOption(${index})">
+                ${option}
+            </button>
+        `;
+
+    });
+
+}
+
+// Option Select
+window.selectOption = function(index) {
+
+    selectedAnswer = index;
+
+    const buttons = document.querySelectorAll(".optionBtn");
+
+    buttons.forEach((btn) => {
+        btn.style.background = "#ffffff";
+        btn.style.color = "#000000";
+    });
+
+    buttons[index].style.background = "#0A3D91";
+    buttons[index].style.color = "#ffffff";
+
+}
+
+// पहला Question दिखाओ
+loadQuestion();
