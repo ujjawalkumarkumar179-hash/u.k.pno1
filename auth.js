@@ -13,8 +13,7 @@ const auth = getAuth(app);
 
 
 // Register Function
-window.register = function(email, password){
-
+window.register = function(name, email, password){
 createUserWithEmailAndPassword(auth,email,password)
 .then((userCredential)=>{
 
