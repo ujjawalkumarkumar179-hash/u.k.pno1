@@ -1,5 +1,14 @@
 import { showCertificate } from "./certificate.js";
 
+
+let currentQuestion = 0;
+let score = 0;
+let selectedAnswer = -1;
+
+const questionBox = document.getElementById("questionBox");
+const optionsBox = document.getElementById("optionsBox");
+const nextBtn = document.getElementById("nextBtn");
+
 const questions = [
 
 {
@@ -137,7 +146,6 @@ nextBtn.addEventListener("click", () => {
         `;
         // Certificate Show
 
-import { showCertificate } from "./certificate.js";
 
 showCertificate(
     studentName,
