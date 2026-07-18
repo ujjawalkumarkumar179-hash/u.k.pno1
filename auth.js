@@ -1,4 +1,7 @@
 // U.K.P NO1 Education - Firebase Authentication
+import { db } from "./firebase.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
 
 import { 
   getAuth, 
