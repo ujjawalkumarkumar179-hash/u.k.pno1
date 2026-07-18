@@ -35,8 +35,8 @@ alert(error.message);
 window.login = function(email,password){
 
 signInWithEmailAndPassword(auth,email,password)
-.then((userCredential)=>{
-
+.then((userCredential)=>{let name = localStorage.getItem("studentName");
+alert("🎉 Welcome " + name);
 alert("Login Successful ✅");
 
 })
