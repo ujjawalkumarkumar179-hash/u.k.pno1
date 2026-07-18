@@ -35,14 +35,13 @@ let password = document.getElementById("password").value;
 register(email,password);
 
 }
+window.registerUser = function(){
 
-
-window.loginUser = function(){
-
+let name = document.getElementById("name").value;
 let email = document.getElementById("email").value;
 let password = document.getElementById("password").value;
 
-login(email,password);
+register(name, email, password);
 
 }
 
