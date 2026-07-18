@@ -148,13 +148,12 @@ nextBtn.addEventListener("click", () => {
 
 
 showCertificate(
-    studentName,
+    "Student",
     "Biology",
     "Chapter 1 Test",
     score,
     questions.length
 );
-
         optionsBox.innerHTML = "";
         nextBtn.style.display = "none";
 
