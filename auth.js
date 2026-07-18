@@ -15,7 +15,9 @@ const auth = getAuth(app);
 // Register Function
 window.register = function(name, email, password){
 createUserWithEmailAndPassword(auth,email,password)
-.then((userCredential)=>{
+.then((userCredential)=>{localStorage.setItem("studentName", name);
+
+alert("🎉 Welcome " + name);
 
 alert("Registration Successful ✅");
 
