@@ -3,7 +3,7 @@
 // Certificate System - Part 1
 // ===============================
 
-export function showCertificate(studentName, subject, testName, score, total) {
+export function showCertificate(currentUser.displayName, subject, testName, score, total);
 
     const percentage = Math.round((score / total) * 100);
 
