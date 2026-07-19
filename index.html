@@ -161,7 +161,7 @@ transform:scale(1.05);
 
       <div class="hero-buttons">
         <a href="#" class="btn-primary">पढ़ाई शुरू करें</a>
-        <a href="#" class="btn-secondary">दैनिक MCQ टेस्ट</a>
+        <a href="#" class="btn-secondary" onclick="openClassSelector()">दैनिक MCQ टेस्ट</a>
       </div>
 
     </div>
@@ -283,7 +283,31 @@ transform:scale(1.05);
             </tr>
         </thead>
 
-        <tbody id="leaderboardBody">
+        <script>
+function openClassSelector() {
+    const studentClass = prompt("Class चुनें (6,7,8,9,10,11,12)");
+
+    if (!studentClass) return;
+
+    const subject = prompt(
+`Subject चुनें:
+
+1. Mathematics
+2. Science
+3. Social Science
+4. Hindi
+5. English
+6. Sanskrit`
+    );
+
+    if (!subject) return;
+
+    localStorage.setItem("studentClass", studentClass);
+    localStorage.setItem("subject", subject);
+
+    window.location.href = "mcq.html";
+}
+        </script>
         </tbody>
     </table>
 </section>
