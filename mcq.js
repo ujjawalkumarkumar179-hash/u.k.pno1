@@ -162,7 +162,7 @@ showCertificate(
 
     // Load Next Question
     loadQuestion();
-
+window.location.href = "mcq.html";
 });
 
 // पहला Question दिखाओ
