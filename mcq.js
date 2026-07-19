@@ -161,8 +161,11 @@ showCertificate(
     }
 
     // Load Next Question
-    loadQuestion();
-window.location.href = "mcq.html";
+loadQuestion();
+});
+
+// पहला Question दिखाओ
+loadQuestion();
 });
 
 // पहला Question दिखाओ
