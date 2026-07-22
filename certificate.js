@@ -20,6 +20,7 @@ export function showCertificate(studentName, subject, testName, score, total) {
     }
 
     document.getElementById("certificateSection").style.display = "block";
+
     document.getElementById("certificateTitle").textContent = title;
     document.getElementById("studentName").textContent = studentName;
     document.getElementById("studentSubject").textContent = subject;
@@ -27,4 +28,10 @@ export function showCertificate(studentName, subject, testName, score, total) {
     document.getElementById("studentScore").textContent = `${score} / ${total}`;
     document.getElementById("studentPercentage").textContent = percentage + "%";
     document.getElementById("studentGrade").textContent = grade;
+
+    // आज की तारीख दिखाएँ
+    const dateElement = document.getElementById("certificateDate");
+    if (dateElement) {
+        dateElement.textContent = new Date().toLocaleDateString("hi-IN");
+    }
 }
