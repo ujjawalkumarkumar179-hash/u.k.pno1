@@ -52,10 +52,11 @@ Join U.K.P NO1 Education and start your learning journey.
 </div>
 
 <!-- Password -->
-<div class="input-box">
-    <i class="fa-solid fa-lock"></i>
-    <input type="password" id="password" placeholder="Create Password" required>
-</div>
+<label>
+  <input type="checkbox" id="agree">
+  I Agree Terms & Conditions
+</label>
+<br><br>
 
 <!-- Confirm Password -->
 <div class="input-box">
@@ -78,10 +79,8 @@ I agree to the Terms & Conditions
 
 <!-- Sign Up Button -->
 
-<button type="submit" class="signup-btn">
-
-Create Account
-
+<button type="submit" id="registerBtn" class="signup-btn" disabled>
+    Create Account
 </button>
 
 <div class="login-link">
@@ -99,7 +98,37 @@ Already have an account?
 </div>
 
 <script src="script.js"></script>
+<script>
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const agree = document.getElementById("agree");
+const btn = document.getElementById("registerBtn");
 
+function checkForm() {
+    if (
+        name.value.trim() !== "" &&
+        email.value.trim() !== "" &&
+        password.value.length >= 6 &&
+        agree.checked
+    ) {
+        btn.disabled = false;
+        btn.style.background = "#0A3D91";
+        btn.style.color = "white";
+        btn.style.cursor = "pointer";
+    } else {
+        btn.disabled = true;
+        btn.style.background = "#ffffff";
+        btn.style.color = "#999";
+        btn.style.cursor = "not-allowed";
+    }
+}
+
+name.oninput = checkForm;
+email.oninput = checkForm;
+password.oninput = checkForm;
+agree.onchange = checkForm;
+</script>
 </body>
 
 </html>
