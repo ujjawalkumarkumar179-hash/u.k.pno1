@@ -287,13 +287,16 @@ nextBtn.addEventListener("click", () => {
         optionsBox.innerHTML = "";
         nextBtn.style.display = "none";
 
-        showCertificate(
-            "Student",
-            "Biology",
-            "Chapter 1 Test",
-            score,
-            questions.length
-        );
+    const studentName = localStorage.getItem("studentName") || "Student";
+
+showCertificate(
+    studentName,
+    "Biology",
+    "Chapter 1 Test",
+    score,
+    questions.length
+);
+        
 
         return;
     }
