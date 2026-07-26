@@ -1,4 +1,35 @@
-export const biologyChapter2 = [
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology Chapters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🧬 Biology Chapters</h1>
+
+<button onclick="openChapter('1')">
+📘 Chapter 1
+</button>
+
+<button onclick="openChapter('2')">
+📗 Chapter 2
+</button>
+
+<script>
+function openChapter(chapter){
+
+localStorage.setItem("chapter",chapter);
+
+window.location.href="mcq.html";
+
+}
+</script>
+
+</body>
+</html>export const biologyChapter2 = [
   // Chapter 2 MCQs यहाँ आएँगे
 ];
 export const biologyChapter2 = [
