@@ -1,5 +1,6 @@
 import { showCertificate } from "./certificate.js";
-
+import { biologyChapter1 } from "./questions/biology-ch1.js";
+import { biologyChapter2 } from "./questions/biology-ch2.js";
 let currentQuestion = 0;
 let score = 0;
 let selectedAnswer = -1;
