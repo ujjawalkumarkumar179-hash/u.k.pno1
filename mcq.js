@@ -1,6 +1,17 @@
 import { showCertificate } from "./certificate.js";
 import { biologyChapter1 } from "./questions/biology-ch1.js";
 import { biologyChapter2 } from "./questions/biology-ch2.js";
+let questions = [];
+
+const chapter = new URLSearchParams(window.location.search).get("chapter");
+
+if (chapter === "1") {
+    questions = biologyChapter1;
+} else if (chapter === "2") {
+    questions = biologyChapter2;
+} else {
+    questions = biologyChapter1; // Default
+}
 let currentQuestion = 0;
 let score = 0;
 let selectedAnswer = -1;
