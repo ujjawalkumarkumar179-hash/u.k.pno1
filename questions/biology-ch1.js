@@ -1,4 +1,4 @@
-const questions = [
+export const biologyChapter1 = [
 
 {
 question:"जीव की संरचनात्मक एवं क्रियात्मक इकाई क्या है?",
