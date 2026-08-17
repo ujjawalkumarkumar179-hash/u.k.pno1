@@ -285,27 +285,49 @@ transform:scale(1.05);
 
         <script>
 function openClassSelector() {
-    const studentClass = prompt("Class चुनें (6,7,8,9,10,11,12)");
+
+    const studentClass = prompt(`
+Class चुनें:
+
+6. Class 6
+7. Class 7
+8. Class 8
+9. Class 9
+10. Class 10
+11. Class 11
+12. Class 12
+`);
 
     if (!studentClass) return;
 
-    const subject = prompt(
-`Subject चुनें:
+    const subject = prompt(`
+Subject चुनें:
 
 1. Mathematics
 2. Science
 3. Social Science
 4. Hindi
 5. English
-6. Sanskrit`
-    );
+6. Sanskrit
+`);
 
     if (!subject) return;
 
+    const chapter = prompt(`
+Chapter चुनें:
+
+1. Chapter 1
+2. Chapter 2
+`);
+
+    if (!chapter) return;
+
     localStorage.setItem("studentClass", studentClass);
     localStorage.setItem("subject", subject);
+    localStorage.setItem("chapter", chapter);
 
-    window.location.href = "mcq.html";
+    window.location.href = "mcq.html?chapter=" + chapter;
+
 }
         </script>
         </tbody>
