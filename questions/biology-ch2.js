@@ -1,5 +1,4 @@
-
-];export const biologyChapter2 = [
+export const biologyChapter2 = [
 {
   question: "तंत्रिका तंत्र की मूल इकाई क्या है?",
   options: ["नेफ्रॉन", "न्यूरॉन", "एल्विओलाई", "विली"],
