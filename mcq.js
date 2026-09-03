@@ -2,6 +2,7 @@ import { showCertificate } from "./certificate.js";
 import { biologyChapter1 } from "./questions/biology-ch1.js";
 import { biologyChapter2 } from "./questions/biology-ch2.js";
 let questions = [];
+import { biologyChapter3 } from "./questions/biology-ch3.js";
 
 const chapter = new URLSearchParams(window.location.search).get("chapter");
 
@@ -10,7 +11,10 @@ if (chapter === "1") {
 } else if (chapter == "2" || chapter == 2) {
     
     questions = biologyChapter2;
+} else if (chapter == "3" || chapter == 3) {
+    questions = biologyChapter3;
 } else {
+    
     questions = biologyChapter1; // Default
 }
 let currentQuestion = 0;
