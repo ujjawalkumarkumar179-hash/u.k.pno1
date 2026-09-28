@@ -291,3 +291,81 @@ footer {
         font-size: 17px;
     }
 }
+/* =========================
+   🌟 ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #fff8ef, #f8efff);
+    text-align: center;
+}
+
+.about-card {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.about-card h2 {
+    font-size: 30px;
+    color: #7b1fa2;
+    margin-bottom: 18px;
+}
+
+.about-card > p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.features {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 28px 18px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.09);
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+}
+
+.feature-card span {
+    font-size: 38px;
+}
+
+.feature-card h3 {
+    margin: 12px 0 8px;
+    color: #8b0000;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 📱 Mobile */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        padding: 50px 15px;
+    }
+
+    .about-card h2 {
+        font-size: 26px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+        }
