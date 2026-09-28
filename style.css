@@ -7,29 +7,39 @@
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #fff7e6, #f8e8ff, #e8f7ff);
+    background: linear-gradient(135deg, #fff8ed, #fdf0fa, #eef5ff);
     color: #222;
     overflow-x: hidden;
 }
 
-/* 🌸 Main Hero */
+/* =========================
+   🌸 HERO SECTION
+========================= */
+
 .hero {
     position: relative;
-    text-align: center;
+    min-height: 520px;
     padding: 55px 20px 70px;
-    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.8), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(255,255,255,.8), transparent 25%),
+        linear-gradient(135deg, #fff5e9, #fceefa, #edf5ff);
 }
 
-/* 🌸 Decorative Flowers */
+/* 🌺 Flowers */
+
 .flower {
     position: absolute;
-    font-size: 45px;
-    animation: floatFlower 4s ease-in-out infinite;
+    font-size: 48px;
+    filter: drop-shadow(0 5px 8px rgba(0,0,0,.12));
+    animation: flowerFloat 4s ease-in-out infinite;
+    user-select: none;
 }
 
 .flower1 {
@@ -38,7 +48,7 @@ body {
 }
 
 .flower2 {
-    top: 80px;
+    top: 65px;
     right: 8%;
     animation-delay: 1s;
 }
@@ -55,28 +65,34 @@ body {
     animation-delay: 3s;
 }
 
-@keyframes floatFlower {
+@keyframes flowerFloat {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
     }
 
     50% {
-        transform: translateY(-15px) rotate(8deg);
+        transform: translateY(-12px) rotate(8deg);
     }
 }
 
-/* 🏆 Logo */
+/* =========================
+   🏆 LOGO
+========================= */
+
 .logo-box {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
+    padding: 8px;
     border-radius: 50%;
-    background: white;
-    padding: 10px;
+    background: rgba(255,255,255,.95);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
-    margin-bottom: 22px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18),
+        0 0 0 5px rgba(255,255,255,.55);
+    margin-bottom: 25px;
+    animation: logoAppear 1s ease;
 }
 
 .logo-box img {
@@ -86,87 +102,147 @@ body {
     border-radius: 50%;
 }
 
-/* 🎓 Website Name */
+@keyframes logoAppear {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   🎓 TITLE
+========================= */
+
 .hero h1 {
-    font-size: 42px;
+    font-size: 43px;
     font-weight: 800;
-    margin-bottom: 15px;
-    background: linear-gradient(90deg, #b8860b, #d40000, #7b1fa2);
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #d00000,
+        #7b1fa2
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .welcome {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 19px;
+    font-size: 18px;
     color: #555;
+    letter-spacing: .5px;
 }
 
-/* 📚 Subjects */
+/* =========================
+   📚 SUBJECT SECTION
+========================= */
+
 .subjects {
+    position: relative;
+    padding: 65px 20px 70px;
     text-align: center;
-    padding: 55px 20px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255,255,255,.82);
 }
 
 .subjects h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
+    font-size: 33px;
     color: #8b0000;
+    margin-bottom: 12px;
 }
 
 .subjects p {
-    color: #555;
-    margin-bottom: 30px;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 32px;
 }
 
+/* 📚 Subject Cards */
+
 .subject-box {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
 .subject-box div {
-    background: white;
-    padding: 22px 15px;
-    border-radius: 18px;
+    padding: 24px 15px;
+    background: rgba(255,255,255,.96);
+    border-radius: 20px;
+
     font-size: 18px;
-    font-weight: 600;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
-    transition: 0.3s;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.09);
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
 .subject-box div:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.15);
 }
 
-/* 🌸 Footer */
+/* =========================
+   🌸 FOOTER
+========================= */
+
 footer {
+    padding: 24px 15px;
     text-align: center;
-    padding: 22px;
-    background: #35104d;
+
+    background: linear-gradient(
+        90deg,
+        #35104d,
+        #551276,
+        #35104d
+    );
+
     color: white;
     font-size: 14px;
 }
 
-/* 📱 Mobile */
+/* =========================
+   📱 MOBILE
+========================= */
+
 @media (max-width: 700px) {
 
     .hero {
-        min-height: 450px;
-        padding: 45px 15px;
+        min-height: 500px;
+        padding: 45px 15px 60px;
+    }
+
+    .logo-box {
+        width: 135px;
+        height: 135px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 31px;
     }
 
     .welcome {
@@ -177,20 +253,41 @@ footer {
         font-size: 16px;
     }
 
-    .logo-box {
-        width: 125px;
-        height: 125px;
+    .flower {
+        font-size: 34px;
     }
 
-    .flower {
-        font-size: 32px;
+    .flower1 {
+        left: 7%;
+    }
+
+    .flower2 {
+        right: 7%;
+    }
+
+    .flower3 {
+        left: 10%;
+    }
+
+    .flower4 {
+        right: 10%;
+    }
+
+    .subjects {
+        padding: 50px 15px;
+    }
+
+    .subjects h2 {
+        font-size: 28px;
     }
 
     .subject-box {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .subjects h2 {
-        font-size: 27px;
+    .subject-box div {
+        padding: 20px;
+        font-size: 17px;
     }
 }
