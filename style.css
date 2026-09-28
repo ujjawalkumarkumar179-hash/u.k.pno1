@@ -681,5 +681,90 @@ footer {
 
     .science-parts h2 {
         font-size: 26px;
+        /* =========================
+   📱 CONNECT WITH US
+========================= */
+
+.connect-section {
+    text-align: center;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #fff5f8, #f4efff, #eef8ff);
+}
+
+.connect-section h2 {
+    font-size: 30px;
+    color: #7b1fa2;
+    margin-bottom: 10px;
+}
+
+.connect-section > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.connect-buttons {
+    max-width: 850px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.connect-card {
+    display: block;
+    text-decoration: none;
+    color: #333;
+
+    background: white;
+    padding: 28px 20px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+}
+
+.connect-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.connect-card span {
+    font-size: 45px;
+}
+
+.connect-card h3 {
+    margin: 12px 0 8px;
+    font-size: 22px;
+}
+
+.connect-card p {
+    margin: 0;
+    color: #666;
+}
+
+.youtube-card h3 {
+    color: #d60000;
+}
+
+.whatsapp-card h3 {
+    color: #128c7e;
+}
+
+
+/* 📱 Mobile */
+
+@media (max-width: 650px) {
+
+    .connect-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .connect-section h2 {
+        font-size: 26px;
+    }
+}
     }
     }
