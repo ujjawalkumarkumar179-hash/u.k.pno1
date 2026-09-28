@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff8ed, #fdf0fa, #eef5ff);
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* =========================
+   🌸 HERO
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 520px;
+    padding: 55px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.8), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(255,255,255,.8), transparent 25%),
+        linear-gradient(135deg, #fff5e9, #fceefa, #edf5ff);
+}
+
+/* 🌺 Flowers */
+
+.flower {
+    position: absolute;
+    font-size: 48px;
+    filter: drop-shadow(0 5px 8px rgba(0,0,0,.12));
+    animation: flowerFloat 4s ease-in-out infinite;
+    user-select: none;
+}
+
+.flower1 {
+    top: 35px;
+    left: 8%;
+}
+
+.flower2 {
+    top: 65px;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.flower3 {
+    bottom: 45px;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.flower4 {
+    bottom: 30px;
+    right: 13%;
+    animation-delay: 3s;
+}
+
+@keyframes flowerFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+/* =========================
+   🏆 LOGO
+========================= */
+
+.logo-box {
+    width: 155px;
+    height: 155px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18),
+        0 0 0 5px rgba(255,255,255,.55);
+
+    margin-bottom: 25px;
+
+    animation: logoAppear 1s ease;
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+@keyframes logoAppear {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   🎓 TITLE
+========================= */
+
+.hero h1 {
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #d00000,
+        #7b1fa2
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555;
+    letter-spacing: .5px;
+}
+
+/* =========================
+   📚 SUBJECTS
+========================= */
+
+.subjects {
+    position: relative;
+    padding: 65px 20px 70px;
+    text-align: center;
+    background: rgba(255,255,255,.88);
+}
+
+.subjects h2 {
+    font-size: 33px;
+    color: #8b0000;
+    margin-bottom: 12px;
+}
+
+.subjects > p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+.subject-box {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.subject-box div {
+    padding: 24px 15px;
+    background: rgba(255,255,255,.98);
+    border-radius: 20px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,.09);
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.subject-box div:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+/* =========================
+   🌟 ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 65px 20px 70px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8ef,
+            #f8efff,
+            #eef7ff
+        );
+}
+
+.about-card {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.about-card h2 {
+    font-size: 31px;
+    color: #7b1fa2;
+    margin-bottom: 18px;
+}
+
+.about-card > p {
+    max-width: 850px;
+    margin: auto;
+
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ⭐ Feature Cards */
+
+.features {
+    max-width: 1000px;
+    margin: 38px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,.96);
+    padding: 28px 18px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.09);
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 32px rgba(0,0,0,.15);
+}
+
+.feature-card span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.feature-card h3 {
+    margin: 8px 0 10px;
+    color: #8b0000;
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* =========================
+   🌸 FOOTER
+========================= */
+
+footer {
+    padding: 24px 15px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #35104d,
+        #551276,
+        #35104d
+    );
+
+    color: white;
+    font-size: 14px;
+}
+
+/* =========================
+   📱 MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 500px;
+        padding: 45px 15px 60px;
+    }
+
+    .logo-box {
+        width: 135px;
+        height: 135px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .welcome {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .flower {
+        font-size: 34px;
+    }
+
+    .flower1 {
+        left: 7%;
+    }
+
+    .flower2 {
+        right: 7%;
+    }
+
+    .flower3 {
+        left: 10%;
+    }
+
+    .flower4 {
+        right: 10%;
+    }
+
+    .subjects {
+        padding: 50px 15px;
+    }
+
+    .subjects h2 {
+        font-size: 28px;
+    }
+
+    .subject-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .subject-box div {
+        padding: 20px;
+        font-size: 17px;
+    }
+
+    .about-section {
+        padding: 50px 15px;
+    }
+
+    .about-card h2 {
+        font-size: 26px;
+    }
+
+    .about-card > p {
+        font-size: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 28px;
+    }
+
+    .feature-card {
+        padding: 24px 18px;
+    }
+  }
