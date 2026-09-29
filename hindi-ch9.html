@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>आविन्यों - U.K.P NO1 Education</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans Devanagari", sans-serif;
+            background: linear-gradient(135deg, #fff8e1, #e3f2fd);
+            color: #222;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, #7b1fa2, #1565c0);
+            color: white;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        header h1 {
+            margin: 12px 0 5px;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 6px;
+            font-size: 16px;
+        }
+
+        .quiz-box {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 15px;
+        }
+
+        .question-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            display: block;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            background: #fafafa;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            background: #f1e5ff;
+            border-color: #7b1fa2;
+        }
+
+        .option input {
+            margin-right: 10px;
+        }
+
+        #submitBtn,
+        #restartBtn {
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #submitBtn {
+            background: #1565c0;
+            color: white;
+        }
+
+        #submitBtn:hover {
+            background: #0d47a1;
+        }
+
+        #restartBtn {
+            background: #7b1fa2;
+            color: white;
+            display: none;
+        }
+
+        #result {
+            display: none;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 25px;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        #result h2 {
+            color: #7b1fa2;
+        }
+
+        #score {
+            font-size: 22px;
+        }
+
+        #message {
+            font-size: 18px;
+        }
+
+        .back {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .quiz-box {
+                padding: 10px;
+            }
+
+            .question {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+
+    <h1>📘 आविन्यों</h1>
+
+    <p>Class 10 Bihar Board • Hindi Chapter 9</p>
+
+    <p>📝 MCQ Test – 50 Questions</p>
+
+</header>
+
+
+<div class="quiz-box" id="quiz"></div>
+
+
+<button id="submitBtn" onclick="submitQuiz()">
+    ✅ Submit Test
+</button>
+
+
+<div id="result">
+
+    <h2>🎉 आपका Result</h2>
+
+    <p id="score"></p>
+
+    <p id="message"></p>
+
+</div>
+
+
+<button id="restartBtn" onclick="location.reload()">
+    🔄 Test फिर से दें
+</button>
+
+
+<div class="back">
+    <a href="hindi.html">⬅️ वापस Hindi पर जाएँ</a>
+</div>
+
+
+<footer>
+    <p>© 2026 U.K.P NO1 Education</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+{
+q: "‘आविन्यों’ पाठ के लेखक कौन हैं?",
+o: ["अशोक वाजपेयी", "रामविलास शर्मा", "अमरकांत", "विनोद कुमार शुक्ल"],
+a: 0
+},
+
+{
+q: "‘आविन्यों’ किस देश का शहर है?",
+o: ["फ्रांस", "भारत", "इटली", "जर्मनी"],
+a: 0
+},
+
+{
+q: "आविन्यों किस नदी के किनारे स्थित है?",
+o: ["रौन नदी", "गंगा नदी", "यमुना नदी", "नील नदी"],
+a: 0
+},
+
+{
+q: "आविन्यों किस देश में स्थित है?",
+o: ["फ्रांस", "इंग्लैंड", "स्पेन", "जापान"],
+a: 0
+},
+
+{
+q: "आविन्यों किस कारण प्रसिद्ध है?",
+o: ["सांस्कृतिक और ऐतिहासिक महत्व के कारण", "केवल खेती के कारण", "केवल उद्योग के कारण", "केवल व्यापार के कारण"],
+a: 0
+},
+
+{
+q: "‘आविन्यों’ पाठ किस प्रकार की रचना है?",
+o: ["यात्रा-वृत्तांत", "कहानी", "नाटक", "कविता"],
+a: 0
+},
+
+{
+q: "अशोक वाजपेयी किस रूप में प्रसिद्ध हैं?",
+o: ["कवि और लेखक", "वैज्ञानिक", "खिलाड़ी", "चित्रकार"],
+a: 0
+},
+
+{
+q: "आविन्यों में लेखक किस प्रकार का अनुभव करते हैं?",
+o: ["सांस्कृतिक और कलात्मक अनुभव", "केवल खेल का अनुभव", "केवल व्यापार का अनुभव", "केवल खेती का अनुभव"],
+a: 0
+},
+
+{
+q: "आविन्यों का ऐतिहासिक महत्व किससे जुड़ा है?",
+o: ["पोपों के निवास से", "भारतीय राजाओं से", "मुगल साम्राज्य से", "रोमन सेना से ही"],
+a: 0
+},
+
+{
+q: "आविन्यों में किस प्रकार का वातावरण लेखक को प्रभावित करता है?",
+o: ["सांस्कृतिक वातावरण", "केवल औद्योगिक वातावरण", "केवल ग्रामीण वातावरण", "केवल राजनीतिक वातावरण"],
+a: 0
+},
+
+{
+q: "‘आविन्यों’ में लेखक किस देश की यात्रा का वर्णन करते हैं?",
+o: ["फ्रांस", "नेपाल", "भारत", "चीन"],
+a: 0
+},
+
+{
+q: "आविन्यों का संबंध किस महाद्वीप से है?",
+o: ["यूरोप", "एशिया", "अफ्रीका", "ऑस्ट्रेलिया"],
+a: 0
+},
+
+{
+q: "आविन्यों किस प्रकार का नगर माना जाता है?",
+o: ["ऐतिहासिक और सांस्कृतिक नगर", "केवल औद्योगिक नगर", "केवल ग्रामीण नगर", "केवल व्यापारिक नगर"],
+a: 0
+},
+
+{
+q: "लेखक की यात्रा में किस चीज का विशेष महत्व है?",
+o: ["क
