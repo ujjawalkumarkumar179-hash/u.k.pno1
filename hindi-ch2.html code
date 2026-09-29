@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>विष के दाँत - MCQ | U.K.P NO1 Education</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff1f5, #f4efff, #eef8ff);
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 15px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            color: #7b1fa2;
+            font-size: 28px;
+            margin: 15px 0 8px;
+        }
+
+        .header p {
+            color: #666;
+            margin: 7px;
+        }
+
+        .quiz-box {
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .progress {
+            text-align: center;
+            font-weight: bold;
+            color: #7b1fa2;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .question-box {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            text-align: left;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #f7f0ff;
+            border-color: #9c27b0;
+        }
+
+        .option.correct {
+            background: #d9f7df;
+            border-color: #22a447;
+        }
+
+        .option.wrong {
+            background: #ffe0e0;
+            border-color: #e53935;
+        }
+
+        .next-btn,
+        .restart-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 12px;
+            background: #7b1fa2;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .next-btn:hover,
+        .restart-btn:hover {
+            background: #5e1680;
+        }
+
+        .result {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .result h2 {
+            color: #7b1fa2;
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e65100;
+        }
+
+        .back {
+            text-align: center;
+            margin: 25px;
+        }
+
+        .back a {
+            display: inline-block;
+            text-decoration: none;
+            background: #8b0000;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .question {
+                font-size: 18px;
+            }
+
+            .option {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+
+    <h1>📘 विष के दाँत</h1>
+
+    <p>Class 10 Bihar Board • Hindi Chapter 2</p>
+
+    <p>📝 कुल 50 MCQ</p>
+
+</header>
+
+
+<main class="quiz-box">
+    <div id="quiz"></div>
+</main>
+
+
+<div class="back">
+    <a href="hindi.html">
+        📘 वापस Hindi Chapters पर जाएँ
+    </a>
+</div>
+
+
+<footer>
+    © 2026 U.K.P NO1 Education
+</footer>
+
+
+<script>
+
+const questions = [
+
+    {
+        q: "‘विष के दाँत’ कहानी के लेखक कौन हैं?",
+        options: [
+            "प्रेमचंद",
+            "नलिन विलोचन शर्मा",
+            "अमरकांत",
+            "रामधारी सिंह दिनकर"
+        ],
+        answer: 1
+    },
+
+    {
+        q: "‘विष के दाँत’ किस विधा की रचना है?",
+        options: [
+            "कविता",
+            "निबंध",
+            "कहानी",
+            "नाटक"
+        ],
+        answer: 2
+    },
+
+    {
+        q: "‘विष के दाँत’ कहानी का प्रमुख विषय क्या है?",
+        options: [
+            "सामाजिक वर्ग-विभेद",
+            "प्रकृति-सौंदर्य",
+            "यात्रा",
+            "धार्मिक अनुष्ठान"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में सेन साहब का पुत्र किस नाम से जाना जाता है?",
+        options: [
+            "मदन",
+            "काशू",
+            "खोखा",
+            "गिरधर"
+        ],
+        answer: 2
+    },
+
+    {
+        q: "मदन किसका पुत्र था?",
+        options: [
+            "सेन साहब",
+            "गिरधर",
+            "काशू",
+            "मुखर्जी साहब"
+        ],
+        answer: 1
+    },
+
+    {
+        q: "काशू किसका पुत्र था?",
+        options: [
+            "गिरधर",
+            "सेन साहब",
+            "मदन",
+            "अखबारनवीस"
+        ],
+        answer: 1
+    },
+
+    {
+        q: "मदन और काशू के बीच किस कारण विवाद हुआ?",
+        options: [
+            "खेल को लेकर",
+            "पढ़ाई को लेकर",
+            "पैसे को लेकर",
+            "कपड़ों को लेकर"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "मदन और काशू किस खेल से संबंधित घटना में उलझते हैं?",
+        options: [
+            "लट्टू",
+            "क्रिकेट",
+            "फुटबॉल",
+            "हॉकी"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में ‘खोखा’ किसका नाम है?",
+        options: [
+            "मदन",
+            "सेन साहब के पुत्र का",
+            "गिरधर",
+            "काशू"
+        ],
+        answer: 1
+    },
+
+    {
+        q: "सेन साहब का परिवार किस प्रकार का परिवार था?",
+        options: [
+            "संपन्न",
+            "गरीब",
+            "मजदूर",
+            "किसान"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "गिरधर किसके पिता हैं?",
+        options: [
+            "मदन",
+            "खोखा",
+            "सेन साहब",
+            "अखबारनवीस"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "सेन साहब के पुत्र को घर में विशेष महत्व क्यों मिलता था?",
+        options: [
+            "वह उनका इकलौता पुत्र था",
+            "वह शिक्षक था",
+            "वह सैनिक था",
+            "वह सबसे बड़ा था"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में ‘अखबारनवीस’ किसे कहा गया है?",
+        options: [
+            "पत्रकार",
+            "डाकिया",
+            "दुकानदार",
+            "शिक्षक"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘अखबारनवीस’ शब्द का संबंध किससे है?",
+        options: [
+            "समाचार-पत्र",
+            "कृषि",
+            "व्यापार",
+            "चिकित्सा"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में दो बच्चों के संघर्ष के पीछे कौन-सा सामाजिक अंतर दिखाई देता है?",
+        options: [
+            "वर्गीय अंतर",
+            "भाषाई अंतर",
+            "क्षेत्रीय अंतर",
+            "धार्मिक अंतर"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ शीर्षक किस भाव की ओर संकेत करता है?",
+        options: [
+            "अहंकार और शक्ति",
+            "प्रकृति",
+            "भक्ति",
+            "प्रेम"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में सेन साहब किस वर्ग का प्रतिनिधित्व करते हैं?",
+        options: [
+            "संपन्न वर्ग",
+            "मजदूर वर्ग",
+            "किसान वर्ग",
+            "अत्यंत गरीब वर्ग"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "मदन किस सामाजिक वर्ग के परिवार से संबंधित है?",
+        options: [
+            "निम्न-मध्य वर्ग",
+            "उच्च वर्ग",
+            "राजघराना",
+            "सामंती वर्ग"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में बच्चों का संघर्ष किस बड़ी समस्या की ओर संकेत करता है?",
+        options: [
+            "सामाजिक असमानता",
+            "जलवायु परिवर्तन",
+            "शिक्षा की कमी",
+            "कृषि समस्या"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "सेन साहब अपने पुत्र के प्रति कैसा व्यवहार करते थे?",
+        options: [
+            "लाड़-प्यार वाला",
+            "उपेक्षापूर्ण",
+            "बहुत कठोर",
+            "उदासीन"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में संपन्न परिवार की पहचान किस वस्तु से भी होती है?",
+        options: [
+            "कार",
+            "हल",
+            "बैलगाड़ी",
+            "कुदाल"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "मदन और खोखा के संघर्ष में कौन-सा तत्व प्रमुख है?",
+        options: [
+            "सामाजिक शक्ति का अंतर",
+            "प्रकृति",
+            "धर्म",
+            "भाषा"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ कहानी किस प्रकार की चेतना उत्पन्न करती है?",
+        options: [
+            "सामाजिक चेतना",
+            "वैज्ञानिक चेतना",
+            "भौगोलिक चेतना",
+            "खगोलीय चेतना"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में किस मानसिकता पर प्रश्न उठाया गया है?",
+        options: [
+            "वर्गीय श्रेष्ठता की मानसिकता",
+            "शिक्षा की मानसिकता",
+            "खेल की मानसिकता",
+            "यात्रा की मानसिकता"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी का सामाजिक यथार्थ किसके माध्यम से सामने आता है?",
+        options: [
+            "पात्रों और उनके व्यवहार से",
+            "प्रकृति-वर्णन से",
+            "यात्रा-वर्णन से",
+            "ऐतिहासिक वर्णन से"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "नलिन विलोचन शर्मा हिंदी साहित्य में किस प्रवृत्ति से जुड़े हैं?",
+        options: [
+            "प्रयोगवाद",
+            "भक्तिकाल",
+            "रीतिकाल",
+            "वीरगाथा काल"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "नलिन विलोचन शर्मा का जन्म किस वर्ष हुआ था?",
+        options: [
+            "1910",
+            "1916",
+            "1925",
+            "1930"
+        ],
+        answer: 1
+    },
+
+    {
+        q: "नलिन विलोचन शर्मा का जन्म कहाँ हुआ था?",
+        options: [
+            "पटना",
+            "दिल्ली",
+            "लखनऊ",
+            "वाराणसी"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में अमीर और गरीब के अंतर को किसके माध्यम से दिखाया गया है?",
+        options: [
+            "दो परिवारों के माध्यम से",
+            "दो विद्यालयों के माध्यम से",
+            "दो शहरों के माध्यम से",
+            "दो देशों के माध्यम से"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में बच्चों के खेल का परिणाम क्या होता है?",
+        options: [
+            "विवाद और संघर्ष",
+            "मित्रता",
+            "परीक्षा",
+            "यात्रा"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "मदन के व्यवहार में कौन-सी विशेषता दिखाई देती है?",
+        options: [
+            "प्रतिरोध",
+            "कायरता",
+            "आलस्य",
+            "उदासीनता"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में सेन साहब की संपन्नता का एक संकेत क्या है?",
+        options: [
+            "कार",
+            "खेती",
+            "झोपड़ी",
+            "दुकान"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में सामाजिक प्रतिष्ठा किस पात्र से अधिक जुड़ी दिखाई देती है?",
+        options: [
+            "सेन साहब",
+            "मदन",
+            "गिरधर",
+            "काशू"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ में व्यंग्य मुख्यतः किस पर है?",
+        options: [
+            "सामाजिक अहंकार",
+            "प्रकृति",
+            "शिक्षा",
+            "खेल"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में वर्गीय अहंकार किसके माध्यम से स्पष्ट होता है?",
+        options: [
+            "सेन साहब के व्यवहार से",
+            "मदन की पढ़ाई से",
+            "प्रकृति-वर्णन से",
+            "यात्रा से"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी का प्रमुख संदेश किससे संबंधित है?",
+        options: [
+            "सामाजिक समानता",
+            "धन-संग्रह",
+            "युद्ध",
+            "प्रकृति-पूजा"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में वर्गीय अंतर किस प्रकार की समस्या पैदा करता है?",
+        options: [
+            "भेदभाव और तनाव",
+            "मित्रता",
+            "समानता",
+            "सहयोग"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ शीर्षक का संबंध किस प्रतीक से माना जा सकता है?",
+        options: [
+            "शोषण और अहंकार",
+            "फूल",
+            "पानी",
+            "सूर्य"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में मदन किस प्रकार की सामाजिक स्थिति में है?",
+        options: [
+            "कम संपन्न परिवार",
+            "बहुत संपन्न परिवार",
+            "राजपरिवार",
+            "सामंत परिवार"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "खोखा किस परिवार का बच्चा है?",
+        options: [
+            "सेन साहब के परिवार का",
+            "गिरधर के परिवार का",
+            "पत्रकार के परिवार का",
+            "शिक्षक के परिवार का"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "मदन किसके साथ संघर्ष करता है?",
+        options: [
+            "खोखा",
+            "गिरधर",
+            "अखबारनवीस",
+            "सेन साहब"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में बच्चों का संघर्ष किसका छोटा रूप दिखाई देता है?",
+        options: [
+            "सामाजिक वर्ग-संघर्ष",
+            "देशों का संघर्ष",
+            "धार्मिक संघर्ष",
+            "भाषाई संघर्ष"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में लेखक ने किस प्रकार की सामाजिक व्यवस्था पर सवाल उठाया है?",
+        options: [
+            "ऊँच-नीच वाली व्यवस्था",
+            "शिक्षा व्यवस्था",
+            "कृषि व्यवस्था",
+            "परिवहन व्यवस्था"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ कहानी में कौन-सा तत्व प्रमुख है?",
+        options: [
+            "सामाजिक यथार्थ",
+            "काल्पनिक विज्ञान",
+            "पौराणिक कथा",
+            "ऐतिहासिक युद्ध"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में संपन्नता के साथ कौन-सी मानसिकता जुड़ी दिखाई देती है?",
+        options: [
+            "श्रेष्ठता का अहंकार",
+            "सादगी",
+            "त्याग",
+            "समानता"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी में गरीब या कम संपन्न वर्ग के प्रति कैसा सामाजिक व्यवहार दिखाया गया है?",
+        options: [
+            "भेदभावपूर्ण",
+            "समान",
+            "सम्मानपूर्ण",
+            "सहयोगपूर्ण"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ कहानी पाठक को किस बात पर विचार करने के लिए प्रेरित करती है?",
+        options: [
+            "सामाजिक असमानता",
+            "केवल खेल",
+            "केवल शिक्षा",
+            "केवल प्रकृति"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी के माध्यम से लेखक किस भावना को महत्व देता दिखाई देता है?",
+        options: [
+            "मानवीय समानता",
+            "अहंकार",
+            "भेदभाव",
+            "शोषण"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ कहानी में बच्चों का संघर्ष किस बात को उजागर करता है?",
+        options: [
+            "बड़े सामाजिक अंतर को",
+            "मौसम को",
+            "कृषि को",
+            "भाषा को"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "कहानी का शीर्षक पाठ की सामाजिक समस्या को किस रूप में प्रस्तुत करता है?",
+        options: [
+            "प्रतीकात्मक रूप में",
+            "वैज्ञानिक रूप में",
+            "ऐतिहासिक रूप में",
+            "भौगोलिक रूप में"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "‘विष के दाँत’ से जुड़े प्रश्नों में मुख्य रूप से किस विषय पर ध्यान दिया जाता है?",
+        options: [
+            "पात्र, घटना और सामाजिक संदेश",
+            "केवल प्रकृति",
+            "केवल भूगोल",
+            "केवल गणित"
+        ],
+        answer: 0
+    },
+
+    {
+        q: "इस कहानी का अध्ययन किस सामाजिक मूल्य को समझने में मदद करता है?",
+        options: [
+            "समानता और मानवीय सम्मान",
+            "भेदभाव",
+            "अहंकार",
+            "ऊँच-नीच"
+        ],
+        answer: 0
+    }
+
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+
+function showQuestion() {
+
+    answered = false;
+
+    const quiz = document.getElementById("quiz");
+    const q = questions[currentQuestion];
+
+    quiz.innerHTML = `
+
+        <div class="progress">
+            प्रश्न ${currentQuestion + 1} / ${questions.length}
+        </div>
+
+        <div class="question-box">
+
+            <div class="question">
+                ${q.q}
+            </div>
+
+            ${q.options.map((option, index) => `
+                <button
+                    class="option"
+                    onclick="selectAnswer(${index})">
+                    ${String.fromCharCode(65 + index)}. ${option}
+                </button>
+            `).join("")}
+
+            <button
+                id="nextBtn"
+                class="next-btn"
+                style="display:none;"
+                onclick="nextQuestion()">
+                अगला प्रश्न ➡️
+            </button>
+
+        </div>
+    `;
+}
+
+
+function selectAnswer(selected) {
+
+    if (answered) return;
+
+    answered = true;
+
+    const q = questions[currentQuestion];
+
+    const buttons = document.querySelectorAll(".option");
+
+    buttons.forEach((button, index) => {
+
+        button.disabled = true;
+
+        if (index === q.answer) {
+            button.classList.add("correct");
+        }
+
+        if (index === selected && selected !== q.answer) {
+            button.classList.add("wrong");
+        }
+
+    });
+
+    if (selected === q.answer) {
+        score++;
+    }
+
+    document.getElementById("nextBtn").style.display = "block";
+}
+
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+
+        showQuestion();
+
+    } else {
+
+        showResult();
+
+    }
+}
+
+
+function showResult() {
+
+    const quiz = document.getElementById("quiz");
+
+    let message;
+
+    if (score >= 45) {
+        message = "🏆 शानदार प्रदर्शन!";
+    } else if (score >= 35) {
+        message = "🎉 बहुत अच्छा!";
+    } else if (score >= 25) {
+        message = "👍 अच्छा प्रयास!";
+    } else {
+        message = "📚 और अभ्यास करें!";
+    }
+
+    quiz.innerHTML = `
+
+        <div class="result">
+
+            <h2>🎊 Test Complete 🎊</h2>
+
+            <p class="score">
+                ${score} / ${questions.length}
+            </p>
+
+            <h3>${message}</h3>
+
+            <p>
+                आपने Hindi Chapter 2 के सभी 50 MCQ पूरे कर लिए हैं।
+            </p>
+
+            <button
+                class="restart-btn"
+                onclick="restartQuiz()">
+                🔄 Test फिर से दें
+            </button>
+
+        </div>
+    `;
+}
+
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+    score = 0;
+
+    showQuestion();
+}
+
+
+showQuestion();
+
+</script>
+
+</body>
+</html>
