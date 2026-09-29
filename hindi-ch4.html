@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>नाखून क्यों बढ़ते हैं - U.K.P NO1 Education</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:linear-gradient(135deg,#fff5f7,#eef7ff,#f5efff);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:25px 15px;
+    background:linear-gradient(135deg,#6a1b9a,#3949ab);
+    color:white;
+    border-radius:0 0 30px 30px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+}
+
+header h1{
+    margin:10px 0;
+    font-size:27px;
+}
+
+header p{
+    margin:6px 0;
+}
+
+.container{
+    max-width:750px;
+    margin:30px auto;
+    padding:15px;
+}
+
+.title{
+    text-align:center;
+    color:#6a1b9a;
+}
+
+.total{
+    text-align:center;
+    color:#666;
+}
+
+.quiz{
+    background:white;
+    padding:25px;
+    border-radius:22px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+    margin-top:20px;
+}
+
+.qno{
+    color:#6a1b9a;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.question{
+    font-size:20px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.option{
+    width:100%;
+    display:block;
+    padding:14px;
+    margin:10px 0;
+    border:2px solid #ddd;
+    border-radius:13px;
+    background:#fafafa;
+    font-size:17px;
+    text-align:left;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#f0e7ff;
+    border-color:#7b1fa2;
+}
+
+.correct{
+    background:#d9f7df !important;
+    border-color:#2e7d32 !important;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+.wrong{
+    background:#ffe0e0 !important;
+    border-color:#c62828 !important;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+.next{
+    width:100%;
+    border:0;
+    padding:14px;
+    margin-top:15px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#7b1fa2,#3949ab);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.result{
+    display:none;
+    text-align:center;
+}
+
+.result h2{
+    color:#6a1b9a;
+}
+
+.score{
+    font-size:25px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.restart{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:13px;
+    background:#6a1b9a;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.back{
+    text-align:center;
+    margin:30px;
+}
+
+.back a{
+    display:inline-block;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:12px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:600px){
+    .question{
+        font-size:18px;
+    }
+
+    .option{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="assets/logo.png" class="logo" alt="U.K.P NO1 Education">
+
+<h1>📘 नाखून क्यों बढ़ते हैं</h1>
+
+<p>Class 10 Bihar Board • Hindi Chapter 4</p>
+
+<p>🌟 पढ़ें • सीखें • आगे बढ़ें 🚀</p>
+
+</header>
+
+
+<div class="container">
+
+<h2 class="title">📝 Chapter 4 MCQ Test</h2>
+
+<p class="total">कुल 50 महत्वपूर्ण प्रश्न</p>
+
+
+<div class="quiz" id="quiz">
+
+<div id="questionBox">
+
+<div class="qno" id="qno"></div>
+
+<div class="question" id="question"></div>
+
+<div id="options"></div>
+
+<button class="next" id="nextBtn" style="display:none;">
+अगला प्रश्न ➡️
+</button>
+
+</div>
+
+
+<div class="result" id="result">
+
+<h2>🎉 Test Complete!</h2>
+
+<div class="score" id="score"></div>
+
+<p id="message"></p>
+
+<button class="restart" id="restartBtn">
+🔄 फिर से Test दें
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="back">
+
+<a href="hindi.html">
+📚 वापस Hindi Chapters पर जाएँ
+</a>
+
+</div>
+
+
+<footer>
+© 2026 U.K.P NO1 Education
+</footer>
+
+
+<script>
+
+/* =========================
+   CHAPTER 4 QUESTIONS
+========================= */
+
+const questions = [
+
+{
+q:"‘नाखून क्यों बढ़ते हैं’ पाठ के लेखक कौन हैं?",
+o:["हजारी प्रसाद द्विवेदी","प्रेमचंद","रामधारी सिंह दिनकर","महादेवी वर्मा"],
+a:0
+},
+
+{
+q:"‘नाखून क्यों बढ़ते हैं’ किस प्रकार की रचना है?",
+o:["निबंध","कविता","नाटक","कहानी"],
+a:0
+},
+
+{
+q:"पाठ में नाखून किसका प्रतीक माने गए हैं?",
+o:["मनुष्य की आदिम प्रवृत्तियों का","धन का","शिक्षा का","प्रकृति का"],
+a:0
+},
+
+{
+q:"नाखून किस प्रकार की प्रवृत्ति की ओर संकेत करते हैं?",
+o:["पशुता की","संगीत की","व्यापार की","कला की"],
+a:0
+},
+
+{
+q:"मनुष्य नाखूनों को क्यों काटता है?",
+o:["सभ्य और व्यवस्थित जीवन के कारण","धन बचाने के लिए","खेलने के लिए","पढ़ाई के लिए"],
+a:0
+},
+
+{
+q:"लेखक ने नाखूनों को किससे जोड़ा है?",
+o:["आदिम पशु-संस्कारों से","आधुनिक मशीनों से","खेती से","संगीत से"],
+a:0
+},
+
+{
+q:"नाखूनों का बढ़ना किस बात का संकेत है?",
+o:["प्राकृतिक प्रवृत्ति का","धन बढ़ने का","ज्ञान बढ़ने का","आयु बढ़ने का"],
+a:0
+},
+
+{
+q:"मनुष्य के भीतर किन प्रवृत्तियों का संघर्ष दिखाई देता है?",
+o:["सभ्यता और पशुता","धन और गरीबी","गाँव और शहर","दिन और रात"],
+a:0
+},
+
+{
+q:"मनुष्य की सभ्यता किस दिशा में बढ़ती है?",
+o:["पशुता से ऊपर उठने की दिशा में","पशुता की ओर","अज्ञान की ओर","आलस्य की ओर"],
+a:0
+},
+
+{
+q:"नाखून काटना किसका प्रतीक माना जा सकता है?",
+o:["सभ्यता और आत्मसंयम का","आलस्य का","अज्ञान का","क्रोध का"],
+a:0
+},
+
+{
+q:"हजारी प्रसाद द्विवेदी किस भाषा के प्रसिद्ध लेखक हैं?",
+o:["हिंदी","अंग्रेजी","फ्रेंच","उर्दू"],
+a:0
+},
+
+{
+q:"नाखून बढ़ने की प्रक्रिया कैसी है?",
+o:["स्वाभाविक","कृत्रिम","असामान्य","मानव द्वारा बनाई हुई"],
+a:0
+},
+
+{
+q:"लेखक नाखूनों के माध्यम से किस विषय पर विचार करता है?",
+o:["मनुष्य की सभ्यता और आदिम प्रवृत्तियों पर","कृषि पर","व्यापार पर","यात्रा पर"],
+a:0
+},
+
+{
+q:"सभ्य होने के लिए मनुष्य को किन प्रवृत्तियों पर नियंत्रण रखना चाहिए?",
+o:["आदिम और हिंसक प्रवृत्तियों पर","ज्ञान पर","प्रेम पर","परिश्रम पर"],
+a:0
+},
+
+{
+q:"पाठ का मुख्य विषय क्या है?",
+o:["मानव सभ्यता और पशुता का संबंध","नाखूनों की चिकित्सा","पेड़-पौधों का वर्णन","यात्रा-वर्णन"],
+a:0
+},
+
+{
+q:"नाखून मनुष्य को किसकी याद दिलाते हैं?",
+o:["उसके आदिम अतीत की","उसकी नौकरी की","उसके विद्यालय की","उसके धन की"],
+a:0
+},
+
+{
+q:"सभ्यता के संदर्भ में आत्मसंयम का क्या महत्व है?",
+o:["यह मनुष्य को अपनी अनुचित प्रवृत्तियों पर नियंत्रण करने में सहायता करता है","इसका कोई महत्व नहीं","यह हिंसा बढ़ाता है","यह आलस्य बढ़ाता है"],
+a:0
+},
+
+{
+q:"पशुता का संबंध किससे है?",
+o:["आदिम और असंयमित प्रवृत्तियों से","ज्ञान से","शिक्षा से","सदाचार से"],
+a:0
+},
+
+{
+q:"मनुष्य को पशुता से ऊपर उठाने में क्या सहायक है?",
+o:["विवेक और आत्मसंयम","क्रोध","हिंसा","आलस्य"],
+a:0
+},
+
+{
+q:"पाठ में लेखक ने किस छोटी वस्तु को विचार का माध्यम बनाया है?",
+o:["नाखून","कलम","जूता","किताब"],
+a:0
+},
+
+{
+q:"नाखून काटने की आदत किस भावना से जुड़ी है?",
+o:["स्वच्छता और सभ्यता","हिंसा","अज्ञान","आलस्य"],
+a:0
+},
+
+{
+q:"लेखक की दृष्टि में मनुष्य का विकास किस दिशा में होना चाहिए?",
+o:["मानवीयता की ओर","पशुता की ओर","हिंसा की ओर","असंयम की ओर"],
+a:0
+},
+
+{
+q:"पाठ में नाखून किस बात की याद दिलाते हैं?",
+o:["आदिम संस्कारों की","धन की","नौकरी की","घर की"],
+a:0
+},
+
+{
+q:"‘नाखून क्यों बढ़ते हैं’ शीर्षक किस प्रकार का है?",
+o:["प्रश्नवाचक","आज्ञावाचक","विस्मयादिबोधक","निषेधवाचक"],
+a:0
+},
+
+{
+q:"शीर्षक किस जिज्ञासा को व्यक्त करता है?",
+o:["नाखूनों के बढ़ने की जिज्ञासा","पेड़ों के बढ़ने की जिज्ञासा","नदियों के बहने की जिज्ञासा","बादलों के बनने की जिज्ञासा"],
+a:0
+},
+
+{
+q:"लेखक ने साधारण विषय को किस रूप में प्रस्तुत किया है?",
+o:["गंभीर चिंतन के रूप में","समाचार के रूप में","विज्ञापन के रूप में","खेल के रूप में"],
+a:0
+},
+
+{
+q:"पाठ से मनुष्य को क्या सीख मिलती है?",
+o:["अपनी आदिम प्रवृत्तियों पर नियंत्रण रखना चाहिए","हिंसा करनी चाहिए","आलस्य करना चाहिए","क्रोध बढ़ाना चाहिए"],
+a:0
+},
+
+{
+q:"सभ्यता के विकास में किसकी आवश्यकता होती है?",
+o:["आत्मसंयम","हिंसा","क्रोध","असंयम"],
+a:0
+},
+
+{
+q:"नाखूनों का बढ़ना किस प्रकार की प्रक्रिया है?",
+o:["जैविक प्रक्रिया","राजनीतिक प्रक्रिया","आर्थिक प्रक्रिया","सामाजिक प्रक्रिया"],
+a:0
+},
+
+{
+q:"पाठ का चिंतन मुख्यतः किसके बारे में है?",
+o:["मानव स्वभाव","मौसम","खेती","व्यापार"],
+a:0
+},
+
+{
+q:"मानव सभ्यता का संबंध किससे है?",
+o:["संयम और संस्कार से","हिंसा से","क्रोध से","असंयम से"],
+a:0
+},
+
+{
+q:"लेखक ने नाखूनों को किस प्रकार की स्मृति से जोड़ा है?",
+o:["आदिम जीवन की स्मृति","आधुनिक तकनीक की स्मृति","विद्यालय की स्मृति","यात्रा की स्मृति"],
+a:0
+},
+
+{
+q:"मनुष्य और पशु में महत्वपूर्ण अंतर क्या है?",
+o:["मनुष्य अपनी प्रवृत्तियों पर नियंत्रण कर सकता है","मनुष्य के नाखून नहीं होते","पशु पढ़ सकते हैं","मनुष्य प्रकृति से अलग है"],
+a:0
+},
+
+{
+q:"‘आदिम’ शब्द का संबंध किससे है?",
+o:["प्राचीन और प्रारंभिक अवस्था से","आधुनिक अवस्था से","भविष्य से","विज्ञान से"],
+a:0
+},
+
+{
+q:"लेखक का उद्देश्य केवल नाखूनों की जानकारी देना है?",
+o:["नहीं, मानव सभ्यता पर विचार करना भी है","हाँ","केवल चिकित्सा बताना है","केवल इतिहास बताना है"],
+a:0
+},
+
+{
+q:"नाखूनों का बढ़ना मनुष्य के किस पक्ष से जुड़ा है?",
+o:["प्राकृतिक पक्ष से","आर्थिक पक्ष से","राजनीतिक पक्ष से","सामाजिक पद से"],
+a:0
+},
+
+{
+q:"सभ्य मनुष्य नाखूनों के साथ क्या करता है?",
+o:["उन्हें काटकर व्यवस्थित रखता है","उन्हें बहुत लंबा रखता है","उन्हें बढ़ने देता है","उन्हें छिपाता है"],
+a:0
+},
+
+{
+q:"पाठ में नाखून किस प्रकार के प्रतीक के रूप में सामने आते हैं?",
+o:["आदिम पशु-प्रवृत्ति के","धन के","शिक्षा के","सौंदर्य के"],
+a:0
+},
+
+{
+q:"हजारी प्रसाद द्विवेदी की लेखन शैली की विशेषता क्या है?",
+o:["गंभीर विषय को रोचक ढंग से प्रस्तुत करना","केवल कठिन शब्दों का प्रयोग","केवल संवाद लिखना","केवल कविता लिखना"],
+a:0
+},
+
+{
+q:"नाखून जैसे छोटे विषय को लेखक किस बड़े विषय से जोड़ते हैं?",
+o:["मानव सभ्यता के विकास से","धन के विकास से","व्यापार से","मशीनों से"],
+a:0
+},
+
+{
+q:"मनुष्य की श्रेष्ठता किससे प्रकट होती है?",
+o:["विवेक और आत्मसंयम से","हिंसा से","क्रोध से","शारीरिक शक्ति से"],
+a:0
+},
+
+{
+q:"पाठ हमें अपनी किन प्रवृत्तियों को पहचानने की प्रेरणा देता है?",
+o:["आदिम और मानवीय प्रवृत्तियों को","केवल आर्थिक प्रवृत्तियों को","केवल राजनीतिक प्रवृत्तियों को","केवल मनोरंजन की प्रवृत्तियों को"],
+a:0
+},
+
+{
+q:"सभ्य मनुष्य का व्यवहार कैसा होना चाहिए?",
+o:["संयमित और मानवीय","हिंसक","क्रोधित","असंयमित"],
+a:0
+},
+
+{
+q:"यह पाठ किस प्रकार की सोच विकसित करता है?",
+o:["चिंतनशील सोच","अंधविश्वास","आलस्य","हिंसा"],
+a:0
+},
+
+{
+q:"पाठ में प्राकृतिक प्रवृत्तियों को संस्कृति किस प्रकार प्रभावित करती है?",
+o:["संस्कृति उन्हें नियंत्रित और परिष्कृत करती है","संस्कृति उन्हें बढ़ाती है","संस्कृति उन्हें समाप्त कर देती है","दोनों का कोई संबंध नहीं"],
+a:0
+},
+
+{
+q:"नाखून काटना किस मानवीय गुण से जोड़ा जा सकता है?",
+o:["व्यवस्था और आत्मनियंत्रण","क्रोध","हिंसा","आलस्य"],
+a:0
+},
+
+{
+q:"पाठ का संदेश किस बात पर बल देता है?",
+o:["मानवता और सभ्यता के विकास पर","हिंसा पर","पशुता अपनाने पर","आलस्य पर"],
+a:0
+},
+
+{
+q:"लेखक ने नाखूनों जैसे छोटे विषय से क्या सिद्ध किया है?",
+o:["छोटी चीज भी बड़े चिंतन का आधार बन सकती है","नाखून सबसे महत्वपूर्ण वस्तु हैं","केवल विज्ञान महत्वपूर्ण है","सिर्फ मनोरंजन आवश्यक है"],
+a:0
+},
+
+{
+q:"मनुष्य को अपनी पशु-प्रवृत्तियों के साथ क्या करना चाहिए?",
+o:["उन पर विवेकपूर्ण नियंत्रण रखना चाहिए","उन्हें बढ़ाना चाहिए","उन्हें प्रोत्साहित करना चाहिए","उन्हें अपनाना चाहिए"],
+a:0
+},
+
+{
+q:"‘नाखून क्यों बढ़ते हैं’ पाठ का केंद्रीय विचार क्या है?",
+o:["नाखूनों के माध्यम से मानव सभ्यता और आदिम प्रवृत्तियों पर चिंतन","नाखूनों की सजावट","नाखूनों की चिकित्सा","नाखूनों का व्यापार"],
+a:0
+},
+
+{
+q:"इस पाठ से विद्यार्थी को कौन-सा मूल्य सीखना चाहिए?",
+o:["आत्मसंयम और मानवीयता","हिंसा","अहंकार","आलस्य"],
+a:0
+},
+
+{
+q:"पाठ का अध्ययन किसके लिए उपयोगी है?",
+o:["मानव स्वभाव और सभ्यता पर विचार करने के लिए","केवल नाखून काटने के लिए","केवल खेल के लिए","केवल गणित के लिए"],
+a:0
+}
+
+];
+
+
+/* =========================
+   QUIZ SYSTEM
+========================= */
+
+let current = 0;
+let score = 0;
+let answered = false;
+
+const qno = document.getElementById("qno");
+const question = document.getElementById("question");
+const options = document.getElementById("options");
+const nextBtn = document.getElementById("nextBtn");
+const questionBox = document.getElementById("questionBox");
+const result = document.getElementById("result");
+const scoreText = document.getElementById("score");
+const message = document.getElementById("message");
+const restartBtn = document.getElementById("restartBtn");
+
+
+function showQuestion(){
+
+    answered = false;
+
+    const item = questions[current];
+
+    qno.textContent =
+        "प्रश्न " + (current + 1) + " / " + questions.length;
+
+    question.textContent = item.q;
+
+    options.innerHTML = "";
+
+    item.o.forEach(function(optionText,index){
+
+        const button = document.createElement("button");
+
+        button.className = "option";
+
+        button.textContent =
+            String.fromCharCode(65 + index) +
+            ". " +
+            optionText;
+
+        button.addEventListener("click",function(){
+
+            selectAnswer(index,button);
+
+        });
+
+        options.appendChild(button);
+
+    });
+
+    nextBtn.style.display = "none";
+}
+
+
+function selectAnswer(selected,selectedButton){
+
+    if(answered){
+        return;
+    }
+
+    answered = true;
+
+    const correct = questions[current].a;
+
+    const buttons =
+        document.querySelectorAll(".option");
+
+    buttons.forEach(function(button,index){
+
+        button.disabled = true;
+
+        if(index === correct){
+
+            button.classList.add("correct");
+
+        }
+
+    });
+
+
+    if(selected === correct){
+
+        score++;
+
+    }else{
+
+        selectedButton.classList.add("wrong");
+
+    }
+
+    nextBtn.style.display = "block";
+}
+
+
+nextBtn.addEventListener("click",function(){
+
+    current++;
+
+    if(current < questions.length){
+
+        showQuestion();
+
+    }else{
+
+        showResult();
+
+    }
+
+});
+
+
+function showResult(){
+
+    questionBox.style.display = "none";
+
+    result.style.display = "block";
+
+    scoreText.textContent =
+        "आपका Score: " + score + " / " + questions.length;
+
+    const percentage =
+        (score / questions.length) * 100;
+
+    if(percentage >= 90){
+
+        message.textContent =
+            "🏆 शानदार! आपकी तैयारी बहुत अच्छी है।";
+
+    }else if(percentage >= 75){
+
+        message.textContent =
+            "🥈 बहुत बढ़िया! थोड़ा और अभ्यास करें।";
+
+    }else if(percentage >= 60){
+
+        message.textContent =
+            "🥉 अच्छा प्रयास! अध्याय को एक बार फिर पढ़ें।";
+
+    }else{
+
+        message.textContent =
+            "📚 अभ्यास जारी रखें। आप अगली बार बेहतर कर सकते हैं!";
+
+    }
+
+}
+
+
+restartBtn.addEventListener("click",function(){
+
+    current = 0;
+
+    score = 0;
+
+    questionBox.style.display = "block";
+
+    result.style.display = "none";
+
+    showQuestion();
+
+});
+
+
+/* START QUIZ */
+showQuestion();
+
+</script>
+
+</body>
+  </html>
