@@ -1,1 +1,706 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>भारत से हम क्या सीखें - MCQ | U.K.P NO1 Education</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:linear-gradient(135deg,#fff1f5,#f4efff,#eef8ff);
+    color:#333;
+}
+
+.header{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.header h1{
+    color:#7b1fa2;
+    font-size:28px;
+    margin:10px 0;
+}
+
+.header p{
+    color:#555;
+    margin:7px;
+}
+
+.quiz-box{
+    max-width:850px;
+    margin:20px auto;
+    padding:25px 20px;
+    background:white;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.10);
+}
+
+.progress{
+    text-align:center;
+    color:#8b0000;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.question{
+    font-size:21px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:2px solid #eee;
+    border-radius:14px;
+    background:#fafafa;
+    font-size:17px;
+    text-align:left;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#f4efff;
+    border-color:#7b1fa2;
+}
+
+.option.correct{
+    background:#dff7e5;
+    border-color:#28a745;
+}
+
+.option.wrong{
+    background:#ffe0e0;
+    border-color:#dc3545;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+.next-btn,
+.restart-btn,
+.home-btn{
+    border:none;
+    padding:13px 22px;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.next-btn{
+    background:#7b1fa2;
+    color:white;
+}
+
+.restart-btn{
+    background:#d35400;
+    color:white;
+}
+
+.home-btn{
+    display:inline-block;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    margin-bottom:25px;
+}
+
+.result{
+    text-align:center;
+    padding:20px;
+}
+
+.result h2{
+    color:#7b1fa2;
+    font-size:28px;
+}
+
+.score{
+    font-size:24px;
+    font-weight:bold;
+    color:#8b0000;
+    margin:20px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+
+@media(max-width:600px){
+    .header h1{
+        font-size:23px;
+    }
+
+    .quiz-box{
+        margin:15px;
+        padding:20px 15px;
+    }
+
+    .question{
+        font-size:18px;
+    }
+
+    .option{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="assets/logo.png"
+         alt="U.K.P NO1 Education Logo"
+         class="logo">
+
+    <h1>📘 भारत से हम क्या सीखें</h1>
+
+    <p><b>Class 10 Bihar Board • Hindi Chapter 3</b></p>
+
+    <p>📝 कुल 50 MCQ</p>
+
+</header>
+
+
+<div class="quiz-box">
+    <div id="quiz"></div>
+</div>
+
+
+<div style="text-align:center;">
+    <a href="hindi.html" class="home-btn">
+        📚 वापस Hindi Chapters पर जाएँ
+    </a>
+</div>
+
+
+<footer>
+    <p>© 2026 U.K.P NO1 Education</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+{
+question:"‘भारत से हम क्या सीखें’ पाठ के लेखक कौन हैं?",
+options:["मैक्समूलर","अमरकांत","प्रेमचंद","हजारी प्रसाद द्विवेदी"],
+answer:0
+},
+
+{
+question:"मैक्समूलर किस देश के विद्वान थे?",
+options:["भारत","जर्मनी","फ्रांस","इटली"],
+answer:1
+},
+
+{
+question:"मैक्समूलर का जन्म कब हुआ था?",
+options:["6 दिसंबर 1823","15 अगस्त 1823","28 अक्टूबर 1823","26 जनवरी 1824"],
+answer:0
+},
+
+{
+question:"मैक्समूलर का जन्म कहाँ हुआ था?",
+options:["डेसाऊ","बर्लिन","लंदन","पेरिस"],
+answer:0
+},
+
+{
+question:"मैक्समूलर की मृत्यु कब हुई थी?",
+options:["28 अक्टूबर 1900","6 दिसंबर 1900","15 अगस्त 1901","26 जनवरी 1900"],
+answer:0
+},
+
+{
+question:"मैक्समूलर के पिता कौन थे?",
+options:["विल्हेम मूलर","विलियम जोन्स","वारेन हेस्टिंग्स","हेकल"],
+answer:0
+},
+
+{
+question:"‘भारत से हम क्या सीखें’ किस विधा की रचना है?",
+options:["भाषण","कहानी","कविता","नाटक"],
+answer:0
+},
+
+{
+question:"मैक्समूलर ने किस भाषा का विशेष अध्ययन किया?",
+options:["संस्कृत","हिंदी","फारसी","अरबी"],
+answer:0
+},
+
+{
+question:"मैक्समूलर भारतीय संस्कृति में किस कारण रुचि रखते थे?",
+options:["प्राचीन ज्ञान के कारण","व्यापार के कारण","खेल के कारण","राजनीति के कारण"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीन ज्ञान-परंपरा को समझने में कौन-सी भाषा महत्वपूर्ण है?",
+options:["संस्कृत","अंग्रेजी","फ्रेंच","जर्मन"],
+answer:0
+},
+
+{
+question:"मैक्समूलर ने भारतीय साहित्य के किस भाग का अध्ययन किया?",
+options:["वेद और उपनिषद","आधुनिक उपन्यास","समाचार पत्र","आधुनिक नाटक"],
+answer:0
+},
+
+{
+question:"‘कठ’ और ‘केन’ किससे संबंधित हैं?",
+options:["उपनिषद","महाकाव्य","नाटक","कहानी"],
+answer:0
+},
+
+{
+question:"भारत की वास्तविक तस्वीर कहाँ अधिक दिखाई देती है?",
+options:["गाँवों में","केवल महानगरों में","विदेशों में","राजमहलों में"],
+answer:0
+},
+
+{
+question:"‘भारत’ को समझने के लिए किसका अध्ययन आवश्यक है?",
+options:["भारतीय संस्कृति","केवल आधुनिक तकनीक","केवल खेल","केवल व्यापार"],
+answer:0
+},
+
+{
+question:"नृवंश विद्या का संबंध किसके अध्ययन से है?",
+options:["मानव जातियों","पौधों","नदियों","तारों"],
+answer:0
+},
+
+{
+question:"पाठ में भारत की किस विशेषता पर जोर दिया गया है?",
+options:["प्राचीन ज्ञान और संस्कृति","केवल उद्योग","केवल व्यापार","केवल खेल"],
+answer:0
+},
+
+{
+question:"मैक्समूलर का भारत के प्रति दृष्टिकोण कैसा था?",
+options:["सम्मानपूर्ण","उपेक्षापूर्ण","घृणापूर्ण","उदासीन"],
+answer:0
+},
+
+{
+question:"भारत की संस्कृति को समझने का महत्वपूर्ण साधन क्या है?",
+options:["प्राचीन साहित्य","केवल आधुनिक फिल्में","केवल समाचार","केवल खेल"],
+answer:0
+},
+
+{
+question:"भारत के गाँव किसका प्रतिनिधित्व करते हैं?",
+options:["भारतीय जनजीवन का","केवल आधुनिक जीवन का","विदेशी जीवन का","औद्योगिक जीवन का"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीन संस्कृति का प्रमुख आधार क्या है?",
+options:["ज्ञान और साहित्य","केवल उद्योग","केवल व्यापार","केवल राजनीति"],
+answer:0
+},
+
+{
+question:"वेद किसकी प्राचीन ज्ञान-परंपरा से जुड़े हैं?",
+options:["भारत","जर्मनी","फ्रांस","इटली"],
+answer:0
+},
+
+{
+question:"उपनिषद मुख्य रूप से किससे जुड़े हैं?",
+options:["दर्शन और आध्यात्मिक चिंतन","खेल","व्यापार","युद्ध"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीनता किसमें दिखाई देती है?",
+options:["प्राचीन साहित्य और संस्कृति में","केवल आधुनिक भवनों में","केवल उद्योगों में","केवल खेलों में"],
+answer:0
+},
+
+{
+question:"भारत के प्रति मैक्समूलर की रुचि किस प्रकार की थी?",
+options:["विद्वत्तापूर्ण","व्यापारिक","सैनिक","राजनीतिक"],
+answer:0
+},
+
+{
+question:"मैक्समूलर किस क्षेत्र के प्रसिद्ध विद्वान माने जाते हैं?",
+options:["प्राच्यविद्या","चिकित्सा","अभियांत्रिकी","कृषि"],
+answer:0
+},
+
+{
+question:"भारत की संस्कृति को जानने के लिए किसका अध्ययन उपयोगी है?",
+options:["संस्कृत ग्रंथों का","केवल आधुनिक पत्रिकाओं का","केवल विज्ञापनों का","केवल खेल पुस्तकों का"],
+answer:0
+},
+
+{
+question:"भारत की ज्ञान-परंपरा में किसका विशेष महत्व है?",
+options:["वेद और उपनिषद","केवल समाचार पत्र","केवल उपन्यास","केवल आधुनिक पुस्तकें"],
+answer:0
+},
+
+{
+question:"पाठ का मुख्य विषय क्या है?",
+options:["भारत की ज्ञान और संस्कृति","आधुनिक खेल","व्यापार","उद्योग"],
+answer:0
+},
+
+{
+question:"भारत को समझने के लिए किस दृष्टि की आवश्यकता है?",
+options:["जिज्ञासु दृष्टि","उपेक्षापूर्ण दृष्टि","आलसी दृष्टि","भय की दृष्टि"],
+answer:0
+},
+
+{
+question:"भारत की सांस्कृतिक विरासत कैसी है?",
+options:["समृद्ध","बहुत छोटी","अज्ञात","नवीन"],
+answer:0
+},
+
+{
+question:"भारत के अध्ययन से क्या समझने में सहायता मिलती है?",
+options:["भारतीय संस्कृति","केवल खेल","केवल व्यापार","केवल तकनीक"],
+answer:0
+},
+
+{
+question:"मैक्समूलर ने भारत की किस विरासत को महत्व दिया?",
+options:["वैदिक ज्ञान","केवल आधुनिक उद्योग","केवल आधुनिक खेल","केवल व्यापार"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीन ज्ञान-परंपरा का अध्ययन किसके लिए उपयोगी है?",
+options:["विद्यार्थियों और विद्वानों के लिए","केवल खिलाड़ियों के लिए","केवल व्यापारियों के लिए","केवल सैनिकों के लिए"],
+answer:0
+},
+
+{
+question:"पाठ में भारत को किस दृष्टि से देखने की प्रेरणा मिलती है?",
+options:["ज्ञान और संस्कृति की दृष्टि से","केवल आर्थिक दृष्टि से","केवल राजनीतिक दृष्टि से","केवल खेल की दृष्टि से"],
+answer:0
+},
+
+{
+question:"भारतीय संस्कृति की जड़ों को समझने के लिए क्या पढ़ना चाहिए?",
+options:["प्राचीन ग्रंथ","केवल आधुनिक समाचार","केवल विज्ञापन","केवल फिल्में"],
+answer:0
+},
+
+{
+question:"मैक्समूलर ने किस भारतीय भाषा के महत्व को समझा?",
+options:["संस्कृत","हिंदी","बंगला","मराठी"],
+answer:0
+},
+
+{
+question:"भारत के गाँवों में किसकी झलक मिलती है?",
+options:["भारतीय जीवन की","केवल विदेशी जीवन की","केवल औद्योगिक जीवन की","केवल राजसी जीवन की"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीन परंपरा किससे समृद्ध हुई?",
+options:["ज्ञान और चिंतन से","केवल व्यापार से","केवल युद्ध से","केवल उद्योग से"],
+answer:0
+},
+
+{
+question:"पाठ में भारत की ओर आकर्षित होने वाले विद्वानों का कारण क्या था?",
+options:["भारत का प्राचीन ज्ञान","भारत के आधुनिक खेल","भारत का उद्योग","भारत का व्यापार"],
+answer:0
+},
+
+{
+question:"भारत को जानने के लिए केवल बाहरी जानकारी क्यों पर्याप्त नहीं है?",
+options:["भारतीय संस्कृति को गहराई से समझना जरूरी है","क्योंकि इतिहास जरूरी नहीं","क्योंकि भाषा जरूरी नहीं","क्योंकि साहित्य जरूरी नहीं"],
+answer:0
+},
+
+{
+question:"भारत की महानता किससे जुड़ी हुई है?",
+options:["ज्ञान और संस्कृति से","केवल धन से","केवल सेना से","केवल उद्योग से"],
+answer:0
+},
+
+{
+question:"पाठ विद्यार्थियों में किस भावना को बढ़ाता है?",
+options:["भारतीय संस्कृति के प्रति जिज्ञासा","आलस्य","उपेक्षा","भय"],
+answer:0
+},
+
+{
+question:"मैक्समूलर का कार्य भारत के किस पक्ष को दुनिया के सामने लाता है?",
+options:["प्राचीन साहित्य और ज्ञान","केवल आधुनिक उद्योग","केवल आधुनिक खेल","केवल व्यापार"],
+answer:0
+},
+
+{
+question:"भारत की संस्कृति को समझने में कौन-सी चीज महत्वपूर्ण है?",
+options:["भाषा और साहित्य","केवल खेल","केवल उद्योग","केवल राजनीति"],
+answer:0
+},
+
+{
+question:"भारत से सीखने का मुख्य अर्थ क्या है?",
+options:["भारत की ज्ञान-परंपरा को समझना","केवल भारत की सीमाएँ जानना","केवल खेल सीखना","केवल व्यापार सीखना"],
+answer:0
+},
+
+{
+question:"भारत के अतीत को जानने के लिए क्या आवश्यक है?",
+options:["इतिहास और प्राचीन साहित्य का अध्ययन","केवल आधुनिक समाचार","केवल खेल","केवल मनोरंजन"],
+answer:0
+},
+
+{
+question:"मैक्समूलर की भारत में विशेष रुचि किस कारण थी?",
+options:["भारतीय प्राचीन ज्ञान","आधुनिक मशीनें","खेल","व्यापार"],
+answer:0
+},
+
+{
+question:"पाठ का संदेश किस ओर प्रेरित करता है?",
+options:["भारतीय ज्ञान-संस्कृति को जानने की ओर","अध्ययन छोड़ने की ओर","केवल मनोरंजन की ओर","केवल खेल की ओर"],
+answer:0
+},
+
+{
+question:"भारत की प्राचीन परंपरा को समझने का सबसे अच्छा माध्यम क्या है?",
+options:["प्राचीन ग्रंथों का अध्ययन","केवल आधुनिक विज्ञापन","केवल खेल","केवल फिल्म"],
+answer:0
+},
+
+{
+question:"‘भारत से हम क्या सीखें’ पाठ से क्या प्रेरणा मिलती है?",
+options:["अपनी ज्ञान-संस्कृति को समझने की","इतिहास भूलने की","अध्ययन छोड़ने की","केवल मनोरंजन करने की"],
+answer:0
+}
+
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+
+function showQuestion(){
+
+    answered = false;
+
+    const q = questions[currentQuestion];
+
+    let html = `
+        <div class="progress">
+            प्रश्न ${currentQuestion + 1} / ${questions.length}
+        </div>
+
+        <div class="question">
+            ${q.question}
+        </div>
+    `;
+
+    q.options.forEach((option,index)=>{
+
+        html += `
+            <button
+                class="option"
+                id="option-${index}"
+                onclick="selectAnswer(${index})">
+
+                ${String.fromCharCode(65+index)}. ${option}
+
+            </button>
+        `;
+
+    });
+
+
+    if(currentQuestion < questions.length - 1){
+
+        html += `
+            <div style="text-align:center;">
+                <button
+                    class="next-btn"
+                    id="nextBtn"
+                    onclick="nextQuestion()"
+                    style="display:none;">
+
+                    अगला प्रश्न ➡️
+
+                </button>
+            </div>
+        `;
+
+    }else{
+
+        html += `
+            <div style="text-align:center;">
+                <button
+                    class="next-btn"
+                    id="nextBtn"
+                    onclick="showResult()"
+                    style="display:none;">
+
+                    परिणाम देखें 🏆
+
+                </button>
+            </div>
+        `;
+    }
+
+    document.getElementById("quiz").innerHTML = html;
+}
+
+
+function selectAnswer(selected){
+
+    if(answered) return;
+
+    answered = true;
+
+    const q = questions[currentQuestion];
+
+    const buttons = document.querySelectorAll(".option");
+
+    buttons.forEach(button=>{
+        button.disabled = true;
+    });
+
+
+    if(selected === q.answer){
+
+        score++;
+
+        document
+        .getElementById("option-"+selected)
+        .classList.add("correct");
+
+    }else{
+
+        document
+        .getElementById("option-"+selected)
+        .classList.add("wrong");
+
+        document
+        .getElementById("option-"+q.answer)
+        .classList.add("correct");
+    }
+
+
+    document.getElementById("nextBtn").style.display="inline-block";
+}
+
+
+function nextQuestion(){
+
+    currentQuestion++;
+
+    showQuestion();
+}
+
+
+function showResult(){
+
+    const percentage =
+        Math.round((score/questions.length)*100);
+
+    let grade="";
+
+    if(percentage>=90){
+
+        grade="🏆 शानदार! Gold A+";
+
+    }else if(percentage>=75){
+
+        grade="🥈 बहुत अच्छा! Silver A";
+
+    }else if(percentage>=60){
+
+        grade="🥉 अच्छा प्रयास! Bronze B";
+
+    }else{
+
+        grade="📚 Keep Practicing!";
+    }
+
+
+    document.getElementById("quiz").innerHTML=`
+
+        <div class="result">
+
+            <h2>🎉 Test पूरा हुआ!</h2>
+
+            <div class="score">
+                आपका Score: ${score} / ${questions.length}
+            </div>
+
+            <p style="font-size:20px;">
+                Percentage: ${percentage}%
+            </p>
+
+            <h3 style="font-size:22px;">
+                ${grade}
+            </h3>
+
+            <button
+                class="restart-btn"
+                onclick="restartQuiz()">
+
+                🔄 फिर से Test दें
+
+            </button>
+
+        </div>
+    `;
+}
+
+
+function restartQuiz(){
+
+    currentQuestion=0;
+    score=0;
+    answered=false;
+
+    showQuestion();
+}
+
+
+showQuestion();
+
+</script>
+
+</body>
+  </html>
