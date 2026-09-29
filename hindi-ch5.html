@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>नागरी लिपि - U.K.P NO1 Education</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:linear-gradient(135deg,#fff5f7,#eef7ff,#f5efff);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:25px 15px;
+    background:linear-gradient(135deg,#6a1b9a,#3949ab);
+    color:white;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+}
+
+header h1{
+    margin:10px 0;
+    font-size:28px;
+}
+
+header p{
+    margin:6px 0;
+}
+
+.quiz-container{
+    max-width:750px;
+    margin:30px auto;
+    padding:15px;
+}
+
+.chapter-title{
+    text-align:center;
+    color:#6a1b9a;
+    font-size:25px;
+}
+
+.question-count{
+    text-align:center;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.quiz-box{
+    background:white;
+    padding:25px;
+    border-radius:22px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
+
+.question-number{
+    color:#6a1b9a;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.question{
+    font-size:20px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.option{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:2px solid #e0e0e0;
+    border-radius:13px;
+    background:#fafafa;
+    font-size:17px;
+    text-align:left;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#f0e7ff;
+    border-color:#7b1fa2;
+}
+
+.option.correct{
+    background:#d9f7df;
+    border-color:#2e7d32;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#ffe0e0;
+    border-color:#c62828;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+.next-btn,
+.restart-btn{
+    width:100%;
+    border:none;
+    border-radius:13px;
+    padding:14px;
+    margin-top:20px;
+    font-size:17px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(135deg,#7b1fa2,#3949ab);
+    cursor:pointer;
+}
+
+.result{
+    text-align:center;
+    display:none;
+}
+
+.result h2{
+    color:#6a1b9a;
+    font-size:28px;
+}
+
+.score{
+    font-size:25px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.back-home{
+    text-align:center;
+    margin:30px 15px;
+}
+
+.back-home a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px 22px;
+    border-radius:12px;
+}
+
+footer{
+    text-align:center;
+    padding:25px 10px;
+    margin-top:30px;
+    background:#222;
+    color:white;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:23px;
+    }
+
+    .question{
+        font-size:18px;
+    }
+
+    .option{
+        font-size:16px;
+    }
+
+    .quiz-box{
+        padding:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="assets/logo.png"
+     alt="U.K.P NO1 Education Logo"
+     class="logo">
+
+<h1>📘 नागरी लिपि</h1>
+
+<p>Class 10 Bihar Board • Hindi Chapter 5</p>
+
+<p>🌟 पढ़ें • सीखें • आगे बढ़ें 🚀</p>
+
+</header>
+
+
+<div class="quiz-container">
+
+<h2 class="chapter-title">
+📝 Chapter 5 MCQ Test
+</h2>
+
+<p class="question-count">
+कुल 50 महत्वपूर्ण प्रश्न
+</p>
+
+
+<div class="quiz-box">
+
+<div id="quizArea">
+
+<div class="question-number" id="questionNumber"></div>
+
+<div class="question" id="question"></div>
+
+<div id="options"></div>
+
+<button class="next-btn"
+        id="nextBtn"
+        onclick="nextQuestion()"
+        style="display:none;">
+अगला प्रश्न ➡️
+</button>
+
+</div>
+
+
+<div class="result" id="result">
+
+<h2>🎉 Test Complete!</h2>
+
+<div class="score" id="score"></div>
+
+<p id="resultMessage"></p>
+
+<button class="restart-btn"
+        onclick="restartQuiz()">
+🔄 फिर से Test दें
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="back-home">
+
+<a href="hindi.html">
+📚 वापस Hindi Chapters पर जाएँ
+</a>
+
+</div>
+
+
+<footer>
+<p>© 2026 U.K.P NO1 Education</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+{
+q:"‘नागरी लिपि’ पाठ के लेखक कौन हैं?",
+options:[
+"गुणाकर मुले",
+"हजारी प्रसाद द्विवेदी",
+"प्रेमचंद",
+"रामधारी सिंह दिनकर"
+],
+answer:0
+},
+
+{
+q:"‘नागरी लिपि’ पाठ मुख्य रूप से किस विषय से संबंधित है?",
+options:[
+"लिपि के विकास से",
+"कृषि से",
+"खेल से",
+"व्यापार से"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि का संबंध मुख्य रूप से किस भाषा-परंपरा से रहा है?",
+options:[
+"भारतीय भाषाओं से",
+"यूरोपीय भाषाओं से",
+"चीनी भाषाओं से",
+"अरबी भाषाओं से"
+],
+answer:0
+},
+
+{
+q:"लिपि का मुख्य उद्देश्य क्या है?",
+options:[
+"भाषा को लिखित रूप देना",
+"भाषा को बोलना",
+"चित्र बनाना",
+"संगीत बजाना"
+],
+answer:0
+},
+
+{
+q:"‘नागरी’ शब्द किससे संबंधित है?",
+options:[
+"नागर या नगर से",
+"समुद्र से",
+"पर्वत से",
+"वन से"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि में कौन-सी भाषा लिखी जाती है?",
+options:[
+"हिंदी",
+"केवल अंग्रेजी",
+"केवल चीनी",
+"केवल रूसी"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि का विकास किस प्राचीन लिपि-परंपरा से जुड़ा माना जाता है?",
+options:[
+"ब्राह्मी",
+"रोमन",
+"चीनी",
+"यूनानी"
+],
+answer:0
+},
+
+{
+q:"ब्राह्मी लिपि का महत्व किस कारण है?",
+options:[
+"यह भारतीय लिपियों की प्राचीन परंपरा में महत्वपूर्ण है",
+"यह केवल अंग्रेजी की लिपि है",
+"यह आधुनिक कंप्यूटर भाषा है",
+"यह केवल चित्रों की लिपि है"
+],
+answer:0
+},
+
+{
+q:"देवनागरी में शब्दों के ऊपर दिखाई देने वाली रेखा को क्या कहते हैं?",
+options:[
+"शिरोरेखा",
+"मात्रारेखा",
+"अक्षररेखा",
+"स्वररेखा"
+],
+answer:0
+},
+
+{
+q:"देवनागरी में स्वर और व्यंजन किसके अंग हैं?",
+options:[
+"वर्णमाला",
+"वाक्य",
+"अनुच्छेद",
+"कहानी"
+],
+answer:0
+},
+
+{
+q:"हिंदी की वर्तमान मानक लिपि कौन-सी है?",
+options:[
+"देवनागरी",
+"रोमन",
+"फारसी",
+"यूनानी"
+],
+answer:0
+},
+
+{
+q:"लिपि और भाषा में क्या अंतर है?",
+options:[
+"भाषा बोलने-सुनने की व्यवस्था है, लिपि उसे लिखने की व्यवस्था है",
+"दोनों बिल्कुल एक ही हैं",
+"लिपि केवल बोलने के लिए है",
+"भाषा केवल लिखने के लिए है"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि की एक विशेषता क्या है?",
+options:[
+"शिरोरेखा का प्रयोग",
+"केवल चित्रों का प्रयोग",
+"केवल संख्याओं का प्रयोग",
+"अक्षरों का अभाव"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि के विकास में किसका योगदान महत्वपूर्ण रहा?",
+options:[
+"भारतीय भाषाई परंपरा का",
+"केवल यूरोप का",
+"केवल अमेरिका का",
+"केवल चीन का"
+],
+answer:0
+},
+
+{
+q:"लिपि के विकास का प्रमुख कारण क्या था?",
+options:[
+"विचारों और भाषा को सुरक्षित रखना",
+"खेल खेलना",
+"चित्र सजाना",
+"व्यापार बंद करना"
+],
+answer:0
+},
+
+{
+q:"लेखन-पद्धति का विकास किस आवश्यकता से जुड़ा है?",
+options:[
+"ज्ञान को सुरक्षित और संप्रेषित करने की आवश्यकता",
+"केवल मनोरंजन",
+"केवल खेल",
+"केवल यात्रा"
+],
+answer:0
+},
+
+{
+q:"देवनागरी में ‘अ’ क्या है?",
+options:[
+"स्वर",
+"व्यंजन",
+"चिह्न",
+"संख्या"
+],
+answer:0
+},
+
+{
+q:"‘क’ देवनागरी वर्णमाला में क्या है?",
+options:[
+"व्यंजन",
+"स्वर",
+"संख्या",
+"विराम चिह्न"
+],
+answer:0
+},
+
+{
+q:"मात्राओं का प्रयोग किसके लिए किया जाता है?",
+options:[
+"स्वरों के विभिन्न रूपों को व्यक्त करने के लिए",
+"संख्याएँ लिखने के लिए",
+"चित्र बनाने के लिए",
+"वाक्य समाप्त करने के लिए"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि में लेखन किस दिशा में होता है?",
+options:[
+"बाएँ से दाएँ",
+"दाएँ से बाएँ",
+"ऊपर से नीचे",
+"नीचे से ऊपर"
+],
+answer:0
+},
+
+{
+q:"लिपि का सबसे बड़ा उपयोग क्या है?",
+options:[
+"ज्ञान को लिखित रूप में सुरक्षित रखना",
+"केवल मनोरंजन",
+"केवल चित्र बनाना",
+"केवल खेल"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि का विकास किस प्रकार की प्रक्रिया है?",
+options:[
+"ऐतिहासिक और क्रमिक प्रक्रिया",
+"एक दिन में हुई प्रक्रिया",
+"केवल आधुनिक प्रक्रिया",
+"कृत्रिम प्रक्रिया"
+],
+answer:0
+},
+
+{
+q:"लिपियों के अध्ययन को क्या कहा जाता है?",
+options:[
+"लिपिविज्ञान",
+"भूगोल",
+"अर्थशास्त्र",
+"जीवविज्ञान"
+],
+answer:0
+},
+
+{
+q:"प्राचीन भारत में लेखन के लिए किस प्रकार के माध्यमों का प्रयोग होता था?",
+options:[
+"पत्थर, धातु और पत्तों आदि",
+"केवल कंप्यूटर",
+"केवल मोबाइल",
+"केवल काँच"
+],
+answer:0
+},
+
+{
+q:"शिलालेख किस माध्यम से जुड़े होते हैं?",
+options:[
+"पत्थर या अन्य कठोर सतह पर लेखन",
+"केवल कागज",
+"केवल मोबाइल",
+"केवल कपड़ा"
+],
+answer:0
+},
+
+{
+q:"लिपि के विकास से किसका संरक्षण संभव हुआ?",
+options:[
+"ज्ञान और साहित्य का",
+"केवल भोजन का",
+"केवल खेल का",
+"केवल वस्त्र का"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि में अक्षरों के ऊपर की रेखा का क्या नाम है?",
+options:[
+"शिरोरेखा",
+"नीचेरेखा",
+"मध्यरेखा",
+"स्वररेखा"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि के अध्ययन से हमें क्या पता चलता है?",
+options:[
+"भारतीय लेखन परंपरा के विकास के बारे में",
+"केवल मौसम के बारे में",
+"केवल खेल के बारे में",
+"केवल भोजन के बारे में"
+],
+answer:0
+},
+
+{
+q:"लिपि किसी भाषा को क्या प्रदान करती है?",
+options:[
+"स्थायी लिखित रूप",
+"केवल आवाज",
+"केवल संगीत",
+"केवल चित्र"
+],
+answer:0
+},
+
+{
+q:"भाषा के लिखित रूप के लिए क्या आवश्यक है?",
+options:[
+"लिपि",
+"केवल आवाज",
+"केवल संगीत",
+"केवल अभिनय"
+],
+answer:0
+},
+
+{
+q:"देवनागरी का प्रयोग किन भाषाओं में होता है?",
+options:[
+"हिंदी सहित कई भारतीय भाषाओं में",
+"केवल अंग्रेजी में",
+"केवल फ्रेंच में",
+"केवल चीनी में"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि के इतिहास का अध्ययन किस प्रकार उपयोगी है?",
+options:[
+"यह भारतीय संस्कृति और भाषा के विकास को समझने में मदद करता है",
+"यह केवल खेल सिखाता है",
+"यह केवल गणित सिखाता है",
+"यह केवल चित्रकला सिखाता है"
+],
+answer:0
+},
+
+{
+q:"लिपि के विकास में सबसे महत्वपूर्ण आवश्यकता क्या थी?",
+options:[
+"विचारों को पीढ़ियों तक पहुँचाना",
+"केवल मनोरंजन",
+"केवल यात्रा",
+"केवल भोजन"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि में स्वर किसका निर्माण करते हैं?",
+options:[
+"वर्णमाला का एक महत्वपूर्ण भाग",
+"केवल वाक्य",
+"केवल अनुच्छेद",
+"केवल संख्या"
+],
+answer:0
+},
+
+{
+q:"व्यंजन के साथ स्वर के संकेत को सामान्यतः क्या कहा जाता है?",
+options:[
+"मात्रा",
+"शब्द",
+"वाक्य",
+"अनुच्छेद"
+],
+answer:0
+},
+
+{
+q:"लिपि का संबंध किससे सबसे अधिक है?",
+options:[
+"लेखन से",
+"खेल से",
+"भोजन से",
+"यात्रा से"
+],
+answer:0
+},
+
+{
+q:"देवनागरी शब्द में ‘देव’ और ‘नागरी’ का प्रयोग किस बात की ओर संकेत करता है?",
+options:[
+"एक विशेष भारतीय लिपि-परंपरा की ओर",
+"किसी खेल की ओर",
+"किसी नदी की ओर",
+"किसी पर्वत की ओर"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि का विकास किस व्यापक संस्कृति से जुड़ा है?",
+options:[
+"भारतीय संस्कृति",
+"केवल यूरोपीय संस्कृति",
+"केवल अमेरिकी संस्कृति",
+"केवल अफ्रीकी संस्कृति"
+],
+answer:0
+},
+
+{
+q:"लिपि के बिना भाषा को लंबे समय तक सुरक्षित रखना क्यों कठिन हो सकता है?",
+options:[
+"क्योंकि लिखित अभिलेख ज्ञान को स्थायी रूप से सुरक्षित करते हैं",
+"क्योंकि भाषा केवल चित्र है",
+"क्योंकि बोलना संभव नहीं",
+"क्योंकि भाषा समाप्त हो जाती है"
+],
+answer:0
+},
+
+{
+q:"लेखन से ज्ञान किस प्रकार आगे बढ़ता है?",
+options:[
+"एक पीढ़ी से दूसरी पीढ़ी तक",
+"केवल एक व्यक्ति तक",
+"केवल एक दिन तक",
+"केवल एक स्थान तक"
+],
+answer:0
+},
+
+{
+q:"देवनागरी लिपि की पहचान में कौन-सी विशेषता बहुत प्रसिद्ध है?",
+options:[
+"शिरोरेखा",
+"गोल चिह्न",
+"चित्र चिह्न",
+"केवल संख्याएँ"
+],
+answer:0
+},
+
+{
+q:"‘नागरी लिपि’ पाठ का अध्ययन किस विषय को समझने में मदद करता है?",
+options:[
+"लिपि और उसके ऐतिहासिक विकास को",
+"केवल विज्ञान को",
+"केवल गणित को",
+"केवल खेल को"
+],
+answer:0
+},
+
+{
+q:"लिपि के माध्यम से मनुष्य क्या दर्ज कर सकता है?",
+options:[
+"विचार, अनुभव और ज्ञान",
+"केवल भोजन",
+"केवल खेल",
+"केवल मौसम"
+],
+answer:0
+},
+
+{
+q:"देवनागरी में लिखी हिंदी किस प्रकार की भाषा है?",
+options:[
+"भारतीय भाषा",
+"यूरोपीय भाषा",
+"चीनी भाषा",
+"अफ्रीकी भाषा"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि के विकास को समझने के लिए किसका अध्ययन आवश्यक है?",
+options:[
+"भारतीय लिपियों के इतिहास का",
+"केवल आधुनिक फिल्मों का",
+"केवल खेलों का",
+"केवल मौसम का"
+],
+answer:0
+},
+
+{
+q:"लिपि संस्कृति की किस चीज को सुरक्षित रखने में सहायक है?",
+options:[
+"साहित्य और ज्ञान",
+"केवल खेल",
+"केवल भोजन",
+"केवल कपड़े"
+],
+answer:0
+},
+
+{
+q:"लिखित भाषा का सबसे बड़ा लाभ क्या है?",
+options:[
+"ज्ञान को स्थायी रूप से सुरक्षित किया जा सकता है",
+"भाषा बोलना बंद हो जाता है",
+"लोग पढ़ना भूल जाते हैं",
+"केवल चित्र बनते हैं"
+],
+answer:0
+},
+
+{
+q:"देवनागरी में अक्षरों की ऊपरी रेखा किसे जोड़ती दिखाई देती है?",
+options:[
+"शिरोरेखा",
+"मात्रा",
+"विराम",
+"संख्या"
+],
+answer:0
+},
+
+{
+q:"नागरी लिपि का अध्ययन हमें किस विरासत से जोड़ता है?",
+options:[
+"भारतीय भाषाई और सांस्कृतिक विरासत से",
+"केवल आधुनिक तकनीक से",
+"केवल खेल से",
+"केवल व्यापार से"
+],
+answer:0
+},
+
+{
+q:"‘नागरी लिपि’ पाठ का मूल उद्देश्य क्या समझना है?",
+options:[
+"लिपि के विकास और उसके महत्व को समझना",
+"केवल अक्षर याद करना",
+"केवल कहानी पढ़ना",
+"केवल कविता सुनना"
+],
+answer:0
+},
+
+{
+q:"लिपि और साहित्य का क्या संबंध है?",
+options:[
+"लिपि साहित्य को लिखित रूप में सुरक्षित रखने में सहायक है",
+"लिपि साहित्य को समाप्त करती है",
+"दोनों का कोई संबंध नहीं",
+"साहित्य केवल बोलकर ही रहता है"
+],
+answer:0
+}
+
+];
+
+
+let currentQuestion=0;
+let score=0;
+let answered=false;
+
+
+function showQuestion(){
+
+answered=false;
+
+const q=questions[currentQuestion];
+
+document.getElementById("questionNumber").textContent=
+"प्रश्न "+(currentQuestion+1)+" / "+questions.length;
+
+document.getElementById("question").textContent=q.q;
+
+const optionsDiv=document.getElementById("options");
+
+optionsDiv.innerHTML="";
+
+q.options.forEach((option,index)=>{
+
+const button=document.createElement("button");
+
+button.className="option";
+
+button.textContent=
+String.fromCharCode(65+index)+". "+option;
+
+button.onclick=function(){
+selectAnswer(index,button);
+};
+
+optionsDiv.appendChild(button);
+
+});
+
+document.getElementById("nextBtn").style.display="none";
+
+}
+
+
+function selectAnswer(selectedIndex,selectedButton){
+
+if(answered) return;
+
+answered=true;
+
+const q=questions[currentQuestion];
+
+const allOptions=document.querySelectorAll(".option");
+
+allOptions.forEach((button,index)=>{
+
+button.disabled=true;
+
+if(index===q.answer){
+button.classList.add("correct");
+}
+
+});
+
+if(selectedIndex===q.answer){
+
+score++;
+
+}else{
+
+selectedButton.classList.add("wrong");
+
+}
+
+document.getElementById("nextBtn").style.display="block";
+
+}
+
+
+function nextQuestion(){
+
+currentQuestion++;
+
+if(currentQuestion<questions.length){
+
+showQuestion();
+
+}else{
+
+showResult();
+
+}
+
+}
+
+
+function showResult(){
+
+document.getElementById("quizArea").style.display="none";
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("score").textContent=
+"आपका Score: "+score+" / "+questions.length;
+
+let percentage=(score/questions.length)*100;
+
+let message="";
+
+if(percentage>=90){
+
+message="🏆 शानदार! आपकी तैयारी बहुत अच्छी है।";
+
+}else if(percentage>=75){
+
+message="🥈 बहुत बढ़िया! थोड़ी और तैयारी करें।";
+
+}else if(percentage>=60){
+
+message="🥉 अच्छा प्रयास! और अभ्यास करें।";
+
+}else{
+
+message="📚 अभ्यास जारी रखें। आप और बेहतर कर सकते हैं!";
+
+}
+
+document.getElementById("resultMessage").textContent=message;
+
+}
+
+
+function restartQuiz(){
+
+currentQuestion=0;
+
+score=0;
+
+document.getElementById("quizArea").style.display="block";
+
+document.getElementById("result").style.display="none";
+
+showQuestion();
+
+}
+
+
+showQuestion();
+
+</script>
+
+</body>
+  </html>
