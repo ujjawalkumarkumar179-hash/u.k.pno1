@@ -1,1 +1,441 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 12 - शिक्षा और संस्कृति</title>
+<link rel="stylesheet" href="style.css">
 
+<style>
+body{
+margin:0;
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
+background:linear-gradient(135deg,#fff7e6,#eef7ff);
+}
+.header{
+text-align:center;
+padding:25px 15px;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+color:white;
+}
+.logo{
+width:90px;
+height:90px;
+object-fit:contain;
+background:white;
+border-radius:50%;
+padding:5px;
+}
+.container{
+max-width:950px;
+margin:auto;
+padding:20px;
+}
+.info,.question{
+background:white;
+margin:15px 0;
+padding:18px;
+border-radius:14px;
+box-shadow:0 4px 14px #0001;
+}
+.question p{
+font-weight:bold;
+}
+.option{
+display:block;
+padding:10px;
+margin:7px 0;
+border:1px solid #ddd;
+border-radius:8px;
+}
+button{
+display:block;
+margin:25px auto;
+padding:13px 25px;
+border:0;
+border-radius:10px;
+background:#dd2476;
+color:white;
+font-size:17px;
+}
+#result{
+text-align:center;
+font-size:21px;
+font-weight:bold;
+}
+.back{
+text-align:center;
+margin:25px;
+}
+.back a{
+background:#222;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<img src="assets/logo.png" class="logo" alt="U.K.P NO1 Education">
+<h1>📖 अध्याय 12</h1>
+<h2>शिक्षा और संस्कृति</h2>
+<p>✍️ लेखक — महात्मा गाँधी</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+<h2>📚 अध्याय परिचय</h2>
+<p>
+इस पाठ में महात्मा गाँधी ने शिक्षा, संस्कृति, चरित्र-निर्माण,
+आध्यात्मिक शिक्षा तथा अहिंसक प्रतिरोध के संबंध में अपने विचार
+प्रस्तुत किए हैं।
+</p>
+</div>
+
+<h2>📝 MCQ Test — 50 Questions</h2>
+
+<form id="quiz">
+
+<div class="question">
+<p>1. ‘शिक्षा और संस्कृति’ पाठ के लेखक कौन हैं?</p>
+<label class="option"><input type="radio" name="q1" value="A"> A. महात्मा गाँधी</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. रवीन्द्रनाथ ठाकुर</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. प्रेमचंद</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. रामविलास शर्मा</label>
+</div>
+
+<div class="question">
+<p>2. गाँधीजी के अनुसार आध्यात्मिक शिक्षा का संबंध किससे है?</p>
+<label class="option"><input type="radio" name="q2" value="A"> A. हृदय से</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. धन से</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. व्यापार से</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. भवन से</label>
+</div>
+
+<div class="question">
+<p>3. गाँधीजी के अनुसार उत्तम शिक्षा क्या है?</p>
+<label class="option"><input type="radio" name="q3" value="A"> A. अहिंसक प्रतिरोध</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. हिंसक प्रतिरोध</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. केवल साक्षरता</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. केवल नौकरी</label>
+</div>
+
+<div class="question">
+<p>4. गाँधीजी का जन्म कहाँ हुआ था?</p>
+<label class="option"><input type="radio" name="q4" value="A"> A. पोरबंदर</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. दिल्ली</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. मुंबई</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. पटना</label>
+</div>
+
+<div class="question">
+<p>5. गाँधीजी का जन्म कब हुआ?</p>
+<label class="option"><input type="radio" name="q5" value="A"> A. 2 अक्टूबर 1869</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. 15 अगस्त 1870</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. 26 जनवरी 1869</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. 30 जनवरी 1870</label>
+</div>
+
+<div class="question">
+<p>6. गाँधीजी की माता का नाम क्या था?</p>
+<label class="option"><input type="radio" name="q6" value="A"> A. पुतलीबाई</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. कस्तूरबा</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. सरोजिनी</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. कमला</label>
+</div>
+
+<div class="question">
+<p>7. गाँधीजी की पत्नी का नाम क्या था?</p>
+<label class="option"><input type="radio" name="q7" value="A"> A. कस्तूरबा</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. पुतलीबाई</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. कमला</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. सरला</label>
+</div>
+
+<div class="question">
+<p>8. गाँधीजी को ‘महात्मा’ की उपाधि किसने दी?</p>
+<label class="option"><input type="radio" name="q8" value="A"> A. रवीन्द्रनाथ ठाकुर</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. जवाहरलाल नेहरू</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. सुभाष चंद्र बोस</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. डॉ. राजेंद्र प्रसाद</label>
+</div>
+
+<div class="question">
+<p>9. ‘हिंद स्वराज’ किसकी रचना है?</p>
+<label class="option"><input type="radio" name="q9" value="A"> A. महात्मा गाँधी</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. प्रेमचंद</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. नेहरू</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. टैगोर</label>
+</div>
+
+<div class="question">
+<p>10. ‘सत्य के साथ मेरे प्रयोग’ किसकी रचना है?</p>
+<label class="option"><input type="radio" name="q10" value="A"> A. महात्मा गाँधी</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. प्रेमचंद</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. दिनकर</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. निराला</label>
+</div>
+
+<div class="question">
+<p>11. गाँधीजी के अनुसार शिक्षा का एक प्रमुख उद्देश्य क्या है?</p>
+<label class="option"><input type="radio" name="q11" value="A"> A. चरित्र-निर्माण</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. धन-संचय</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. केवल नौकरी</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>12. गाँधीजी शिक्षा में किसे महत्व देते हैं?</p>
+<label class="option"><input type="radio" name="q12" value="A"> A. चरित्र और हृदय</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. केवल धन</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. केवल परीक्षा</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. केवल नौकरी</label>
+</div>
+
+<div class="question">
+<p>13. गाँधीजी के विचार में संस्कृति का संबंध किससे है?</p>
+<label class="option"><input type="radio" name="q13" value="A"> A. जीवन-मूल्यों से</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. केवल धन से</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. केवल वस्त्र से</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. केवल भवन से</label>
+</div>
+
+<div class="question">
+<p>14. गाँधीजी किस प्रकार के प्रतिरोध को श्रेष्ठ मानते हैं?</p>
+<label class="option"><input type="radio" name="q14" value="A"> A. अहिंसक प्रतिरोध</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. हिंसक प्रतिरोध</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. मौन प्रतिरोध मात्र</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. कोई नहीं</label>
+</div>
+
+<div class="question">
+<p>15. गाँधीजी के अनुसार शिक्षा का उद्देश्य केवल क्या नहीं होना चाहिए?</p>
+<label class="option"><input type="radio" name="q15" value="A"> A. साक्षरता</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. चरित्र</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. नैतिकता</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. मानवता</label>
+</div>
+
+<div class="question">
+<p>16. गाँधीजी के अनुसार शिक्षा किसका विकास करे?</p>
+<label class="option"><input type="radio" name="q16" value="A"> A. संपूर्ण व्यक्तित्व</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. केवल शरीर</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. केवल धन</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. केवल स्मरण शक्ति</label>
+</div>
+
+<div class="question">
+<p>17. गाँधीजी के अनुसार संस्कृति का आधार क्या है?</p>
+<label class="option"><input type="radio" name="q17" value="A"> A. नैतिक जीवन</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. धन</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. सत्ता</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>18. गाँधीजी का दक्षिण अफ्रीका प्रवास कब से कब तक रहा?</p>
+<label class="option"><input type="radio" name="q18" value="A"> A. 1893 से 1914</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. 1900 से 1910</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. 1880 से 1890</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. 1915 से 1930</label>
+</div>
+
+<div class="question">
+<p>19. गाँधीजी का जन्मदिन कब मनाया जाता है?</p>
+<label class="option"><input type="radio" name="q19" value="A"> A. 2 अक्टूबर</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. 15 अगस्त</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. 26 जनवरी</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. 30 जनवरी</label>
+</div>
+
+<div class="question">
+<p>20. गाँधीजी का निधन कब हुआ?</p>
+<label class="option"><input type="radio" name="q20" value="A"> A. 30 जनवरी 1948</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. 2 अक्टूबर 1948</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. 15 अगस्त 1947</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. 26 जनवरी 1950</label>
+</div>
+
+<div class="question">
+<p>21. गाँधीजी शिक्षा में किस भावना को बढ़ावा देना चाहते थे?</p>
+<label class="option"><input type="radio" name="q21" value="A"> A. सत्य और अहिंसा</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. हिंसा</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. स्वार्थ</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. घृणा</label>
+</div>
+
+<div class="question">
+<p>22. शिक्षा का संबंध किससे होना चाहिए?</p>
+<label class="option"><input type="radio" name="q22" value="A"> A. जीवन से</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. केवल परीक्षा से</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. केवल नौकरी से</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. केवल धन से</label>
+</div>
+
+<div class="question">
+<p>23. गाँधीजी के अनुसार सच्ची शिक्षा किसे विकसित करती है?</p>
+<label class="option"><input type="radio" name="q23" value="A"> A. मनुष्य के चरित्र को</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. केवल धन को</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. केवल शरीर को</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. केवल पद को</label>
+</div>
+
+<div class="question">
+<p>24. गाँधीजी के विचार में हृदय की शिक्षा किसका रूप है?</p>
+<label class="option"><input type="radio" name="q24" value="A"> A. आध्यात्मिक शिक्षा</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. तकनीकी शिक्षा</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. व्यापारिक शिक्षा</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. सैनिक शिक्षा</label>
+</div>
+
+<div class="question">
+<p>25. गाँधीजी के जीवन में सत्य का क्या स्थान था?</p>
+<label class="option"><input type="radio" name="q25" value="A"> A. अत्यंत महत्वपूर्ण</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. कोई महत्व नहीं</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. केवल राजनीति में</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. केवल शिक्षा में</label>
+</div>
+
+<div class="question">
+<p>26. गाँधीजी के विचारों में अहिंसा का क्या महत्व है?</p>
+<label class="option"><input type="radio" name="q26" value="A"> A. बहुत महत्वपूर्ण</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. कोई महत्व नहीं</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. केवल युद्ध में</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. केवल खेल में</label>
+</div>
+
+<div class="question">
+<p>27. ‘शिक्षा और संस्कृति’ पाठ किस प्रकार की रचना है?</p>
+<label class="option"><input type="radio" name="q27" value="A"> A. शिक्षाशास्त्रीय विचार-प्रधान गद्य</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. कहानी</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. नाटक</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. कविता</label>
+</div>
+
+<div class="question">
+<p>28. गाँधीजी के अनुसार स्वराज्य मिलने पर शिक्षा का ध्येय क्या होगा?</p>
+<label class="option"><input type="radio" name="q28" value="A"> A. चरित्र-निर्माण</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. धन-संचय</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. व्यापार</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. केवल नौकरी</label>
+</div>
+
+<div class="question">
+<p>29. गाँधीजी के अनुसार मनुष्य को किस प्रकार की शिक्षा चाहिए?</p>
+<label class="option"><input type="radio" name="q29" value="A"> A. जीवनोपयोगी और नैतिक</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. केवल परीक्षा आधारित</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. केवल नौकरी आधारित</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. केवल धन आधारित</label>
+</div>
+
+<div class="question">
+<p>30. गाँधीजी के विचार में संस्कृति मनुष्य के जीवन को क्या देती है?</p>
+<label class="option"><input type="radio" name="q30" value="A"> A. दिशा और मूल्य</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. केवल धन</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. केवल पद</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. केवल शक्ति</label>
+</div>
+
+<div class="question">
+<p>31. गाँधीजी के जीवन का प्रमुख सिद्धांत क्या था?</p>
+<label class="option"><input type="radio" name="q31" value="A"> A. सत्य और अहिंसा</label>
+<label class="option"><input type="radio" name="q31" value="B"> B. हिंसा</label>
+<label class="option"><input type="radio" name="q31" value="C"> C. स्वार्थ</label>
+<label class="option"><input type="radio" name="q31" value="D"> D. भोग</label>
+</div>
+
+<div class="question">
+<p>32. शिक्षा का उद्देश्य किस प्रकार का नागरिक बनाना होना चाहिए?</p>
+<label class="option"><input type="radio" name="q32" value="A"> A. चरित्रवान</label>
+<label class="option"><input type="radio" name="q32" value="B"> B. स्वार्थी</label>
+<label class="option"><input type="radio" name="q32" value="C"> C. हिंसक</label>
+<label class="option"><input type="radio" name="q32" value="D"> D. लालची</label>
+</div>
+
+<div class="question">
+<p>33. गाँधीजी किस प्रकार के जीवन को महत्व देते थे?</p>
+<label class="option"><input type="radio" name="q33" value="A"> A. सादा और नैतिक</label>
+<label class="option"><input type="radio" name="q33" value="B"> B. विलासी</label>
+<label class="option"><input type="radio" name="q33" value="C"> C. स्वार्थी</label>
+<label class="option"><input type="radio" name="q33" value="D"> D. हिंसक</label>
+</div>
+
+<div class="question">
+<p>34. ‘शिक्षा और संस्कृति’ में किस प्रकार की शिक्षा की चर्चा है?</p>
+<label class="option"><input type="radio" name="q34" value="A"> A. आध्यात्मिक और नैतिक शिक्षा</label>
+<label class="option"><input type="radio" name="q34" value="B"> B. केवल तकनीकी शिक्षा</label>
+<label class="option"><input type="radio" name="q34" value="C"> C. केवल सैनिक शिक्षा</label>
+<label class="option"><input type="radio" name="q34" value="D"> D. केवल व्यापारिक शिक्षा</label>
+</div>
+
+<div class="question">
+<p>35. गाँधीजी के अनुसार शिक्षा मनुष्य के किस पक्ष को विकसित करे?</p>
+<label class="option"><input type="radio" name="q35" value="A"> A. शरीर, मन और आत्मा</label>
+<label class="option"><input type="radio" name="q35" value="B"> B. केवल शरीर</label>
+<label class="option"><input type="radio" name="q35" value="C"> C. केवल बुद्धि</label>
+<label class="option"><input type="radio" name="q35" value="D"> D. केवल धन</label>
+</div>
+
+<div class="question">
+<p>36. गाँधीजी के अनुसार शिक्षा और संस्कृति में क्या संबंध है?</p>
+<label class="option"><input type="radio" name="q36" value="A"> A. गहरा संबंध</label>
+<label class="option"><input type="radio" name="q36" value="B"> B. कोई संबंध नहीं</label>
+<label class="option"><input type="radio" name="q36" value="C"> C. विरोध</label>
+<label class="option"><input type="radio" name="q36" value="D"> D. केवल आर्थिक संबंध</label>
+</div>
+
+<div class="question">
+<p>37. गाँधीजी के अनुसार संस्कृति मनुष्य में क्या पैदा करती है?</p>
+<label class="option"><input type="radio" name="q37" value="A"> A. अच्छे संस्कार</label>
+<label class="option"><input type="radio" name="q37" value="B"> B. लालच</label>
+<label class="option"><input type="radio" name="q37" value="C"> C. हिंसा</label>
+<label class="option"><input type="radio" name="q37" value="D"> D. घमंड</label>
+</div>
+
+<div class="question">
+<p>38. गाँधीजी के विचार में शिक्षा का अंतिम लक्ष्य क्या है?</p>
+<label class="option"><input type="radio" name="q38" value="A"> A. अच्छा मनुष्य बनना</label>
+<label class="option"><input type="radio" name="q38" value="B"> B. अमीर बनना</label>
+<label class="option"><input type="radio" name="q38" value="C"> C. शक्तिशाली बनना</label>
+<label class="option"><input type="radio" name="q38" value="D"> D. प्रसिद्ध बनना</label>
+</div>
+
+<div class="question">
+<p>39. गाँधीजी की शिक्षा में किसका महत्व है?</p>
+<label class="option"><input type="radio" name="q39" value="A"> A. आत्मअनुशासन</label>
+<label class="option"><input type="radio" name="q39" value="B"> B. विलासिता</label>
+<label class="option"><input type="radio" name="q39" value="C"> C. स्वार्थ</label>
+<label class="option"><input type="radio" name="q39" value="D"> D. हिंसा</label>
+</div>
+
+<div class="question">
+<p>40. गाँधीजी के विचार में सच्ची संस्कृति क्या सिखाती है?</p>
+<label class="option"><input type="radio" name="q40" value="A"> A. नैतिकता</label>
+<label class="option"><input type="radio" name="q40" value="B"> B. लालच</label>
+<label class="option"><input type="radio" name="q40" value="C"> C. हिंसा</label>
+<label class="option"><input type="radio" name="q40" value="D"> D. स्वार्थ</label>
+</div>
+
+<div class="question">
+<p>41. गाँधीजी के अनुसार मनुष्य के जीवन में सत्य का क्या स्थान है?</p>
+<label class="option"><input type="radio" name="q41" value="A"> A. सर्वोच्च</label>
+<label class="option"><input type="radio" name="q41" value="B"> B. सामान्य</label>
+<label class="option"><input type="radio" name="q41" value="C"> C. नगण्य</label>
+<label class="option"><input type="radio" name="q41" value="D"> D. कोई नहीं</label>
+</div>
+
+<div class="question">
+<p>42. गाँधीजी के अनुसार शिक्षा किसके लिए होनी चाहिए?</p>
+<label class="option"><input type="radio" name="q42" value="A"> A. पूरे समाज के लिए</label>
+<label class="option"><input type="radio" name="q42" value="B"> B. केवल अमीरों के लिए</label>
+<label class="option"><input type="radio" name="q42" value="C"> C. केवल नेताओं के लिए</label>
+<label class="option"><input type="radio" name="q42" value="D"> D. केवल नौकरी करने वालों के लिए</label>
+</div>
+
+<div class="question">
+<p>43. गाँधीजी
