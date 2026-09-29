@@ -1,1 +1,444 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 11 - नौबतखाने में इबादत</title>
+<link rel="stylesheet" href="style.css">
 
+<style>
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:linear-gradient(135deg,#fff7e6,#eef7ff);
+}
+.header{
+    text-align:center;
+    padding:25px 15px;
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+    color:white;
+}
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+}
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:20px;
+}
+.info,.question{
+    background:white;
+    margin:15px 0;
+    padding:18px;
+    border-radius:14px;
+    box-shadow:0 4px 14px #0001;
+}
+.question p{
+    font-weight:bold;
+}
+.option{
+    display:block;
+    padding:10px;
+    margin:7px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+button{
+    display:block;
+    margin:25px auto;
+    padding:13px 25px;
+    border:0;
+    border-radius:10px;
+    background:#4a00e0;
+    color:white;
+    font-size:17px;
+}
+#result{
+    text-align:center;
+    font-size:21px;
+    font-weight:bold;
+}
+.back{
+    text-align:center;
+    margin:25px;
+}
+.back a{
+    background:#222;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<img src="assets/logo.png" class="logo" alt="U.K.P NO1 Education">
+<h1>📖 अध्याय 11</h1>
+<h2>नौबतखाने में इबादत</h2>
+<p>✍️ लेखक — यतीन्द्र मिश्र</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+<h2>📚 अध्याय परिचय</h2>
+<p>
+यह पाठ उस्ताद बिस्मिल्ला ख़ाँ के जीवन, शहनाई-साधना,
+संगीत के प्रति समर्पण और भारतीय सांस्कृतिक परंपरा से उनके
+गहरे संबंध को प्रस्तुत करता है।
+</p>
+</div>
+
+<h2>📝 MCQ Test — 50 Questions</h2>
+
+<form id="quiz">
+
+<div class="question">
+<p>1. ‘नौबतखाने में इबादत’ के लेखक कौन हैं?</p>
+<label class="option"><input type="radio" name="q1" value="A"> A. यतीन्द्र मिश्र</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. अशोक वाजपेयी</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. अमरकांत</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. विनोद कुमार शुक्ल</label>
+</div>
+
+<div class="question">
+<p>2. पाठ का मुख्य विषय किससे संबंधित है?</p>
+<label class="option"><input type="radio" name="q2" value="A"> A. चित्रकला</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. संगीत और शहनाई</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. कृषि</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>3. पाठ में प्रमुख रूप से किस महान कलाकार का वर्णन है?</p>
+<label class="option"><input type="radio" name="q3" value="A"> A. उस्ताद बिस्मिल्ला ख़ाँ</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. पं. रविशंकर</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. बिरजू महाराज</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. कुमार गंधर्व</label>
+</div>
+
+<div class="question">
+<p>4. बिस्मिल्ला ख़ाँ किस वाद्य के महान कलाकार थे?</p>
+<label class="option"><input type="radio" name="q4" value="A"> A. तबला</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. शहनाई</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. सितार</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. बाँसुरी</label>
+</div>
+
+<div class="question">
+<p>5. बिस्मिल्ला ख़ाँ का संगीत किस साधना का प्रतीक था?</p>
+<label class="option"><input type="radio" name="q5" value="A"> A. संगीत-साधना</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. व्यापार</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. खेल</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>6. बिस्मिल्ला ख़ाँ का संबंध किस शहर से विशेष रूप से जुड़ा था?</p>
+<label class="option"><input type="radio" name="q6" value="A"> A. वाराणसी</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. जयपुर</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. दिल्ली</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. मुंबई</label>
+</div>
+
+<div class="question">
+<p>7. शहनाई किस प्रकार का वाद्य है?</p>
+<label class="option"><input type="radio" name="q7" value="A"> A. वायु वाद्य</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. ताल वाद्य</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. तार वाद्य</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. कोई नहीं</label>
+</div>
+
+<div class="question">
+<p>8. बिस्मिल्ला ख़ाँ की शहनाई किस भावना से जुड़ी थी?</p>
+<label class="option"><input type="radio" name="q8" value="A"> A. साधना</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. आलस्य</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. व्यापार</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. मनोरंजन मात्र</label>
+</div>
+
+<div class="question">
+<p>9. ‘इबादत’ शब्द का अर्थ क्या है?</p>
+<label class="option"><input type="radio" name="q9" value="A"> A. पूजा/उपासना</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. युद्ध</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. व्यापार</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. यात्रा</label>
+</div>
+
+<div class="question">
+<p>10. पाठ में संगीत को किससे जोड़ा गया है?</p>
+<label class="option"><input type="radio" name="q10" value="A"> A. साधना</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. राजनीति</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. खेती</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>11. बिस्मिल्ला ख़ाँ किस क्षेत्र के प्रसिद्ध कलाकार थे?</p>
+<label class="option"><input type="radio" name="q11" value="A"> A. संगीत</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. साहित्य</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. चित्रकला</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. विज्ञान</label>
+</div>
+
+<div class="question">
+<p>12. पाठ में किस वाद्य की महिमा दिखाई गई है?</p>
+<label class="option"><input type="radio" name="q12" value="A"> A. शहनाई</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. तबला</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. सितार</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. मृदंग</label>
+</div>
+
+<div class="question">
+<p>13. बिस्मिल्ला ख़ाँ की प्रसिद्धि किस कारण हुई?</p>
+<label class="option"><input type="radio" name="q13" value="A"> A. शहनाई वादन</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. लेखन</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. अभिनय</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. चित्रकला</label>
+</div>
+
+<div class="question">
+<p>14. लेखक यतीन्द्र मिश्र का संबंध किस विधा से है?</p>
+<label class="option"><input type="radio" name="q14" value="A"> A. साहित्य और संगीत लेखन</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. गणित</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. चिकित्सा</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. कृषि</label>
+</div>
+
+<div class="question">
+<p>15. बिस्मिल्ला ख़ाँ के लिए संगीत क्या था?</p>
+<label class="option"><input type="radio" name="q15" value="A"> A. साधना</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. नौकरी मात्र</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. खेल</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>16. पाठ में किस प्रकार की संस्कृति दिखाई देती है?</p>
+<label class="option"><input type="radio" name="q16" value="A"> A. भारतीय सांस्कृतिक समन्वय</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. केवल विदेशी संस्कृति</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. औद्योगिक संस्कृति</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. राजनीतिक संस्कृति</label>
+</div>
+
+<div class="question">
+<p>17. बिस्मिल्ला ख़ाँ का प्रमुख वाद्य कौन-सा था?</p>
+<label class="option"><input type="radio" name="q17" value="A"> A. शहनाई</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. वीणा</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. तबला</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. मंजीरा</label>
+</div>
+
+<div class="question">
+<p>18. पाठ का शीर्षक किस भावना को प्रकट करता है?</p>
+<label class="option"><input type="radio" name="q18" value="A"> A. संगीत को इबादत मानना</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. युद्ध</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. व्यापार</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. यात्रा</label>
+</div>
+
+<div class="question">
+<p>19. बिस्मिल्ला ख़ाँ किस प्रकार के कलाकार थे?</p>
+<label class="option"><input type="radio" name="q19" value="A"> A. शहनाई वादक</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. गायक मात्र</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. नर्तक</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. चित्रकार</label>
+</div>
+
+<div class="question">
+<p>20. पाठ में संगीत की कौन-सी शक्ति दिखाई गई है?</p>
+<label class="option"><input type="radio" name="q20" value="A"> A. मन को जोड़ने की शक्ति</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. धन कमाने की शक्ति</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. युद्ध की शक्ति</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. राजनीति की शक्ति</label>
+</div>
+
+<div class="question">
+<p>21. बिस्मिल्ला ख़ाँ की कला में क्या प्रमुख था?</p>
+<label class="option"><input type="radio" name="q21" value="A"> A. परिश्रम</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. आलस्य</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. दिखावा</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>22. पाठ का मूल संदेश क्या है?</p>
+<label class="option"><input type="radio" name="q22" value="A"> A. कला के प्रति समर्पण</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. धन का महत्व</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. राजनीति</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. युद्ध</label>
+</div>
+
+<div class="question">
+<p>23. बिस्मिल्ला ख़ाँ का जीवन किसका उदाहरण है?</p>
+<label class="option"><input type="radio" name="q23" value="A"> A. निरंतर साधना</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. आलस्य</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. धन-संचय</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>24. शहनाई की ध्वनि का संबंध किससे है?</p>
+<label class="option"><input type="radio" name="q24" value="A"> A. संगीत</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. चित्रकला</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. लेखन</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. विज्ञान</label>
+</div>
+
+<div class="question">
+<p>25. यतीन्द्र मिश्र ने किस कलाकार को केंद्र में रखा?</p>
+<label class="option"><input type="radio" name="q25" value="A"> A. बिस्मिल्ला ख़ाँ</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. अमरकांत</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. कबीर</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. तुलसीदास</label>
+</div>
+
+<div class="question">
+<p>26. पाठ में किसका वर्णन जीवंत रूप में मिलता है?</p>
+<label class="option"><input type="radio" name="q26" value="A"> A. संगीत-साधना</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. खेती</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. व्यापार</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>27. बिस्मिल्ला ख़ाँ की सफलता का आधार क्या था?</p>
+<label class="option"><input type="radio" name="q27" value="A"> A. प्रतिभा और अभ्यास</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. केवल धन</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. केवल प्रसिद्धि</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>28. ‘इबादत’ का संबंध किससे है?</p>
+<label class="option"><input type="radio" name="q28" value="A"> A. उपासना</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. व्यापार</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. युद्ध</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. खेल</label>
+</div>
+
+<div class="question">
+<p>29. पाठ किस प्रकार की रचना है?</p>
+<label class="option"><input type="radio" name="q29" value="A"> A. व्यक्तिचित्रात्मक गद्य</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. नाटक</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. कविता मात्र</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. उपन्यास</label>
+</div>
+
+<div class="question">
+<p>30. बिस्मिल्ला ख़ाँ की कला में किसका सुंदर मेल था?</p>
+<label class="option"><input type="radio" name="q30" value="A"> A. प्रतिभा और परिश्रम</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. धन और व्यापार</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. राजनीति और युद्ध</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. खेल और मनोरंजन</label>
+</div>
+
+<div class="question">
+<p>31. बिस्मिल्ला ख़ाँ किस भारतीय संगीत परंपरा के महान कलाकार माने जाते हैं?</p>
+<label class="option"><input type="radio" name="q31" value="A"> A. शहनाई वादन</label>
+<label class="option"><input type="radio" name="q31" value="B"> B. पश्चिमी पियानो</label>
+<label class="option"><input type="radio" name="q31" value="C"> C. गिटार</label>
+<label class="option"><input type="radio" name="q31" value="D"> D. वायलिन मात्र</label>
+</div>
+
+<div class="question">
+<p>32. पाठ में कलाकार के किस गुण पर जोर है?</p>
+<label class="option"><input type="radio" name="q32" value="A"> A. साधना</label>
+<label class="option"><input type="radio" name="q32" value="B"> B. अहंकार</label>
+<label class="option"><input type="radio" name="q32" value="C"> C. आलस्य</label>
+<label class="option"><input type="radio" name="q32" value="D"> D. लालच</label>
+</div>
+
+<div class="question">
+<p>33. संगीत किस प्रकार की भाषा बन सकता है?</p>
+<label class="option"><input type="radio" name="q33" value="A"> A. भावों की भाषा</label>
+<label class="option"><input type="radio" name="q33" value="B"> B. केवल व्यापार की भाषा</label>
+<label class="option"><input type="radio" name="q33" value="C"> C. राजनीति की भाषा</label>
+<label class="option"><input type="radio" name="q33" value="D"> D. कानून की भाषा</label>
+</div>
+
+<div class="question">
+<p>34. बिस्मिल्ला ख़ाँ की शहनाई ने किस कला को ऊँचाई दी?</p>
+<label class="option"><input type="radio" name="q34" value="A"> A. शहनाई वादन</label>
+<label class="option"><input type="radio" name="q34" value="B"> B. चित्रकला</label>
+<label class="option"><input type="radio" name="q34" value="C"> C. नृत्य</label>
+<label class="option"><input type="radio" name="q34" value="D"> D. साहित्य</label>
+</div>
+
+<div class="question">
+<p>35. पाठ में कला को किस रूप में देखा गया है?</p>
+<label class="option"><input type="radio" name="q35" value="A"> A. साधना</label>
+<label class="option"><input type="radio" name="q35" value="B"> B. व्यवसाय मात्र</label>
+<label class="option"><input type="radio" name="q35" value="C"> C. खेल</label>
+<label class="option"><input type="radio" name="q35" value="D"> D. राजनीति</label>
+</div>
+
+<div class="question">
+<p>36. बिस्मिल्ला ख़ाँ के जीवन से क्या सीख मिलती है?</p>
+<label class="option"><input type="radio" name="q36" value="A"> A. निरंतर अभ्यास</label>
+<label class="option"><input type="radio" name="q36" value="B"> B. काम से बचना</label>
+<label class="option"><input type="radio" name="q36" value="C"> C. केवल धन कमाना</label>
+<label class="option"><input type="radio" name="q36" value="D"> D. प्रसिद्धि के पीछे भागना</label>
+</div>
+
+<div class="question">
+<p>37. पाठ में संगीत और आध्यात्मिकता का संबंध कैसा है?</p>
+<label class="option"><input type="radio" name="q37" value="A"> A. गहरा</label>
+<label class="option"><input type="radio" name="q37" value="B"> B. असंबंधित</label>
+<label class="option"><input type="radio" name="q37" value="C"> C. विरोधी</label>
+<label class="option"><input type="radio" name="q37" value="D"> D. असंभव</label>
+</div>
+
+<div class="question">
+<p>38. पाठ का वातावरण मुख्यतः किससे जुड़ा है?</p>
+<label class="option"><input type="radio" name="q38" value="A"> A. संगीत और संस्कृति</label>
+<label class="option"><input type="radio" name="q38" value="B"> B. राजनीति</label>
+<label class="option"><input type="radio" name="q38" value="C"> C. युद्ध</label>
+<label class="option"><input type="radio" name="q38" value="D"> D. व्यापार</label>
+</div>
+
+<div class="question">
+<p>39. बिस्मिल्ला ख़ाँ का जीवन किसका प्रेरणादायक उदाहरण है?</p>
+<label class="option"><input type="radio" name="q39" value="A"> A. कला के प्रति समर्पण</label>
+<label class="option"><input type="radio" name="q39" value="B"> B. आलस्य</label>
+<label class="option"><input type="radio" name="q39" value="C"> C. लालच</label>
+<label class="option"><input type="radio" name="q39" value="D"> D. अहंकार</label>
+</div>
+
+<div class="question">
+<p>40. शहनाई किस चीज से ध्वनि उत्पन्न करती है?</p>
+<label class="option"><input type="radio" name="q40" value="A"> A. वायु के कंपन से</label>
+<label class="option"><input type="radio" name="q40" value="B"> B. तार से</label>
+<label class="option"><input type="radio" name="q40" value="C"> C. चक्र से</label>
+<label class="option"><input type="radio" name="q40" value="D"> D. कागज से</label>
+</div>
+
+<div class="question">
+<p>41. पाठ का शीर्षक ‘नौबतखाने में इबादत’ किस बात का संकेत देता है?</p>
+<label class="option"><input type="radio" name="q41" value="A"> A. संगीत को पूजा के समान मानना</label>
+<label class="option"><input type="radio" name="q41" value="B"> B. युद्ध करना</label>
+<label class="option"><input type="radio" name="q41" value="C"> C. यात्रा करना</label>
+<label class="option"><input type="radio" name="q41" value="D"> D. व्यापार करना</label>
+</div>
+
+<div class="question">
+<p>42. बिस्मिल्ला ख़ाँ के लिए शहनाई क्या थी?</p>
+<label class="option"><input type="radio" name="q42" value="A"> A. साधना का माध्यम</label>
+<label class="option"><input type="radio" name="q42" value="B"> B. खिलौना</label>
+<label class="option"><input type="radio" name="q42" value="C"> C. व्यापार की वस्तु</label>
+<label class="option"><input type="radio" name="q42" value="D"> D. खेल</label>
+</div>
+
+<div class="question">
+<p>43. पाठ में किस मूल्य को महत्व दिया गया है?</p>
+<label class="option"><input type="radio" name="q43" value="A"> A. समर्पण</label>
+<label class="option"><input type="radio" name="q43" value="B"> B. आलस्य</label>
+<label class="option"><input type="radio" name="q43" value="C">
