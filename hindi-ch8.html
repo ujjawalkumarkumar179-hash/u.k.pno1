@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>जित-जित मैं निरखत हूँ - U.K.P NO1 Education</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans Devanagari", sans-serif;
+            background: linear-gradient(135deg, #fff8e1, #e3f2fd);
+            color: #222;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, #7b1fa2, #1565c0);
+            color: white;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        header h1 {
+            margin: 12px 0 5px;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 6px;
+            font-size: 16px;
+        }
+
+        .quiz-box {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 15px;
+        }
+
+        .question-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            display: block;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            background: #fafafa;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            background: #f1e5ff;
+            border-color: #7b1fa2;
+        }
+
+        .option input {
+            margin-right: 10px;
+        }
+
+        #submitBtn,
+        #restartBtn {
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #submitBtn {
+            background: #1565c0;
+            color: white;
+        }
+
+        #submitBtn:hover {
+            background: #0d47a1;
+        }
+
+        #restartBtn {
+            background: #7b1fa2;
+            color: white;
+            display: none;
+        }
+
+        #result {
+            display: none;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 25px;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        #result h2 {
+            color: #7b1fa2;
+        }
+
+        #score {
+            font-size: 22px;
+        }
+
+        #message {
+            font-size: 18px;
+        }
+
+        .back {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .quiz-box {
+                padding: 10px;
+            }
+
+            .question {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+
+    <h1>📘 जित-जित मैं निरखत हूँ</h1>
+
+    <p>Class 10 Bihar Board • Hindi Chapter 8</p>
+
+    <p>📝 MCQ Test – 50 Questions</p>
+
+</header>
+
+
+<div class="quiz-box" id="quiz"></div>
+
+
+<button id="submitBtn" onclick="submitQuiz()">
+    ✅ Submit Test
+</button>
+
+
+<div id="result">
+
+    <h2>🎉 आपका Result</h2>
+
+    <p id="score"></p>
+
+    <p id="message"></p>
+
+</div>
+
+
+<button id="restartBtn" onclick="location.reload()">
+    🔄 Test फिर से दें
+</button>
+
+
+<div class="back">
+    <a href="hindi.html">⬅️ वापस Hindi पर जाएँ</a>
+</div>
+
+
+<footer>
+    <p>© 2026 U.K.P NO1 Education</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+{
+q: "‘जित-जित मैं निरखत हूँ’ पाठ मुख्य रूप से किससे संबंधित है?",
+o: ["कथक नृत्य", "चित्रकला", "विज्ञान", "कृषि"],
+a: 0
+},
+
+{
+q: "‘जित-जित मैं निरखत हूँ’ पाठ में किस कलाकार से बातचीत की गई है?",
+o: ["पंडित बिरजू महाराज", "हरिप्रसाद चौरसिया", "सत्यजीत रे", "अमृता शेरगिल"],
+a: 0
+},
+
+{
+q: "पंडित बिरजू महाराज किस नृत्य के प्रसिद्ध कलाकार थे?",
+o: ["कथक", "भरतनाट्यम", "कुचिपुड़ी", "ओडिसी"],
+a: 0
+},
+
+{
+q: "बिरजू महाराज किस घराने से संबंधित थे?",
+o: ["लखनऊ घराना", "जयपुर घराना", "बनारस घराना", "मैहर घराना"],
+a: 0
+},
+
+{
+q: "बिरजू महाराज का जन्म कब हुआ था?",
+o: ["4 फरवरी 1938", "15 अगस्त 1940", "2 अक्टूबर 1935", "26 जनवरी 1938"],
+a: 0
+},
+
+{
+q: "बिरजू महाराज के पिता का नाम क्या था?",
+o: ["अच्छन महाराज", "शंभू महाराज", "लच्छू महाराज", "कालिका प्रसाद"],
+a: 0
+},
+
+{
+q: "बिरजू महाराज को बचपन से किस कला में रुचि थी?",
+o: ["नृत्य और संगीत", "चित्रकला", "मूर्तिकला", "लेखन"],
+a: 0
+},
+
+{
+q: "कथक नृत्य में किसका विशेष महत्व है?",
+o: ["लय और ताल", "केवल चित्र", "केवल रंग", "केवल लेखन"],
+a: 0
+},
+
+{
+q: "बिरजू महाराज किस कला के
