@@ -578,4 +578,88 @@ Class 10 • English Grammar • 50 MCQs
 <label><input type="radio" name="q50" value="A"> A) She goes home.</label>
 <label><input type="radio" name="q50" value="B"> B) She is going home.</label>
 <label><input type="radio" name="q50" value="C"> C) She went home.</label>
+    <label><input type="radio" name="q50" value="D"> D) She had gone home.</label>
+</div>
+
+<button type="button" class="submit-btn" onclick="checkResult()">
+    ✅ Submit Test
+</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+<div class="back">
+<a href="index.html">🏠 वापस Home पर जाएँ</a>
+</div>
+
+<script>
+function checkResult(){
+
+    const answers = {
+        q1:"B", q2:"C", q3:"B", q4:"A", q5:"C",
+        q6:"B", q7:"B", q8:"A", q9:"C", q10:"B",
+        q11:"A", q12:"B", q13:"B", q14:"C", q15:"A",
+        q16:"B", q17:"B", q18:"C", q19:"B", q20:"B",
+        q21:"B", q22:"C", q23:"B", q24:"A", q25:"B",
+        q26:"A", q27:"B", q28:"B", q29:"A", q30:"C",
+        q31:"C", q32:"D", q33:"A", q34:"B", q35:"B",
+        q36:"C", q37:"B", q38:"B", q39:"A", q40:"A",
+        q41:"B", q42:"B", q43:"A", q44:"A", q45:"B",
+        q46:"A", q47:"C", q48:"B", q49:"C", q50:"C"
+    };
+
+    let score = 0;
+
+    for(let i = 1; i <= 50; i++){
+
+        const selected = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        if(selected && selected.value === answers["q" + i]){
+            score++;
+        }
+    }
+
+    let percentage = (score / 50) * 100;
+
+    let grade;
+
+    if(score >= 45){
+        grade = "A+ 🏆";
+    }else if(score >= 38){
+        grade = "A 🥇";
+    }else if(score >= 30){
+        grade = "B 🥈";
+    }else if(score >= 20){
+        grade = "C 🥉";
+    }else{
+        grade = "D 📚 Keep Practicing";
+    }
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").innerHTML = `
+        <h2>🎉 Test Completed!</h2>
+        <h3>Your Score: ${score} / 50</h3>
+        <h3>Percentage: ${percentage}%</h3>
+        <h3>Grade: ${grade}</h3>
+
+        <button class="restart-btn" onclick="location.reload()">
+            🔄 Restart Test
+        </button>
+    `;
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
 <label
