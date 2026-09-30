@@ -1,1 +1,791 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>जित-जित मैं निरखत हूँ - MCQ Test</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:linear-gradient(135deg,#fff7e6,#e8f5e9);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:25px 15px;
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+    color:white;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+}
+
+header h1{
+    margin:12px 0 5px;
+    font-size:25px;
+}
+
+header p{
+    margin:5px;
+}
+
+.quiz-container{
+    max-width:900px;
+    margin:20px auto;
+    padding:15px;
+}
+
+.question{
+    background:white;
+    margin-bottom:18px;
+    padding:18px;
+    border-radius:14px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.10);
+}
+
+.question h3{
+    margin-top:0;
+    font-size:18px;
+}
+
+.option{
+    display:block;
+    padding:10px;
+    margin:7px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#fff3cd;
+}
+
+.submit-btn,
+.restart-btn{
+    display:block;
+    width:100%;
+    max-width:400px;
+    margin:25px auto;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn{
+    background:#198754;
+    color:white;
+}
+
+.restart-btn{
+    background:#0d6efd;
+    color:white;
+}
+
+#result{
+    display:none;
+    background:white;
+    margin:25px auto;
+    padding:25px;
+    max-width:600px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.back-home{
+    text-align:center;
+    margin:25px;
+}
+
+.back-home a{
+    text-decoration:none;
+    font-weight:bold;
+    color:#d63384;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="assets/logo.png"
+     alt="U.K.P NO1 Education Logo"
+     class="logo">
+
+<h1>📘 जित-जित मैं निरखत हूँ</h1>
+
+<p>कक्षा 10 • हिंदी • अध्याय 8</p>
+
+<p>📝 MCQ Test – 50 Questions</p>
+
+</header>
+
+<div class="quiz-container">
+
+<!-- Question 1 -->
+<div class="question">
+<h3>1. ‘जित-जित मैं निरखत हूँ’ पाठ के लेखक/मुख्य व्यक्तित्व कौन हैं?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. पं. बिरजू महाराज
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. अमरकांत
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. रामविलास शर्मा
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. अशोक वाजपेयी
+</label>
+</div>
+
+
+<!-- Question 2 -->
+<div class="question">
+<h3>2. बिरजू महाराज किस कला से संबंधित थे?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. चित्रकला
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. कथक नृत्य
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. गायन
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. मूर्तिकला
+</label>
+</div>
+
+
+<!-- Question 3 -->
+<div class="question">
+<h3>3. बिरजू महाराज किस घराने से संबंधित थे?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. जयपुर घराना
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. लखनऊ घराना
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. बनारस घराना
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. ग्वालियर घराना
+</label>
+</div>
+
+
+<!-- Question 4 -->
+<div class="question">
+<h3>4. बिरजू महाराज के नृत्य की प्रमुख विशेषता क्या थी?</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A. भाव और अभिव्यक्ति
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B. केवल तेज गति
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C. केवल संगीत
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D. केवल अभिनय
+</label>
+</div>
+
+
+<!-- Question 5 -->
+<div class="question">
+<h3>5. बिरजू महाराज का संबंध किस पीढ़ी से बताया गया है?</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+A. पाँचवीं
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+B. छठी
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C. सातवीं
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+D. आठवीं
+</label>
+</div>
+
+
+<!-- Question 6 -->
+<div class="question">
+<h3>6. बिरजू महाराज का जन्म कब हुआ था?</h3>
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+A. 4 फरवरी 1938
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+B. 4 जनवरी 1938
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+C. 14 फरवरी 1938
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+D. 4 फरवरी 1940
+</label>
+</div>
+
+
+<!-- Question 7 -->
+<div class="question">
+<h3>7. बिरजू महाराज का बचपन किस वातावरण में बीता?</h3>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+A. व्यापारिक वातावरण
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+B. संगीत और नृत्य के वातावरण में
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+C. सैनिक वातावरण में
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+D. राजनीतिक वातावरण में
+</label>
+</div>
+
+
+<!-- Question 8 -->
+<div class="question">
+<h3>8. बिरजू महाराज ने किस नृत्य को प्रसिद्ध बनाया?</h3>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+A. भरतनाट्यम
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+B. कथक
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+C. कुचिपुड़ी
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+D. ओडिसी
+</label>
+</div>
+
+
+<!-- Question 9 -->
+<div class="question">
+<h3>9. बिरजू महाराज को संगीत नाटक अकादमी पुरस्कार लगभग किस आयु में मिला?</h3>
+
+<label class="option">
+<input type="radio" name="q9" value="A">
+A. 20 वर्ष
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+B. 27 वर्ष
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="C">
+B. 35 वर्ष
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="D">
+D. 40 वर्ष
+</label>
+</div>
+
+
+<!-- Question 10 -->
+<div class="question">
+<h3>10. ‘जित-जित मैं निरखत हूँ’ किस प्रकार की रचना है?</h3>
+
+<label class="option">
+<input type="radio" name="q10" value="A">
+A. संवादात्मक/साक्षात्कारात्मक
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="B">
+B. कहानी
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+C. कविता
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="D">
+D. नाटक
+</label>
+</div>
+
+
+<!-- Question 11 -->
+<div class="question">
+<h3>11. पाठ में बिरजू महाराज से बातचीत किस रूप में प्रस्तुत की गई है?</h3>
+
+<label class="option">
+<input type="radio" name="q11" value="A">
+A. साक्षात्कार
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="B">
+B. पत्र
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+C. डायरी
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="D">
+D. कहानी
+</label>
+</div>
+
+
+<!-- Question 12 -->
+<div class="question">
+<h3>12. बिरजू महाराज के जीवन में नृत्य का क्या स्थान था?</h3>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+A. केवल मनोरंजन
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="B">
+B. जीवन का महत्वपूर्ण हिस्सा
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="C">
+C. केवल व्यवसाय
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="D">
+D. कोई विशेष स्थान नहीं
+</label>
+</div>
+
+
+<!-- Question 13 -->
+<div class="question">
+<h3>13. कथक में किस चीज का विशेष महत्व है?</h3>
+
+<label class="option">
+<input type="radio" name="q13" value="A">
+A. ताल और लय
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="B">
+B. केवल चित्र
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="C">
+C. केवल वस्त्र
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+D. केवल मंच
+</label>
+</div>
+
+
+<!-- Question 14 -->
+<div class="question">
+<h3>14. बिरजू महाराज की कला में किसका सुंदर मेल दिखाई देता है?</h3>
+
+<label class="option">
+<input type="radio" name="q14" value="A">
+A. भाव, ताल और लय
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+B. केवल शब्द
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="C">
+C. केवल वाद्य
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="D">
+D. केवल पोशाक
+</label>
+</div>
+
+
+<!-- Question 15 -->
+<div class="question">
+<h3>15. बिरजू महाराज किस क्षेत्र की महत्वपूर्ण हस्ती माने जाते हैं?</h3>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+A. भारतीय शास्त्रीय नृत्य
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="B">
+B. विज्ञान
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="C">
+C. राजनीति
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="D">
+D. खेल
+</label>
+</div>
+
+
+<!-- Question 16 -->
+<div class="question">
+<h3>16. बिरजू महाराज की प्रसिद्धि का मुख्य आधार क्या था?</h3>
+
+<label class="option">
+<input type="radio" name="q16" value="A">
+A. कथक नृत्य
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+A. चित्रकला
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="C">
+C. लेखन
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="D">
+D. अभिनय मात्र
+</label>
+</div>
+
+
+<!-- Question 17 -->
+<div class="question">
+<h3>17. पाठ में बिरजू महाराज के व्यक्तित्व का कौन-सा पक्ष प्रमुख है?</h3>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+A. कलाकार का जीवन
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="B">
+B. व्यापारी जीवन
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="C">
+C. सैनिक जीवन
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="D">
+D. राजनीतिक जीवन
+</label>
+</div>
+
+
+<!-- Question 18 -->
+<div class="question">
+<h3>18. कथक नृत्य में पैरों की गति किससे जुड़ी होती है?</h3>
+
+<label class="option">
+<input type="radio" name="q18" value="A">
+A. ताल और लय
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="B">
+A. चित्र
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+C. लेख
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="D">
+D. रंग
+</label>
+</div>
+
+
+<!-- Question 19 -->
+<div class="question">
+<h3>19. बिरजू महाराज की कला किस परंपरा से जुड़ी हुई थी?</h3>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+A. भारतीय शास्त्रीय परंपरा
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="B">
+B. पश्चिमी परंपरा
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="C">
+C. आधुनिक खेल परंपरा
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="D">
+D. औद्योगिक परंपरा
+</label>
+</div>
+
+
+<!-- Question 20 -->
+<div class="question">
+<h3>20. ‘जित-जित मैं निरखत हूँ’ में किस कलाकार के जीवन पर केंद्रित चर्चा है?</h3>
+
+<label class="option">
+<input type="radio" name="q20" value="A">
+A. बिरजू महाराज
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+A. अमरकांत
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="C">
+C. महात्मा गांधी
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="D">
+D. मैक्समूलर
+</label>
+</div>
+
+
+<!-- Question 21 -->
+<div class="question">
+<h3>21. बिरजू महाराज की कला में किस भाव की विशेष अभिव्यक्ति मिलती है?</h3>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+A. भाव-अभिनय
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="B">
+B. केवल हास्य
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="C">
+C. केवल क्रोध
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="D">
+D. कोई भाव नहीं
+</label>
+</div>
+
+
+<!-- Question 22 -->
+<div class="question">
+<h3>22. कथक भारत की किस प्रकार की कला है?</h3>
+
+<label class="option">
+<input type="radio" name="q22" value="A">
+A. शास्त्रीय नृत्य
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+B. लोकगीत
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="C">
+C. चित्रकला
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="D">
+D. वास्तुकला
+</label>
+</div>
+
+
+<!-- Question 23 -->
+<div class="question">
+<h3>23. बिरजू महाराज का संबंध किस शहर/परंपरा से विशेष रूप से जुड़ा था?</h3>
+
+<label class="option">
+<input type="radio" name="q23" value="A">
+A. लखनऊ
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="B">
+B. जयपुर
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="C">
+C. पटना
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+D. चेन्नई
+</label>
+</div>
+
+
+<!-- Question 24 -->
+<div class="question">
+<h3>24. बिरजू महाराज के लिए नृत्य किस प्रकार की साधना थी?</h3>
+
+<label class="option">
+<input type="radio" name="q24" value="A">
+A. कला-साधना
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+B. केवल खेल
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="C">
+C. केवल नौकरी
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="D">
+D. केवल मनोरंजन
+</label>
+</div>
+
+
+<!-- Question 25 -->
+<div class="question">
+<h3>25. पाठ से मुख्य रूप से किस प्रकार की प्रेरणा मिलती है?</h3>
+
+<label class="option">
+<input type="radio" name="q25" value="A">
+A. अपनी कला के प्रति समर्पण
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="B">
+B. पढ़ाई छोड़ देना
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+C. मेहनत से बचना
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="D">
+D. कला से दूर रहना
+</label>
+  </div>
