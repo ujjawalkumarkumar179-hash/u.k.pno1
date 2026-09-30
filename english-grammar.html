@@ -1,1 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>English Grammar Test - U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#ffffff);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+h1{
+    color:#1a237e;
+}
+
+.subtitle{
+    color:#555;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:15px;
+}
+
+.question{
+    background:white;
+    margin:15px 0;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.10);
+}
+
+.question h3{
+    margin-top:0;
+}
+
+label{
+    display:block;
+    padding:10px;
+    margin:7px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+label:hover{
+    background:#e8eaff;
+}
+
+.submit-btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:12px;
+    background:#1a237e;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:25px 0;
+}
+
+#result{
+    display:none;
+    text-align:center;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    margin:20px 0;
+}
+
+.restart-btn{
+    padding:12px 22px;
+    border:0;
+    border-radius:10px;
+    background:#388e3c;
+    color:white;
+    font-size:16px;
+}
+
+.back{
+    text-align:center;
+    margin:25px;
+}
+
+.back a{
+    text-decoration:none;
+    background:#444;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="assets/logo.png"
+     class="logo"
+     alt="U.K.P NO1 Education Logo">
+
+<h1>✍️ English Grammar Test</h1>
+
+<p class="subtitle">
+Class 10 • English Grammar • 50 MCQs
+</p>
+
+</header>
+
+<div class="container">
+
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question">
+<h3>1. He ___ to school every day.</h3>
+<label><input type="radio" name="q1" value="A"> A) go</label>
+<label><input type="radio" name="q1" value="B"> B) goes</label>
+<label><input type="radio" name="q1" value="C"> C) going</label>
+<label><input type="radio" name="q1" value="D"> D) gone</label>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<h3>2. They ___ playing cricket now.</h3>
+<label><input type="radio" name="q2" value="A"> A) is</label>
+<label><input type="radio" name="q2" value="B"> B) was</label>
+<label><input type="radio" name="q2" value="C"> C) are</label>
+<label><input type="radio" name="q2" value="D"> D) be</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<h3>3. I ___ my homework yesterday.</h3>
+<label><input type="radio" name="q3" value="A"> A) complete</label>
+<label><input type="radio" name="q3" value="B"> B) completed</label>
+<label><input type="radio" name="q3" value="C"> C) completing</label>
+<label><input type="radio" name="q3" value="D"> D) completes</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<h3>4. She ___ already finished her work.</h3>
+<label><input type="radio" name="q4" value="A"> A) has</label>
+<label><input type="radio" name="q4" value="B"> B) have</label>
+<label><input type="radio" name="q4" value="C"> C) having</label>
+<label><input type="radio" name="q4" value="D"> D) had</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<h3>5. We ___ dinner before they arrived.</h3>
+<label><input type="radio" name="q5" value="A"> A) eat</label>
+<label><input type="radio" name="q5" value="B"> B) ate</label>
+<label><input type="radio" name="q5" value="C"> C) had eaten</label>
+<label><input type="radio" name="q5" value="D"> D) eating</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<h3>6. Choose the correct article: He is ___ honest man.</h3>
+<label><input type="radio" name="q6" value="A"> A) a</label>
+<label><input type="radio" name="q6" value="B"> B) an</label>
+<label><input type="radio" name="q6" value="C"> C) the</label>
+<label><input type="radio" name="q6" value="D"> D) no article</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<h3>7. I saw ___ elephant in the zoo.</h3>
+<label><input type="radio" name="q7" value="A"> A) a</label>
+<label><input type="radio" name="q7" value="B"> B) an</label>
+<label><input type="radio" name="q7" value="C"> C) the</label>
+<label><input type="radio" name="q7" value="D"> D) no article</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<h3>8. The book is ___ the table.</h3>
+<label><input type="radio" name="q8" value="A"> A) on</label>
+<label><input type="radio" name="q8" value="B"> B) at</label>
+<label><input type="radio" name="q8" value="C"> C) by</label>
+<label><input type="radio" name="q8" value="D"> D) from</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<h3>9. She is good ___ English.</h3>
+<label><input type="radio" name="q9" value="A"> A) in</label>
+<label><input type="radio" name="q9" value="B"> B) on</label>
+<label><input type="radio" name="q9" value="C"> C) at</label>
+<label><input type="radio" name="q9" value="D"> D) for</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<h3>10. We have lived here ___ 2015.</h3>
+<label><input type="radio" name="q10" value="A"> A) for</label>
+<label><input type="radio" name="q10" value="B"> B) since</label>
+<label><input type="radio" name="q10" value="C"> C) from</label>
+<label><input type="radio" name="q10" value="D"> D) by</label>
+</div>
+
+<!-- Q11 -->
+<div class="question">
+<h3>11. You ___ obey your parents.</h3>
+<label><input type="radio" name="q11" value="A"> A) should</label>
+<label><input type="radio" name="q11" value="B"> B) may</label>
+<label><input type="radio" name="q11" value="C"> C) can</label>
+<label><input type="radio" name="q11" value="D"> D) might</label>
+</div>
+
+<!-- Q12 -->
+<div class="question">
+<h3>12. ___ I come in?</h3>
+<label><input type="radio" name="q12" value="A"> A) Must</label>
+<label><input type="radio" name="q12" value="B"> B) May</label>
+<label><input type="radio" name="q12" value="C"> C) Should</label>
+<label><input type="radio" name="q12" value="D"> D) Would</label>
+</div>
+
+<!-- Q13 -->
+<div class="question">
+<h3>13. He ___ swim when he was five.</h3>
+<label><input type="radio" name="q13" value="A"> A) can</label>
+<label><input type="radio" name="q13" value="B"> B) could</label>
+<label><input type="radio" name="q13" value="C"> C) may</label>
+<label><input type="radio" name="q13" value="D"> D) shall</label>
+</div>
+
+<!-- Q14 -->
+<div class="question">
+<h3>14. You ___ not smoke here.</h3>
+<label><input type="radio" name="q14" value="A"> A) can</label>
+<label><input type="radio" name="q14" value="B"> B) may</label>
+<label><input type="radio" name="q14" value="C"> C) must</label>
+<label><input type="radio" name="q14" value="D"> D) would</label>
+</div>
+
+<!-- Q15 -->
+<div class="question">
+<h3>15. We ___ respect our teachers.</h3>
+<label><input type="radio" name="q15" value="A"> A) should</label>
+<label><input type="radio" name="q15" value="B"> B) might</label>
+<label><input type="radio" name="q15" value="C"> C) could</label>
+<label><input type="radio" name="q15" value="D"> D) would</label>
+</div>
+
+<!-- Q16 -->
+<div class="question">
+<h3>16. The plural of "child" is:</h3>
+<label><input type="radio" name="q16" value="A"> A) childs</label>
+<label><input type="radio" name="q16" value="B"> B) children</label>
+<label><input type="radio" name="q16" value="C"> C) childes</label>
+<label><input type="radio" name="q16" value="D"> D) childrens</label>
+</div>
+
+<!-- Q17 -->
+<div class="question">
+<h3>17. The opposite of "ancient" is:</h3>
+<label><input type="radio" name="q17" value="A"> A) old</label>
+<label><input type="radio" name="q17" value="B"> B) modern</label>
+<label><input type="radio" name="q17" value="C"> C) past</label>
+<label><input type="radio" name="q17" value="D"> D) historic</label>
+</div>
+
+<!-- Q18 -->
+<div class="question">
+<h3>18. Choose the synonym of "happy".</h3>
+<label><input type="radio" name="q18" value="A"> A) sad</label>
+<label><input type="radio" name="q18" value="B"> B) angry</label>
+<label><input type="radio" name="q18" value="C"> C) joyful</label>
+<label><input type="radio" name="q18" value="D"> D) weak</label>
+</div>
+
+<!-- Q19 -->
+<div class="question">
+<h3>19. He runs very ___.</h3>
+<label><input type="radio" name="q19" value="A"> A) quick</label>
+<label><input type="radio" name="q19" value="B"> B) quickly</label>
+<label><input type="radio" name="q19" value="C"> C) quickest</label>
+<label><input type="radio" name="q19" value="D"> D) quicker</label>
+</div>
+
+<!-- Q20 -->
+<div class="question">
+<h3>20. She sings ___.</h3>
+<label><input type="radio" name="q20" value="A"> A) beautiful</label>
+<label><input type="radio" name="q20" value="B"> B) beautifully</label>
+<label><input type="radio" name="q20" value="C"> C) beauty</label>
+<label><input type="radio" name="q20" value="D"> D) beautify</label>
+</div>
+
+<!-- Q21 -->
+<div class="question">
+<h3>21. Ram is ___ than Shyam.</h3>
+<label><input type="radio" name="q21" value="A"> A) tall</label>
+<label><input type="radio" name="q21" value="B"> B) taller</label>
+<label><input type="radio" name="q21" value="C"> C) tallest</label>
+<label><input type="radio" name="q21" value="D"> D) more tall</label>
+</div>
+
+<!-- Q22 -->
+<div class="question">
+<h3>22. This is the ___ building in the city.</h3>
+<label><input type="radio" name="q22" value="A"> A) tall</label>
+<label><input type="radio" name="q22" value="B"> B) taller</label>
+<label><input type="radio" name="q22" value="C"> C) tallest</label>
+<label><input type="radio" name="q22" value="D"> D) more tall</label>
+</div>
+
+<!-- Q23 -->
+<div class="question">
+<h3>23. Neither Ram ___ Shyam was present.</h3>
+<label><input type="radio" name="q23" value="A"> A) or</label>
+<label><input type="radio" name="q23" value="B"> B) nor</label>
+<label><input type="radio" name="q23" value="C"> C) and</label>
+<label><input type="radio" name="q23" value="D"> D) but</label>
+</div>
+
+<!-- Q24 -->
+<div class="question">
+<h3>24. Work hard ___ you will fail.</h3>
+<label><input type="radio" name="q24" value="A"> A) or</label>
+<label><input type="radio" name="q24" value="B"> B) and</label>
+<label><input type="radio" name="q24" value="C"> C) but</label>
+<label><input type="radio" name="q24" value="D"> D) because</label>
+</div>
+
+<!-- Q25 -->
+<div class="question">
+<h3>25. I was tired, ___ I continued working.</h3>
+<label><input type="radio" name="q25" value="A"> A) because</label>
+<label><input type="radio" name="q25" value="B"> B) but</label>
+<label><input type="radio" name="q25" value="C"> C) or</label>
+<label><input type="radio" name="q25" value="D"> D) so</label>
+</div>
+
+<!-- Q26 -->
+<div class="question">
+<h3>26. The passive voice of "Ram writes a letter" is:</h3>
+<label><input type="radio" name="q26" value="A"> A) A letter is written by Ram.</label>
+<label><input type="radio" name="q26" value="B"> B) A letter was written by Ram.</label>
+<label><input type="radio" name="q26" value="C"> C) A letter has written by Ram.</label>
+<label><input type="radio" name="q26" value="D"> D) A letter wrote Ram.</label>
+</div>
+
+<!-- Q27 -->
+<div class="question">
+<h3>27. The passive voice of "She cleaned the room" is:</h3>
+<label><input type="radio" name="q27" value="A"> A) The room is cleaned by her.</label>
+<label><input type="radio" name="q27" value="B"> B) The room was cleaned by her.</label>
+<label><input type="radio" name="q27" value="C"> C) The room has cleaned by her.</label>
+<label><input type="radio" name="q27" value="D"> D) The room cleans her.</label>
+</div>
+
+<!-- Q28 -->
+<div class="question">
+<h3>28. Change into indirect speech: He said, "I am happy."</h3>
+<label><input type="radio" name="q28" value="A"> A) He said that I am happy.</label>
+<label><input type="radio" name="q28" value="B"> B) He said that he was happy.</label>
+<label><input type="radio" name="q28" value="C"> C) He says that he was happy.</label>
+<label><input type="radio" name="q28" value="D"> D) He said he is happy.</label>
+</div>
+
+<!-- Q29 -->
+<div class="question">
+<h3>29. Change into indirect speech: She said, "I can swim."</h3>
+<label><input type="radio" name="q29" value="A"> A) She said that she could swim.</label>
+<label><input type="radio" name="q29" value="B"> B) She said that I could swim.</label>
+<label><input type="radio" name="q29" value="C"> C) She says she could swim.</label>
+<label><input type="radio" name="q29" value="D"> D) She said she can swimming.</label>
+</div>
+
+<!-- Q30 -->
+<div class="question">
+<h3>30. "Honesty" is a:</h3>
+<label><input type="radio" name="q30" value="A"> A) Verb</label>
+<label><input type="radio" name="q30" value="B"> B) Adjective</label>
+<label><input type="radio" name="q30" value="C"> C) Noun</label>
+<label><input type="radio" name="q30" value="D"> D) Adverb</label>
+</div>
+
+<!-- Q31 -->
+<div class="question">
+<h3>31. "Beautiful" is a:</h3>
+<label><input type="radio" name="q31" value="A"> A) Noun</label>
+<label><input type="radio" name="q31" value="B"> B) Verb</label>
+<label><input type="radio" name="q31" value="C"> C) Adjective</label>
+<label><input type="radio" name="q31" value="D"> D) Adverb</label>
+</div>
+
+<!-- Q32 -->
+<div class="question">
+<h3>32. "Slowly" is a:</h3>
+<label><input type="radio" name="q32" value="A"> A) Noun</label>
+<label><input type="radio" name="q32" value="B"> B) Adjective</label>
+<label><input type="radio" name="q32" value="C"> C) Verb</label>
+<label><input type="radio" name="q32" value="D"> D) Adverb</label>
+</div>
+
+<!-- Q33 -->
+<div class="question">
+<h3>33. Choose the correct pronoun: Rahul is my friend. ___ is honest.</h3>
+<label><input type="radio" name="q33" value="A"> A) He</label>
+<label><input type="radio" name="q33" value="B"> B) She</label>
+<label><input type="radio" name="q33" value="C"> C) It</label>
+<label><input type="radio" name="q33" value="D"> D) They</label>
+</div>
+
+<!-- Q34 -->
+<div class="question">
+<h3>34. This book belongs to me. It is ___.</h3>
+<label><input type="radio" name="q34" value="A"> A) my</label>
+<label><input type="radio" name="q34" value="B"> B) mine</label>
+<label><input type="radio" name="q34" value="C"> C) me</label>
+<label><input type="radio" name="q34" value="D"> D) I</label>
+</div>
+
+<!-- Q35 -->
+<div class="question">
+<h3>35. ___ students are absent today.</h3>
+<label><input type="radio" name="q35" value="A"> A) Much</label>
+<label><input type="radio" name="q35" value="B"> B) Many</label>
+<label><input type="radio" name="q35" value="C"> C) Little</label>
+<label><input type="radio" name="q35" value="D"> D) Any</label>
+</div>
+
+<!-- Q36 -->
+<div class="question">
+<h3>36. There isn't ___ water in the bottle.</h3>
+<label><input type="radio" name="q36" value="A"> A) many</label>
+<label><input type="radio" name="q36" value="B"> B) few</label>
+<label><input type="radio" name="q36" value="C"> C) much</label>
+<label><input type="radio" name="q36" value="D"> D) many of</label>
+</div>
+
+<!-- Q37 -->
+<div class="question">
+<h3>37. I have ___ friends in this city.</h3>
+<label><input type="radio" name="q37" value="A"> A) a little</label>
+<label><input type="radio" name="q37" value="B"> B) a few</label>
+<label><input type="radio" name="q37" value="C"> C) much</label>
+<label><input type="radio" name="q37" value="D"> D) little</label>
+</div>
+
+<!-- Q38 -->
+<div class="question">
+<h3>38. If I were rich, I ___ help the poor.</h3>
+<label><input type="radio" name="q38" value="A"> A) will</label>
+<label><input type="radio" name="q38" value="B"> B) would</label>
+<label><input type="radio" name="q38" value="C"> C) can</label>
+<label><input type="radio" name="q38" value="D"> D) shall</label>
+</div>
+
+<!-- Q39 -->
+<div class="question">
+<h3>39. If it rains, we ___ stay at home.</h3>
+<label><input type="radio" name="q39" value="A"> A) will</label>
+<label><input type="radio" name="q39" value="B"> B) would</label>
+<label><input type="radio" name="q39" value="C"> C) were</label>
+<label><input type="radio" name="q39" value="D"> D) had</label>
+</div>
+
+<!-- Q40 -->
+<div class="question">
+<h3>40. The train arrived ___ time.</h3>
+<label><input type="radio" name="q40" value="A"> A) on</label>
+<label><input type="radio" name="q40" value="B"> B) in</label>
+<label><input type="radio" name="q40" value="C"> C) at</label>
+<label><input type="radio" name="q40" value="D"> D) by</label>
+</div>
+
+<!-- Q41 -->
+<div class="question">
+<h3>41. He has been studying ___ two hours.</h3>
+<label><input type="radio" name="q41" value="A"> A) since</label>
+<label><input type="radio" name="q41" value="B"> B) for</label>
+<label><input type="radio" name="q41" value="C"> C) from</label>
+<label><input type="radio" name="q41" value="D"> D) by</label>
+</div>
+
+<!-- Q42 -->
+<div class="question">
+<h3>42. She has lived here ___ Monday.</h3>
+<label><input type="radio" name="q42" value="A"> A) for</label>
+<label><input type="radio" name="q42" value="B"> B) since</label>
+<label><input type="radio" name="q42" value="C"> C) by</label>
+<label><input type="radio" name="q42" value="D"> D) during</label>
+</div>
+
+<!-- Q43 -->
+<div class="question">
+<h3>43. Choose the correct question tag: You are coming, ___?</h3>
+<label><input type="radio" name="q43" value="A"> A) aren't you</label>
+<label><input type="radio" name="q43" value="B"> B) are you</label>
+<label><input type="radio" name="q43" value="C"> C) isn't you</label>
+<label><input type="radio" name="q43" value="D"> D) don't you</label>
+</div>
+
+<!-- Q44 -->
+<div class="question">
+<h3>44. He doesn't play cricket, ___?</h3>
+<label><input type="radio" name="q44" value="A"> A) does he</label>
+<label><input type="radio" name="q44" value="B"> B) doesn't he</label>
+<label><input type="radio" name="q44" value="C"> C) is he</label>
+<label><input type="radio" name="q44" value="D"> D) did he</label>
+</div>
+
+<!-- Q45 -->
+<div class="question">
+<h3>45. What is the correct spelling?</h3>
+<label><input type="radio" name="q45" value="A"> A) Beautifull</label>
+<label><input type="radio" name="q45" value="B"> B) Beautiful</label>
+<label><input type="radio" name="q45" value="C"> C) Beutiful</label>
+<label><input type="radio" name="q45" value="D"> D) Beautifal</label>
+</div>
+
+<!-- Q46 -->
+<div class="question">
+<h3>46. What is the correct spelling?</h3>
+<label><input type="radio" name="q46" value="A"> A) Necessary</label>
+<label><input type="radio" name="q46" value="B"> B) Neccessary</label>
+<label><input type="radio" name="q46" value="C"> C) Necesary</label>
+<label><input type="radio" name="q46" value="D"> D) Nessessary</label>
+</div>
+
+<!-- Q47 -->
+<div class="question">
+<h3>47. Choose the correct sentence.</h3>
+<label><input type="radio" name="q47" value="A"> A) He don't like tea.</label>
+<label><input type="radio" name="q47" value="B"> B) He doesn't likes tea.</label>
+<label><input type="radio" name="q47" value="C"> C) He doesn't like tea.</label>
+<label><input type="radio" name="q47" value="D"> D) He not like tea.</label>
+</div>
+
+<!-- Q48 -->
+<div class="question">
+<h3>48. Choose the correct sentence.</h3>
+<label><input type="radio" name="q48" value="A"> A) She go to school daily.</label>
+<label><input type="radio" name="q48" value="B"> B) She goes to school daily.</label>
+<label><input type="radio" name="q48" value="C"> C) She going to school daily.</label>
+<label><input type="radio" name="q48" value="D"> D) She gone school daily.</label>
+</div>
+
+<!-- Q49 -->
+<div class="question">
+<h3>49. Which sentence is in the present continuous tense?</h3>
+<label><input type="radio" name="q49" value="A"> A) I play cricket.</label>
+<label><input type="radio" name="q49" value="B"> B) I played cricket.</label>
+<label><input type="radio" name="q49" value="C"> C) I am playing cricket.</label>
+<label><input type="radio" name="q49" value="D"> D) I have played cricket.</label>
+</div>
+
+<!-- Q50 -->
+<div class="question">
+<h3>50. Which sentence is in the simple past tense?</h3>
+<label><input type="radio" name="q50" value="A"> A) She goes home.</label>
+<label><input type="radio" name="q50" value="B"> B) She is going home.</label>
+<label><input type="radio" name="q50" value="C"> C) She went home.</label>
+<label
