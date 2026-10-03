@@ -510,5 +510,152 @@ button{
 
 <!-- Q46 -->
 <div class="question">
+<h3>Q46. किसी टावर की ऊँचाई 30√3 m और उससे दूरी 30 m है। उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q46" value="A"> A) 30°</label>
+<label><input type="radio" name="q46" value="B"> B) 45°</label>
+<label><input type="radio" name="q46" value="C"> C) 60°</label>
+<label><input type="radio" name="q46" value="D"> D) 90°</label>
+</div>
+
+<!-- Q47 -->
+<div class="question">
+<h3>Q47. किसी टावर की ऊँचाई 50 m है और उसके शीर्ष से अवनमन कोण 45° है। टावर से दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q47" value="A"> A) 25 m</label>
+<label><input type="radio" name="q47" value="B"> B) 50 m</label>
+<label><input type="radio" name="q47" value="C"> C) 50√3 m</label>
+<label><input type="radio" name="q47" value="D"> D) 100 m</label>
+</div>
+
+<!-- Q48 -->
+<div class="question">
+<h3>Q48. किसी वस्तु की ऊँचाई 40 m और क्षैतिज दूरी 40√3 m है। उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q48" value="A"> A) 30°</label>
+<label><input type="radio" name="q48" value="B"> B) 45°</label>
+<label><input type="radio" name="q48" value="C"> C) 60°</label>
+<label><input type="radio" name="q48" value="D"> D) 90°</label>
+</div>
+
+<!-- Q49 -->
+<div class="question">
+<h3>Q49. tan θ = h/d में h किसे दर्शाता है?</h3>
+<label><input type="radio" name="q49" value="A"> A) दूरी</label>
+<label><input type="radio" name="q49" value="B"> B) ऊँचाई</label>
+<label><input type="radio" name="q49" value="C"> C) कर्ण</label>
+<label><input type="radio" name="q49" value="D"> D) कोण</label>
+</div>
+
+<!-- Q50 -->
+<div class="question">
+<h3>Q50. ऊँचाई और दूरी से संबंधित प्रश्नों में सबसे अधिक किस त्रिकोणमितीय अनुपात का प्रयोग होता है?</h3>
+<label><input type="radio" name="q50" value="A"> A) tan θ</label>
+<label><input type="radio" name="q50" value="B"> B) sin θ</label>
+<label><input type="radio" name="q50" value="C"> C) cos θ</label>
+<label><input type="radio" name="q50" value="D"> D) sec θ</label>
+</div>
+
+<button type="button" onclick="checkResult()">📝 Submit Test</button>
+
+</form>
+
+<div id="result"></div>
+
+<section class="shayari">
+📐 ऊँचाई हो चाहे दूरी का सवाल,<br>
+💪 मेहनत से होगा हर मुश्किल का हल।<br>
+🌟 सीखते चलो और आगे बढ़ते चलो।
+</section>
+
+<a href="math.html" class="home">🏠 वापस Math Page पर जाएँ</a>
+
+<script>
+const answers = {
+    q1:"B",
+    q2:"B",
+    q3:"B",
+    q4:"A",
+    q5:"B",
+    q6:"A",
+    q7:"B",
+    q8:"A",
+    q9:"B",
+    q10:"C",
+    q11:"B",
+    q12:"A",
+    q13:"C",
+    q14:"C",
+    q15:"B",
+    q16:"B",
+    q17:"B",
+    q18:"B",
+    q19:"A",
+    q20:"C",
+    q21:"A",
+    q22:"B",
+    q23:"B",
+    q24:"B",
+    q25:"B",
+    q26:"A",
+    q27:"B",
+    q28:"C",
+    q29:"B",
+    q30:"C",
+    q31:"B",
+    q32:"B",
+    q33:"B",
+    q34:"B",
+    q35:"C",
+    q36:"B",
+    q37:"A",
+    q38:"A",
+    q39:"B",
+    q40:"B",
+    q41:"B",
+    q42:"B",
+    q43:"B",
+    q44:"C",
+    q45:"A",
+    q46:"C",
+    q47:"B",
+    q48:"A",
+    q49:"B",
+    q50:"A"
+};
+
+function checkResult(){
+    let score = 0;
+
+    for(let i = 1; i <= 50; i++){
+        const selected = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        if(selected && selected.value === answers["q" + i]){
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+
+    let message = "";
+
+    if(score >= 45){
+        message = "🏆 शानदार! आपकी तैयारी बहुत अच्छी है।";
+    }else if(score >= 38){
+        message = "🌟 बहुत बढ़िया! थोड़ी और मेहनत करें।";
+    }else if(score >= 30){
+        message = "👍 अच्छा प्रयास! अभ्यास जारी रखें।";
+    }else{
+        message = "📚 और अभ्यास करें, सफलता जरूर मिलेगी।";
+    }
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "🎯 आपका Score: " + score + " / 50<br><br>" + message;
+}
+</script>
+
+</body>
+</html>
 <h3>Q46. किसी टावर की ऊँचाई 30√3 m और दूरी 30 m है। उन्नयन कोण क्या होगा?</h3>
 <label><input type
