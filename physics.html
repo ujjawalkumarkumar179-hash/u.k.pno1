@@ -1,33 +1,395 @@
-<div class="chapter-grid">
+<!DOCTYPE html>
+<html lang="hi">
 
-    <!-- Chapter 1 -->
-    <a href="physics-ch1.html" class="chapter-card">
-        <h3>🔦 Chapter 1 — प्रकाश: परावर्तन एवं अपवर्तन</h3>
-        <p>Reflection, Refraction, Mirror, Lens और महत्वपूर्ण MCQs</p>
-    </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Chapter 2 -->
-    <a href="physics-ch2.html" class="chapter-card">
-        <h3>👁️ Chapter 2 — मानव नेत्र तथा रंगीन संसार</h3>
-        <p>Human Eye, Defects of Vision और Colourful World</p>
-    </a>
+    <title>Physics - U.K.P NO1 Education</title>
 
-    <!-- Chapter 3 -->
-    <a href="physics-ch3.html" class="chapter-card">
-        <h3>⚡ Chapter 3 — विद्युत</h3>
-        <p>Current, Voltage, Resistance और Electrical Power</p>
-    </a>
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Chapter 4 -->
-    <a href="physics-ch4.html" class="chapter-card">
-        <h3>🧲 Chapter 4 — विद्युत का चुंबकीय प्रभाव</h3>
-        <p>Magnetic Field, Fleming Rule और Electromagnetism</p>
-    </a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <!-- Chapter 5 -->
-    <a href="physics-ch5.html" class="chapter-card">
-        <h3>☀️ Chapter 5 — ऊर्जा के स्रोत</h3>
-        <p>Renewable और Non-renewable Sources of Energy</p>
-    </a>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #ffffff);
+            color: #222;
+        }
 
-</div>
+        /* Header */
+        .physics-header {
+            text-align: center;
+            padding: 28px 15px;
+            background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .physics-header img {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .physics-header h1 {
+            margin: 8px 0;
+            font-size: 30px;
+        }
+
+        .physics-header p {
+            margin: 7px 0;
+            font-size: 16px;
+        }
+
+        .welcome {
+            font-weight: bold;
+            font-size: 18px !important;
+        }
+
+        /* Shayari */
+        .physics-shayari {
+            margin: 20px 15px;
+            padding: 20px 15px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+            border: 2px solid #ffb300;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+            line-height: 1.9;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        /* Chapter Section */
+        .chapter-section {
+            padding: 10px 15px 25px;
+        }
+
+        .chapter-section h2 {
+            text-align: center;
+            color: #0d47a1;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .chapter-intro {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Chapter Grid */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        /* Chapter Card */
+        .chapter-card {
+            display: block;
+            text-decoration: none;
+            color: #222;
+            background: white;
+            padding: 20px 18px;
+            border-radius: 20px;
+            border-left: 7px solid #1565c0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            transition: 0.2s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .chapter-card:active {
+            transform: scale(0.98);
+        }
+
+        .chapter-number {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0d47a1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .chapter-card h3 {
+            margin: 5px 0 10px;
+            color: #1565c0;
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+        .chapter-card p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .start-test {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 13px;
+            background: #1565c0;
+            color: white;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Back Button */
+        .back-home {
+            text-align: center;
+            margin: 25px 15px 35px;
+        }
+
+        .back-home a {
+            display: inline-block;
+            padding: 13px 22px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .back-home a:hover {
+            background: #111;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #0d47a1;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .physics-header h1 {
+                font-size: 27px;
+            }
+
+            .chapter-card {
+                padding: 18px 15px;
+            }
+
+            .chapter-card h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header class="physics-header">
+
+        <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+
+        <h1>⚛️ Physics</h1>
+
+        <p>Class 10 • Bihar Board • NCERT</p>
+
+        <p class="welcome">
+            📚 Physics पढ़ें • समझें • Practice करें • Score बढ़ाएँ 🚀
+        </p>
+
+    </header>
+
+
+    <!-- Top Shayari -->
+    <section class="physics-shayari">
+
+        🌟 मेहनत की राह पर बढ़ते जाना है,<br>
+        📚 Physics को समझते जाना है,<br>
+        💪 आज की मेहनत से कल सफलता पाना है। 🚀
+
+    </section>
+
+
+    <!-- Chapters -->
+    <section class="chapter-section">
+
+        <h2>📖 Physics के Chapters</h2>
+
+        <p class="chapter-intro">
+            अपना Chapter चुनें और सीधे MCQ Test शुरू करें।
+        </p>
+
+
+        <div class="chapter-grid">
+
+
+            <!-- Chapter 1 -->
+            <a href="physics-ch1.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 1
+                </span>
+
+                <h3>
+                    🔦 प्रकाश — परावर्तन एवं अपवर्तन
+                </h3>
+
+                <p>
+                    प्रकाश का परावर्तन, दर्पण, अपवर्तन,
+                    लेंस और महत्वपूर्ण प्रश्न।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 2 -->
+            <a href="physics-ch2.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 2
+                </span>
+
+                <h3>
+                    👁️ मानव नेत्र तथा रंगीन संसार
+                </h3>
+
+                <p>
+                    मानव नेत्र, दृष्टि दोष, उनका निवारण
+                    और रंगीन संसार से जुड़े प्रश्न।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 3 -->
+            <a href="physics-ch3.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 3
+                </span>
+
+                <h3>
+                    ⚡ विद्युत
+                </h3>
+
+                <p>
+                    विद्युत धारा, विभवांतर, प्रतिरोध,
+                    विद्युत शक्ति और ऊर्जा।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 4 -->
+            <a href="physics-ch4.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 4
+                </span>
+
+                <h3>
+                    🧲 विद्युत का चुंबकीय प्रभाव
+                </h3>
+
+                <p>
+                    चुंबकीय क्षेत्र, विद्युत मोटर,
+                    जनित्र और Fleming के नियम।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 5 -->
+            <a href="physics-ch5.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 5
+                </span>
+
+                <h3>
+                    ☀️ ऊर्जा के स्रोत
+                </h3>
+
+                <p>
+                    नवीकरणीय और अनवीकरणीय ऊर्जा स्रोत,
+                    सौर ऊर्जा तथा अन्य महत्वपूर्ण विषय।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Bottom Shayari -->
+    <section class="physics-shayari">
+
+        📚 सवाल कठिन हो तो घबराना नहीं,<br>
+        💪 मेहनत से कभी पीछे हटना नहीं,<br>
+        🌟 सीखते चलो और सफलता की ओर बढ़ते चलो। 🚀
+
+    </section>
+
+
+    <!-- Back -->
+    <section class="back-home">
+
+        <a href="science.html">
+            🔬 वापस Science Page पर जाएँ
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 U.K.P NO1 Education
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
