@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>द्विघात समीकरण - U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+header h1{
+    margin:10px 0 5px;
+}
+
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>📐 U.K.P NO1 Education</h1>
+    <h2>Chapter 4 — द्विघात समीकरण</h2>
+    <p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+    📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+    ✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>Q1. द्विघात समीकरण का सामान्य रूप क्या है?</h3>
+<label><input type="radio" name="q1" value="A"> A) ax + b = 0</label>
+<label><input type="radio" name="q1" value="B"> B) ax² + bx + c = 0</label>
+<label><input type="radio" name="q1" value="C"> C) ax³ + bx + c = 0</label>
+<label><input type="radio" name="q1" value="D"> D) ax² + b = 0</label>
+</div>
+
+<div class="question">
+<h3>Q2. द्विघात समीकरण की घात कितनी होती है?</h3>
+<label><input type="radio" name="q2" value="A"> A) 1</label>
+<label><input type="radio" name="q2" value="B"> B) 2</label>
+<label><input type="radio" name="q2" value="C"> C) 3</label>
+<label><input type="radio" name="q2" value="D"> D) 4</label>
+</div>
+
+<div class="question">
+<h3>Q3. द्विघात समीकरण ax² + bx + c = 0 में a के बारे में क्या सत्य है?</h3>
+<label><input type="radio" name="q3" value="A"> A) a = 0</label>
+<label><input type="radio" name="q3" value="B"> B) a ≠ 0</label>
+<label><input type="radio" name="q3" value="C"> C) a = 1 हमेशा</label>
+<label><input type="radio" name="q3" value="D"> D) a < 0 हमेशा</label>
+</div>
+
+<div class="question">
+<h3>Q4. x² - 5x + 6 = 0 के मूल हैं—</h3>
+<label><input type="radio" name="q4" value="A"> A) 1, 6</label>
+<label><input type="radio" name="q4" value="B"> B) 2, 3</label>
+<label><input type="radio" name="q4" value="C"> C) -2, -3</label>
+<label><input type="radio" name="q4" value="D"> D) 0, 6</label>
+</div>
+
+<div class="question">
+<h3>Q5. x² - 7x + 12 = 0 के मूल हैं—</h3>
+<label><input type="radio" name="q5" value="A"> A) 2, 6</label>
+<label><input type="radio" name="q5" value="B"> B) 3, 4</label>
+<label><input type="radio" name="q5" value="C"> C) -3, -4</label>
+<label><input type="radio" name="q5" value="D"> D) 1, 12</label>
+</div>
+
+<div class="question">
+<h3>Q6. x² - 9 = 0 के मूल हैं—</h3>
+<label><input type="radio" name="q6" value="A"> A) 3, 3</label>
+<label><input type="radio" name="q6" value="B"> B) -3, -3</label>
+<label><input type="radio" name="q6" value="C"> C) 3, -3</label>
+<label><input type="radio" name="q6" value="D"> D) 9, -9</label>
+</div>
+
+<div class="question">
+<h3>Q7. x² - 4x + 4 = 0 का मूल है—</h3>
+<label><input type="radio" name="q7" value="A"> A) 2</label>
+<label><input type="radio" name="q7" value="B"> B) -2</label>
+<label><input type="radio" name="q7" value="C"> C) 4</label>
+<label><input type="radio" name="q7" value="D"> D) -4</label>
+</div>
+
+<div class="question">
+<h3>Q8. द्विघात समीकरण का विविक्तकर (Discriminant) क्या है?</h3>
+<label><input type="radio" name="q8" value="A"> A) b² + 4ac</label>
+<label><input type="radio" name="q8" value="B"> B) b² - 4ac</label>
+<label><input type="radio" name="q8" value="C"> C) a² - 4bc</label>
+<label><input type="radio" name="q8" value="D"> D) c² - 4ab</label>
+</div>
+
+<div class="question">
+<h3>Q9. यदि D > 0 हो, तो द्विघात समीकरण के मूल कैसे होते हैं?</h3>
+<label><input type="radio" name="q9" value="A"> A) वास्तविक और असमान</label>
+<label><input type="radio" name="q9" value="B"> B) वास्तविक और समान</label>
+<label><input type="radio" name="q9" value="C"> C) कोई वास्तविक मूल नहीं</label>
+<label><input type="radio" name="q9" value="D"> D) केवल एक मूल</label>
+</div>
+
+<div class="question">
+<h3>Q10. यदि D = 0 हो, तो मूल कैसे होते हैं?</h3>
+<label><input type="radio" name="q10" value="A"> A) वास्तविक और असमान</label>
+<label><input type="radio" name="q10" value="B"> B) वास्तविक और समान</label>
+<label><input type="radio" name="q10" value="C"> C) कोई मूल नहीं</label>
+<label><input type="radio" name="q10" value="D"> D) अपरिमेय</label>
+</div>
+
+<div class="question">
+<h3>Q11. यदि D < 0 हो, तो समीकरण के—</h3>
+<label><input type="radio" name="q11" value="A"> A) दो वास्तविक असमान मूल होते हैं</label>
+<label><input type="radio" name="q11" value="B"> B) दो समान वास्तविक मूल होते हैं</label>
+<label><input type="radio" name="q11" value="C"> C) कोई वास्तविक मूल नहीं होता</label>
+<label><input type="radio" name="q11" value="D"> D) एक वास्तविक मूल होता है</label>
+</div>
+
+<div class="question">
+<h3>Q12. द्विघात सूत्र क्या है?</h3>
+<label><input type="radio" name="q12" value="A"> A) x = (-b ± √(b²-4ac))/2a</label>
+<label><input type="radio" name="q12" value="B"> B) x = (b ± √(b²+4ac))/2a</label>
+<label><input type="radio" name="q12" value="C"> C) x = (-b ± √(b²+4ac))/a</label>
+<label><input type="radio" name="q12" value="D"> D) x = b/2a</label>
+</div>
+
+<div class="question">
+<h3>Q13. x² - 3x + 2 = 0 में मूलों का योग है—</h3>
+<label><input type="radio" name="q13" value="A"> A) -3</label>
+<label><input type="radio" name="q13" value="B"> B) 3</label>
+<label><input type="radio" name="q13" value="C"> C) 2</label>
+<label><input type="radio" name="q13" value="D"> D) -2</label>
+</div>
+
+<div class="question">
+<h3>Q14. x² - 3x + 2 = 0 में मूलों का गुणनफल है—</h3>
+<label><input type="radio" name="q14" value="A"> A) 3</label>
+<label><input type="radio" name="q14" value="B"> B) -3</label>
+<label><input type="radio" name="q14" value="C"> C) 2</label>
+<label><input type="radio" name="q14" value="D"> D) -2</label>
+</div>
+
+<div class="question">
+<h3>Q15. ax² + bx + c = 0 के मूलों का योग है—</h3>
+<label><input type="radio" name="q15" value="A"> A) b/a</label>
+<label><input type="radio" name="q15" value="B"> B) -b/a</label>
+<label><input type="radio" name="q15" value="C"> C) c/a</label>
+<label><input type="radio" name="q15" value="D"> D) -c/a</label>
+</div>
+
+<div class="question">
+<h3>Q16. ax² + bx + c = 0 के मूलों का गुणनफल है—</h3>
+<label><input type="radio" name="q16" value="A"> A) b/a</label>
+<label><input type="radio" name="q16" value="B"> B) -b/a</label>
+<label><input type="radio" name="q16" value="C"> C) c/a</label>
+<label><input type="radio" name="q16" value="D"> D) -c/a</label>
+</div>
+
+<div class="question">
+<h3>Q17. x² + 5x + 6 = 0 के मूलों का योग है—</h3>
+<label><input type="radio" name="q17" value="A"> A) 5</label>
+<label><input type="radio" name="q17" value="B"> B) -5</label>
+<label><input type="radio" name="q17" value="C"> C) 6</label>
+<label><input type="radio" name="q17" value="D"> D) -6</label>
+</div>
+
+<div class="question">
+<h3>Q18. x² + 5x + 6 = 0 के मूलों का गुणनफल है—</h3>
+<label><input type="radio" name="q18" value="A"> A) 5</label>
+<label><input type="radio" name="q18" value="B"> B) -5</label>
+<label><input type="radio" name="q18" value="C"> C) 6</label>
+<label><input type="radio" name="q18" value="D"> D) -6</label>
+</div>
+
+<div class="question">
+<h3>Q19. x² + 2x + 1 = 0 के मूल हैं—</h3>
+<label><input type="radio" name="q19" value="A"> A) 1, 1</label>
+<label><input type="radio" name="q19" value="B"> B) -1, -1</label>
+<label><input type="radio" name="q19" value="C"> C) 1, -1</label>
+<label><input type="radio" name="q19" value="D"> D) 2, 1</label>
+</div>
+
+<div class="question">
+<h3>Q20. x² - 6x + 9 = 0 के मूल हैं—</h3>
+<label><input type="radio" name="q20" value="A"> A) 3, 3</label>
+<label><input type="radio" name="q20" value="B"> B) -3, -3</label>
+<label><input type="radio" name="q20" value="C"> C) 3, -3</label>
+<label><input type="radio" name="q20" value="D"> D) 9, 1</label>
+</div>
+
+<div class="question">
+<h3>Q21. x² - 5x + 6 = 0 का विविक्तकर है—</h3>
+<label><input type="radio" name="q21" value="A"> A) 1</label>
+<label><input type="radio" name="q21" value="B"> B) 2</label>
+<label><input type="radio" name="q21" value="C"> C) 3</label>
+<label><input type="radio" name="q21" value="D"> D) 4</label>
+</div>
+
+<div class="question">
+<h3>Q22. x² - 4x + 4 = 0 का विविक्तकर है—</h3>
+<label><input type="radio" name="q22" value="A"> A) 0</label>
+<label><input type="radio" name="q22" value="B"> B) 4</label>
+<label><input type="radio" name="q22" value="C"> C) 8</label>
+<label><input type="radio" name="q22" value="D"> D) 16</label>
+</div>
+
+<div class="question">
+<h3>Q23. x² + 2x + 5 = 0 का विविक्तकर है—</h3>
+<label><input type="radio" name="q23" value="A"> A) -16</label>
+<label><input type="radio" name="q23" value="B"> B) 16</label>
+<label><input type="radio" name="q23" value="C"> C) -4</label>
+<label><input type="radio" name="q23" value="D"> D) 4</label>
+</div>
+
+<div class="question">
+<h3>Q24. यदि द्विघात समीकरण के मूल 2 और 5 हैं, तो मूलों का योग क्या होगा?</h3>
+<label><input type="radio" name="q24" value="A"> A) 3</label>
+<label><input type="radio" name="q24" value="B"> B) 7</label>
+<label><input type="radio" name="q24" value="C"> C) 10</label>
+<label><input type="radio" name="q24" value="D"> D) -7</label>
+</div>
+
+<div class="question">
+<h3>Q25. यदि द्विघात समीकरण के मूल 2 और 5 हैं, तो मूलों का गुणनफल क्या होगा?</h3>
+<label><input type="radio" name="q25" value="A"> A) 7</label>
+<label><input type="radio" name="q25" value="B"> B) 10</label>
+<label><input type="radio" name="q25" value="C"> C) 3</label>
+<label><input type="radio" name="q25" value="D"> D) -10</label>
+</div>
+
+<!-- PART 2 यहाँ से जारी होगा -->
