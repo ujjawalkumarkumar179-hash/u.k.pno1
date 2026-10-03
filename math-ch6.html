@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>त्रिभुज - U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+header h1{
+    margin:10px 0 5px;
+}
+
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>📐 U.K.P NO1 Education</h1>
+    <h2>Chapter 6 — त्रिभुज</h2>
+    <p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+    📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+    ✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>Q1. दो त्रिभुजों को समरूप त्रिभुज कब कहा जाता है?</h3>
+<label><input type="radio" name="q1" value="A"> A) जब उनके क्षेत्रफल समान हों</label>
+<label><input type="radio" name="q1" value="B"> B) जब उनके संगत कोण समान हों और संगत भुजाएँ समानुपाती हों</label>
+<label><input type="radio" name="q1" value="C"> C) जब उनकी परिमाप समान हो</label>
+<label><input type="radio" name="q1" value="D"> D) जब सभी भुजाएँ अलग हों</label>
+</div>
+
+<div class="question">
+<h3>Q2. समरूपता का कौन-सा मानदंड सही है?</h3>
+<label><input type="radio" name="q2" value="A"> A) AA</label>
+<label><input type="radio" name="q2" value="B"> B) केवल SSS</label>
+<label><input type="radio" name="q2" value="C"> C) केवल SAS</label>
+<label><input type="radio" name="q2" value="D"> D) इनमें से कोई नहीं</label>
+</div>
+
+<div class="question">
+<h3>Q3. यदि दो त्रिभुजों के दो-दो संगत कोण समान हों, तो वे त्रिभुज होते हैं—</h3>
+<label><input type="radio" name="q3" value="A"> A) सर्वांगसम</label>
+<label><input type="radio" name="q3" value="B"> B) समरूप</label>
+<label><input type="radio" name="q3" value="C"> C) असमान</label>
+<label><input type="radio" name="q3" value="D"> D) समद्विबाहु</label>
+</div>
+
+<div class="question">
+<h3>Q4. यदि ΔABC ~ ΔDEF, तो ∠A किस कोण के बराबर होगा?</h3>
+<label><input type="radio" name="q4" value="A"> A) ∠D</label>
+<label><input type="radio" name="q4" value="B"> B) ∠E</label>
+<label><input type="radio" name="q4" value="C"> C) ∠F</label>
+<label><input type="radio" name="q4" value="D"> D) ∠B</label>
+</div>
+
+<div class="question">
+<h3>Q5. यदि ΔABC ~ ΔDEF, तो AB/DE बराबर होगा—</h3>
+<label><input type="radio" name="q5" value="A"> A) BC/EF</label>
+<label><input type="radio" name="q5" value="B"> B) AC/DF</label>
+<label><input type="radio" name="q5" value="C"> C) दोनों A और B</label>
+<label><input type="radio" name="q5" value="D"> D) इनमें से कोई नहीं</label>
+</div>
+
+<div class="question">
+<h3>Q6. यदि दो त्रिभुजों की संगत भुजाएँ समानुपाती हों, तो कौन-सा समरूपता मानदंड लागू हो सकता है?</h3>
+<label><input type="radio" name="q6" value="A"> A) SSS</label>
+<label><input type="radio" name="q6" value="B"> B) केवल AA</label>
+<label><input type="radio" name="q6" value="C"> C) केवल RHS</label>
+<label><input type="radio" name="q6" value="D"> D) कोई नहीं</label>
+</div>
+
+<div class="question">
+<h3>Q7. यदि ΔABC ~ ΔDEF और AB/DE = 2/3 है, तो BC/EF होगा—</h3>
+<label><input type="radio" name="q7" value="A"> A) 2/3</label>
+<label><input type="radio" name="q7" value="B"> B) 3/2</label>
+<label><input type="radio" name="q7" value="C"> C) 1/3</label>
+<label><input type="radio" name="q7" value="D"> D) 3</label>
+</div>
+
+<div class="question">
+<h3>Q8. यदि दो समरूप त्रिभुजों की संगत भुजाओं का अनुपात 2:3 है, तो उनके परिमापों का अनुपात होगा—</h3>
+<label><input type="radio" name="q8" value="A"> A) 4:9</label>
+<label><input type="radio" name="q8" value="B"> B) 2:3</label>
+<label><input type="radio" name="q8" value="C"> C) 3:2</label>
+<label><input type="radio" name="q8" value="D"> D) 4:3</label>
+</div>
+
+<div class="question">
+<h3>Q9. दो समरूप त्रिभुजों की संगत भुजाओं का अनुपात 2:3 है। उनके क्षेत्रफलों का अनुपात क्या होगा?</h3>
+<label><input type="radio" name="q9" value="A"> A) 2:3</label>
+<label><input type="radio" name="q9" value="B"> B) 4:9</label>
+<label><input type="radio" name="q9" value="C"> C) 3:2</label>
+<label><input type="radio" name="q9" value="D"> D) 8:27</label>
+</div>
+
+<div class="question">
+<h3>Q10. पाइथागोरस प्रमेय किस त्रिभुज पर लागू होता है?</h3>
+<label><input type="radio" name="q10" value="A"> A) समबाहु त्रिभुज</label>
+<label><input type="radio" name="q10" value="B"> B) समद्विबाहु त्रिभुज</label>
+<label><input type="radio" name="q10" value="C"> C) समकोण त्रिभुज</label>
+<label><input type="radio" name="q10" value="D"> D) अधिककोण त्रिभुज</label>
+</div>
+
+<div class="question">
+<h3>Q11. समकोण त्रिभुज में सबसे बड़ी भुजा को क्या कहते हैं?</h3>
+<label><input type="radio" name="q11" value="A"> A) आधार</label>
+<label><input type="radio" name="q11" value="B"> B) लंब</label>
+<label><input type="radio" name="q11" value="C"> C) कर्ण</label>
+<label><input type="radio" name="q11" value="D"> D) माध्यिका</label>
+</div>
+
+<div class="question">
+<h3>Q12. पाइथागोरस प्रमेय के अनुसार—</h3>
+<label><input type="radio" name="q12" value="A"> A) कर्ण² = आधार² + लंब²</label>
+<label><input type="radio" name="q12" value="B"> B) कर्ण = आधार + लंब</label>
+<label><input type="radio" name="q12" value="C"> C) आधार² = कर्ण² + लंब²</label>
+<label><input type="radio" name="q12" value="D"> D) लंब² = आधार² + कर्ण²</label>
+</div>
+
+<div class="question">
+<h3>Q13. यदि किसी समकोण त्रिभुज की भुजाएँ 3 cm और 4 cm हैं, तो कर्ण कितना होगा?</h3>
+<label><input type="radio" name="q13" value="A"> A) 5 cm</label>
+<label><input type="radio" name="q13" value="B"> B) 6 cm</label>
+<label><input type="radio" name="q13" value="C"> C) 7 cm</label>
+<label><input type="radio" name="q13" value="D"> D) 8 cm</label>
+</div>
+
+<div class="question">
+<h3>Q14. यदि समकोण त्रिभुज का कर्ण 13 cm और एक भुजा 5 cm है, तो दूसरी भुजा होगी—</h3>
+<label><input type="radio" name="q14" value="A"> A) 8 cm</label>
+<label><input type="radio" name="q14" value="B"> B) 10 cm</label>
+<label><input type="radio" name="q14" value="C"> C) 12 cm</label>
+<label><input type="radio" name="q14" value="D"> D) 14 cm</label>
+</div>
+
+<div class="question">
+<h3>Q15. 6 cm, 8 cm और 10 cm भुजाओं वाला त्रिभुज कैसा है?</h3>
+<label><input type="radio" name="q15" value="A"> A) समकोण त्रिभुज</label>
+<label><input type="radio" name="q15" value="B"> B) समबाहु त्रिभुज</label>
+<label><input type="radio" name="q15" value="C"> C) अधिककोण त्रिभुज</label>
+<label><input type="radio" name="q15" value="D"> D) समद्विबाहु त्रिभुज</label>
+</div>
+
+<div class="question">
+<h3>Q16. यदि ΔABC ~ ΔDEF, तो उनके क्षेत्रफलों का अनुपात किसके बराबर होता है?</h3>
+<label><input type="radio" name="q16" value="A"> A) संगत भुजाओं के अनुपात के</label>
+<label><input type="radio" name="q16" value="B"> B) संगत भुजाओं के अनुपात के वर्ग के</label>
+<label><input type="radio" name="q16" value="C"> C) संगत भुजाओं के अनुपात के घन के</label>
+<label><input type="radio" name="q16" value="D"> D) हमेशा 1 के</label>
+</div>
+
+<div class="question">
+<h3>Q17. यदि दो समरूप त्रिभुजों की भुजाओं का अनुपात 3:5 है, तो क्षेत्रफलों का अनुपात होगा—</h3>
+<label><input type="radio" name="q17" value="A"> A) 3:5</label>
+<label><input type="radio" name="q17" value="B"> B) 6:10</label>
+<label><input type="radio" name="q17" value="C"> C) 9:25</label>
+<label><input type="radio" name="q17" value="D"> D) 27:125</label>
+</div>
+
+<div class="question">
+<h3>Q18. यदि दो समरूप त्रिभुजों के क्षेत्रफलों का अनुपात 4:9 है, तो संगत भुजाओं का अनुपात होगा—</h3>
+<label><input type="radio" name="q18" value="A"> A) 4:9</label>
+<label><input type="radio" name="q18" value="B"> B) 2:3</label>
+<label><input type="radio" name="q18" value="C"> C) 3:2</label>
+<label><input type="radio" name="q18" value="D"> D) 16:81</label>
+</div>
+
+<div class="question">
+<h3>Q19. यदि दो त्रिभुजों की संगत भुजाओं का अनुपात 1:2 है, तो क्षेत्रफलों का अनुपात होगा—</h3>
+<label><input type="radio" name="q19" value="A"> A) 1:2</label>
+<label><input type="radio" name="q19" value="B"> B) 1:4</label>
+<label><input type="radio" name="q19" value="C"> C) 2:1</label>
+<label><input type="radio" name="q19" value="D"> D) 4:1</label>
+</div>
+
+<div class="question">
+<h3>Q20. यदि ΔABC ~ ΔDEF, AB = 6 cm और DE = 9 cm, तो समानता अनुपात ABC:DEF होगा—</h3>
+<label><input type="radio" name="q20" value="A"> A) 2:3</label>
+<label><input type="radio" name="q20" value="B"> B) 3:2</label>
+<label><input type="radio" name="q20" value="C"> C) 6:15</label>
+<label><input type="radio" name="q20" value="D"> D) 1:3</label>
+</div>
+
+<div class="question">
+<h3>Q21. यदि किसी त्रिभुज में एक रेखा एक भुजा के समानांतर खींची जाए, तो वह अन्य दो भुजाओं को—</h3>
+<label><input type="radio" name="q21" value="A"> A) समान रूप से विभाजित करती है</label>
+<label><input type="radio" name="q21" value="B"> B) समानुपाती भागों में विभाजित करती है</label>
+<label><input type="radio" name="q21" value="C"> C) कभी नहीं काटती</label>
+<label><input type="radio" name="q21" value="D"> D) लंबवत काटती है</label>
+</div>
+
+<div class="question">
+<h3>Q22. आधारभूत समानुपातिकता प्रमेय को किस नाम से भी जाना जाता है?</h3>
+<label><input type="radio" name="q22" value="A"> A) पाइथागोरस प्रमेय</label>
+<label><input type="radio" name="q22" value="B"> B) थेल्स प्रमेय</label>
+<label><input type="radio" name="q22" value="C"> C) यूक्लिड प्रमेय</label>
+<label><input type="radio" name="q22" value="D"> D) हेरॉन प्रमेय</label>
+</div>
+
+<div class="question">
+<h3>Q23. यदि DE ∥ BC, जहाँ D और E क्रमशः AB और AC पर स्थित हैं, तो—</h3>
+<label><input type="radio" name="q23" value="A"> A) AD/DB = AE/EC</label>
+<label><input type="radio" name="q23" value="B"> B) AD/AB = EC/AC</label>
+<label><input type="radio" name="q23" value="C"> C) AB/DB = AC/EC</label>
+<label><input type="radio" name="q23" value="D"> D) AD/AE = DB/EC</label>
+</div>
+
+<div class="question">
+<h3>Q24. यदि दो समरूप त्रिभुजों के परिमापों का अनुपात 3:4 है, तो उनकी संगत भुजाओं का अनुपात होगा—</h3>
+<label><input type="radio" name="q24" value="A"> A) 9:16</label>
+<label><input type="radio" name="q24" value="B"> B) 3:4</label>
+<label><input type="radio" name="q24" value="C"> C) 4:3</label>
+<label><input type="radio" name="q24" value="D"> D) 6:8</label>
+</div>
+
+<div class="question">
+<h3>Q25. यदि दो समरूप त्रिभुजों की संगत भुजाओं का अनुपात 4:5 है, तो उनके क्षेत्रफलों का अनुपात क्या होगा?</h3>
+<label><input type="radio" name="q25" value="A"> A) 4:5</label>
+<label><input type="radio" name="q25" value="B"> B) 8:10</label>
+<label><input type="radio" name="q25" value="C"> C) 16:25</label>
+<label><input type="radio" name="q25" value="D"> D) 20:25</label>
+</div>
+
+<!-- PART 2 यहाँ से जारी होगा -->
