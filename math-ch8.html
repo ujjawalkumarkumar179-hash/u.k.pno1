@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Chapter 8 - त्रिकोणमिति का परिचय | U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+header h1{
+    margin:10px 0 5px;
+}
+
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>📐 U.K.P NO1 Education</h1>
+    <h2>Chapter 8 — त्रिकोणमिति का परिचय</h2>
+    <p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+    📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+    ✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>Q1. त्रिकोणमिति मुख्य रूप से किससे संबंधित है?</h3>
+<label><input type="radio" name="q1" value="A"> A) वृत्तों से</label>
+<label><input type="radio" name="q1" value="B"> B) त्रिभुज की भुजाओं और कोणों से</label>
+<label><input type="radio" name="q1" value="C"> C) केवल क्षेत्रफल से</label>
+<label><input type="radio" name="q1" value="D"> D) केवल आयतन से</label>
+</div>
+
+<div class="question">
+<h3>Q2. समकोण त्रिभुज में समकोण के सामने वाली भुजा को क्या कहते हैं?</h3>
+<label><input type="radio" name="q2" value="A"> A) आधार</label>
+<label><input type="radio" name="q2" value="B"> B) लंब</label>
+<label><input type="radio" name="q2" value="C"> C) कर्ण</label>
+<label><input type="radio" name="q2" value="D"> D) माध्यिका</label>
+</div>
+
+<div class="question">
+<h3>Q3. sin θ का मान क्या होता है?</h3>
+<label><input type="radio" name="q3" value="A"> A) आधार/कर्ण</label>
+<label><input type="radio" name="q3" value="B"> B) लंब/कर्ण</label>
+<label><input type="radio" name="q3" value="C"> C) कर्ण/लंब</label>
+<label><input type="radio" name="q3" value="D"> D) लंब/आधार</label>
+</div>
+
+<div class="question">
+<h3>Q4. cos θ का मान क्या होता है?</h3>
+<label><input type="radio" name="q4" value="A"> A) लंब/कर्ण</label>
+<label><input type="radio" name="q4" value="B"> B) कर्ण/आधार</label>
+<label><input type="radio" name="q4" value="C"> C) आधार/कर्ण</label>
+<label><input type="radio" name="q4" value="D"> D) लंब/आधार</label>
+</div>
+
+<div class="question">
+<h3>Q5. tan θ का मान क्या होता है?</h3>
+<label><input type="radio" name="q5" value="A"> A) लंब/आधार</label>
+<label><input type="radio" name="q5" value="B"> B) आधार/कर्ण</label>
+<label><input type="radio" name="q5" value="C"> C) कर्ण/लंब</label>
+<label><input type="radio" name="q5" value="D"> D) कर्ण/आधार</label>
+</div>
+
+<div class="question">
+<h3>Q6. cosec θ किसका व्युत्क्रम है?</h3>
+<label><input type="radio" name="q6" value="A"> A) cos θ</label>
+<label><input type="radio" name="q6" value="B"> B) tan θ</label>
+<label><input type="radio" name="q6" value="C"> C) sin θ</label>
+<label><input type="radio" name="q6" value="D"> D) cot θ</label>
+</div>
+
+<div class="question">
+<h3>Q7. sec θ किसका व्युत्क्रम है?</h3>
+<label><input type="radio" name="q7" value="A"> A) sin θ</label>
+<label><input type="radio" name="q7" value="B"> B) cos θ</label>
+<label><input type="radio" name="q7" value="C"> C) tan θ</label>
+<label><input type="radio" name="q7" value="D"> D) cot θ</label>
+</div>
+
+<div class="question">
+<h3>Q8. cot θ किसका व्युत्क्रम है?</h3>
+<label><input type="radio" name="q8" value="A"> A) sin θ</label>
+<label><input type="radio" name="q8" value="B"> B) cos θ</label>
+<label><input type="radio" name="q8" value="C"> C) tan θ</label>
+<label><input type="radio" name="q8" value="D"> D) sec θ</label>
+</div>
+
+<div class="question">
+<h3>Q9. sin 30° का मान क्या है?</h3>
+<label><input type="radio" name="q9" value="A"> A) 1</label>
+<label><input type="radio" name="q9" value="B"> B) √3/2</label>
+<label><input type="radio" name="q9" value="C"> C) 1/2</label>
+<label><input type="radio" name="q9" value="D"> D) 0</label>
+</div>
+
+<div class="question">
+<h3>Q10. cos 60° का मान क्या है?</h3>
+<label><input type="radio" name="q10" value="A"> A) 1/2</label>
+<label><input type="radio" name="q10" value="B"> B) √3/2</label>
+<label><input type="radio" name="q10" value="C"> C) 1</label>
+<label><input type="radio" name="q10" value="D"> D) 0</label>
+</div>
+
+<div class="question">
+<h3>Q11. tan 45° का मान क्या है?</h3>
+<label><input type="radio" name="q11" value="A"> A) 0</label>
+<label><input type="radio" name="q11" value="B"> B) 1</label>
+<label><input type="radio" name="q11" value="C"> C) √3</label>
+<label><input type="radio" name="q11" value="D"> D) 1/√3</label>
+</div>
+
+<div class="question">
+<h3>Q12. sin 90° का मान क्या है?</h3>
+<label><input type="radio" name="q12" value="A"> A) 0</label>
+<label><input type="radio" name="q12" value="B"> B) 1/2</label>
+<label><input type="radio" name="q12" value="C"> C) 1</label>
+<label><input type="radio" name="q12" value="D"> D) √3/2</label>
+</div>
+
+<div class="question">
+<h3>Q13. cos 0° का मान क्या है?</h3>
+<label><input type="radio" name="q13" value="A"> A) 0</label>
+<label><input type="radio" name="q13" value="B"> B) 1</label>
+<label><input type="radio" name="q13" value="C"> C) 1/2</label>
+<label><input type="radio" name="q13" value="D"> D) √3/2</label>
+</div>
+
+<div class="question">
+<h3>Q14. tan 0° का मान क्या है?</h3>
+<label><input type="radio" name="q14" value="A"> A) 0</label>
+<label><input type="radio" name="q14" value="B"> B) 1</label>
+<label><input type="radio" name="q14" value="C"> C) √3</label>
+<label><input type="radio" name="q14" value="D"> D) 1/√3</label>
+</div>
+
+<div class="question">
+<h3>Q15. sin 60° का मान क्या है?</h3>
+<label><input type="radio" name="q15" value="A"> A) 1/2</label>
+<label><input type="radio" name="q15" value="B"> B) 1</label>
+<label><input type="radio" name="q15" value="C"> C) √3/2</label>
+<label><input type="radio" name="q15" value="D"> D) 1/√3</label>
+</div>
+
+<div class="question">
+<h3>Q16. cos 30° का मान क्या है?</h3>
+<label><input type="radio" name="q16" value="A"> A) 1/2</label>
+<label><input type="radio" name="q16" value="B"> B) √3/2</label>
+<label><input type="radio" name="q16" value="C"> C) 1</label>
+<label><input type="radio" name="q16" value="D"> D) 0</label>
+</div>
+
+<div class="question">
+<h3>Q17. tan 30° का मान क्या है?</h3>
+<label><input type="radio" name="q17" value="A"> A) √3</label>
+<label><input type="radio" name="q17" value="B"> B) 1</label>
+<label><input type="radio" name="q17" value="C"> C) 1/√3</label>
+<label><input type="radio" name="q17" value="D"> D) 1/2</label>
+</div>
+
+<div class="question">
+<h3>Q18. tan 60° का मान क्या है?</h3>
+<label><input type="radio" name="q18" value="A"> A) 1/√3</label>
+<label><input type="radio" name="q18" value="B"> B) 1/2</label>
+<label><input type="radio" name="q18" value="C"> C) 1</label>
+<label><input type="radio" name="q18" value="D"> D) √3</label>
+</div>
+
+<div class="question">
+<h3>Q19. sin²θ + cos²θ का मान क्या होता है?</h3>
+<label><input type="radio" name="q19" value="A"> A) 0</label>
+<label><input type="radio" name="q19" value="B"> B) 1</label>
+<label><input type="radio" name="q19" value="C"> C) 2</label>
+<label><input type="radio" name="q19" value="D"> D) θ</label>
+</div>
+
+<div class="question">
+<h3>Q20. 1 + tan²θ किसके बराबर होता है?</h3>
+<label><input type="radio" name="q20" value="A"> A) sec²θ</label>
+<label><input type="radio" name="q20" value="B"> B) cosec²θ</label>
+<label><input type="radio" name="q20" value="C"> C) sin²θ</label>
+<label><input type="radio" name="q20" value="D"> D) cos²θ</label>
+</div>
+
+<div class="question">
+<h3>Q21. 1 + cot²θ किसके बराबर होता है?</h3>
+<label><input type="radio" name="q21" value="A"> A) sec²θ</label>
+<label><input type="radio" name="q21" value="B"> B) cosec²θ</label>
+<label><input type="radio" name="q21" value="C"> C) tan²θ</label>
+<label><input type="radio" name="q21" value="D"> D) cos²θ</label>
+</div>
+
+<div class="question">
+<h3>Q22. यदि sin θ = 3/5 है, तो cos θ का मान क्या होगा? (θ तीव्र कोण है)</h3>
+<label><input type="radio" name="q22" value="A"> A) 3/5</label>
+<label><input type="radio" name="q22" value="B"> B) 4/5</label>
+<label><input type="radio" name="q22" value="C"> C) 5/4</label>
+<label><input type="radio" name="q22" value="D"> D) 5/3</label>
+</div>
+
+<div class="question">
+<h3>Q23. यदि cos θ = 4/5 है, तो sin θ का मान क्या होगा? (θ तीव्र कोण है)</h3>
+<label><input type="radio" name="q23" value="A"> A) 3/5</label>
+<label><input type="radio" name="q23" value="B"> B) 4/5</label>
+<label><input type="radio" name="q23" value="C"> C) 5/4</label>
+<label><input type="radio" name="q23" value="D"> D) 1/5</label>
+</div>
+
+<div class="question">
+<h3>Q24. यदि tan θ = 3/4 है, तो sin θ का मान क्या होगा? (θ तीव्र कोण है)</h3>
+<label><input type="radio" name="q24" value="A"> A) 3/5</label>
+<label><input type="radio" name="q24" value="B"> B) 4/5</label>
+<label><input type="radio" name="q24" value="C"> C) 5/3</label>
+<label><input type="radio" name="q24" value="D"> D) 5/4</label>
+</div>
+
+<div class="question">
+<h3>Q25. यदि tan θ = 1 है, तो θ का मान (0° से 90° के बीच) क्या होगा?</h3>
+<label><input type="radio" name="q25" value="A"> A) 30°</label>
+<label><input type="radio" name="q25" value="B"> B) 45°</label>
+<label><input type="radio" name="q25" value="C"> C) 60°</label>
+<label><input type="radio" name="q25" value="D"> D) 90°</label>
+</div>
+
+<!-- PART 2 यहाँ से जारी होगा -->
