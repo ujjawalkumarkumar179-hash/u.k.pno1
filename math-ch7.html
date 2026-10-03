@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Chapter 7 - निर्देशांक ज्यामिति | U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+header h1{
+    margin:10px 0 5px;
+}
+
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>📐 U.K.P NO1 Education</h1>
+    <h2>Chapter 7 — निर्देशांक ज्यामिति</h2>
+    <p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+    📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+    ✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question">
+<h3>Q1. कार्तीय तल में क्षैतिज अक्ष को क्या कहते हैं?</h3>
+<label><input type="radio" name="q1" value="A"> A) y-अक्ष</label>
+<label><input type="radio" name="q1" value="B"> B) x-अक्ष</label>
+<label><input type="radio" name="q1" value="C"> C) z-अक्ष</label>
+<label><input type="radio" name="q1" value="D"> D) मूल बिंदु</label>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<h3>Q2. कार्तीय तल में ऊर्ध्वाधर अक्ष को क्या कहते हैं?</h3>
+<label><input type="radio" name="q2" value="A"> A) x-अक्ष</label>
+<label><input type="radio" name="q2" value="B"> B) y-अक्ष</label>
+<label><input type="radio" name="q2" value="C"> C) z-अक्ष</label>
+<label><input type="radio" name="q2" value="D"> D) संख्या रेखा</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<h3>Q3. x-अक्ष और y-अक्ष जिस बिंदु पर मिलते हैं, उसे क्या कहते हैं?</h3>
+<label><input type="radio" name="q3" value="A"> A) केंद्र</label>
+<label><input type="radio" name="q3" value="B"> B) मूल बिंदु</label>
+<label><input type="radio" name="q3" value="C"> C) शीर्ष</label>
+<label><input type="radio" name="q3" value="D"> D) मध्य बिंदु</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<h3>Q4. मूल बिंदु के निर्देशांक क्या होते हैं?</h3>
+<label><input type="radio" name="q4" value="A"> A) (1, 1)</label>
+<label><input type="radio" name="q4" value="B"> B) (1, 0)</label>
+<label><input type="radio" name="q4" value="C"> C) (0, 1)</label>
+<label><input type="radio" name="q4" value="D"> D) (0, 0)</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<h3>Q5. किसी बिंदु (x, y) में x को क्या कहते हैं?</h3>
+<label><input type="radio" name="q5" value="A"> A) कोटि</label>
+<label><input type="radio" name="q5" value="B"> B) भुजा</label>
+<label><input type="radio" name="q5" value="C"> C) भुज</label>
+<label><input type="radio" name="q5" value="D"> D) मूल</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<h3>Q6. किसी बिंदु (x, y) में y को क्या कहते हैं?</h3>
+<label><input type="radio" name="q6" value="A"> A) भुज</label>
+<label><input type="radio" name="q6" value="B"> B) कोटि</label>
+<label><input type="radio" name="q6" value="C"> C) मूल</label>
+<label><input type="radio" name="q6" value="D"> D) दूरी</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<h3>Q7. बिंदु (4, 5) किस चतुर्थांश में स्थित है?</h3>
+<label><input type="radio" name="q7" value="A"> A) प्रथम</label>
+<label><input type="radio" name="q7" value="B"> B) द्वितीय</label>
+<label><input type="radio" name="q7" value="C"> C) तृतीय</label>
+<label><input type="radio" name="q7" value="D"> D) चतुर्थ</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<h3>Q8. बिंदु (-4, 5) किस चतुर्थांश में स्थित है?</h3>
+<label><input type="radio" name="q8" value="A"> A) प्रथम</label>
+<label><input type="radio" name="q8" value="B"> B) द्वितीय</label>
+<label><input type="radio" name="q8" value="C"> C) तृतीय</label>
+<label><input type="radio" name="q8" value="D"> D) चतुर्थ</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<h3>Q9. बिंदु (-4, -5) किस चतुर्थांश में स्थित है?</h3>
+<label><input type="radio" name="q9" value="A"> A) प्रथम</label>
+<label><input type="radio" name="q9" value="B"> B) द्वितीय</label>
+<label><input type="radio" name="q9" value="C"> C) तृतीय</label>
+<label><input type="radio" name="q9" value="D"> D) चतुर्थ</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<h3>Q10. बिंदु (4, -5) किस चतुर्थांश में स्थित है?</h3>
+<label><input type="radio" name="q10" value="A"> A) प्रथम</label>
+<label><input type="radio" name="q10" value="B"> B) द्वितीय</label>
+<label><input type="radio" name="q10" value="C"> C) तृतीय</label>
+<label><input type="radio" name="q10" value="D"> D) चतुर्थ</label>
+</div>
+
+<!-- Q11 -->
+<div class="question">
+<h3>Q11. x-अक्ष पर स्थित किसी बिंदु की कोटि क्या होती है?</h3>
+<label><input type="radio" name="q11" value="A"> A) 1</label>
+<label><input type="radio" name="q11" value="B"> B) -1</label>
+<label><input type="radio" name="q11" value="C"> C) 0</label>
+<label><input type="radio" name="q11" value="D"> D) 2</label>
+</div>
+
+<!-- Q12 -->
+<div class="question">
+<h3>Q12. y-अक्ष पर स्थित किसी बिंदु की भुज क्या होती है?</h3>
+<label><input type="radio" name="q12" value="A"> A) 0</label>
+<label><input type="radio" name="q12" value="B"> B) 1</label>
+<label><input type="radio" name="q12" value="C"> C) -1</label>
+<label><input type="radio" name="q12" value="D"> D) 2</label>
+</div>
+
+<!-- Q13 -->
+<div class="question">
+<h3>Q13. बिंदु (0, 7) किस अक्ष पर स्थित है?</h3>
+<label><input type="radio" name="q13" value="A"> A) x-अक्ष</label>
+<label><input type="radio" name="q13" value="B"> B) y-अक्ष</label>
+<label><input type="radio" name="q13" value="C"> C) दोनों अक्ष</label>
+<label><input type="radio" name="q13" value="D"> D) किसी पर नहीं</label>
+</div>
+
+<!-- Q14 -->
+<div class="question">
+<h3>Q14. बिंदु (-6, 0) किस अक्ष पर स्थित है?</h3>
+<label><input type="radio" name="q14" value="A"> A) x-अक्ष</label>
+<label><input type="radio" name="q14" value="B"> B) y-अक्ष</label>
+<label><input type="radio" name="q14" value="C"> C) दोनों अक्ष</label>
+<label><input type="radio" name="q14" value="D"> D) किसी पर नहीं</label>
+</div>
+
+<!-- Q15 -->
+<div class="question">
+<h3>Q15. बिंदु (3, 4) और (3, 8) के बीच की दूरी कितनी है?</h3>
+<label><input type="radio" name="q15" value="A"> A) 3</label>
+<label><input type="radio" name="q15" value="B"> B) 4</label>
+<label><input type="radio" name="q15" value="C"> C) 5</label>
+<label><input type="radio" name="q15" value="D"> D) 7</label>
+</div>
+
+<!-- Q16 -->
+<div class="question">
+<h3>Q16. बिंदु (2, 3) और (6, 3) के बीच की दूरी कितनी है?</h3>
+<label><input type="radio" name="q16" value="A"> A) 2</label>
+<label><input type="radio" name="q16" value="B"> B) 3</label>
+<label><input type="radio" name="q16" value="C"> C) 4</label>
+<label><input type="radio" name="q16" value="D"> D) 5</label>
+</div>
+
+<!-- Q17 -->
+<div class="question">
+<h3>Q17. बिंदु (0, 0) और (3, 4) के बीच की दूरी कितनी है?</h3>
+<label><input type="radio" name="q17" value="A"> A) 3</label>
+<label><input type="radio" name="q17" value="B"> B) 4</label>
+<label><input type="radio" name="q17" value="C"> C) 5</label>
+<label><input type="radio" name="q17" value="D"> D) 7</label>
+</div>
+
+<!-- Q18 -->
+<div class="question">
+<h3>Q18. दो बिंदुओं (x₁,y₁) और (x₂,y₂) के बीच दूरी का सूत्र कौन-सा है?</h3>
+<label><input type="radio" name="q18" value="A"> A) √[(x₂-x₁)² + (y₂-y₁)²]</label>
+<label><input type="radio" name="q18" value="B"> B) √[(x₂+x₁)² + (y₂+y₁)²]</label>
+<label><input type="radio" name="q18" value="C"> C) (x₂-x₁)+(y₂-y₁)</label>
+<label><input type="radio" name="q18" value="D"> D) x₁x₂+y₁y₂</label>
+</div>
+
+<!-- Q19 -->
+<div class="question">
+<h3>Q19. बिंदु (1, 2) और (4, 6) के बीच की दूरी कितनी है?</h3>
+<label><input type="radio" name="q19" value="A"> A) 4</label>
+<label><input type="radio" name="q19" value="B"> B) 5</label>
+<label><input type="radio" name="q19" value="C"> C) 6</label>
+<label><input type="radio" name="q19" value="D"> D) 7</label>
+</div>
+
+<!-- Q20 -->
+<div class="question">
+<h3>Q20. बिंदु (-2, 3) और (2, 3) के बीच की दूरी कितनी है?</h3>
+<label><input type="radio" name="q20" value="A"> A) 2</label>
+<label><input type="radio" name="q20" value="B"> B) 3</label>
+<label><input type="radio" name="q20" value="C"> C) 4</label>
+<label><input type="radio" name="q20" value="D"> D) 5</label>
+</div>
+
+<!-- Q21 -->
+<div class="question">
+<h3>Q21. रेखाखंड के मध्य-बिंदु का सूत्र क्या है?</h3>
+<label><input type="radio" name="q21" value="A"> A) ((x₁+x₂)/2, (y₁+y₂)/2)</label>
+<label><input type="radio" name="q21" value="B"> B) (x₁+x₂, y₁+y₂)</label>
+<label><input type="radio" name="q21" value="C"> C) ((x₁-x₂)/2, (y₁-y₂)/2)</label>
+<label><input type="radio" name="q21" value="D"> D) (x₁x₂, y₁y₂)</label>
+</div>
+
+<!-- Q22 -->
+<div class="question">
+<h3>Q22. (2, 4) और (6, 8) का मध्य-बिंदु क्या होगा?</h3>
+<label><input type="radio" name="q22" value="A"> A) (3, 5)</label>
+<label><input type="radio" name="q22" value="B"> B) (4, 6)</label>
+<label><input type="radio" name="q22" value="C"> C) (5, 6)</label>
+<label><input type="radio" name="q22" value="D"> D) (4, 5)</label>
+</div>
+
+<!-- Q23 -->
+<div class="question">
+<h3>Q23. (-2, 5) और (4, 1) का मध्य-बिंदु क्या होगा?</h3>
+<label><input type="radio" name="q23" value="A"> A) (1, 3)</label>
+<label><input type="radio" name="q23" value="B"> B) (2, 3)</label>
+<label><input type="radio" name="q23" value="C"> C) (1, 2)</label>
+<label><input type="radio" name="q23" value="D"> D) (3, 1)</label>
+</div>
+
+<!-- Q24 -->
+<div class="question">
+<h3>Q24. तीन बिंदु एक ही सीधी रेखा पर स्थित हों, तो उन्हें क्या कहते हैं?</h3>
+<label><input type="radio" name="q24" value="A"> A) समांतर बिंदु</label>
+<label><input type="radio" name="q24" value="B"> B) संरेख बिंदु</label>
+<label><input type="radio" name="q24" value="C"> C) समान बिंदु</label>
+<label><input type="radio" name="q24" value="D"> D) केंद्र बिंदु</label>
+</div>
+
+<!-- Q25 -->
+<div class="question">
+<h3>Q25. बिंदु (1, 2), (2, 4) और (3, 6) किस प्रकार के बिंदु हैं?</h3>
+<label><input type="radio" name="q25" value="A"> A) संरेख</label>
+<label><input type="radio" name="q25" value="B"> B) असंरेख</label>
+<label><input type="radio" name="q25" value="C"> C) समान</label>
+<label><input type="radio" name="q25" value="D"> D) इनमें से कोई नहीं</label>
+</div>
+
+<!-- PART 2 यहाँ से जारी होगा -->
