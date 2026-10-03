@@ -1,1 +1,514 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 9 - त्रिकोणमिति के कुछ अनुप्रयोग | U.K.P NO1 Education</title>
 
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+header h1{margin:10px 0 5px;}
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+<h1>📐 U.K.P NO1 Education</h1>
+<h2>Chapter 9 — त्रिकोणमिति के कुछ अनुप्रयोग</h2>
+<p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question">
+<h3>Q1. ऊँचाई और दूरी से संबंधित समस्याओं में मुख्यतः किसका प्रयोग होता है?</h3>
+<label><input type="radio" name="q1" value="A"> A) बीजगणित</label>
+<label><input type="radio" name="q1" value="B"> B) त्रिकोणमिति</label>
+<label><input type="radio" name="q1" value="C"> C) सांख्यिकी</label>
+<label><input type="radio" name="q1" value="D"> D) प्रायिकता</label>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<h3>Q2. किसी वस्तु को ऊपर की ओर देखने पर बनने वाला कोण क्या कहलाता है?</h3>
+<label><input type="radio" name="q2" value="A"> A) अवनमन कोण</label>
+<label><input type="radio" name="q2" value="B"> B) उन्नयन कोण</label>
+<label><input type="radio" name="q2" value="C"> C) समकोण</label>
+<label><input type="radio" name="q2" value="D"> D) संपूरक कोण</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<h3>Q3. किसी ऊँची वस्तु को नीचे की ओर देखने पर बनने वाला कोण क्या कहलाता है?</h3>
+<label><input type="radio" name="q3" value="A"> A) उन्नयन कोण</label>
+<label><input type="radio" name="q3" value="B"> B) अवनमन कोण</label>
+<label><input type="radio" name="q3" value="C"> C) समकोण</label>
+<label><input type="radio" name="q3" value="D"> D) शून्य कोण</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<h3>Q4. उन्नयन कोण किस स्थिति में बनता है?</h3>
+<label><input type="radio" name="q4" value="A"> A) जब वस्तु को ऊपर की ओर देखा जाए</label>
+<label><input type="radio" name="q4" value="B"> B) जब वस्तु को नीचे देखा जाए</label>
+<label><input type="radio" name="q4" value="C"> C) जब वस्तु सामने न हो</label>
+<label><input type="radio" name="q4" value="D"> D) केवल क्षैतिज स्थिति में</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<h3>Q5. अवनमन कोण किस स्थिति में बनता है?</h3>
+<label><input type="radio" name="q5" value="A"> A) ऊपर देखकर</label>
+<label><input type="radio" name="q5" value="B"> B) नीचे देखकर</label>
+<label><input type="radio" name="q5" value="C"> C) सीधे देखकर</label>
+<label><input type="radio" name="q5" value="D"> D) पीछे देखकर</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<h3>Q6. यदि किसी वस्तु की ऊँचाई h और क्षैतिज दूरी d हो तथा उन्नयन कोण θ हो, तो कौन-सा संबंध सही है?</h3>
+<label><input type="radio" name="q6" value="A"> A) tan θ = h/d</label>
+<label><input type="radio" name="q6" value="B"> B) tan θ = d/h</label>
+<label><input type="radio" name="q6" value="C"> C) sin θ = h/d</label>
+<label><input type="radio" name="q6" value="D"> D) cos θ = h/d</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<h3>Q7. किसी मीनार की ऊँचाई 10 m और आधार से दूरी 10 m है। उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q7" value="A"> A) 30°</label>
+<label><input type="radio" name="q7" value="B"> B) 45°</label>
+<label><input type="radio" name="q7" value="C"> C) 60°</label>
+<label><input type="radio" name="q7" value="D"> D) 90°</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<h3>Q8. यदि tan θ = 1/√3 है, तो θ कितना होगा?</h3>
+<label><input type="radio" name="q8" value="A"> A) 30°</label>
+<label><input type="radio" name="q8" value="B"> B) 45°</label>
+<label><input type="radio" name="q8" value="C"> C) 60°</label>
+<label><input type="radio" name="q8" value="D"> D) 90°</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<h3>Q9. यदि tan θ = 1 है, तो θ का मान क्या होगा?</h3>
+<label><input type="radio" name="q9" value="A"> A) 30°</label>
+<label><input type="radio" name="q9" value="B"> B) 45°</label>
+<label><input type="radio" name="q9" value="C"> C) 60°</label>
+<label><input type="radio" name="q9" value="D"> D) 90°</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<h3>Q10. यदि tan θ = √3 है, तो θ का मान क्या होगा?</h3>
+<label><input type="radio" name="q10" value="A"> A) 30°</label>
+<label><input type="radio" name="q10" value="B"> B) 45°</label>
+<label><input type="radio" name="q10" value="C"> C) 60°</label>
+<label><input type="radio" name="q10" value="D"> D) 90°</label>
+</div>
+
+<!-- Q11 -->
+<div class="question">
+<h3>Q11. एक पेड़ की छाया 10 m है और सूर्य का उन्नयन कोण 45° है। पेड़ की ऊँचाई कितनी होगी?</h3>
+<label><input type="radio" name="q11" value="A"> A) 5 m</label>
+<label><input type="radio" name="q11" value="B"> B) 10 m</label>
+<label><input type="radio" name="q11" value="C"> C) 15 m</label>
+<label><input type="radio" name="q11" value="D"> D) 20 m</label>
+</div>
+
+<!-- Q12 -->
+<div class="question">
+<h3>Q12. किसी मीनार की ऊँचाई 20 m और दूरी 20√3 m है। उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q12" value="A"> A) 30°</label>
+<label><input type="radio" name="q12" value="B"> B) 45°</label>
+<label><input type="radio" name="q12" value="C"> C) 60°</label>
+<label><input type="radio" name="q12" value="D"> D) 90°</label>
+</div>
+
+<!-- Q13 -->
+<div class="question">
+<h3>Q13. किसी वस्तु की ऊँचाई 10√3 m और दूरी 10 m है। उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q13" value="A"> A) 30°</label>
+<label><input type="radio" name="q13" value="B"> B) 45°</label>
+<label><input type="radio" name="q13" value="C"> C) 60°</label>
+<label><input type="radio" name="q13" value="D"> D) 90°</label>
+</div>
+
+<!-- Q14 -->
+<div class="question">
+<h3>Q14. किसी मीनार से 30 m दूर एक बिंदु से उन्नयन कोण 45° है। मीनार की ऊँचाई कितनी है?</h3>
+<label><input type="radio" name="q14" value="A"> A) 15 m</label>
+<label><input type="radio" name="q14" value="B"> B) 20 m</label>
+<label><input type="radio" name="q14" value="C"> C) 30 m</label>
+<label><input type="radio" name="q14" value="D"> D) 60 m</label>
+</div>
+
+<!-- Q15 -->
+<div class="question">
+<h3>Q15. यदि किसी खंभे की ऊँचाई 10 m और उन्नयन कोण 30° है, तो उसकी दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q15" value="A"> A) 10 m</label>
+<label><input type="radio" name="q15" value="B"> B) 10√3 m</label>
+<label><input type="radio" name="q15" value="C"> C) 5√3 m</label>
+<label><input type="radio" name="q15" value="D"> D) 20 m</label>
+</div>
+
+<!-- Q16 -->
+<div class="question">
+<h3>Q16. किसी भवन की ऊँचाई 15 m और दूरी 15 m है। उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q16" value="A"> A) 30°</label>
+<label><input type="radio" name="q16" value="B"> B) 45°</label>
+<label><input type="radio" name="q16" value="C"> C) 60°</label>
+<label><input type="radio" name="q16" value="D"> D) 90°</label>
+</div>
+
+<!-- Q17 -->
+<div class="question">
+<h3>Q17. यदि किसी वस्तु की ऊँचाई और क्षैतिज दूरी बराबर हों, तो उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q17" value="A"> A) 30°</label>
+<label><input type="radio" name="q17" value="B"> B) 45°</label>
+<label><input type="radio" name="q17" value="C"> C) 60°</label>
+<label><input type="radio" name="q17" value="D"> D) 90°</label>
+</div>
+
+<!-- Q18 -->
+<div class="question">
+<h3>Q18. किसी मीनार की ऊँचाई 10√3 m है और उन्नयन कोण 60° है। दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q18" value="A"> A) 5 m</label>
+<label><input type="radio" name="q18" value="B"> B) 10 m</label>
+<label><input type="radio" name="q18" value="C"> C) 10√3 m</label>
+<label><input type="radio" name="q18" value="D"> D) 20 m</label>
+</div>
+
+<!-- Q19 -->
+<div class="question">
+<h3>Q19. यदि ऊँचाई 5 m और दूरी 5√3 m है, तो उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q19" value="A"> A) 30°</label>
+<label><input type="radio" name="q19" value="B"> B) 45°</label>
+<label><input type="radio" name="q19" value="C"> C) 60°</label>
+<label><input type="radio" name="q19" value="D"> D) 90°</label>
+</div>
+
+<!-- Q20 -->
+<div class="question">
+<h3>Q20. यदि ऊँचाई 5√3 m और दूरी 5 m है, तो उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q20" value="A"> A) 30°</label>
+<label><input type="radio" name="q20" value="B"> B) 45°</label>
+<label><input type="radio" name="q20" value="C"> C) 60°</label>
+<label><input type="radio" name="q20" value="D"> D) 90°</label>
+</div>
+
+<!-- Q21 -->
+<div class="question">
+<h3>Q21. अवनमन कोण और संबंधित उन्नयन कोण में क्या संबंध होता है?</h3>
+<label><input type="radio" name="q21" value="A"> A) दोनों बराबर होते हैं</label>
+<label><input type="radio" name="q21" value="B"> B) एक दूसरे के दोगुने होते हैं</label>
+<label><input type="radio" name="q21" value="C"> C) उनका योग 180° होता है</label>
+<label><input type="radio" name="q21" value="D"> D) कोई संबंध नहीं</label>
+</div>
+
+<!-- Q22 -->
+<div class="question">
+<h3>Q22. किसी भवन के शीर्ष का अवनमन कोण 45° है। उसी स्थिति से भवन का उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q22" value="A"> A) 30°</label>
+<label><input type="radio" name="q22" value="B"> B) 45°</label>
+<label><input type="radio" name="q22" value="C"> C) 60°</label>
+<label><input type="radio" name="q22" value="D"> D) 90°</label>
+</div>
+
+<!-- Q23 -->
+<div class="question">
+<h3>Q23. 20 m ऊँचे भवन से जमीन पर किसी बिंदु का अवनमन कोण 45° है। भवन से उस बिंदु की दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q23" value="A"> A) 10 m</label>
+<label><input type="radio" name="q23" value="B"> B) 20 m</label>
+<label><input type="radio" name="q23" value="C"> C) 20√3 m</label>
+<label><input type="radio" name="q23" value="D"> D) 40 m</label>
+</div>
+
+<!-- Q24 -->
+<div class="question">
+<h3>Q24. 30 m ऊँचे भवन से जमीन पर एक बिंदु का अवनमन कोण 30° है। क्षैतिज दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q24" value="A"> A) 30 m</label>
+<label><input type="radio" name="q24" value="B"> B) 30√3 m</label>
+<label><input type="radio" name="q24" value="C"> C) 15√3 m</label>
+<label><input type="radio" name="q24" value="D"> D) 60 m</label>
+</div>
+
+<!-- Q25 -->
+<div class="question">
+<h3>Q25. 10 m लंबी सीढ़ी जमीन से 60° का कोण बनाती है। दीवार पर सीढ़ी कितनी ऊँचाई तक पहुँचेगी?</h3>
+<label><input type="radio" name="q25" value="A"> A) 5 m</label>
+<label><input type="radio" name="q25" value="B"> B) 5√3 m</label>
+<label><input type="radio" name="q25" value="C"> C) 10 m</label>
+<label><input type="radio" name="q25" value="D"> D) 10√3 m</label>
+</div>
+
+<!-- Q26 -->
+<div class="question">
+<h3>Q26. 10 m लंबी सीढ़ी जमीन से 30° का कोण बनाती है। दीवार पर इसकी ऊँचाई कितनी होगी?</h3>
+<label><input type="radio" name="q26" value="A"> A) 5 m</label>
+<label><input type="radio" name="q26" value="B"> B) 5√3 m</label>
+<label><input type="radio" name="q26" value="C"> C) 10 m</label>
+<label><input type="radio" name="q26" value="D"> D) 10√3 m</label>
+</div>
+
+<!-- Q27 -->
+<div class="question">
+<h3>Q27. 20 m लंबी सीढ़ी जमीन से 60° का कोण बनाती है। दीवार से सीढ़ी के निचले सिरे की दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q27" value="A"> A) 5 m</label>
+<label><input type="radio" name="q27" value="B"> B) 10 m</label>
+<label><input type="radio" name="q27" value="C"> C) 10√3 m</label>
+<label><input type="radio" name="q27" value="D"> D) 20 m</label>
+</div>
+
+<!-- Q28 -->
+<div class="question">
+<h3>Q28. किसी पेड़ की ऊँचाई 20 m और उसकी छाया 20/√3 m है। सूर्य का उन्नयन कोण कितना होगा?</h3>
+<label><input type="radio" name="q28" value="A"> A) 30°</label>
+<label><input type="radio" name="q28" value="B"> B) 45°</label>
+<label><input type="radio" name="q28" value="C"> C) 60°</label>
+<label><input type="radio" name="q28" value="D"> D) 90°</label>
+</div>
+
+<!-- Q29 -->
+<div class="question">
+<h3>Q29. एक खंभे की छाया 10√3 m है और सूर्य का उन्नयन कोण 30° है। खंभे की ऊँचाई कितनी है?</h3>
+<label><input type="radio" name="q29" value="A"> A) 5 m</label>
+<label><input type="radio" name="q29" value="B"> B) 10 m</label>
+<label><input type="radio" name="q29" value="C"> C) 10√3 m</label>
+<label><input type="radio" name="q29" value="D"> D) 30 m</label>
+</div>
+
+<!-- Q30 -->
+<div class="question">
+<h3>Q30. किसी पेड़ की ऊँचाई 10√3 m और छाया 10 m है। सूर्य का उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q30" value="A"> A) 30°</label>
+<label><input type="radio" name="q30" value="B"> B) 45°</label>
+<label><input type="radio" name="q30" value="C"> C) 60°</label>
+<label><input type="radio" name="q30" value="D"> D) 90°</label>
+</div>
+
+<!-- Q31 -->
+<div class="question">
+<h3>Q31. किसी वस्तु की ऊँचाई दोगुनी हो जाए और दूरी समान रहे, तो tan θ पर क्या प्रभाव पड़ेगा?</h3>
+<label><input type="radio" name="q31" value="A"> A) आधा होगा</label>
+<label><input type="radio" name="q31" value="B"> B) दोगुना होगा</label>
+<label><input type="radio" name="q31" value="C"> C) समान रहेगा</label>
+<label><input type="radio" name="q31" value="D"> D) शून्य होगा</label>
+</div>
+
+<!-- Q32 -->
+<div class="question">
+<h3>Q32. किसी मीनार से दूर जाने पर उसके शीर्ष का उन्नयन कोण सामान्यतः कैसा होता है?</h3>
+<label><input type="radio" name="q32" value="A"> A) बढ़ता है</label>
+<label><input type="radio" name="q32" value="B"> B) घटता है</label>
+<label><input type="radio" name="q32" value="C"> C) हमेशा 90° होता है</label>
+<label><input type="radio" name="q32" value="D"> D) हमेशा 0° होता है</label>
+</div>
+
+<!-- Q33 -->
+<div class="question">
+<h3>Q33. किसी ऊँची वस्तु के आधार से दूरी बढ़ाने पर, उसकी ऊँचाई समान होने पर, उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q33" value="A"> A) बढ़ेगा</label>
+<label><input type="radio" name="q33" value="B"> B) घटेगा</label>
+<label><input type="radio" name="q33" value="C"> C) दोगुना होगा</label>
+<label><input type="radio" name="q33" value="D"> D) समान रहेगा</label>
+</div>
+
+<!-- Q34 -->
+<div class="question">
+<h3>Q34. यदि किसी मीनार की ऊँचाई 12 m और दूरी 12 m है, तो उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q34" value="A"> A) 30°</label>
+<label><input type="radio" name="q34" value="B"> B) 45°</label>
+<label><input type="radio" name="q34" value="C"> C) 60°</label>
+<label><input type="radio" name="q34" value="D"> D) 90°</label>
+</div>
+
+<!-- Q35 -->
+<div class="question">
+<h3>Q35. 15 m ऊँची वस्तु के शीर्ष का उन्नयन कोण 45° है। आधार से दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q35" value="A"> A) 5 m</label>
+<label><input type="radio" name="q35" value="B"> B) 10 m</label>
+<label><input type="radio" name="q35" value="C"> C) 15 m</label>
+<label><input type="radio" name="q35" value="D"> D) 30 m</label>
+</div>
+
+<!-- Q36 -->
+<div class="question">
+<h3>Q36. 15 m ऊँची वस्तु के शीर्ष का उन्नयन कोण 30° है। आधार से दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q36" value="A"> A) 15 m</label>
+<label><input type="radio" name="q36" value="B"> B) 15√3 m</label>
+<label><input type="radio" name="q36" value="C"> C) 5√3 m</label>
+<label><input type="radio" name="q36" value="D"> D) 30 m</label>
+</div>
+
+<!-- Q37 -->
+<div class="question">
+<h3>Q37. 15 m ऊँची वस्तु के शीर्ष का उन्नयन कोण 60° है। आधार से दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q37" value="A"> A) 5√3 m</label>
+<label><input type="radio" name="q37" value="B"> B) 15 m</label>
+<label><input type="radio" name="q37" value="C"> C) 15√3 m</label>
+<label><input type="radio" name="q37" value="D"> D) 30 m</label>
+</div>
+
+<!-- Q38 -->
+<div class="question">
+<h3>Q38. किसी पतंग की डोरी 20 m लंबी है और जमीन से 30° का कोण बनाती है। पतंग की ऊँचाई कितनी होगी?</h3>
+<label><input type="radio" name="q38" value="A"> A) 10 m</label>
+<label><input type="radio" name="q38" value="B"> B) 10√3 m</label>
+<label><input type="radio" name="q38" value="C"> C) 20 m</label>
+<label><input type="radio" name="q38" value="D"> D) 20√3 m</label>
+</div>
+
+<!-- Q39 -->
+<div class="question">
+<h3>Q39. 20 m लंबी डोरी जमीन से 60° का कोण बनाती है। पतंग की ऊँचाई कितनी होगी?</h3>
+<label><input type="radio" name="q39" value="A"> A) 10 m</label>
+<label><input type="radio" name="q39" value="B"> B) 10√3 m</label>
+<label><input type="radio" name="q39" value="C"> C) 20 m</label>
+<label><input type="radio" name="q39" value="D"> D) 20√3 m</label>
+</div>
+
+<!-- Q40 -->
+<div class="question">
+<h3>Q40. यदि किसी वस्तु का उन्नयन कोण 0° हो, तो वस्तु किस दिशा में दिखाई देगी?</h3>
+<label><input type="radio" name="q40" value="A"> A) बिल्कुल ऊपर</label>
+<label><input type="radio" name="q40" value="B"> B) क्षैतिज दिशा में</label>
+<label><input type="radio" name="q40" value="C"> C) नीचे</label>
+<label><input type="radio" name="q40" value="D"> D) पीछे</label>
+</div>
+
+<!-- Q41 -->
+<div class="question">
+<h3>Q41. यदि उन्नयन कोण 90° हो, तो देखने की रेखा कैसी होगी?</h3>
+<label><input type="radio" name="q41" value="A"> A) क्षैतिज</label>
+<label><input type="radio" name="q41" value="B"> B) ऊर्ध्वाधर</label>
+<label><input type="radio" name="q41" value="C"> C) तिरछी</label>
+<label><input type="radio" name="q41" value="D"> D) समानांतर</label>
+</div>
+
+<!-- Q42 -->
+<div class="question">
+<h3>Q42. किसी भवन के शीर्ष से जमीन पर किसी बिंदु का अवनमन कोण 30° है। भवन और बिंदु के बीच क्षैतिज दूरी d तथा ऊँचाई h में कौन-सा संबंध होगा?</h3>
+<label><input type="radio" name="q42" value="A"> A) h = d</label>
+<label><input type="radio" name="q42" value="B"> B) h = d/√3</label>
+<label><input type="radio" name="q42" value="C"> C) h = √3d</label>
+<label><input type="radio" name="q42" value="D"> D) h = 2d</label>
+</div>
+
+<!-- Q43 -->
+<div class="question">
+<h3>Q43. किसी भवन के शीर्ष का अवनमन कोण 60° है। यदि क्षैतिज दूरी 10 m है, तो भवन की ऊँचाई कितनी होगी?</h3>
+<label><input type="radio" name="q43" value="A"> A) 10 m</label>
+<label><input type="radio" name="q43" value="B"> B) 10√3 m</label>
+<label><input type="radio" name="q43" value="C"> C) 20 m</label>
+<label><input type="radio" name="q43" value="D"> D) 5√3 m</label>
+</div>
+
+<!-- Q44 -->
+<div class="question">
+<h3>Q44. यदि किसी मीनार के शीर्ष का उन्नयन कोण 45° है और मीनार की ऊँचाई 25 m है, तो दूरी कितनी होगी?</h3>
+<label><input type="radio" name="q44" value="A"> A) 15 m</label>
+<label><input type="radio" name="q44" value="B"> B) 20 m</label>
+<label><input type="radio" name="q44" value="C"> C) 25 m</label>
+<label><input type="radio" name="q44" value="D"> D) 50 m</label>
+</div>
+
+<!-- Q45 -->
+<div class="question">
+<h3>Q45. किसी टावर की ऊँचाई 30 m और दूरी 30√3 m है। उन्नयन कोण क्या होगा?</h3>
+<label><input type="radio" name="q45" value="A"> A) 30°</label>
+<label><input type="radio" name="q45" value="B"> B) 45°</label>
+<label><input type="radio" name="q45" value="C"> C) 60°</label>
+<label><input type="radio" name="q45" value="D"> D) 90°</label>
+</div>
+
+<!-- Q46 -->
+<div class="question">
+<h3>Q46. किसी टावर की ऊँचाई 30√3 m और दूरी 30 m है। उन्नयन कोण क्या होगा?</h3>
+<label><input type
