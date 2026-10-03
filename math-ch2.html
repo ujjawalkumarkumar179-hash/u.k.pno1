@@ -1,1 +1,320 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>बहुपद - U.K.P NO1 Education</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:20px 10px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+}
+
+header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+header h1{
+    margin:10px 0 5px;
+}
+
+.shayari{
+    margin:20px 12px;
+    padding:18px;
+    text-align:center;
+    background:#fff3cd;
+    border:2px solid #ffc107;
+    border-radius:18px;
+    line-height:1.8;
+    font-weight:bold;
+}
+
+.question{
+    margin:15px 12px;
+    padding:18px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.question h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+label{
+    display:block;
+    padding:9px;
+    margin:6px 0;
+    background:#f5f5f5;
+    border-radius:8px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#result{
+    display:none;
+    margin:20px 12px;
+    padding:20px;
+    text-align:center;
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.home{
+    display:block;
+    width:max-content;
+    margin:20px auto 30px;
+    padding:12px 22px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>📐 U.K.P NO1 Education</h1>
+    <h2>Chapter 2 — बहुपद</h2>
+    <p>📝 50 MCQ Test</p>
+</header>
+
+<section class="shayari">
+    📚 मेहनत से पढ़ोगे, तो सफलता जरूर आएगी,<br>
+    ✨ आज की मेहनत, कल नई पहचान बनाएगी।
+</section>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>Q1. बहुपद 3x² + 5x + 2 की घात क्या है?</h3>
+<label><input type="radio" name="q1" value="A"> A) 1</label>
+<label><input type="radio" name="q1" value="B"> B) 2</label>
+<label><input type="radio" name="q1" value="C"> C) 3</label>
+<label><input type="radio" name="q1" value="D"> D) 5</label>
+</div>
+
+<div class="question">
+<h3>Q2. निम्न में से कौन-सा एक रैखिक बहुपद है?</h3>
+<label><input type="radio" name="q2" value="A"> A) x² + 1</label>
+<label><input type="radio" name="q2" value="B"> B) 3x + 2</label>
+<label><input type="radio" name="q2" value="C"> C) x³ + x</label>
+<label><input type="radio" name="q2" value="D"> D) x⁴ + 1</label>
+</div>
+
+<div class="question">
+<h3>Q3. बहुपद x + 5 का शून्यक क्या है?</h3>
+<label><input type="radio" name="q3" value="A"> A) 5</label>
+<label><input type="radio" name="q3" value="B"> B) -5</label>
+<label><input type="radio" name="q3" value="C"> C) 0</label>
+<label><input type="radio" name="q3" value="D"> D) 1</label>
+</div>
+
+<div class="question">
+<h3>Q4. बहुपद x - 7 का शून्यक है—</h3>
+<label><input type="radio" name="q4" value="A"> A) -7</label>
+<label><input type="radio" name="q4" value="B"> B) 0</label>
+<label><input type="radio" name="q4" value="C"> C) 7</label>
+<label><input type="radio" name="q4" value="D"> D) 1</label>
+</div>
+
+<div class="question">
+<h3>Q5. द्विघात बहुपद की घात कितनी होती है?</h3>
+<label><input type="radio" name="q5" value="A"> A) 1</label>
+<label><input type="radio" name="q5" value="B"> B) 2</label>
+<label><input type="radio" name="q5" value="C"> C) 3</label>
+<label><input type="radio" name="q5" value="D"> D) 4</label>
+</div>
+
+<div class="question">
+<h3>Q6. x² - 5x + 6 के शून्यक हैं—</h3>
+<label><input type="radio" name="q6" value="A"> A) 1, 6</label>
+<label><input type="radio" name="q6" value="B"> B) 2, 3</label>
+<label><input type="radio" name="q6" value="C"> C) -2, -3</label>
+<label><input type="radio" name="q6" value="D"> D) 0, 6</label>
+</div>
+
+<div class="question">
+<h3>Q7. x² - 9 के शून्यक हैं—</h3>
+<label><input type="radio" name="q7" value="A"> A) 3, 3</label>
+<label><input type="radio" name="q7" value="B"> B) -3, -3</label>
+<label><input type="radio" name="q7" value="C"> C) 3, -3</label>
+<label><input type="radio" name="q7" value="D"> D) 9, -9</label>
+</div>
+
+<div class="question">
+<h3>Q8. यदि α और β, x² - 5x + 6 के शून्यक हैं, तो α + β = ?</h3>
+<label><input type="radio" name="q8" value="A"> A) 5</label>
+<label><input type="radio" name="q8" value="B"> B) -5</label>
+<label><input type="radio" name="q8" value="C"> C) 6</label>
+<label><input type="radio" name="q8" value="D"> D) -6</label>
+</div>
+
+<div class="question">
+<h3>Q9. x² - 5x + 6 में शून्यकों का गुणनफल क्या है?</h3>
+<label><input type="radio" name="q9" value="A"> A) 5</label>
+<label><input type="radio" name="q9" value="B"> B) -5</label>
+<label><input type="radio" name="q9" value="C"> C) 6</label>
+<label><input type="radio" name="q9" value="D"> D) -6</label>
+</div>
+
+<div class="question">
+<h3>Q10. ax² + bx + c के शून्यकों का योग है—</h3>
+<label><input type="radio" name="q10" value="A"> A) b/a</label>
+<label><input type="radio" name="q10" value="B"> B) -b/a</label>
+<label><input type="radio" name="q10" value="C"> C) c/a</label>
+<label><input type="radio" name="q10" value="D"> D) -c/a</label>
+</div>
+
+<div class="question">
+<h3>Q11. ax² + bx + c के शून्यकों का गुणनफल है—</h3>
+<label><input type="radio" name="q11" value="A"> A) b/a</label>
+<label><input type="radio" name="q11" value="B"> B) -b/a</label>
+<label><input type="radio" name="q11" value="C"> C) c/a</label>
+<label><input type="radio" name="q11" value="D"> D) -c/a</label>
+</div>
+
+<div class="question">
+<h3>Q12. x² + 7x + 12 के शून्यकों का योग है—</h3>
+<label><input type="radio" name="q12" value="A"> A) 7</label>
+<label><input type="radio" name="q12" value="B"> B) -7</label>
+<label><input type="radio" name="q12" value="C"> C) 12</label>
+<label><input type="radio" name="q12" value="D"> D) -12</label>
+</div>
+
+<div class="question">
+<h3>Q13. x² + 7x + 12 के शून्यकों का गुणनफल है—</h3>
+<label><input type="radio" name="q13" value="A"> A) 7</label>
+<label><input type="radio" name="q13" value="B"> B) -7</label>
+<label><input type="radio" name="q13" value="C"> C) 12</label>
+<label><input type="radio" name="q13" value="D"> D) -12</label>
+</div>
+
+<div class="question">
+<h3>Q14. यदि किसी बहुपद का शून्यक 0 है, तो उसका स्थिर पद होगा—</h3>
+<label><input type="radio" name="q14" value="A"> A) 0</label>
+<label><input type="radio" name="q14" value="B"> B) 1</label>
+<label><input type="radio" name="q14" value="C"> C) -1</label>
+<label><input type="radio" name="q14" value="D"> D) 2</label>
+</div>
+
+<div class="question">
+<h3>Q15. x² - 4x + 4 का एक शून्यक है—</h3>
+<label><input type="radio" name="q15" value="A"> A) 1</label>
+<label><input type="radio" name="q15" value="B"> B) 2</label>
+<label><input type="radio" name="q15" value="C"> C) 4</label>
+<label><input type="radio" name="q15" value="D"> D) -2</label>
+</div>
+
+<div class="question">
+<h3>Q16. x² + 2x - 8 के शून्यक हैं—</h3>
+<label><input type="radio" name="q16" value="A"> A) 2, 4</label>
+<label><input type="radio" name="q16" value="B"> B) 2, -4</label>
+<label><input type="radio" name="q16" value="C"> C) -2, 4</label>
+<label><input type="radio" name="q16" value="D"> D) -2, -4</label>
+</div>
+
+<div class="question">
+<h3>Q17. x² - 3x - 10 के शून्यक हैं—</h3>
+<label><input type="radio" name="q17" value="A"> A) 5, -2</label>
+<label><input type="radio" name="q17" value="B"> B) -5, 2</label>
+<label><input type="radio" name="q17" value="C"> C) 5, 2</label>
+<label><input type="radio" name="q17" value="D"> D) -5, -2</label>
+</div>
+
+<div class="question">
+<h3>Q18. यदि शून्यक 3 और 4 हैं, तो संबंधित द्विघात बहुपद क्या हो सकता है?</h3>
+<label><input type="radio" name="q18" value="A"> A) x² + 7x + 12</label>
+<label><input type="radio" name="q18" value="B"> B) x² - 7x + 12</label>
+<label><input type="radio" name="q18" value="C"> C) x² + 7x - 12</label>
+<label><input type="radio" name="q18" value="D"> D) x² - 12x + 7</label>
+</div>
+
+<div class="question">
+<h3>Q19. यदि शून्यक 2 और -3 हैं, तो शून्यकों का योग है—</h3>
+<label><input type="radio" name="q19" value="A"> A) 5</label>
+<label><input type="radio" name="q19" value="B"> B) -5</label>
+<label><input type="radio" name="q19" value="C"> C) -1</label>
+<label><input type="radio" name="q19" value="D"> D) 1</label>
+</div>
+
+<div class="question">
+<h3>Q20. यदि शून्यक 2 और -3 हैं, तो उनका गुणनफल है—</h3>
+<label><input type="radio" name="q20" value="A"> A) 6</label>
+<label><input type="radio" name="q20" value="B"> B) -6</label>
+<label><input type="radio" name="q20" value="C"> C) 1</label>
+<label><input type="radio" name="q20" value="D"> D) -1</label>
+</div>
+
+<div class="question">
+<h3>Q21. बहुपद 5x - 10 का शून्यक है—</h3>
+<label><input type="radio" name="q21" value="A"> A) 1</label>
+<label><input type="radio" name="q21" value="B"> B) 2</label>
+<label><input type="radio" name="q21" value="C"> C) -2</label>
+<label><input type="radio" name="q21" value="D"> D) 5</label>
+</div>
+
+<div class="question">
+<h3>Q22. 2x + 6 का शून्यक है—</h3>
+<label><input type="radio" name="q22" value="A"> A) 3</label>
+<label><input type="radio" name="q22" value="B"> B) -3</label>
+<label><input type="radio" name="q22" value="C"> C) 6</label>
+<label><input type="radio" name="q22" value="D"> D) -6</label>
+</div>
+
+<div class="question">
+<h3>Q23. शेषफल प्रमेय के अनुसार p(x) को (x - a) से भाग देने पर शेषफल क्या होगा?</h3>
+<label><input type="radio" name="q23" value="A"> A) p(0)</label>
+<label><input type="radio" name="q23" value="B"> B) p(1)</label>
+<label><input type="radio" name="q23" value="C"> C) p(a)</label>
+<label><input type="radio" name="q23" value="D"> D) p(-a)</label>
+</div>
+
+<div class="question">
+<h3>Q24. यदि p(a) = 0 है, तो (x - a) क्या है?</h3>
+<label><input type="radio" name="q24" value="A"> A) p(x) का गुणनखंड</label>
+<label><input type="radio" name="q24" value="B"> B) p(x) का शून्य बहुपद</label>
+<label><input type="radio" name="q24" value="C"> C) p(x) की घात</label>
+<label><input type="radio" name="q24" value="D"> D) स्थिरांक</label>
+</div>
+
+<div class="question">
+<h3>Q25. यदि p(2)=0 है, तो निम्न में से कौन-सा p(x) का गुणनखंड है?</h3>
+<label><input type="radio" name="q25" value="A"> A) x + 2</label>
+<label><input type="radio" name="q25" value="B"> B) x - 2</label>
+<label><input type="radio" name="q25" value="C"> C) x</label>
+<label><input type="radio" name="q25" value="D"> D) x + 1</label>
+</div>
+
+<!-- PART 2 यहीं से जारी होगा -->
