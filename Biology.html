@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biology - U.K.P NO1 Education</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9, #ffffff);
+            color: #222;
+        }
+
+        .biology-header {
+            text-align: center;
+            padding: 28px 15px;
+            background: linear-gradient(135deg, #1b5e20, #388e3c, #66bb6a);
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .biology-header img {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+        }
+
+        .biology-header h1 {
+            margin: 10px 0;
+            font-size: 30px;
+        }
+
+        .biology-header p {
+            margin: 7px 0;
+            font-size: 16px;
+        }
+
+        .welcome {
+            font-size: 18px !important;
+            font-weight: bold;
+        }
+
+        .biology-shayari {
+            margin: 20px 15px;
+            padding: 20px 15px;
+            text-align: center;
+            background: linear-gradient(135deg, #f1f8e9, #dcedc8);
+            border: 2px solid #66bb6a;
+            border-radius: 20px;
+            line-height: 1.9;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .chapter-section {
+            padding: 10px 15px 25px;
+        }
+
+        .chapter-section h2 {
+            text-align: center;
+            color: #1b5e20;
+            font-size: 25px;
+        }
+
+        .chapter-intro {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .chapter-card {
+            display: block;
+            text-decoration: none;
+            color: #222;
+            background: white;
+            padding: 20px 18px;
+            border-radius: 20px;
+            border-left: 7px solid #2e7d32;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            transition: 0.2s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .chapter-card:active {
+            transform: scale(0.98);
+        }
+
+        .chapter-number {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .chapter-card h3 {
+            margin: 10px 0;
+            color: #2e7d32;
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+        .chapter-card p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .start-test {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 13px;
+            background: #2e7d32;
+            color: white;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .back-home {
+            text-align: center;
+            margin: 25px 15px 35px;
+        }
+
+        .back-home a {
+            display: inline-block;
+            padding: 13px 22px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #1b5e20;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .biology-header h1 {
+                font-size: 27px;
+            }
+
+            .chapter-card h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="biology-header">
+
+        <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+
+        <h1>🧬 Biology</h1>
+
+        <p>Class 10 • Bihar Board • NCERT</p>
+
+        <p class="welcome">
+            📚 Biology पढ़ें • समझें • Practice करें • Score बढ़ाएँ 🚀
+        </p>
+
+    </header>
+
+
+    <!-- Top Shayari -->
+    <section class="biology-shayari">
+
+        🌿 जीवन को समझते जाना है,<br>
+        🧬 Biology के हर Chapter को पढ़ते जाना है,<br>
+        💪 मेहनत करके सफलता पाना है। 🚀
+
+    </section>
+
+
+    <!-- Chapters -->
+    <section class="chapter-section">
+
+        <h2>🧬 Biology के Chapters</h2>
+
+        <p class="chapter-intro">
+            अपना Chapter चुनें और सीधे MCQ Test शुरू करें।
+        </p>
+
+
+        <div class="chapter-grid">
+
+
+            <!-- Chapter 1 -->
+            <a href="biology-ch1.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 1
+                </span>
+
+                <h3>
+                    🌱 जैव प्रक्रम
+                </h3>
+
+                <p>
+                    पोषण, श्वसन, परिवहन और उत्सर्जन
+                    से संबंधित महत्वपूर्ण प्रश्न।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 2 -->
+            <a href="biology-ch2.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 2
+                </span>
+
+                <h3>
+                    🧠 नियंत्रण एवं समन्वय
+                </h3>
+
+                <p>
+                    तंत्रिका तंत्र, मस्तिष्क, हार्मोन
+                    और पौधों में नियंत्रण एवं समन्वय।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 3 -->
+            <a href="biology-ch3.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 3
+                </span>
+
+                <h3>
+                    🌸 जीव जनन कैसे करते हैं?
+                </h3>
+
+                <p>
+                    अलैंगिक एवं लैंगिक जनन तथा
+                    मानव जनन से जुड़े महत्वपूर्ण प्रश्न।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 4 -->
+            <a href="biology-ch4.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 4
+                </span>
+
+                <h3>
+                    🧬 आनुवंशिकता एवं जैव विकास
+                </h3>
+
+                <p>
+                    Heredity, Mendel के नियम,
+                    विविधता और Evolution।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+            <!-- Chapter 5 -->
+            <a href="biology-ch5.html" class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 5
+                </span>
+
+                <h3>
+                    🌍 हमारा पर्यावरण
+                </h3>
+
+                <p>
+                    Ecosystem, Food Chain, जैव अपघटन
+                    और पर्यावरण से जुड़े महत्वपूर्ण प्रश्न।
+                </p>
+
+                <span class="start-test">
+                    📝 MCQ Test शुरू करें →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Bottom Shayari -->
+    <section class="biology-shayari">
+
+        📚 ज्ञान को अपनी ताकत बनाना है,<br>
+        🌿 प्रकृति और जीवन को समझना है,<br>
+        🌟 मेहनत से अपना लक्ष्य पाना है। 🚀
+
+    </section>
+
+
+    <!-- Back -->
+    <section class="back-home">
+
+        <a href="science.html">
+            🔬 वापस Science Page पर जाएँ
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 U.K.P NO1 Education
+        </p>
+
+    </footer>
+
+</body>
+
+  </html>
