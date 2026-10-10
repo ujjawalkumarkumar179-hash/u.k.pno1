@@ -1,1 +1,614 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 3 | लोकतंत्र और विविधता | U.K.P NO1 Education</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd, #fff8e1);
+  color: #222;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  background: white;
+  padding: 22px 15px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px #00000015;
+  border-top: 5px solid #198754;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.header h1 {
+  color: #087443;
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.header h2 {
+  color: #b45309;
+  font-size: 21px;
+}
+
+.header p {
+  line-height: 1.7;
+}
+
+.info {
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.progress-box {
+  background: white;
+  margin: 15px 0;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.progress-bg {
+  height: 12px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #198754;
+  transition: width 0.3s;
+}
+
+.question {
+  background: white;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #00000010;
+  border-left: 4px solid #198754;
+}
+
+.question h3 {
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.option {
+  display: block;
+  padding: 12px;
+  margin: 9px 0;
+  background: #f6f8fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.option:hover {
+  background: #e8f5e9;
+}
+
+.option input {
+  margin-right: 8px;
+  accent-color: #198754;
+}
+
+button {
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 6px 3px;
+}
+
+.submit-btn {
+  background: #087443;
+  color: white;
+  width: 100%;
+}
+
+.reset-btn {
+  background: #e5e7eb;
+  color: #222;
+}
+
+.result {
+  display: none;
+  background: white;
+  padding: 22px;
+  margin-top: 20px;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid #198754;
+}
+
+.result h2 {
+  color: #087443;
+}
+
+#review {
+  text-align: left;
+}
+
+.review-item {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.correct {
+  background: #dcfce7;
+}
+
+.wrong {
+  background: #fee2e2;
+}
+
+.footer {
+  text-align: center;
+  margin: 25px 0 10px;
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 9px;
+  }
+
+  .header h1 {
+    font-size: 21px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .question {
+    padding: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header class="header">
+  <img src="assets/logo.png" alt="U.K.P NO1 Education Logo"
+       class="logo"
+       onerror="this.style.display='none'">
+
+  <h1>🌟 U.K.P NO1 Education 🌟</h1>
+
+  <h2>कक्षा 10 — नागरिक शास्त्र</h2>
+
+  <h2>अध्याय 3: लोकतंत्र और विविधता</h2>
+
+  <p>
+    📚 अभ्यास करें • अपना ज्ञान बढ़ाएँ • सफलता की ओर कदम बढ़ाएँ
+  </p>
+
+  <div class="info">
+    📝 कुल प्रश्न: 25 |
+    🎯 प्रत्येक प्रश्न: 1 अंक |
+    💯 अधिकतम अंक: 25
+  </div>
+</header>
+
+<div class="progress-box">
+  <strong>आपकी टेस्ट प्रगति:</strong>
+  <span id="progressText">0 / 25 प्रश्न हल किए</span>
+  <div class="progress-bg">
+    <div id="progress"></div>
+  </div>
+</div>
+
+<form id="quizForm">
+
+<!-- प्रश्न 1 -->
+<div class="question">
+<h3>प्रश्न 1. विविधता का सामान्य अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A. सभी लोगों का एक जैसा होना</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. लोगों में विभिन्नताएँ होना</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. केवल आर्थिक समानता</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. केवल राजनीतिक दल होना</label>
+</div>
+
+<!-- प्रश्न 2 -->
+<div class="question">
+<h3>प्रश्न 2. लोकतंत्र में विविधता का सम्मान क्यों आवश्यक है?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A. भेदभाव बढ़ाने के लिए</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. लोगों को अलग रखने के लिए</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. समान अधिकार और सहभागिता सुनिश्चित करने के लिए</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. चुनाव रोकने के लिए</label>
+</div>
+
+<!-- प्रश्न 3 -->
+<div class="question">
+<h3>प्रश्न 3. सामाजिक विभाजन का एक आधार कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A. भाषा</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. मौसम का पूर्वानुमान</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. दिन और रात</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. पृथ्वी का आकार</label>
+</div>
+
+<!-- प्रश्न 4 -->
+<div class="question">
+<h3>प्रश्न 4. सामाजिक अंतर कब सामाजिक विभाजन का रूप ले सकते हैं?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A. जब सभी लोग समान अवसर पाएँ</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. जब अलग-अलग समूहों के बीच दूरी और टकराव बढ़े</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. जब लोग एक-दूसरे का सम्मान करें</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. जब सभी मिलकर काम करें</label>
+</div>
+
+<!-- प्रश्न 5 -->
+<div class="question">
+<h3>प्रश्न 5. अमेरिका में मार्टिन लूथर किंग जूनियर किसके लिए प्रसिद्ध थे?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A. राजतंत्र स्थापित करने के लिए</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. उपनिवेशवाद फैलाने के लिए</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. अश्वेत लोगों के नागरिक अधिकारों के आंदोलन के लिए</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. सैन्य शासन के लिए</label>
+</div>
+
+<!-- प्रश्न 6 -->
+<div class="question">
+<h3>प्रश्न 6. नस्लीय भेदभाव का संबंध मुख्यतः किससे है?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A. लोगों की नस्ल या त्वचा के रंग के आधार पर भेदभाव</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. केवल मौसम से</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. केवल भाषा सीखने से</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. केवल खेल से</label>
+</div>
+
+<!-- प्रश्न 7 -->
+<div class="question">
+<h3>प्रश्न 7. अमेरिका में नागरिक अधिकार आंदोलन का प्रमुख उद्देश्य क्या था?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A. मतदान समाप्त करना</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. समान नागरिक अधिकार प्राप्त करना</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. नस्लीय भेदभाव बढ़ाना</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. लोकतंत्र समाप्त करना</label>
+</div>
+
+<!-- प्रश्न 8 -->
+<div class="question">
+<h3>प्रश्न 8. सामाजिक विभाजन को समझने के लिए क्या देखना चाहिए?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A. केवल लोगों की संख्या</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. केवल देश का क्षेत्रफल</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. केवल मौसम</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. लोगों की पहचान, परिस्थितियाँ और सामाजिक संबंध</label>
+</div>
+
+<!-- प्रश्न 9 -->
+<div class="question">
+<h3>प्रश्न 9. जब एक व्यक्ति की कई सामाजिक पहचानें होती हैं, तो इसे क्या कहा जा सकता है?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A. एकमात्र पहचान</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. बहुस्तरीय सामाजिक पहचान</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. राजनीतिक निषेध</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. आर्थिक संकट</label>
+</div>
+
+<!-- प्रश्न 10 -->
+<div class="question">
+<h3>प्रश्न 10. सामाजिक विभाजन कब अधिक खतरनाक हो सकता है?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A. जब सभी को समान अधिकार मिलें</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. जब लोग सहयोग करें</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. जब एक सामाजिक अंतर दूसरे अंतर से जुड़कर गहरा अलगाव पैदा करे</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. जब भेदभाव समाप्त हो</label>
+</div>
+
+<!-- प्रश्न 11 -->
+<div class="question">
+<h3>प्रश्न 11. ओलंपिक में टॉमी स्मिथ और जॉन कार्लोस ने किस मुद्दे की ओर ध्यान आकर्षित किया था?</h3>
+<label class="option"><input type="radio" name="q11" value="A"> A. नस्लीय भेदभाव और अश्वेत लोगों के अधिकार</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. अंतरिक्ष अनुसंधान</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. कृषि उत्पादन</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. व्यापारिक कर</label>
+</div>
+
+<!-- प्रश्न 12 -->
+<div class="question">
+<h3>प्रश्न 12. सामाजिक विविधता का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q12" value="A"> A. सभी लोगों का एक ही भाषा बोलना अनिवार्य होना</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. अलग-अलग भाषाओं और संस्कृतियों के लोगों का साथ रहना</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. सभी अधिकारों को समाप्त करना</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. केवल एक व्यक्ति का शासन</label>
+</div>
+
+<!-- प्रश्न 13 -->
+<div class="question">
+<h3>प्रश्न 13. लोकतंत्र में अल्पसंख्यक समूहों के अधिकारों की रक्षा क्यों जरूरी है?</h3>
+<label class="option"><input type="radio" name="q13" value="A"> A. ताकि उनके साथ भेदभाव किया जा सके</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. ताकि उनकी आवाज दबाई जा सके</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. ताकि सभी को समान सम्मान और अधिकार मिलें</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. ताकि चुनाव न हों</label>
+</div>
+
+<!-- प्रश्न 14 -->
+<div class="question">
+<h3>प्रश्न 14. सामाजिक विभाजन का राजनीतिक परिणाम किस पर निर्भर करता है?</h3>
+<label class="option"><input type="radio" name="q14" value="A"> A. केवल जनसंख्या पर</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. नेताओं के व्यवहार, संस्थाओं और लोगों की प्रतिक्रिया पर</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. केवल वर्षा पर</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. केवल देश के आकार पर</label>
+</div>
+
+<!-- प्रश्न 15 -->
+<div class="question">
+<h3>प्रश्न 15. सामाजिक एकता को मजबूत करने का अच्छा तरीका क्या है?</h3>
+<label class="option"><input type="radio" name="q15" value="A"> A. अफवाहें फैलाना</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. दूसरों की भाषा का अपमान करना</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. भेदभाव करना</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. संवाद, समानता और आपसी सम्मान बढ़ाना</label>
+</div>
+
+<!-- प्रश्न 16 -->
+<div class="question">
+<h3>प्रश्न 16. सामाजिक विभाजन के संदर्भ में 'अतिव्यापी अंतर' का क्या अर्थ है?</h3>
+<label class="option"><input type="radio" name="q16" value="A"> A. जब एक सामाजिक अंतर दूसरे सामाजिक अंतर के साथ मिलकर अलगाव बढ़ाता है</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. जब सभी सामाजिक समूहों के हित समान हों</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. जब कोई सामाजिक अंतर न हो</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. जब सभी लोग एक ही स्थान पर रहें</label>
+</div>
+
+<!-- प्रश्न 17 -->
+<div class="question">
+<h3>प्रश्न 17. सामाजिक विभाजन के संदर्भ में 'परस्पर काटने वाले अंतर' क्या संकेत देते हैं?</h3>
+<label class="option"><input type="radio" name="q17" value="A"> A. सभी पहचानें हमेशा एक ही समूह में मिलती हैं</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. अलग-अलग मुद्दों पर लोगों की समूह पहचानें अलग हो सकती हैं</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. समाज में कोई विविधता नहीं होती</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. चुनाव नहीं होते</label>
+</div>
+
+<!-- प्रश्न 18 -->
+<div class="question">
+<h3>प्रश्न 18. लोकतंत्र में चुनावों की क्या भूमिका हो सकती है?</h3>
+<label class="option"><input type="radio" name="q18" value="A"> A. सामाजिक मुद्दों को चर्चा और प्रतिनिधित्व का अवसर देना</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. सभी सामाजिक समूहों को मतदान से रोकना</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. नागरिक अधिकार समाप्त करना</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. विविधता को पूरी तरह मिटाना</label>
+</div>
+
+<!-- प्रश्न 19 -->
+<div class="question">
+<h3>प्रश्न 19. क्या सामाजिक विविधता अपने आप में बुरी होती है?</h3>
+<label class="option"><input type="radio" name="q19" value="A"> A. हाँ, हमेशा</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. हाँ, केवल लोकतंत्र में</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. नहीं, विविधता समाज को समृद्ध बना सकती है</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. हाँ, क्योंकि इससे चुनाव रुक जाते हैं</label>
+</div>
+
+<!-- प्रश्न 20 -->
+<div class="question">
+<h3>प्रश्न 20. लोकतांत्रिक व्यवस्था में मतभेदों का समाधान कैसे करना चाहिए?</h3>
+<label class="option"><input type="radio" name="q20" value="A"> A. हिंसा से</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. संवाद, चर्चा और संवैधानिक तरीकों से</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. दूसरों को चुप कराकर</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. मतदान पर रोक लगाकर</label>
+</div>
+
+<!-- प्रश्न 21 -->
+<div class="question">
+<h3>प्रश्न 21. मार्टिन लूथर किंग जूनियर किस देश के नागरिक अधिकार आंदोलन से जुड़े थे?</h3>
+<label class="option"><input type="radio" name="q21" value="A"> A. भारत</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. अमेरिका</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. जापान</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. नेपाल</label>
+</div>
+
+<!-- प्रश्न 22 -->
+<div class="question">
+<h3>प्रश्न 22. सामाजिक विभाजन के कारण समाज में क्या समस्या उत्पन्न हो सकती है?</h3>
+<label class="option"><input type="radio" name="q22" value="A"> A. सभी को समान अवसर मिलना</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. आपसी सहयोग बढ़ना</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. सभी भेदभावों का अंत</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. भेदभाव, तनाव और संघर्ष</label>
+</div>
+
+<!-- प्रश्न 23 -->
+<div class="question">
+<h3>प्रश्न 23. एक व्यक्ति की पहचान किस-किस आधार पर बन सकती है?</h3>
+<label class="option"><input type="radio" name="q23" value="A"> A. केवल नाम से</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. केवल उम्र से</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. भाषा, धर्म, जाति, क्षेत्र और अन्य सामाजिक अनुभवों से</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. केवल कपड़ों से</label>
+</div>
+
+<!-- प्रश्न 24 -->
+<div class="question">
+<h3>प्रश्न 24. विविधता वाले समाज में समानता का क्या अर्थ है?</h3>
+<label class="option"><input type="radio" name="q24" value="A"> A. सभी की संस्कृति एक जैसी करना</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. सभी को समान अधिकार और अवसर देना</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. सभी भाषाओं पर रोक लगाना</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. कुछ समूहों को अधिकार न देना</label>
+</div>
+
+<!-- प्रश्न 25 -->
+<div class="question">
+<h3>प्रश्न 25. लोकतंत्र और विविधता का सबसे उपयुक्त संबंध कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q25" value="A"> A. लोकतंत्र विविध समूहों को अपनी बात रखने का अवसर दे सकता है</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. लोकतंत्र में सभी मतभेद समाप्त हो जाते हैं</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. लोकतंत्र में केवल बहुसंख्यक समूह के अधिकार होते हैं</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. लोकतंत्र में चुनाव नहीं होते</label>
+</div>
+
+<button type="button" class="submit-btn" onclick="submitTest()">
+✅ Submit Test
+</button>
+
+<button type="button" class="reset-btn" onclick="resetTest()">
+🔄 दोबारा टेस्ट दें
+</button>
+
+</form>
+
+<section class="result" id="result">
+  <h2>🎉 आपका परिणाम</h2>
+
+  <p id="score"></p>
+  <p id="percentage"></p>
+  <p id="grade"></p>
+  <p id="message"></p>
+
+  <h3>📖 उत्तरों की जाँच</h3>
+  <div id="review"></div>
+</section>
+
+<div class="footer">
+  <h3>🌼 मेहनत ही सफलता की चाबी है 🌼</h3>
+  <p>
+    आज का अभ्यास, कल की सफलता।<br>
+    हर दिन सीखें, हर दिन आगे बढ़ें! 🚀
+  </p>
+  <strong>U.K.P NO1 Education</strong>
+</div>
+
+</div>
+
+<script>
+const answers = {
+  q1: "B",
+  q2: "C",
+  q3: "A",
+  q4: "B",
+  q5: "C",
+  q6: "A",
+  q7: "B",
+  q8: "D",
+  q9: "B",
+  q10: "C",
+  q11: "A",
+  q12: "B",
+  q13: "C",
+  q14: "B",
+  q15: "D",
+  q16: "A",
+  q17: "B",
+  q18: "A",
+  q19: "C",
+  q20: "B",
+  q21: "B",
+  q22: "D",
+  q23: "C",
+  q24: "B",
+  q25: "A"
+};
+
+let submitted = false;
+
+function updateProgress() {
+  const total = Object.keys(answers).length;
+  let attempted = 0;
+
+  for (let i = 1; i <= total; i++) {
+    if (document.querySelector('input[name="q' + i + '"]:checked')) {
+      attempted++;
+    }
+  }
+
+  document.getElementById("progressText").textContent =
+    attempted + " / " + total + " प्रश्न हल किए";
+
+  document.getElementById("progress").style.width =
+    (attempted / total * 100) + "%";
+}
+
+document.getElementById("quizForm").addEventListener("change", function() {
+  if (!submitted) updateProgress();
+});
+
+function submitTest() {
+  if (submitted) {
+    alert("आप यह टेस्ट पहले ही सबमिट कर चुके हैं। दोबारा टेस्ट देने के लिए Reset बटन दबाएँ।");
+    return;
+  }
+
+  const total = Object.keys(answers).length;
+  let score = 0;
+  let attempted = 0;
+  let reviewHTML = "";
+
+  for (let i = 1; i <= total; i++) {
+    const qName = "q" + i;
+    const selected = document.querySelector(
+      'input[name="' + qName + '"]:checked'
+    );
+
+    const correct = answers[qName];
+    const questionBox = document.querySelector(
+      'input[name="' + qName + '"]'
+    ).closest(".question");
+
+    const questionText = questionBox.querySelector("h3").textContent;
+
+    const correctOption = questionBox.querySelector(
+      'input[value="' + correct + '"]'
+    ).parentElement.textContent.trim();
+
+    let selectedText = "उत्तर नहीं दिया";
+    let isCorrect = false;
+
+    if (selected) {
+      attempted++;
+      selectedText = selected.parentElement.textContent.trim();
+
+      if (selected.value === correct) {
+        score++;
+        isCorrect = true;
+      }
+    }
+
+    reviewHTML += `
+      <div class="review-item ${isCorrect ? "correct" : "wrong"}">
+        <strong>${questionText}</strong><br>
+        आपका उत्तर: ${selectedText}<br>
+        सही उत्तर: ${correctOption}<br>
+        ${isCorrect ? "✅ सही उत्तर" : "❌ गलत या अनुत्तरित"}
+      </div>
+    `;
+  }
+
+  const percentage = (score / total * 100).toFixed(2);
+
+  let grade;
+  let message;
+
+  if (percentage >= 90) {
+    grade = "Gold A+ 🥇";
+    message = "शानदार! आपका प्रदर्शन बेहतरीन है।";
+  } else if (percentage >= 75) {
+    grade = "Silver A 🥈";
+    message = "बहुत अच्छा! इसी तरह अभ्यास करते रहें।";
+  } else if (percentage >= 60) {
+    grade = "Bronze B 🥉";
+    message = "अच्छा प्रयास! थोड़ा और अभ्यास करें।";
+  } el
