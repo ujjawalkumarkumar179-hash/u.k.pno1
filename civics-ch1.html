@@ -1,1 +1,532 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Chapter 1 Test | U.K.P NO1 Education</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+    color: #1e293b;
+}
+
+header {
+    background: linear-gradient(135deg, #312e81, #6d28d9, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 22px 12px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 5px 18px #0002;
+}
+
+.logo {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid #facc15;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 25px;
+}
+
+header p {
+    margin: 7px 0;
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 12px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px #00000010;
+    border: 1px solid #e2e8f0;
+}
+
+.quote {
+    text-align: center;
+    line-height: 1.8;
+    background: #fff7ed;
+    border-left: 5px solid #f59e0b;
+}
+
+.progress-box {
+    background: #e0e7ff;
+    padding: 13px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.progress-track {
+    height: 9px;
+    background: #c7d2fe;
+    border-radius: 10px;
+    margin-top: 9px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #6d28d9;
+    transition: width .2s;
+}
+
+.question {
+    padding: 17px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.question:last-child {
+    border-bottom: none;
+}
+
+.question h3 {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+.option {
+    display: block;
+    background: #f8fafc;
+    padding: 11px;
+    margin: 9px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+.option:hover {
+    background: #ede9fe;
+    border-color: #8b5cf6;
+}
+
+.option input {
+    margin-right: 8px;
+    accent-color: #6d28d9;
+}
+
+button, .back-button {
+    display: inline-block;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px 3px;
+}
+
+.submit {
+    background: #16a34a;
+    color: white;
+    width: 100%;
+    margin: 15px 0 5px;
+}
+
+.reset {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.back-button {
+    background: #facc15;
+    color: #1e1b4b;
+}
+
+#result {
+    display: none;
+    text-align: center;
+    line-height: 1.8;
+    border: 2px solid #facc15;
+    background: #fffbeb;
+}
+
+#result h2 {
+    color: #6d28d9;
+}
+
+#answerReview {
+    text-align: left;
+}
+
+.review-item {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+footer {
+    background: #1e1b4b;
+    color: white;
+    text-align: center;
+    padding: 22px 12px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+footer strong {
+    color: #facc15;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 13px;
+    }
+
+    .question h3 {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img
+        src="assets/logo.png"
+        alt="U.K.P NO1 Education Logo"
+        class="logo"
+        onerror="this.style.display='none'"
+    >
+
+    <h1>U.K.P NO1 Education</h1>
+    <p>📘 Class 10 • Civics Chapter Test</p>
+    <p>अध्याय 1: लोकतंत्र में सत्ता की साझेदारी</p>
+</header>
+
+<main class="container">
+
+    <section class="card quote">
+        <strong>🌟 आज की मेहनत, कल की सफलता 🌟</strong>
+        <br>
+        लक्ष्य बड़ा रखो, मेहनत जारी रखो,
+        <br>
+        हर दिन कुछ नया सीखो और आगे बढ़ो! 💪
+    </section>
+
+    <section class="card">
+        <h2>📝 टेस्ट के नियम</h2>
+        <p>✅ कुल प्रश्न: <strong>25</strong></p>
+        <p>✅ प्रत्येक सही उत्तर: <strong>1 अंक</strong></p>
+        <p>✅ गलत उत्तर पर कोई अंक नहीं कटेगा।</p>
+        <p>✅ सभी उत्तर चुनने के बाद Submit Test दबाएँ।</p>
+    </section>
+
+    <section class="card">
+        <div class="progress-box">
+            <strong>📊 आपकी तैयारी</strong>
+            <p id="progressText">उत्तर दिए गए: 0 / 25</p>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <h2>📚 Chapter 1 MCQ Test</h2>
+
+        <form id="quizForm">
+
+            <div class="question">
+                <h3>1. सत्ता की साझेदारी का मुख्य उद्देश्य क्या है?</h3>
+                <label class="option"><input type="radio" name="q1" value="A"> A. सत्ता को एक व्यक्ति तक सीमित करना</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B. सत्ता का बँटवारा करके संघर्ष कम करना</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C. चुनाव समाप्त करना</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D. नागरिकों के अधिकार समाप्त करना</label>
+            </div>
+
+            <div class="question">
+                <h3>2. बेल्जियम किस महाद्वीप में स्थित है?</h3>
+                <label class="option"><input type="radio" name="q2" value="A"> A. एशिया</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B. अफ्रीका</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C. यूरोप</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D. ऑस्ट्रेलिया</label>
+            </div>
+
+            <div class="question">
+                <h3>3. बेल्जियम की राजधानी क्या है?</h3>
+                <label class="option"><input type="radio" name="q3" value="A"> A. ब्रुसेल्स</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B. पेरिस</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C. रोम</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D. बर्लिन</label>
+            </div>
+
+            <div class="question">
+                <h3>4. बेल्जियम में बहुसंख्यक लोग कौन-सी भाषा बोलते हैं?</h3>
+                <label class="option"><input type="radio" name="q4" value="A"> A. फ्रेंच</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B. डच</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C. स्पेनिश</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D. इतालवी</label>
+            </div>
+
+            <div class="question">
+                <h3>5. बेल्जियम की लगभग कितनी आबादी डच भाषा बोलती है?</h3>
+                <label class="option"><input type="radio" name="q5" value="A"> A. 20%</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B. 40%</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C. 59%</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D. 80%</label>
+            </div>
+
+            <div class="question">
+                <h3>6. बेल्जियम में फ्रेंच भाषा बोलने वाले लोग लगभग कितने प्रतिशत हैं?</h3>
+                <label class="option"><input type="radio" name="q6" value="A"> A. 40%</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B. 59%</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C. 80%</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D. 1%</label>
+            </div>
+
+            <div class="question">
+                <h3>7. बेल्जियम में सत्ता की साझेदारी का एक प्रमुख आधार क्या था?</h3>
+                <label class="option"><input type="radio" name="q7" value="A"> A. केवल एक भाषा को मान्यता देना</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B. विभिन्न समुदायों के हितों का सम्मान</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C. चुनाव बंद करना</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D. सभी दलों पर प्रतिबंध</label>
+            </div>
+
+            <div class="question">
+                <h3>8. श्रीलंका में बहुसंख्यक समुदाय कौन-सा है?</h3>
+                <label class="option"><input type="radio" name="q8" value="A"> A. तमिल</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B. सिंहली</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C. डच</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D. फ्रेंच</label>
+            </div>
+
+            <div class="question">
+                <h3>9. श्रीलंका को स्वतंत्रता कब मिली?</h3>
+                <label class="option"><input type="radio" name="q9" value="A"> A. 1947</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B. 1948</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C. 1950</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D. 1956</label>
+            </div>
+
+            <div class="question">
+                <h3>10. श्रीलंका में 1956 में किस भाषा को एकमात्र राजभाषा बनाया गया?</h3>
+                <label class="option"><input type="radio" name="q10" value="A"> A. तमिल</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B. अंग्रेजी</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C. सिंहली</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D. डच</label>
+            </div>
+
+            <div class="question">
+                <h3>11. सत्ता की साझेदारी किस शासन व्यवस्था की आत्मा मानी जाती है?</h3>
+                <label class="option"><input type="radio" name="q11" value="A"> A. लोकतंत्र</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B. तानाशाही</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C. राजतंत्र</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D. उपनिवेशवाद</label>
+            </div>
+
+            <div class="question">
+                <h3>12. सत्ता की साझेदारी से किसमें कमी आ सकती है?</h3>
+                <label class="option"><input type="radio" name="q12" value="A"> A. शिक्षा</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B. सामाजिक संघर्ष</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C. नागरिक अधिकार</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D. जनभागीदारी</label>
+            </div>
+
+            <div class="question">
+                <h3>13. बेल्जियम में सामुदायिक सरकार किस आधार पर चुनी जाती है?</h3>
+                <label class="option"><input type="radio" name="q13" value="A"> A. भाषा समुदाय</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B. केवल आय</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C. केवल व्यवसाय</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D. केवल उम्र</label>
+            </div>
+
+            <div class="question">
+                <h3>14. बेल्जियम में सामुदायिक सरकार मुख्य रूप से किन विषयों पर काम करती है?</h3>
+                <label class="option"><input type="radio" name="q14" value="A"> A. रक्षा और युद्ध</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B. भाषा, संस्कृति और शिक्षा</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C. केवल विदेश नीति</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D. केवल मुद्रा</label>
+            </div>
+
+            <div class="question">
+                <h3>15. लोकतंत्र में सत्ता का बँटवारा किनके बीच हो सकता है?</h3>
+                <label class="option"><input type="radio" name="q15" value="A"> A. सरकार के विभिन्न अंगों के बीच</label>
+                <label class="option"><input type="radio" name="q15" value="B"> B. केवल सेना के बीच</label>
+                <label class="option"><input type="radio" name="q15" value="C"> C. केवल एक व्यक्ति के बीच</label>
+                <label class="option"><input type="radio" name="q15" value="D"> D. केवल अधिकारियों के बीच</label>
+            </div>
+
+            <div class="question">
+                <h3>16. विधायिका का प्रमुख कार्य क्या है?</h3>
+                <label class="option"><input type="radio" name="q16" value="A"> A. कानून बनाना</label>
+                <label class="option"><input type="radio" name="q16" value="B"> B. न्यायिक फैसले देना</label>
+                <label class="option"><input type="radio" name="q16" value="C"> C. केवल चुनाव कराना</label>
+                <label class="option"><input type="radio" name="q16" value="D"> D. केवल पुलिस चलाना</label>
+            </div>
+
+            <div class="question">
+                <h3>17. कार्यपालिका का मुख्य कार्य क्या है?</h3>
+                <label class="option"><input type="radio" name="q17" value="A"> A. कानूनों को लागू करना</label>
+                <label class="option"><input type="radio" name="q17" value="B"> B. संविधान लिखना ही</label>
+                <label class="option"><input type="radio" name="q17" value="C"> C. केवल फैसले सुनाना</label>
+                <label class="option"><input type="radio" name="q17" value="D"> D. चुनावी नतीजे बदलना</label>
+            </div>
+
+            <div class="question">
+                <h3>18. न्यायपालिका का प्रमुख कार्य क्या है?</h3>
+                <label class="option"><input type="radio" name="q18" value="A"> A. कानून बनाना</label>
+                <label class="option"><input type="radio" name="q18" value="B"> B. कानूनों की व्याख्या और न्याय करना</label>
+                <label class="option"><input type="radio" name="q18" value="C"> C. बजट बनाना</label>
+                <label class="option"><input type="radio" name="q18" value="D"> D. चुनाव प्रचार करना</label>
+            </div>
+
+            <div class="question">
+                <h3>19. भारत में केंद्र और राज्य सरकारों के बीच सत्ता का बँटवारा किसका उदाहरण है?</h3>
+                <label class="option"><input type="radio" name="q19" value="A"> A. संघीय सत्ता-विभाजन</label>
+                <label class="option"><input type="radio" name="q19" value="B"> B. सैन्य शासन</label>
+                <label class="option"><input type="radio" name="q19" value="C"> C. तानाशाही</label>
+                <label class="option"><input type="radio" name="q19" value="D"> D. राजतंत्र</label>
+            </div>
+
+            <div class="question">
+                <h3>20. राजनीतिक दलों के बीच सत्ता की साझेदारी का उदाहरण क्या है?</h3>
+                <label class="option"><input type="radio" name="q20" value="A"> A. गठबंधन सरकार</label>
+                <label class="option"><input type="radio" name="q20" value="B"> B. एकदलीय प्रतिबंध</label>
+                <label class="option"><input type="radio" name="q20" value="C"> C. चुनाव समाप्त करना</label>
+                <label class="option"><input type="radio" name="q20" value="D"> D. न्यायपालिका हटाना</label>
+            </div>
+
+            <div class="question">
+                <h3>21. लोकतंत्र में विपक्ष की भूमिका क्या है?</h3>
+                <label class="option"><input type="radio" name="q21" value="A"> A. सरकार से सवाल करना और जवाबदेही सुनिश्चित करना</label>
+                <label class="option"><input type="radio" name="q21" value="B"> B. चुनाव रोकना</label>
+                <label class="option"><input type="radio" name="q21" value="C"> C. नागरिक अधिकार खत्म करना</label>
+                <label class="option"><input type="radio" name="q21" value="D"> D. अदालतें बंद करना</label>
+            </div>
+
+            <div class="question">
+                <h3>22. सत्ता की साझेदारी का नैतिक कारण क्या है?</h3>
+                <label class="option"><input type="radio" name="q22" value="A"> A. यह लोकतंत्र की मूल भावना है</label>
+                <label class="option"><input type="radio" name="q22" value="B"> B. इससे चुनाव की जरूरत नहीं रहती</label>
+                <label class="option"><input type="radio" name="q22" value="C"> C. इससे नागरिकों की आवाज बंद होती है</label>
+                <label class="option"><input type="radio" name="q22" value="D"> D. इससे कानून समाप्त होते हैं</label>
+            </div>
+
+            <div class="question">
+                <h3>23. सत्ता की साझेदारी का व्यावहारिक लाभ क्या है?</h3>
+                <label class="option"><input type="radio" name="q23" value="A"> A. संघर्ष और अस्थिरता कम हो सकती है</label>
+                <label class="option"><input type="radio" name="q23" value="B"> B. सभी चुनाव समाप्त हो जाते हैं</label>
+                <label class="option"><input type="radio" name="q23" value="C"> C. सभी मतभेद खत्म हो जाते हैं</label>
+                <label class="option"><input type="radio" name="q23" value="D"> D. केवल एक समुदाय शासन करता है</label>
+            </div>
+
+            <div class="question">
+                <h3>24. श्रीलंका में बहुसंख्यकवाद की नीति का क्या प्रभाव पड़ा?</h3>
+                <label class="option"><input type="radio" name="q24" value="A"> A. सभी समुदायों में समान संतुष्टि</label>
+                <label class="option"><input type="radio" name="q24" value="B"> B. तमिल समुदाय में असंतोष और तनाव</label>
+                <label class="option"><input type="radio" name="q24" value="C"> C. सभी भाषाएँ समाप्त हो गईं</label>
+                <label class="option"><input type="radio" name="q24" value="D"> D. चुनाव बंद हो गए</label>
+            </div>
+
+            <div class="question">
+                <h3>25. लोकतांत्रिक शासन में नागरिकों की भागीदारी क्यों महत्त्वपूर्ण है?</h3>
+                <label class="option"><input type="radio" name="q25" value="A"> A. ताकि शासन अधिक जवाबदेह और समावेशी बने</label>
+                <label class="option"><input type="radio" name="q25" value="B"> B. ताकि नागरिकों के अधिकार समाप्त हों</label>
+                <label class="option"><input type="radio" name="q25" value="C"> C. ताकि चुनाव की जरूरत न रहे</label>
+                <label class="option"><input type="radio" name="q25" value="D"> D. ताकि सत्ता केवल एक व्यक्ति के पास रहे</label>
+            </div>
+
+            <button type="button" class="submit" onclick="submitTest()">
+                ✅ Submit Test
+            </button>
+
+            <button type="button" class="reset" onclick="resetTest()">
+                🔄 दोबारा टेस्ट दें
+            </button>
+
+        </form>
+    </section>
+
+    <section class="card" id="result">
+        <h2>🏆 आपका रिजल्ट</h2>
+        <p id="score"></p>
+        <p id="percentage"></p>
+        <p id="grade"></p>
+        <p id="message"></p>
+
+        <h3>📖 उत्तरों की जाँच</h3>
+        <div id="answerReview"></div>
+    </section>
+
+    <center>
+        <a class="back-button" href="civics.html">
+            ⬅ Civics Chapters
+        </a>
+    </center>
+
+</main>
+
+<footer>
+    <strong>U.K.P NO1 Education</strong><br>
+    Learn Smart • Score Better 🚀<br>
+    मेहनत करते रहो, सफलता जरूर मिलेगी! 🌟
+</footer>
+
+<script>
+const answerKey = {
+    q1: "B",
+    q2: "C",
+    q3: "A",
+    q4: "B",
+    q5: "C",
+    q6: "A",
+    q7: "B",
+    q8: "B",
+    q9: "B",
+    q10: "C",
+    q11: "A",
+    q12: "B",
+    q13: "A",
+    q14: "B",
+    q15: "A",
+    q16: "A",
+    q17: "A",
+    q18: "B",
+    q19: "A",
+    q20: "A",
+    q21: "A",
+    q22: "A",
+    q23: "A",
+    q24: "B",
+    q25: "A"
+};
+
+const totalQuestions = 25;
+let submitted = false;
+
+function updateProgress() {
+    const form = document.getElementById("quizForm");
+    let answered = 0;
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector('input[name="q' + i + '"]:checked')) {
+            
