@@ -495,5 +495,69 @@ onerror="this.style.display='none'">
 </div>
 
 <div class="q">
+  <label><input type="radio" name="q50" value="A"> A. कौशल न सीखना</label>
+<label><input type="radio" name="q50" value="B"> B. शिक्षा और प्रशिक्षण</label>
+<label><input type="radio" name="q50" value="C"> C. हर अवसर छोड़ना</label>
+<label><input type="radio" name="q50" value="D"> D. काम से बचना</label>
+</div>
+
+<button type="button" onclick="checkResult()">✅ Submit Test</button>
+</form>
+
+<div id="result"></div>
+
+<a class="home" href="history.html">📚 History Home</a>
+<a class="home" href="index.html">🏠 Website Home</a>
+
+<script>
+const answers = {
+q1:"A", q2:"B", q3:"C", q4:"A", q5:"D",
+q6:"B", q7:"C", q8:"A", q9:"C", q10:"B",
+q11:"A", q12:"D", q13:"B", q14:"C", q15:"A",
+q16:"C", q17:"B", q18:"D", q19:"A", q20:"B",
+q21:"C", q22:"A", q23:"D", q24:"B", q25:"C",
+q26:"A", q27:"D", q28:"B", q29:"C", q30:"A",
+q31:"B", q32:"D", q33:"C", q34:"A", q35:"B",
+q36:"C", q37:"A", q38:"D", q39:"B", q40:"C",
+q41:"A", q42:"D", q43:"B", q44:"C", q45:"A",
+q46:"B", q47:"D", q48:"A", q49:"C", q50:"B"
+};
+
+function checkResult(){
+  let score = 0;
+
+  for(let i = 1; i <= 50; i++){
+    const selected = document.querySelector(
+      'input[name="q' + i + '"]:checked'
+    );
+
+    if(selected && selected.value === answers["q" + i]){
+      score++;
+    }
+  }
+
+  const percent = score * 2;
+  let grade;
+
+  if(score >= 45) grade = "A+";
+  else if(score >= 38) grade = "A";
+  else if(score >= 30) grade = "B";
+  else grade = "C";
+
+  const result = document.getElementById("result");
+  result.style.display = "block";
+  result.innerHTML =
+    "🎯 आपका स्कोर: " + score + "/50" +
+    "<br>📊 प्रतिशत: " + percent + "%" +
+    "<br>🏆 ग्रेड: " + grade +
+    "<br>❌ गलत या छोड़े गए प्रश्न: " + (50-score) +
+    "<br>💪 मेहनत जारी रखो, सफलता जरूर मिलेगी!";
+
+  result.scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
 <p>50. आजीविका बेहतर बनाने में क्या सहायक हो सकता है?</p>
 <label>
