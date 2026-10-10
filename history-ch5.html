@@ -1,1 +1,499 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अर्थव्यवस्था और आजीविका | U.K.P NO1 Education</title>
 
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#fff8e1;
+  color:#222;
+}
+header{
+  background:#283593;
+  color:white;
+  text-align:center;
+  padding:16px 10px;
+}
+header img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+}
+.shayari{
+  margin:12px;
+  padding:14px;
+  background:#fff0bd;
+  text-align:center;
+  line-height:1.8;
+  border-radius:10px;
+}
+.info{
+  text-align:center;
+  font-weight:bold;
+  margin:12px;
+}
+.q{
+  background:white;
+  margin:10px;
+  padding:12px;
+  border-radius:9px;
+  box-shadow:0 2px 5px #ddd;
+}
+.q p{
+  font-weight:bold;
+  margin:0 0 8px;
+}
+label{
+  display:block;
+  padding:6px;
+  cursor:pointer;
+}
+button,.home{
+  display:block;
+  width:90%;
+  max-width:400px;
+  margin:16px auto;
+  padding:13px;
+  background:#283593;
+  color:white;
+  border:0;
+  border-radius:8px;
+  text-decoration:none;
+  text-align:center;
+  font-size:16px;
+  cursor:pointer;
+}
+#result{
+  display:none;
+  background:#e8f5e9;
+  margin:12px;
+  padding:18px;
+  border-radius:10px;
+  text-align:center;
+  line-height:2;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="assets/logo.png" alt="U.K.P Logo"
+onerror="this.style.display='none'">
+<h2>U.K.P NO1 Education</h2>
+<h3>इतिहास अध्याय 5</h3>
+<p>अर्थव्यवस्था और आजीविका</p>
+<p>कक्षा 10 | 50 MCQs</p>
+</header>
+
+<div class="shayari">
+📚 मेहनत से आगे बढ़ते जाना है,<br>
+🎯 हर दिन नया ज्ञान पाना है,<br>
+🏆 मेहनत से अपना लक्ष्य पाना है!
+</div>
+
+<div class="info">सभी प्रश्न हल करें और Submit दबाएँ।</div>
+
+<form id="quiz">
+
+<div class="q">
+<p>1. अर्थव्यवस्था का संबंध किससे है?</p>
+<label><input type="radio" name="q1" value="A"> A. उत्पादन और वितरण</label>
+<label><input type="radio" name="q1" value="B"> B. केवल खेल</label>
+<label><input type="radio" name="q1" value="C"> C. केवल संगीत</label>
+<label><input type="radio" name="q1" value="D"> D. केवल चित्रकला</label>
+</div>
+
+<div class="q">
+<p>2. कृषि किस क्षेत्र का उदाहरण है?</p>
+<label><input type="radio" name="q2" value="A"> A. सेवा क्षेत्र</label>
+<label><input type="radio" name="q2" value="B"> B. प्राथमिक क्षेत्र</label>
+<label><input type="radio" name="q2" value="C"> C. केवल सूचना क्षेत्र</label>
+<label><input type="radio" name="q2" value="D"> D. इनमें से कोई नहीं</label>
+</div>
+
+<div class="q">
+<p>3. उद्योग किस क्षेत्र से संबंधित है?</p>
+<label><input type="radio" name="q3" value="A"> A. प्राथमिक क्षेत्र</label>
+<label><input type="radio" name="q3" value="B"> B. केवल सेवा क्षेत्र</label>
+<label><input type="radio" name="q3" value="C"> C. द्वितीयक क्षेत्र</label>
+<label><input type="radio" name="q3" value="D"> D. इनमें से कोई नहीं</label>
+</div>
+
+<div class="q">
+<p>4. मछली पकड़ना किस क्षेत्र में आता है?</p>
+<label><input type="radio" name="q4" value="A"> A. प्राथमिक क्षेत्र</label>
+<label><input type="radio" name="q4" value="B"> B. द्वितीयक क्षेत्र</label>
+<label><input type="radio" name="q4" value="C"> C. सेवा क्षेत्र</label>
+<label><input type="radio" name="q4" value="D"> D. इनमें से कोई नहीं</label>
+</div>
+
+<div class="q">
+<p>5. कपड़ा बनाने का कारखाना किसका उदाहरण है?</p>
+<label><input type="radio" name="q5" value="A"> A. कृषि</label>
+<label><input type="radio" name="q5" value="B"> B. पशुपालन</label>
+<label><input type="radio" name="q5" value="C"> C. मछली पालन</label>
+<label><input type="radio" name="q5" value="D"> D. विनिर्माण उद्योग</label>
+</div>
+
+<div class="q">
+<p>6. आजीविका का अर्थ क्या है?</p>
+<label><input type="radio" name="q6" value="A"> A. मनोरंजन</label>
+<label><input type="radio" name="q6" value="B"> B. जीवन-यापन का साधन</label>
+<label><input type="radio" name="q6" value="C"> C. खेल प्रतियोगिता</label>
+<label><input type="radio" name="q6" value="D"> D. यात्रा</label>
+</div>
+
+<div class="q">
+<p>7. कृषि के लिए मुख्य रूप से क्या आवश्यक है?</p>
+<label><input type="radio" name="q7" value="A"> A. केवल मशीन</label>
+<label><input type="radio" name="q7" value="B"> B. केवल सड़क</label>
+<label><input type="radio" name="q7" value="C"> C. भूमि और पानी</label>
+<label><input type="radio" name="q7" value="D"> D. केवल दुकान</label>
+</div>
+
+<div class="q">
+<p>8. मशीनों का उपयोग किसमें किया जाता है?</p>
+<label><input type="radio" name="q8" value="A"> A. उत्पादन में</label>
+<label><input type="radio" name="q8" value="B"> B. केवल पढ़ने में</label>
+<label><input type="radio" name="q8" value="C"> C. केवल सोने में</label>
+<label><input type="radio" name="q8" value="D"> D. इनमें से कोई नहीं</label>
+</div>
+
+<div class="q">
+<p>9. कच्चे माल को तैयार वस्तु में बदलना क्या कहलाता है?</p>
+<label><input type="radio" name="q9" value="A"> A. उपभोग</label>
+<label><input type="radio" name="q9" value="B"> B. बचत</label>
+<label><input type="radio" name="q9" value="C"> C. विनिर्माण</label>
+<label><input type="radio" name="q9" value="D"> D. मनोरंजन</label>
+</div>
+
+<div class="q">
+<p>10. निम्न में से कौन सेवा क्षेत्र का उदाहरण है?</p>
+<label><input type="radio" name="q10" value="A"> A. गेहूँ उगाना</label>
+<label><input type="radio" name="q10" value="B"> B. बैंकिंग</label>
+<label><input type="radio" name="q10" value="C"> C. कोयला निकालना</label>
+<label><input type="radio" name="q10" value="D"> D. कपास उगाना</label>
+</div>
+
+<div class="q">
+<p>11. मजदूरी किसके बदले मिलती है?</p>
+<label><input type="radio" name="q11" value="A"> A. काम के बदले</label>
+<label><input type="radio" name="q11" value="B"> B. छुट्टी के बदले ही</label>
+<label><input type="radio" name="q11" value="C"> C. खेल के बदले ही</label>
+<label><input type="radio" name="q11" value="D"> D. उपहार के बदले</label>
+</div>
+
+<div class="q">
+<p>12. बेरोजगारी का अर्थ क्या है?</p>
+<label><input type="radio" name="q12" value="A"> A. नौकरी करना</label>
+<label><input type="radio" name="q12" value="B"> B. व्यापार करना</label>
+<label><input type="radio" name="q12" value="C"> C. पढ़ाई करना</label>
+<label><input type="radio" name="q12" value="D"> D. काम चाहने पर भी काम न मिलना</label>
+</div>
+
+<div class="q">
+<p>13. सिंचाई का मुख्य उद्देश्य क्या है?</p>
+<label><input type="radio" name="q13" value="A"> A. सड़क बनाना</label>
+<label><input type="radio" name="q13" value="B"> B. फसलों को पानी देना</label>
+<label><input type="radio" name="q13" value="C"> C. घर बनाना</label>
+<label><input type="radio" name="q13" value="D"> D. कपड़ा बनाना</label>
+</div>
+
+<div class="q">
+<p>14. किसान मुख्य रूप से किस कार्य से जुड़ा है?</p>
+<label><input type="radio" name="q14" value="A"> A. बैंकिंग</label>
+<label><input type="radio" name="q14" value="B"> B. परिवहन</label>
+<label><input type="radio" name="q14" value="C"> C. खेती</label>
+<label><input type="radio" name="q14" value="D"> D. डाक सेवा</label>
+</div>
+
+<div class="q">
+<p>15. व्यापार का अर्थ क्या है?</p>
+<label><input type="radio" name="q15" value="A"> A. वस्तुओं और सेवाओं का क्रय-विक्रय</label>
+<label><input type="radio" name="q15" value="B"> B. केवल खेती</label>
+<label><input type="radio" name="q15" value="C"> C. केवल पढ़ाई</label>
+<label><input type="radio" name="q15" value="D"> D. केवल खेल</label>
+</div>
+
+<div class="q">
+<p>16. परिवहन का मुख्य काम क्या है?</p>
+<label><input type="radio" name="q16" value="A"> A. फसल उगाना</label>
+<label><input type="radio" name="q16" value="B"> B. कपड़ा सिलना</label>
+<label><input type="radio" name="q16" value="C"> C. वस्तुओं और लोगों को ले जाना</label>
+<label><input type="radio" name="q16" value="D"> D. घर बनाना</label>
+</div>
+
+<div class="q">
+<p>17. कुटीर उद्योग सामान्यतः कहाँ चलाया जाता है?</p>
+<label><input type="radio" name="q17" value="A"> A. केवल बड़े बंदरगाह पर</label>
+<label><input type="radio" name="q17" value="B"> B. घर या छोटे कार्यस्थल पर</label>
+<label><input type="radio" name="q17" value="C"> C. केवल हवाई अड्डे पर</label>
+<label><input type="radio" name="q17" value="D"> D. केवल संसद में</label>
+</div>
+
+<div class="q">
+<p>18. हस्तशिल्प में मुख्य रूप से किसका उपयोग होता है?</p>
+<label><input type="radio" name="q18" value="A"> A. केवल कंप्यूटर</label>
+<label><input type="radio" name="q18" value="B"> B. केवल बड़े इंजन</label>
+<label><input type="radio" name="q18" value="C"> C. केवल ट्रैक्टर</label>
+<label><input type="radio" name="q18" value="D"> D. हाथों के कौशल का</label>
+</div>
+
+<div class="q">
+<p>19. कोयला किस प्रकार का संसाधन है?</p>
+<label><input type="radio" name="q19" value="A"> A. खनिज संसाधन</label>
+<label><input type="radio" name="q19" value="B"> B. मानव संसाधन</label>
+<label><input type="radio" name="q19" value="C"> C. केवल सेवा</label>
+<label><input type="radio" name="q19" value="D"> D. इनमें से कोई नहीं</label>
+</div>
+
+<div class="q">
+<p>20. कारखानों में वस्तुएँ क्यों बनाई जाती हैं?</p>
+<label><input type="radio" name="q20" value="A"> A. केवल सजावट के लिए</label>
+<label><input type="radio" name="q20" value="B"> B. उपयोग और बिक्री के लिए</label>
+<label><input type="radio" name="q20" value="C"> C. केवल फेंकने के लिए</label>
+<label><input type="radio" name="q20" value="D"> D. केवल रखने के लिए</label>
+</div>
+
+<div class="q">
+<p>21. मजदूर किससे अपनी आजीविका कमा सकता है?</p>
+<label><input type="radio" name="q21" value="A"> A. केवल छुट्टी से</label>
+<label><input type="radio" name="q21" value="B"> B. केवल यात्रा से</label>
+<label><input type="radio" name="q21" value="C"> C. श्रम करके</label>
+<label><input type="radio" name="q21" value="D"> D. केवल मनोरंजन से</label>
+</div>
+
+<div class="q">
+<p>22. कृषि पर आधारित उद्योग का उदाहरण कौन-सा है?</p>
+<label><input type="radio" name="q22" value="A"> A. चीनी उद्योग</label>
+<label><input type="radio" name="q22" value="B"> B. सॉफ्टवेयर सेवा</label>
+<label><input type="radio" name="q22" value="C"> C. बैंकिंग</label>
+<label><input type="radio" name="q22" value="D"> D. पर्यटन सेवा</label>
+</div>
+
+<div class="q">
+<p>23. दूध उत्पादन किससे संबंधित है?</p>
+<label><input type="radio" name="q23" value="A"> A. खनन</label>
+<label><input type="radio" name="q23" value="B"> B. बैंकिंग</label>
+<label><input type="radio" name="q23" value="C"> C. जहाज निर्माण</label>
+<label><input type="radio" name="q23" value="D"> D. पशुपालन</label>
+</div>
+
+<div class="q">
+<p>24. फसल काटने के बाद अनाज कहाँ बेचा जा सकता है?</p>
+<label><input type="radio" name="q24" value="A"> A. अस्पताल में</label>
+<label><input type="radio" name="q24" value="B"> B. बाजार में</label>
+<label><input type="radio" name="q24" value="C"> C. विद्यालय में</label>
+<label><input type="radio" name="q24" value="D"> D. अदालत में</label>
+</div>
+
+<div class="q">
+<p>25. अर्थव्यवस्था में बैंक की भूमिका क्या है?</p>
+<label><input type="radio" name="q25" value="A"> A. फसल काटना</label>
+<label><input type="radio" name="q25" value="B"> B. खनिज निकालना</label>
+<label><input type="radio" name="q25" value="C"> C. जमा और ऋण जैसी सेवाएँ देना</label>
+<label><input type="radio" name="q25" value="D"> D. सड़क साफ करना</label>
+</div>
+
+<div class="q">
+<p>26. श्रमिकों के लिए सुरक्षित कार्यस्थल क्यों जरूरी है?</p>
+<label><input type="radio" name="q26" value="A"> A. दुर्घटनाओं का खतरा कम करने के लिए</label>
+<label><input type="radio" name="q26" value="B"> B. काम बंद करने के लिए</label>
+<label><input type="radio" name="q26" value="C"> C. उत्पादन रोकने के लिए</label>
+<label><input type="radio" name="q26" value="D"> D. वेतन खत्म करने के लिए</label>
+</div>
+
+<div class="q">
+<p>27. उत्पादन का एक प्रमुख साधन कौन-सा है?</p>
+<label><input type="radio" name="q27" value="A"> A. मनोरंजन</label>
+<label><input type="radio" name="q27" value="B"> B. अफवाह</label>
+<label><input type="radio" name="q27" value="C"> C. छुट्टी</label>
+<label><input type="radio" name="q27" value="D"> D. श्रम</label>
+</div>
+
+<div class="q">
+<p>28. भूमि का उपयोग किस कार्य में होता है?</p>
+<label><input type="radio" name="q28" value="A"> A. केवल संगीत सुनने में</label>
+<label><input type="radio" name="q28" value="B"> B. खेती और निर्माण में</label>
+<label><input type="radio" name="q28" value="C"> C. केवल पढ़ने में</label>
+<label><input type="radio" name="q28" value="D"> D. केवल सोने में</label>
+</div>
+
+<div class="q">
+<p>29. छोटे दुकानदार की आजीविका किससे जुड़ी है?</p>
+<label><input type="radio" name="q29" value="A"> A. खेती ही</label>
+<label><input type="radio" name="q29" value="B"> B. खनन ही</label>
+<label><input type="radio" name="q29" value="C"> C. व्यापार</label>
+<label><input type="radio" name="q29" value="D"> D. मछली पकड़ना ही</label>
+</div>
+
+<div class="q">
+<p>30. उत्पादक किसे कहते हैं?</p>
+<label><input type="radio" name="q30" value="A"> A. वस्तु या सेवा बनाने वाले को</label>
+<label><input type="radio" name="q30" value="B"> B. केवल दर्शक को</label>
+<label><input type="radio" name="q30" value="C"> C. केवल यात्री को</label>
+<label><input type="radio" name="q30" value="D"> D. केवल खिलाड़ी को</label>
+</div>
+
+<div class="q">
+<p>31. उपभोक्ता कौन होता है?</p>
+<label><input type="radio" name="q31" value="A"> A. केवल कारखाना</label>
+<label><input type="radio" name="q31" value="B"> B. वस्तु या सेवा का उपयोग करने वाला</label>
+<label><input type="radio" name="q31" value="C"> C. केवल किसान</label>
+<label><input type="radio" name="q31" value="D"> D. केवल चालक</label>
+</div>
+
+<div class="q">
+<p>32. आय का अर्थ क्या है?</p>
+<label><input type="radio" name="q32" value="A"> A. केवल खर्च</label>
+<label><input type="radio" name="q32" value="B"> B. केवल कर्ज</label>
+<label><input type="radio" name="q32" value="C"> C. केवल नुकसान</label>
+<label><input type="radio" name="q32" value="D"> D. प्राप्त होने वाला धन</label>
+</div>
+
+<div class="q">
+<p>33. बचत का अर्थ क्या है?</p>
+<label><input type="radio" name="q33" value="A"> A. पूरी आय खर्च करना</label>
+<label><input type="radio" name="q33" value="B"> B. अधिक कर्ज लेना</label>
+<label><input type="radio" name="q33" value="C"> C. आय का बचा हुआ हिस्सा</label>
+<label><input type="radio" name="q33" value="D"> D. वस्तुएँ नष्ट करना</label>
+</div>
+
+<div class="q">
+<p>34. ग्रामीण क्षेत्रों में आजीविका का सामान्य साधन क्या है?</p>
+<label><input type="radio" name="q34" value="A"> A. कृषि</label>
+<label><input type="radio" name="q34" value="B"> B. केवल विमान सेवा</label>
+<label><input type="radio" name="q34" value="C"> C. केवल फिल्म निर्माण</label>
+<label><input type="radio" name="q34" value="D"> D. केवल समुद्री व्यापार</label>
+</div>
+
+<div class="q">
+<p>35. कच्चा माल किसे कहते हैं?</p>
+<label><input type="radio" name="q35" value="A"> A. तैयार वस्तु</label>
+<label><input type="radio" name="q35" value="B"> B. उत्पादन में उपयोग होने वाली मूल सामग्री</label>
+<label><input type="radio" name="q35" value="C"> C. केवल वेतन</label>
+<label><input type="radio" name="q35" value="D"> D. केवल कर</label>
+</div>
+
+<div class="q">
+<p>36. कपास से मुख्य रूप से क्या बनाया जाता है?</p>
+<label><input type="radio" name="q36" value="A"> A. पेट्रोल</label>
+<label><input type="radio" name="q36" value="B"> B. सीमेंट</label>
+<label><input type="radio" name="q36" value="C"> C. कपड़ा</label>
+<label><input type="radio" name="q36" value="D"> D. लोहा</label>
+</div>
+
+<div class="q">
+<p>37. रोजगार का एक प्रमुख लाभ क्या है?</p>
+<label><input type="radio" name="q37" value="A"> A. आय प्राप्त होना</label>
+<label><input type="radio" name="q37" value="B"> B. आय का हमेशा शून्य होना</label>
+<label><input type="radio" name="q37" value="C"> C. उत्पादन बंद होना</label>
+<label><input type="radio" name="q37" value="D"> D. व्यापार खत्म होना</label>
+</div>
+
+<div class="q">
+<p>38. खनन में क्या निकाला जाता है?</p>
+<label><input type="radio" name="q38" value="A"> A. तैयार कपड़े</label>
+<label><input type="radio" name="q38" value="B"> B. बैंक जमा</label>
+<label><input type="radio" name="q38" value="C"> C. सेवाएँ</label>
+<label><input type="radio" name="q38" value="D"> D. धरती से खनिज</label>
+</div>
+
+<div class="q">
+<p>39. तकनीक का उपयोग उत्पादन में क्यों होता है?</p>
+<label><input type="radio" name="q39" value="A"> A. काम रोकने के लिए</label>
+<label><input type="radio" name="q39" value="B"> B. काम को अधिक कुशल बनाने के लिए</label>
+<label><input type="radio" name="q39" value="C"> C. वस्तुएँ नष्ट करने के लिए</label>
+<label><input type="radio" name="q39" value="D"> D. बाजार बंद करने के लिए</label>
+</div>
+
+<div class="q">
+<p>40. सहकारी संस्था का मुख्य आधार क्या है?</p>
+<label><input type="radio" name="q40" value="A"> A. अकेले काम करना</label>
+<label><input type="radio" name="q40" value="B"> B. केवल प्रतियोगिता</label>
+<label><input type="radio" name="q40" value="C"> C. सदस्यों का आपसी सहयोग</label>
+<label><input type="radio" name="q40" value="D"> D. किसी का सहयोग न लेना</label>
+</div>
+
+<div class="q">
+<p>41. श्रम विभाजन का अर्थ क्या है?</p>
+<label><input type="radio" name="q41" value="A"> A. काम को अलग-अलग कार्यों में बाँटना</label>
+<label><input type="radio" name="q41" value="B"> B. काम पूरी तरह बंद करना</label>
+<label><input type="radio" name="q41" value="C"> C. मजदूरी खत्म करना</label>
+<label><input type="radio" name="q41" value="D"> D. उत्पादन रोकना</label>
+</div>
+
+<div class="q">
+<p>42. बाजार में कीमत किस पर निर्भर कर सकती है?</p>
+<label><input type="radio" name="q42" value="A"> A. केवल मौसम के नाम पर</label>
+<label><input type="radio" name="q42" value="B"> B. केवल दुकान के रंग पर</label>
+<label><input type="radio" name="q42" value="C"> C. केवल विक्रेता की उम्र पर</label>
+<label><input type="radio" name="q42" value="D"> D. माँग और आपूर्ति पर</label>
+</div>
+
+<div class="q">
+<p>43. सार्वजनिक परिवहन का उदाहरण कौन-सा है?</p>
+<label><input type="radio" name="q43" value="A"> A. निजी अलमारी</label>
+<label><input type="radio" name="q43" value="B"> B. बस सेवा</label>
+<label><input type="radio" name="q43" value="C"> C. निजी बिस्तर</label>
+<label><input type="radio" name="q43" value="D"> D. घरेलू मेज</label>
+</div>
+
+<div class="q">
+<p>44. मौसमी बेरोजगारी किससे जुड़ी होती है?</p>
+<label><input type="radio" name="q44" value="A"> A. हर समय समान काम</label>
+<label><input type="radio" name="q44" value="B"> B. केवल परीक्षा</label>
+<label><input type="radio" name="q44" value="C"> C. कुछ मौसमों में ही काम मिलना</label>
+<label><input type="radio" name="q44" value="D"> D. केवल छुट्टी</label>
+</div>
+
+<div class="q">
+<p>45. कृषि में उर्वरक का उपयोग क्यों होता है?</p>
+<label><input type="radio" name="q45" value="A"> A. मिट्टी की उर्वरता और फसल की वृद्धि में मदद के लिए</label>
+<label><input type="radio" name="q45" value="B"> B. सड़क बनाने के लिए</label>
+<label><input type="radio" name="q45" value="C"> C. कपड़ा सिलने के लिए</label>
+<label><input type="radio" name="q45" value="D"> D. बैंक चलाने के लिए</label>
+</div>
+
+<div class="q">
+<p>46. उद्योगों के विकास से क्या बढ़ सकता है?</p>
+<label><input type="radio" name="q46" value="A"> A. सभी व्यापार का अंत</label>
+<label><input type="radio" name="q46" value="B"> B. रोजगार के अवसर</label>
+<label><input type="radio" name="q46" value="C"> C. उत्पादन का पूर्ण अंत</label>
+<label><input type="radio" name="q46" value="D"> D. सभी बाजारों का बंद होना</label>
+</div>
+
+<div class="q">
+<p>47. मानव संसाधन किसे कहा जाता है?</p>
+<label><input type="radio" name="q47" value="A"> A. केवल मशीनों को</label>
+<label><input type="radio" name="q47" value="B"> B. केवल इमारतों को</label>
+<label><input type="radio" name="q47" value="C"> C. केवल खनिजों को</label>
+<label><input type="radio" name="q47" value="D"> D. ज्ञान और कौशल वाले लोगों को</label>
+</div>
+
+<div class="q">
+<p>48. कौशल विकास से क्या लाभ होता है?</p>
+<label><input type="radio" name="q48" value="A"> A. काम की क्षमता बढ़ सकती है</label>
+<label><input type="radio" name="q48" value="B"> B. सभी काम बंद हो जाते हैं</label>
+<label><input type="radio" name="q48" value="C"> C. ज्ञान कम होता है</label>
+<label><input type="radio" name="q48" value="D"> D. उत्पादन हमेशा रुकता है</label>
+</div>
+
+<div class="q">
+<p>49. अर्थव्यवस्था में उपभोग का अर्थ क्या है?</p>
+<label><input type="radio" name="q49" value="A"> A. केवल वस्तुएँ बनाना</label>
+<label><input type="radio" name="q49" value="B"> B. केवल सामान ढोना</label>
+<label><input type="radio" name="q49" value="C"> C. वस्तुओं और सेवाओं का उपयोग</label>
+<label><input type="radio" name="q49" value="D"> D. केवल बचत करना</label>
+</div>
+
+<div class="q">
+<p>50. आजीविका बेहतर बनाने में क्या सहायक हो सकता है?</p>
+<label>
