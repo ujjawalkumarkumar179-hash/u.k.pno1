@@ -1,1 +1,380 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 6 - मानचित्र अध्ययन | U.K.P NO1 Education</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e8eaf6);
+      color: #222;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px #0002;
+    }
+
+    header {
+      text-align: center;
+      padding: 15px 5px;
+      background: #073b4c;
+      color: white;
+      border-radius: 12px;
+    }
+
+    header img {
+      width: 85px;
+      height: 85px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    h1 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: #073b4c;
+      text-align: center;
+    }
+
+    .shayari {
+      background: #fff3cd;
+      border-left: 5px solid #ff9800;
+      padding: 12px;
+      margin: 18px 0;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .question {
+      padding: 15px;
+      margin: 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+
+    .question p {
+      font-weight: bold;
+      line-height: 1.6;
+    }
+
+    label {
+      display: block;
+      padding: 9px;
+      margin: 6px 0;
+      border-radius: 6px;
+      background: #eef5ff;
+      cursor: pointer;
+    }
+
+    label:hover {
+      background: #d8eaff;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .note {
+      padding: 12px;
+      background: #e8f5e9;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 17px;
+      border-radius: 8px;
+      background: #087f8c;
+      color: white;
+      text-decoration: none;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      padding: 15px;
+      background: #073b4c;
+      color: white;
+      border-radius: 10px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <img src="assets/logo.png" alt="U.K.P NO1 Education Logo">
+    <h1>U.K.P NO1 Education</h1>
+    <p>कक्षा 10 • भूगोल • अध्याय 6</p>
+  </header>
+
+  <h2>🗺️ मानचित्र अध्ययन — Part 1</h2>
+
+  <div class="shayari">
+    📚 मेहनत से हर मंजिल आसान होती है,<br>
+    पढ़ने वालों की अलग पहचान होती है।<br>
+    🎯 रोज़ अभ्यास करते जाओ,<br>
+    सफलता एक दिन तुम्हारे नाम होती है!
+  </div>
+
+  <div class="note">
+    <strong>निर्देश:</strong> सभी प्रश्नों के सही विकल्प चुनें।<br>
+    अभी प्रश्न 1 से 25 तक हल करें। Part 2 में प्रश्न 26–50 और Submit बटन मिलेगा।
+  </div>
+
+  <form id="quizForm">
+
+    <div class="question">
+      <p>1. मानचित्र क्या है?</p>
+      <label><input type="radio" name="q1" value="A"> A. पृथ्वी या उसके भाग का समतल चित्र</label>
+      <label><input type="radio" name="q1" value="B"> B. केवल किसी भवन का चित्र</label>
+      <label><input type="radio" name="q1" value="C"> C. मौसम का विवरण</label>
+      <label><input type="radio" name="q1" value="D"> D. जनसंख्या की सूची</label>
+    </div>
+
+    <div class="question">
+      <p>2. मानचित्र में दिशा बताने के लिए किसका प्रयोग होता है?</p>
+      <label><input type="radio" name="q2" value="A"> A. दिशा सूचक चिह्न</label>
+      <label><input type="radio" name="q2" value="B"> B. तापमापी</label>
+      <label><input type="radio" name="q2" value="C"> C. वर्षामापी</label>
+      <label><input type="radio" name="q2" value="D"> D. घड़ी</label>
+    </div>
+
+    <div class="question">
+      <p>3. सामान्य मानचित्र में ऊपर की दिशा प्रायः कौन-सी मानी जाती है?</p>
+      <label><input type="radio" name="q3" value="A"> A. दक्षिण</label>
+      <label><input type="radio" name="q3" value="B"> B. पूर्व</label>
+      <label><input type="radio" name="q3" value="C"> C. उत्तर</label>
+      <label><input type="radio" name="q3" value="D"> D. पश्चिम</label>
+    </div>
+
+    <div class="question">
+      <p>4. मानचित्र में मापनी (Scale) का क्या उपयोग है?</p>
+      <label><input type="radio" name="q4" value="A"> A. वर्षा मापने में</label>
+      <label><input type="radio" name="q4" value="B"> B. वास्तविक दूरी और मानचित्र की दूरी का संबंध बताने में</label>
+      <label><input type="radio" name="q4" value="C"> C. जनसंख्या गिनने में</label>
+      <label><input type="radio" name="q4" value="D"> D. तापमान बताने में</label>
+    </div>
+
+    <div class="question">
+      <p>5. मानचित्र में संकेतों और चिह्नों को समझाने वाली सूची क्या कहलाती है?</p>
+      <label><input type="radio" name="q5" value="A"> A. अनुक्रमणिका या संकेत-सूची</label>
+      <label><input type="radio" name="q5" value="B"> B. प्रस्तावना</label>
+      <label><input type="radio" name="q5" value="C"> C. उपसंहार</label>
+      <label><input type="radio" name="q5" value="D"> D. जनगणना</label>
+    </div>
+
+    <div class="question">
+      <p>6. पृथ्वी के संपूर्ण या बड़े भाग को दिखाने के लिए कौन-सा साधन उपयोगी है?</p>
+      <label><input type="radio" name="q6" value="A"> A. थर्मामीटर</label>
+      <label><input type="radio" name="q6" value="B"> B. ग्लोब</label>
+      <label><input type="radio" name="q6" value="C"> C. वर्षामापी</label>
+      <label><input type="radio" name="q6" value="D"> D. कंपास बॉक्स</label>
+    </div>
+
+    <div class="question">
+      <p>7. पृथ्वी पर काल्पनिक रूप से खींची गई पूर्व-पश्चिम रेखाएँ क्या कहलाती हैं?</p>
+      <label><input type="radio" name="q7" value="A"> A. देशांतर रेखाएँ</label>
+      <label><input type="radio" name="q7" value="B"> B. अक्षांश रेखाएँ</label>
+      <label><input type="radio" name="q7" value="C"> C. सड़कें</label>
+      <label><input type="radio" name="q7" value="D"> D. सीमाएँ</label>
+    </div>
+
+    <div class="question">
+      <p>8. प्रधान मध्याह्न रेखा का देशांतर कितना है?</p>
+      <label><input type="radio" name="q8" value="A"> A. 90° पूर्व</label>
+      <label><input type="radio" name="q8" value="B"> B. 180°</label>
+      <label><input type="radio" name="q8" value="C"> C. 90° पश्चिम</label>
+      <label><input type="radio" name="q8" value="D"> D. 0°</label>
+    </div>
+
+    <div class="question">
+      <p>9. भूमध्य रेखा का अक्षांश कितना है?</p>
+      <label><input type="radio" name="q9" value="A"> A. 0°</label>
+      <label><input type="radio" name="q9" value="B"> B. 23½° उत्तर</label>
+      <label><input type="radio" name="q9" value="C"> C. 66½° उत्तर</label>
+      <label><input type="radio" name="q9" value="D"> D. 90° दक्षिण</label>
+    </div>
+
+    <div class="question">
+      <p>10. भारत का मानक मध्याह्न किस देशांतर को माना गया है?</p>
+      <label><input type="radio" name="q10" value="A"> A. 68°7′ पूर्व</label>
+      <label><input type="radio" name="q10" value="B"> B. 82°30′ पूर्व</label>
+      <label><input type="radio" name="q10" value="C"> C. 97°25′ पूर्व</label>
+      <label><input type="radio" name="q10" value="D"> D. 0°</label>
+    </div>
+
+    <div class="question">
+      <p>11. भारत का मानक समय ग्रीनविच समय से कितना आगे है?</p>
+      <label><input type="radio" name="q11" value="A"> A. 4 घंटे</label>
+      <label><input type="radio" name="q11" value="B"> B. 5 घंटे</label>
+      <label><input type="radio" name="q11" value="C"> C. 5 घंटे 30 मिनट</label>
+      <label><input type="radio" name="q11" value="D"> D. 6 घंटे 30 मिनट</label>
+    </div>
+
+    <div class="question">
+      <p>12. स्थलाकृतिक मानचित्र (Topographical Map) में मुख्य रूप से क्या दिखाया जाता है?</p>
+      <label><input type="radio" name="q12" value="A"> A. केवल देशों के नाम</label>
+      <label><input type="radio" name="q12" value="B"> B. धरातल की प्राकृतिक और मानवीय विशेषताएँ</label>
+      <label><input type="radio" name="q12" value="C"> C. केवल जनसंख्या</label>
+      <label><input type="radio" name="q12" value="D"> D. केवल भाषा</label>
+    </div>
+
+    <div class="question">
+      <p>13. पर्वत, पठार और मैदान किस प्रकार की विशेषताएँ हैं?</p>
+      <label><input type="radio" name="q13" value="A"> A. प्राकृतिक स्थलरूप</label>
+      <label><input type="radio" name="q13" value="B"> B. राजनीतिक दल</label>
+      <label><input type="radio" name="q13" value="C"> C. उद्योग</label>
+      <label><input type="radio" name="q13" value="D"> D. परिवहन साधन</label>
+    </div>
+
+    <div class="question">
+      <p>14. मानचित्र में नीला रंग सामान्यतः किसे दर्शाता है?</p>
+      <label><input type="radio" name="q14" value="A"> A. रेगिस्तान</label>
+      <label><input type="radio" name="q14" value="B"> B. वन</label>
+      <label><input type="radio" name="q14" value="C"> C. जल निकाय</label>
+      <label><input type="radio" name="q14" value="D"> D. बर्फ रहित पर्वत</label>
+    </div>
+
+    <div class="question">
+      <p>15. मानचित्र में हरा रंग प्रायः किसे दर्शाने के लिए उपयोग किया जाता है?</p>
+      <label><input type="radio" name="q15" value="A"> A. समुद्र</label>
+      <label><input type="radio" name="q15" value="B"> B. निम्न भूमि या वनस्पति क्षेत्र (मानचित्र के प्रकार पर निर्भर)</label>
+      <label><input type="radio" name="q15" value="C"> C. रेलमार्ग</label>
+      <label><input type="radio" name="q15" value="D"> D. सीमा रेखा</label>
+    </div>
+
+    <div class="question">
+      <p>16. राजनीतिक मानचित्र में मुख्य रूप से क्या दिखाया जाता है?</p>
+      <label><input type="radio" name="q16" value="A"> A. केवल वर्षा</label>
+      <label><input type="radio" name="q16" value="B"> B. केवल मिट्टी</label>
+      <label><input type="radio" name="q16" value="C"> C. केवल पर्वत</label>
+      <label><input type="radio" name="q16" value="D"> D. देश, राज्य और उनकी सीमाएँ</label>
+    </div>
+
+    <div class="question">
+      <p>17. विषयगत मानचित्र (Thematic Map) किसे दर्शाता है?</p>
+      <label><input type="radio" name="q17" value="A"> A. किसी विशेष विषय या तथ्य का वितरण</label>
+      <label><input type="radio" name="q17" value="B"> B. केवल दिशाएँ</label>
+      <label><input type="radio" name="q17" value="C"> C. केवल समुद्र की गहराई</label>
+      <label><input type="radio" name="q17" value="D"> D. केवल सड़क की लंबाई</label>
+    </div>
+
+    <div class="question">
+      <p>18. जनसंख्या के वितरण को दिखाने वाला मानचित्र किसका उदाहरण है?</p>
+      <label><input type="radio" name="q18" value="A"> A. राजनीतिक मानचित्र</label>
+      <label><input type="radio" name="q18" value="B"> B. विषयगत मानचित्र</label>
+      <label><input type="radio" name="q18" value="C"> C. केवल रेखाचित्र</label>
+      <label><input type="radio" name="q18" value="D"> D. मौसम का उपकरण</label>
+    </div>
+
+    <div class="question">
+      <p>19. समोच्च रेखाएँ (Contour Lines) क्या दर्शाती हैं?</p>
+      <label><input type="radio" name="q19" value="A"> A. समान जनसंख्या</label>
+      <label><input type="radio" name="q19" value="B"> B. समान वर्षा</label>
+      <label><input type="radio" name="q19" value="C"> C. समुद्र का रंग</label>
+      <label><input type="radio" name="q19" value="D"> D. समान ऊँचाई वाले स्थान</label>
+    </div>
+
+    <div class="question">
+      <p>20. मानचित्र पर दूरी ज्ञात करने के लिए किसकी आवश्यकता होती है?</p>
+      <label><input type="radio" name="q20" value="A"> A. केवल शीर्षक</label>
+      <label><input type="radio" name="q20" value="B"> B. केवल रंग</label>
+      <label><input type="radio" name="q20" value="C"> C. मापनी</label>
+      <label><input type="radio" name="q20" value="D"> D. केवल सीमा</label>
+    </div>
+
+    <div class="question">
+      <p>21. मानचित्र का शीर्षक क्या बताता है?</p>
+      <label><input type="radio" name="q21" value="A"> A. मानचित्र का विषय या क्षेत्र</label>
+      <label><input type="radio" name="q21" value="B"> B. केवल लेखक की आयु</label>
+      <label><input type="radio" name="q21" value="C"> C. कागज का वजन</label>
+      <label><input type="radio" name="q21" value="D"> D. पुस्तक की कीमत</label>
+    </div>
+
+    <div class="question">
+      <p>22. बड़े पैमाने का मानचित्र सामान्यतः क्या दिखाता है?</p>
+      <label><input type="radio" name="q22" value="A"> A. पूरी दुनिया का बहुत कम विवरण</label>
+      <label><input type="radio" name="q22" value="B"> B. छोटे क्षेत्र का अधिक विवरण</label>
+      <label><input type="radio" name="q22" value="C"> C. केवल महासागर</label>
+      <label><input type="radio" name="q22" value="D"> D. केवल महाद्वीपों के नाम</label>
+    </div>
+
+    <div class="question">
+      <p>23. छोटे पैमाने का मानचित्र सामान्यतः क्या दिखाता है?</p>
+      <label><input type="radio" name="q23" value="A"> A. एक कमरे का पूरा विवरण</label>
+      <label><input type="radio" name="q23" value="B"> B. केवल एक सड़क</label>
+      <label><input type="radio" name="q23" value="C"> C. बड़े क्षेत्र का कम विवरण</label>
+      <label><input type="radio" name="q23" value="D"> D. केवल एक मकान</label>
+    </div>
+
+    <div class="question">
+      <p>24. पृथ्वी पर स्थान की स्थिति बताने के लिए किन रेखाओं का उपयोग होता है?</p>
+      <label><input type="radio" name="q24" value="A"> A. केवल नदियों का</label>
+      <label><input type="radio" name="q24" value="B"> B. केवल सड़कों का</label>
+      <label><input type="radio" name="q24" value="C"> C. केवल सीमाओं का</label>
+      <label><input type="radio" name="q24" value="D"> D. अक्षांश और देशांतर रेखाओं का</label>
+    </div>
+
+    <div class="question">
+      <p>25. मानचित्र अध्ययन का एक प्रमुख लाभ क्या है?</p>
+      <label><input type="radio" name="q25" value="A"> A. स्थान, दिशा और दूरी समझने में सहायता</label>
+      <label><input type="radio" name="q25" value="B"> B. भोजन पकाना</label>
+      <label><input type="radio" name="q25" value="C"> C. तापमान सीधे मापना</label>
+      <label><input type="radio" name="q25" value="D"> D. भाषा बदलना</label>
+    </div>
+
+    <!-- Part 2 में प्रश्न 26–50 और Submit बटन जोड़े जाएंगे -->
+
+  </form>
+
+  <div class="nav-buttons">
+    <a class="btn" href="geography.html">⬅️ भूगोल के अध्याय</a>
+    <a class="btn" href="social-science.html">📚 सामाजिक विज्ञान</a>
+    <a class="btn" href="index.html">🏠 Home</a>
+  </div>
+
+  <footer>
+    <strong>U.K.P NO1 Education</strong><br>
+    Learn Smart • Score Better 🚀<br>
+    मेहनत जारी रखो — सफलता जरूर मिलेगी!
+  </footer>
+
+</div>
+</body>
+  </html>
