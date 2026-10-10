@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5 | जन-संघर्ष और आंदोलन | U.K.P NO1 Education</title>
 
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;padding:15px;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:linear-gradient(135deg,#e8f5e9,#e3f2fd,#fff8e1);
+  color:#222
+}
+.container{max-width:850px;margin:auto}
+.header{
+  text-align:center;background:#fff;padding:22px 15px;
+  border-radius:18px;box-shadow:0 5px 18px #00000015;
+  border-top:5px solid #198754
+}
+.logo{width:90px;height:90px;object-fit:contain;border-radius:50%}
+.header h1{color:#087443;font-size:25px;margin:10px 0}
+.header h2{color:#b45309;font-size:20px}
+.header p{line-height:1.7}
+.info{background:#e8f5e9;padding:12px;border-radius:10px;font-weight:bold}
+.progress-box{background:#fff;margin:15px 0;padding:14px;border-radius:12px}
+.progress-bg{height:12px;background:#ddd;border-radius:20px;overflow:hidden;margin-top:8px}
+#progress{width:0%;height:100%;background:#198754;transition:width .3s}
+.question{
+  background:#fff;padding:18px;margin:15px 0;border-radius:14px;
+  box-shadow:0 3px 12px #00000010;border-left:4px solid #198754
+}
+.question h3{margin-top:0;font-size:17px;line-height:1.7}
+.option{
+  display:block;padding:12px;margin:9px 0;background:#f6f8fa;
+  border:1px solid #e2e8f0;border-radius:9px;cursor:pointer;line-height:1.6
+}
+.option:hover{background:#e8f5e9}
+.option input{margin-right:8px;accent-color:#198754}
+button{
+  border:none;padding:14px 20px;border-radius:10px;font-size:16px;
+  font-weight:bold;cursor:pointer;margin:6px 3px
+}
+.submit-btn{background:#087443;color:#fff;width:100%}
+.reset-btn{background:#e5e7eb;color:#222}
+.result{
+  display:none;background:#fff;padding:22px;margin-top:20px;
+  border-radius:16px;text-align:center;border:2px solid #198754
+}
+.result h2{color:#087443}
+#review{text-align:left}
+.review-item{padding:12px;margin:10px 0;border-radius:10px;line-height:1.8}
+.correct{background:#dcfce7}
+.wrong{background:#fee2e2}
+.footer{text-align:center;margin:25px 0 10px;color:#555;line-height:1.8}
+@media(max-width:500px){
+  body{padding:9px}
+  .header h1{font-size:21px}
+  .header h2{font-size:18px}
+  .question{padding:14px}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header class="header">
+  <img src="assets/logo.png" alt="U.K.P NO1 Education Logo"
+       class="logo" onerror="this.style.display='none'">
+
+  <h1>🌟 U.K.P NO1 Education 🌟</h1>
+  <h2>कक्षा 10 — नागरिक शास्त्र</h2>
+  <h2>अध्याय 5: जन-संघर्ष और आंदोलन</h2>
+
+  <p>📚 सीखें • अभ्यास करें • सफलता की ओर बढ़ें</p>
+
+  <div class="info">
+    📝 कुल प्रश्न: 25 |
+    🎯 प्रत्येक प्रश्न: 1 अंक |
+    💯 अधिकतम अंक: 25
+  </div>
+</header>
+
+<div class="progress-box">
+  <strong>आपकी टेस्ट प्रगति:</strong>
+  <span id="progressText">0 / 25 प्रश्न हल किए</span>
+  <div class="progress-bg"><div id="progress"></div></div>
+</div>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>प्रश्न 1. जन-संघर्ष का सामान्य अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A. जनता द्वारा अपने अधिकारों या माँगों के लिए सामूहिक प्रयास</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. केवल व्यक्तिगत मनोरंजन</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. चुनाव समाप्त करना</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. नागरिक अधिकार छीनना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 2. नेपाल में 2006 के लोकतंत्र समर्थक आंदोलन का प्रमुख उद्देश्य क्या था?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A. राजशाही की शक्तियाँ बढ़ाना</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. लोकतंत्र बहाल करना और राजा की निरंकुश शक्तियों को सीमित करना</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. चुनावों पर स्थायी रोक लगाना</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. राजनीतिक दलों को समाप्त करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 3. नेपाल के 2006 के आंदोलन को सामान्यतः क्या कहा जाता है?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A. हरित क्रांति</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. श्वेत क्रांति</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. अप्रैल आंदोलन या लोकतंत्र आंदोलन</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. औद्योगिक क्रांति</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 4. बोलिविया का जल-संघर्ष किस मुद्दे से जुड़ा था?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A. भाषा विवाद</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. राजशाही की स्थापना</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. शिक्षा समाप्त करने</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. पानी के निजीकरण और कीमतों में बढ़ोतरी के विरोध से</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 5. बोलिविया का जल-युद्ध किस शहर से विशेष रूप से जुड़ा था?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A. कोचाबाम्बा</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. काठमांडू</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. दिल्ली</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. ढाका</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 6. जन-संघर्ष में संगठित भागीदारी क्यों महत्वपूर्ण होती है?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A. इससे जनता की आवाज कमजोर होती है</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. इससे माँगों को सामूहिक ताकत मिल सकती है</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. इससे नागरिक अधिकार समाप्त हो जाते हैं</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. इससे संवाद बंद हो जाता है</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 7. दबाव समूह का प्रमुख उद्देश्य क्या होता है?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A. हमेशा सरकार बनाना</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. चुनावों पर रोक लगाना</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. किसी मुद्दे पर सरकारी नीतियों और फैसलों को प्रभावित करना</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. न्यायपालिका समाप्त करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 8. दबाव समूह और राजनीतिक दल में प्रमुख अंतर क्या है?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A. दबाव समूह सामान्यतः नीतियों को प्रभावित करना चाहते हैं, जबकि राजनीतिक दल सत्ता प्राप्त करने का प्रयास करते हैं</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. दोनों का उद्देश्य हमेशा समान होता है</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. राजनीतिक दल चुनाव में भाग नहीं लेते</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. दबाव समूहों का किसी मुद्दे से संबंध नहीं होता</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 9. ट्रेड यूनियन मुख्यतः किसके हितों के लिए काम करती है?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A. केवल बड़े व्यापारियों के</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. केवल मंत्रियों के</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. केवल विदेशी सरकारों के</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. श्रमिकों और कर्मचारियों के</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 10. आंदोलन का एक प्रमुख लोकतांत्रिक तरीका कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A. हिंसा और धमकी</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. शांतिपूर्ण प्रदर्शन और जन-जागरूकता</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. नागरिकों को मतदान से रोकना</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. अधिकारों को नष्ट करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 11. नेपाल में लोकतंत्र बहाल करने वाले आंदोलन में किसकी भागीदारी रही?</h3>
+<label class="option"><input type="radio" name="q11" value="A"> A. केवल राजा की</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. केवल विदेशी पर्यटकों की</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. राजनीतिक दलों, नागरिकों और विभिन्न संगठनों की</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. केवल व्यापारियों की</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 12. बोलिविया के जल-संघर्ष से कौन-सा सबक मिलता है?</h3>
+<label class="option"><input type="radio" name="q12" value="A"> A. संगठित नागरिक आंदोलन नीतियों में बदलाव ला सकते हैं</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. जनता की भागीदारी का कोई महत्व नहीं</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. पानी का कोई सामाजिक महत्व नहीं</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. सभी आंदोलनों पर रोक होनी चाहिए</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 13. दबाव समूह किन तरीकों से अपनी माँगें उठा सकते हैं?</h3>
+<label class="option"><input type="radio" name="q13" value="A"> A. ज्ञापन और चर्चा</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. शांतिपूर्ण प्रदर्शन</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. जन-जागरूकता अभियान</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. उपर्युक्त सभी</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 14. लोकतंत्र में जन-संघर्ष की आवश्यकता क्यों पड़ सकती है?</h3>
+<label class="option"><input type="radio" name="q14" value="A"> A. क्योंकि सभी समस्याएँ अपने आप हल हो जाती हैं</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. जब लोग नीतियों या फैसलों में बदलाव की माँग करते हैं</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. क्योंकि नागरिकों के अधिकार नहीं होते</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. क्योंकि लोकतंत्र में जनता की कोई भूमिका नहीं</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 15. जन-संगठन की ताकत मुख्यतः किससे आती है?</h3>
+<label class="option"><input type="radio" name="q15" value="A"> A. लोगों की सामूहिक भागीदारी और साझा उद्देश्य से</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. नागरिकों को अलग रखने से</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. सूचना छिपाने से</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. लोगों को चुप कराने से</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 16. किसी जन-आंदोलन की सफलता किस पर निर्भर कर सकती है?</h3>
+<label class="option"><input type="radio" name="q16" value="A"> A. केवल उसके नाम पर</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. केवल मौसम पर</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. उद्देश्य, संगठन, जनसमर्थन और परिस्थितियों पर</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. केवल पोस्टर के रंग पर</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 17. लोकतांत्रिक व्यवस्था में नागरिक संगठन क्या भूमिका निभा सकते हैं?</h3>
+<label class="option"><input type="radio" name="q17" value="A"> A. नागरिकों को सार्वजनिक मुद्दों पर संगठित करना</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. जनता की आवाज दबाना</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. सभी चुनाव रोकना</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. सभी अधिकार समाप्त करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 18. क्या हर जन-आंदोलन का उद्देश्य सरकार बनाना होता है?</h3>
+<label class="option"><input type="radio" name="q18" value="A"> A. हाँ, हमेशा</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. हाँ, केवल स्थानीय स्तर पर</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. नहीं, कई आंदोलन किसी विशेष मुद्दे या नीति में बदलाव के लिए होते हैं</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. हाँ, सभी आंदोलन चुनाव लड़ते हैं</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 19. लोकतंत्र में शांतिपूर्ण विरोध का क्या महत्व है?</h3>
+<label class="option"><input type="radio" name="q19" value="A"> A. इससे नागरिकों की आवाज हमेशा समाप्त हो जाती है</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. इससे नागरिक अपनी माँगें और असहमति व्यक्त कर सकते हैं</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. इससे सभी चुनाव रुक जाते हैं</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. इससे संविधान की आवश्यकता समाप्त हो जाती है</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 20. जन-संघर्ष और लोकतंत्र के बीच कैसा संबंध है?</h3>
+<label class="option"><input type="radio" name="q20" value="A"> A. जन-संघर्ष का लोकतंत्र से कोई संबंध नहीं</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. जन-संघर्ष हमेशा लोकतंत्र को समाप्त करता है</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. जन-संघर्ष में नागरिकों की भागीदारी निषिद्ध है</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. जन-संघर्ष नागरिकों की माँगों को सामने लाकर लोकतंत्र को मजबूत कर सकता है</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 21. किसी दबाव समूह का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q21" value="A"> A. श्रमिकों के हितों के लिए काम करने वाला संगठन</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. केवल मौसम का पूर्वानुमान</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. एक व्यक्तिगत डायरी</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. केवल मनोरंजन कार्यक्रम</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 22. जन-आंदोलन में मीडिया और संचार की क्या भूमिका हो सकती है?</h3>
+<label class="option"><input type="radio" name="q22" value="A"> A. सभी जानकारियाँ छिपाना</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. लोगों को मुद्दों की जानकारी और जागरूकता देना</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. संवाद पर हमेशा रोक लगाना</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. नागरिकों को अलग करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 23. आंदोलन में नेतृत्व का एक महत्वपूर्ण कार्य क्या है?</h3>
+<label class="option"><input type="radio" name="q23" value="A"> A. सभी विचारों को अनदेखा करना</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. लोगों को बिना उद्देश्य के इकट्ठा करना</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. साझा उद्देश्य तय करने और लोगों को संगठित करने में मदद करना</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. नागरिकों को अधिकारों से वंचित करना</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 24. लोकतंत्र में जनता की भागीदारी केवल मतदान तक सीमित क्यों नहीं होनी चाहिए?</h3>
+<label class="option"><input type="radio" name="q24" value="A"> A. क्योंकि मतदान का कोई महत्व नहीं</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. क्योंकि नागरिकों को राजनीति से दूर रहना चाहिए</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. क्योंकि सरकार को कभी जवाबदेह नहीं होना चाहिए</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. क्योंकि नागरिक मुद्दों पर चर्चा, संगठन और शांतिपूर्ण विरोध से भी भाग ले सकते हैं</label>
+</div>
+
+<div class="question">
+<h3>प्रश्न 25. जन-संघर्ष और आंदोलनों से जुड़ा सबसे महत्वपूर्ण लोकतांत्रिक सिद्धांत क्या है?</h3>
+<label class="option"><input type="radio" name="q25" value="A"> A. नागरिक भागीदारी और अपने विचार व्यक्त करने का अधिकार</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. जनता को चुप रखना</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. सभी संगठनों पर रोक लगाना</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. केवल एक व्यक्ति को निर्णय लेने देना</label>
+</div>
+
+<button type="button" class="submit-btn" onclick="submitTest()">
+✅ Submit Test
+</button>
+
+<button type="button" class="reset-btn" onclick="resetTest()">
+🔄 दोबारा टेस्ट दें
+</button>
+
+</form>
+
+<section class="result" id="result">
+<h2>🎉 आपका परिणाम</h2>
+<p id="score"></p>
+<p id="percentage"></p>
+<p id="grade"></p>
+<p id="message"></p>
+<h3>📖 उत्तरों की जाँच</h3>
+<div id="review"></div>
+</section>
+
+<div class="footer">
+<h3>🌼 मेहनत ही सफलता की चाबी है 🌼</h3>
+<p>आज का अभ्यास, कल की सफलता।<br>हर दिन सीखें, हर दिन आगे बढ़ें! 🚀</p>
+<strong>U.K.P NO1 Education</strong>
+</div>
+
+</div>
+
+<script>
+const answers = {
+  q1:"A", q2:"B", q3:"C", q4:"D", q5:"A",
+  q6:"B", q7:"C", q8:"A", q9:"D", q10:"B",
+  q11:"C", q12:"A", q13:"D", q14:"B", q15:"A",
+  q16:"C", q17:"A", q18:"C", q19:"B", q20:"D",
+  q21:"A", q22:"B", q23:"C", q24:"D", q25:"A"
+};
+
+let submitted = false;
+
+function updateProgress() {
+  const total = Object.keys(answers).length;
+  let attempted = 0;
+
+  for (let i = 1; i <= total; i++) {
+    if (document.querySelector('input[name="q' + i + '"]:checked')) {
+      attempted++;
+    }
+  }
+
+  document.getElementById("progressText").textContent =
+    attempted + " / " + total + " प्रश्न हल किए";
+
+  document.getElementById("progress").style.width =
+    (attempted / total * 100) + "%";
+}
+
+document.getElementById("quizForm").addEventListener("change", function() {
+  if (!submitted) updateProgress();
+});
+
+function submitTest() {
+  if (submitted) {
+    alert("टेस्ट पहले ही सबमिट हो चुका है। दोबारा देने के लिए Reset दबाएँ।");
+    return;
+  }
+
+  const total = Object.keys(answers).length;
+  let score = 0;
+  let attempted = 0;
+  let reviewHTML = "";
+
+  for (let i = 1; i <= total; i++) {
+    const qName = "q" + i;
+    const selected = document.querySelector(
+      'input[name="' + qName + '"]:checked'
+    );
+
+    const correct = answers[qName];
+    const questionBox = document.querySelector(
+      'input[name="' + qName + '"]'
+    ).closest(".question");
+
+    const questionText = questionBox.querySelector("h3").textContent;
+    const correctOption = questionBox.querySelector(
+      'input[value="' + correct + '"]'
+    ).parentElement.textContent.trim();
+
+    let selectedText = "उत्तर नहीं दिया";
+    let isCorrect = false;
+
+    if (selected) {
+      attempted++;
+      selectedText = selected.parentElement.textContent.trim();
+
+      if (selected.value === correct) {
+        score++;
+        isCorrect = true;
+      }
+    }
+
+    reviewHTML += `
+      <div class="review-item ${isCorrect ? "correct" : "wrong"}">
+        <strong>${questionText}</strong><br>
+        आपका उत्तर: ${selectedText}<br>
+        सही उत्तर: ${correctOption}<br>
+        ${isCorrect ? "✅ सही उत्तर" : "❌ गलत या अनुत्तरित"}
+      </div>
+    `;
+  }
+
+  const percentage = (score / total * 100).toFixed(2);
+  let grade, message;
+
+  if (percentage >= 90) {
+    grade = "Gold A+ 🥇";
+    message = "शानदार! आपका प्रदर्शन बेहतरीन है।";
+  } else if (percentage >= 75) {
+    grade = "Silver A 🥈";
+    message = "बहुत अच्छा! अभ्यास जारी रखें।";
+  } else if (percentage >= 60) {
+    grade = "Bronze B 🥉";
+    message = "अच्छा प्रयास! थोड़ा और अभ्यास करें।";
+  } else {
+    grade = "Keep Practicing C 📚";
+    message = "गलत उत्तरों को समझें और फिर प्रयास करें।";
+  }
+
+  document.getElementById("score").textContent =
+    "आपका स्कोर: " + score + " / " + total;
+
+  document.getElementById("percentage").textContent =
+    "प्रतिशत: " + percentage + "%";
+
+  document.getElementById("grade").textContent = "ग्रेड: " + grade;
+
+  document.getElementById("message").textContent =
+    message + " आपने " + attempted + " प्रश्न हल किए।";
+
+  document.getElementById("review").innerHTML = reviewHTML;
+  document.getElementById("result").style.display = "block";
+
+  submitted = true;
+
+  document.querySelectorAll("#quizForm input").
