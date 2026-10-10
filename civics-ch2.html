@@ -1,1 +1,414 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civics Chapter 2 | U.K.P NO1 Education</title>
 
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;
+ background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+ color:#1e293b
+}
+header{
+ background:linear-gradient(135deg,#312e81,#6d28d9,#2563eb);
+ color:white;text-align:center;padding:22px 12px;
+ border-radius:0 0 25px 25px;box-shadow:0 5px 18px #0002
+}
+.logo{
+ width:95px;height:95px;object-fit:contain;background:white;
+ padding:5px;border-radius:50%;border:3px solid #facc15;margin-bottom:10px
+}
+header h1{font-size:24px;margin:5px}
+.container{max-width:850px;margin:20px auto;padding:12px}
+.card{
+ background:white;padding:18px;margin-bottom:18px;border-radius:16px;
+ box-shadow:0 4px 15px #00000010;border:1px solid #e2e8f0
+}
+.quote{text-align:center;line-height:1.8;background:#fff7ed;border-left:5px solid #f59e0b}
+h2{text-align:center;color:#6d28d9}
+.progress-box{background:#e0e7ff;padding:13px;border-radius:12px}
+.progress-track{height:9px;background:#c7d2fe;border-radius:10px;margin-top:9px;overflow:hidden}
+#progressBar{height:100%;width:0;background:#6d28d9;transition:width .2s}
+.question{padding:17px 0;border-bottom:1px solid #e2e8f0}
+.question h3{font-size:16px;line-height:1.7}
+.option{
+ display:block;background:#f8fafc;padding:11px;margin:9px 0;
+ border:1px solid #e2e8f0;border-radius:10px;cursor:pointer;line-height:1.6
+}
+.option:hover{background:#ede9fe;border-color:#8b5cf6}
+.option input{margin-right:8px;accent-color:#6d28d9}
+button,.back{
+ border:0;padding:13px 18px;border-radius:10px;font-weight:bold;
+ cursor:pointer;margin:5px 3px;font-size:15px
+}
+.submit{background:#16a34a;color:white;width:100%;margin-top:15px}
+.reset{background:#e2e8f0;color:#1e293b}
+.back{display:inline-block;background:#facc15;color:#1e1b4b;text-decoration:none}
+#result{display:none;text-align:center;line-height:1.8;background:#fffbeb;border:2px solid #facc15}
+#answerReview{text-align:left}
+.review-item{padding:12px;margin:10px 0;border-radius:10px;background:white;border:1px solid #e2e8f0}
+footer{background:#1e1b4b;color:white;text-align:center;padding:22px 12px;line-height:1.8}
+footer strong{color:#facc15}
+@media(max-width:480px){
+ header h1{font-size:21px}.card{padding:13px}.question h3{font-size:15px}
+}
+</style>
+</head>
+
+<body>
+<header>
+ <img src="assets/logo.png" alt="U.K.P NO1 Education Logo" class="logo"
+      onerror="this.style.display='none'">
+ <h1>U.K.P NO1 Education</h1>
+ <p>📘 Class 10 • Civics Chapter Test</p>
+ <p>अध्याय 2: सत्ता में साझेदारी की कार्यप्रणाली</p>
+</header>
+
+<main class="container">
+ <section class="card quote">
+  <strong>🌟 मेहनत ही सफलता की चाबी है 🌟</strong><br>
+  हर सवाल से ज्ञान बढ़ाएँ,<br>हर प्रयास से मंजिल पाएँ! 💪
+ </section>
+
+ <section class="card">
+  <h2>📝 टेस्ट के नियम</h2>
+  <p>📚 कुल प्रश्न: <b>25</b></p>
+  <p>✅ प्रत्येक सही उत्तर: <b>1 अंक</b></p>
+  <p>📊 गलत उत्तर पर कोई अंक नहीं कटेगा।</p>
+  <p>🏆 अंत में स्कोर और सही उत्तर दिखाई देंगे।</p>
+ </section>
+
+ <section class="card">
+  <div class="progress-box">
+   <b>📊 आपकी तैयारी</b>
+   <p id="progressText">उत्तर दिए गए: 0 / 25</p>
+   <div class="progress-track"><div id="progressBar"></div></div>
+  </div>
+
+  <h2>📚 Chapter 2 MCQ Test</h2>
+  <form id="quizForm">
+
+   <div class="question">
+    <h3>1. सत्ता की साझेदारी का अर्थ क्या है?</h3>
+    <label class="option"><input type="radio" name="q1" value="A"> A. सत्ता एक व्यक्ति को देना</label>
+    <label class="option"><input type="radio" name="q1" value="B"> B. सत्ता विभिन्न संस्थाओं और समूहों में बाँटना</label>
+    <label class="option"><input type="radio" name="q1" value="C"> C. चुनाव बंद करना</label>
+    <label class="option"><input type="radio" name="q1" value="D"> D. नागरिक अधिकार हटाना</label>
+   </div>
+
+   <div class="question">
+    <h3>2. लोकतंत्र में सत्ता की साझेदारी क्यों आवश्यक है?</h3>
+    <label class="option"><input type="radio" name="q2" value="A"> A. संघर्ष बढ़ाने के लिए</label>
+    <label class="option"><input type="radio" name="q2" value="B"> B. जनता को शासन से दूर रखने के लिए</label>
+    <label class="option"><input type="radio" name="q2" value="C"> C. विभिन्न समूहों को भागीदारी देने के लिए</label>
+    <label class="option"><input type="radio" name="q2" value="D"> D. तानाशाही स्थापित करने के लिए</label>
+   </div>
+
+   <div class="question">
+    <h3>3. सरकार के विभिन्न अंगों के बीच सत्ता-विभाजन किसका उदाहरण है?</h3>
+    <label class="option"><input type="radio" name="q3" value="A"> A. क्षैतिज सत्ता-विभाजन</label>
+    <label class="option"><input type="radio" name="q3" value="B"> B. सैन्य शासन</label>
+    <label class="option"><input type="radio" name="q3" value="C"> C. राजतंत्र</label>
+    <label class="option"><input type="radio" name="q3" value="D"> D. उपनिवेशवाद</label>
+   </div>
+
+   <div class="question">
+    <h3>4. विधायिका का प्रमुख कार्य क्या है?</h3>
+    <label class="option"><input type="radio" name="q4" value="A"> A. न्याय देना</label>
+    <label class="option"><input type="radio" name="q4" value="B"> B. कानून बनाना</label>
+    <label class="option"><input type="radio" name="q4" value="C"> C. कानून लागू करना</label>
+    <label class="option"><input type="radio" name="q4" value="D"> D. पुलिस जाँच करना</label>
+   </div>
+
+   <div class="question">
+    <h3>5. कार्यपालिका का मुख्य काम क्या है?</h3>
+    <label class="option"><input type="radio" name="q5" value="A"> A. कानून बनाना ही</label>
+    <label class="option"><input type="radio" name="q5" value="B"> B. न्यायिक समीक्षा करना</label>
+    <label class="option"><input type="radio" name="q5" value="C"> C. कानूनों को लागू करना</label>
+    <label class="option"><input type="radio" name="q5" value="D"> D. संविधान समाप्त करना</label>
+   </div>
+
+   <div class="question">
+    <h3>6. न्यायपालिका का प्रमुख कार्य क्या है?</h3>
+    <label class="option"><input type="radio" name="q6" value="A"> A. बजट बनाना</label>
+    <label class="option"><input type="radio" name="q6" value="B"> B. न्याय करना और कानून की व्याख्या करना</label>
+    <label class="option"><input type="radio" name="q6" value="C"> C. चुनाव प्रचार करना</label>
+    <label class="option"><input type="radio" name="q6" value="D"> D. मंत्रिमंडल बनाना</label>
+   </div>
+
+   <div class="question">
+    <h3>7. क्षैतिज सत्ता-विभाजन में संस्थाएँ किस स्तर पर काम करती हैं?</h3>
+    <label class="option"><input type="radio" name="q7" value="A"> A. अलग-अलग देशों में</label>
+    <label class="option"><input type="radio" name="q7" value="B"> B. केवल गाँवों में</label>
+    <label class="option"><input type="radio" name="q7" value="C"> C. केवल केंद्र के नीचे</label>
+    <label class="option"><input type="radio" name="q7" value="D"> D. समान स्तर पर, अलग-अलग अधिकारों के साथ</label>
+   </div>
+
+   <div class="question">
+    <h3>8. सत्ता के विभिन्न अंग एक-दूसरे पर नियंत्रण क्यों रखते हैं?</h3>
+    <label class="option"><input type="radio" name="q8" value="A"> A. सत्ता के दुरुपयोग को रोकने के लिए</label>
+    <label class="option"><input type="radio" name="q8" value="B"> B. चुनाव रोकने के लिए</label>
+    <label class="option"><input type="radio" name="q8" value="C"> C. नागरिक अधिकार हटाने के लिए</label>
+    <label class="option"><input type="radio" name="q8" value="D"> D. एक अंग को असीमित शक्ति देने के लिए</label>
+   </div>
+
+   <div class="question">
+    <h3>9. केंद्र और राज्य सरकारों के बीच सत्ता-विभाजन किसका उदाहरण है?</h3>
+    <label class="option"><input type="radio" name="q9" value="A"> A. तानाशाही</label>
+    <label class="option"><input type="radio" name="q9" value="B"> B. क्षैतिज विभाजन</label>
+    <label class="option"><input type="radio" name="q9" value="C"> C. ऊर्ध्वाधर सत्ता-विभाजन</label>
+    <label class="option"><input type="radio" name="q9" value="D"> D. राजतंत्र</label>
+   </div>
+
+   <div class="question">
+    <h3>10. भारत में सत्ता के विभिन्न स्तरों का आधार क्या है?</h3>
+    <label class="option"><input type="radio" name="q10" value="A"> A. केवल भाषा</label>
+    <label class="option"><input type="radio" name="q10" value="B"> B. केंद्र, राज्य और स्थानीय सरकारें</label>
+    <label class="option"><input type="radio" name="q10" value="C"> C. केवल सेना</label>
+    <label class="option"><input type="radio" name="q10" value="D"> D. केवल न्यायपालिका</label>
+   </div>
+
+   <div class="question">
+    <h3>11. गठबंधन सरकार कब बनती है?</h3>
+    <label class="option"><input type="radio" name="q11" value="A"> A. जब कई दल मिलकर सरकार बनाते हैं</label>
+    <label class="option"><input type="radio" name="q11" value="B"> B. जब चुनाव नहीं होते</label>
+    <label class="option"><input type="radio" name="q11" value="C"> C. जब विपक्ष समाप्त हो जाता है</label>
+    <label class="option"><input type="radio" name="q11" value="D"> D. जब अदालत सरकार चलाती है</label>
+   </div>
+
+   <div class="question">
+    <h3>12. राजनीतिक दलों के बीच सत्ता की साझेदारी किस रूप में दिखाई देती है?</h3>
+    <label class="option"><input type="radio" name="q12" value="A"> A. एकदलीय प्रतिबंध</label>
+    <label class="option"><input type="radio" name="q12" value="B"> B. चुनाव समाप्त करना</label>
+    <label class="option"><input type="radio" name="q12" value="C"> C. गठबंधन सरकार</label>
+    <label class="option"><input type="radio" name="q12" value="D"> D. सैन्य शासन</label>
+   </div>
+
+   <div class="question">
+    <h3>13. दबाव समूह सत्ता की साझेदारी में कैसे भाग लेते हैं?</h3>
+    <label class="option"><input type="radio" name="q13" value="A"> A. सभी चुनाव रद्द करके</label>
+    <label class="option"><input type="radio" name="q13" value="B"> B. नीतियों और फैसलों को प्रभावित करके</label>
+    <label class="option"><input type="radio" name="q13" value="C"> C. अदालतें बंद करके</label>
+    <label class="option"><input type="radio" name="q13" value="D"> D. संविधान हटाकर</label>
+   </div>
+
+   <div class="question">
+    <h3>14. हित समूहों का उद्देश्य सामान्यतः क्या होता है?</h3>
+    <label class="option"><input type="radio" name="q14" value="A"> A. अपने साझा हितों को आगे बढ़ाना</label>
+    <label class="option"><input type="radio" name="q14" value="B"> B. लोकतंत्र खत्म करना</label>
+    <label class="option"><input type="radio" name="q14" value="C"> C. सभी दलों पर प्रतिबंध लगाना</label>
+    <label class="option"><input type="radio" name="q14" value="D"> D. चुनाव समाप्त करना</label>
+   </div>
+
+   <div class="question">
+    <h3>15. लोकतंत्र में विपक्ष क्यों आवश्यक है?</h3>
+    <label class="option"><input type="radio" name="q15" value="A"> A. सरकार को बिना सवाल काम करने देने के लिए</label>
+    <label class="option"><input type="radio" name="q15" value="B"> B. नागरिक अधिकार समाप्त करने के लिए</label>
+    <label class="option"><input type="radio" name="q15" value="C"> C. सरकार की जवाबदेही सुनिश्चित करने के लिए</label>
+    <label class="option"><input type="radio" name="q15" value="D"> D. चुनाव रोकने के लिए</label>
+   </div>
+
+   <div class="question">
+    <h3>16. सत्ता की साझेदारी का नैतिक आधार क्या है?</h3>
+    <label class="option"><input type="radio" name="q16" value="A"> A. यह लोकतंत्र की भावना के अनुरूप है</label>
+    <label class="option"><input type="radio" name="q16" value="B"> B. इससे जनता की भूमिका समाप्त होती है</label>
+    <label class="option"><input type="radio" name="q16" value="C"> C. इससे तानाशाही आती है</label>
+    <label class="option"><input type="radio" name="q16" value="D"> D. इससे चुनाव की आवश्यकता नहीं रहती</label>
+   </div>
+
+   <div class="question">
+    <h3>17. सत्ता की साझेदारी का व्यावहारिक लाभ क्या है?</h3>
+    <label class="option"><input type="radio" name="q17" value="A"> A. सामाजिक संघर्ष बढ़ाना</label>
+    <label class="option"><input type="radio" name="q17" value="B"> B. संघर्ष की संभावना कम करना</label>
+    <label class="option"><input type="radio" name="q17" value="C"> C. नागरिक भागीदारी रोकना</label>
+    <label class="option"><input type="radio" name="q17" value="D"> D. सत्ता एक जगह केंद्रित करना</label>
+   </div>
+
+   <div class="question">
+    <h3>18. लोकतंत्र में नागरिक सत्ता की साझेदारी में कैसे भाग लेते हैं?</h3>
+    <label class="option"><input type="radio" name="q18" value="A"> A. मतदान और सार्वजनिक चर्चा के माध्यम से</label>
+    <label class="option"><input type="radio" name="q18" value="B"> B. सभी संस्थाएँ बंद करके</label>
+    <label class="option"><input type="radio" name="q18" value="C"> C. अधिकार छोड़कर</label>
+    <label class="option"><input type="radio" name="q18" value="D"> D. चुनाव रोककर</label>
+   </div>
+
+   <div class="question">
+    <h3>19. सत्ता का केंद्रीकरण किस स्थिति को जन्म दे सकता है?</h3>
+    <label class="option"><input type="radio" name="q19" value="A"> A. सभी की समान भागीदारी</label>
+    <label class="option"><input type="radio" name="q19" value="B"> B. पूर्ण जवाबदेही</label>
+    <label class="option"><input type="radio" name="q19" value="C"> C. सत्ता के दुरुपयोग का खतरा</label>
+    <label class="option"><input type="radio" name="q19" value="D"> D. सभी मतभेदों का अंत</label>
+   </div>
+
+   <div class="question">
+    <h3>20. स्थानीय सरकारों का एक उदाहरण कौन-सा है?</h3>
+    <label class="option"><input type="radio" name="q20" value="A"> A. सर्वोच्च न्यायालय</label>
+    <label class="option"><input type="radio" name="q20" value="B"> B. ग्राम पंचायत</label>
+    <label class="option"><input type="radio" name="q20" value="C"> C. संयुक्त राष्ट्र</label>
+    <label class="option"><input type="radio" name="q20" value="D"> D. विदेशी संसद</label>
+   </div>
+
+   <div class="question">
+    <h3>21. सत्ता की साझेदारी में सामाजिक समूहों को प्रतिनिधित्व देने का लाभ क्या है?</h3>
+    <label class="option"><input type="radio" name="q21" value="A"> A. सभी आवाजों को जगह मिल सकती है</label>
+    <label class="option"><input type="radio" name="q21" value="B"> B. नागरिकता समाप्त हो जाती है</label>
+    <label class="option"><input type="radio" name="q21" value="C"> C. चुनाव अनावश्यक हो जाते हैं</label>
+    <label class="option"><input type="radio" name="q21" value="D"> D. कानून खत्म हो जाते हैं</label>
+   </div>
+
+   <div class="question">
+    <h3>22. स्वतंत्र न्यायपालिका लोकतंत्र में क्यों महत्त्वपूर्ण है?</h3>
+    <label class="option"><input type="radio" name="q22" value="A"> A. वह चुनाव प्रचार करती है</label>
+    <label class="option"><input type="radio" name="q22" value="B"> B. वह सरकार के हर निर्णय को बिना जाँच स्वीकार करती है</label>
+    <label class="option"><input type="radio" name="q22" value="C"> C. वह कानून लागू करने वाली पुलिस है</label>
+    <label class="option"><input type="radio" name="q22" value="D"> D. वह कानून के अनुसार निष्पक्ष न्याय कर सकती है</label>
+   </div>
+
+   <div class="question">
+    <h3>23. संघीय व्यवस्था में सरकारों के अधिकार कैसे निर्धारित होते हैं?</h3>
+    <label class="option"><input type="radio" name="q23" value="A"> A. केवल एक दल की इच्छा से</label>
+    <label class="option"><input type="radio" name="q23" value="B"> B. संविधान और कानूनों के अनुसार</label>
+    <label class="option"><input type="radio" name="q23" value="C"> C. केवल सेना द्वारा</label>
+    <label class="option"><input type="radio" name="q23" value="D"> D. बिना किसी नियम के</label>
+   </div>
+
+   <div class="question">
+    <h3>24. सत्ता की साझेदारी किसे मजबूत करती है?</h3>
+    <label class="option"><input type="radio" name="q24" value="A"> A. तानाशाही</label>
+    <label class="option"><input type="radio" name="q24" value="B"> B. नागरिकों के अधिकारों का अंत</label>
+    <label class="option"><input type="radio" name="q24" value="C"> C. लोकतंत्र और जवाबदेही</label>
+    <label class="option"><input type="radio" name="q24" value="D"> D. सत्ता का एकाधिकार</label>
+   </div>
+
+   <div class="question">
+    <h3>25. सफल लोकतांत्रिक शासन के लिए क्या जरूरी है?</h3>
+    <label class="option"><input type="radio" name="q25" value="A"> A. जनता की भागीदारी और संस्थाओं के बीच संतुलन</label>
+    <label class="option"><input type="radio" name="q25" value="B"> B. सभी चुनाव बंद करना</label>
+    <label class="option"><input type="radio" name="q25" value="C"> C. एक व्यक्ति को असीमित शक्ति देना</label>
+    <label class="option"><input type="radio" name="q25" value="D"> D. विपक्ष समाप्त करना</label>
+   </div>
+
+   <button type="button" class="submit" onclick="submitTest()">✅ Submit Test</button>
+   <button type="button" class="reset" onclick="resetTest()">🔄 दोबारा टेस्ट दें</button>
+  </form>
+ </section>
+
+ <section class="card" id="result">
+  <h2>🏆 आपका रिजल्ट</h2>
+  <p id="score"></p>
+  <p id="percentage"></p>
+  <p id="grade"></p>
+  <p id="message"></p>
+  <h3>📖 उत्तरों की जाँच</h3>
+  <div id="answerReview"></div>
+ </section>
+
+ <center><a class="back" href="civics.html">⬅ Civics Chapters</a></center>
+</main>
+
+<footer>
+ <strong>U.K.P NO1 Education</strong><br>
+ Learn Smart • Score Better 🚀<br>
+ मेहनत करते रहो, सफलता जरूर मिलेगी! 🌟
+</footer>
+
+<script>
+const answerKey = {
+ q1:"B", q2:"C", q3:"A", q4:"B", q5:"C",
+ q6:"B", q7:"D", q8:"A", q9:"C", q10:"B",
+ q11:"A", q12:"C", q13:"B", q14:"A", q15:"C",
+ q16:"A", q17:"B", q18:"A", q19:"C", q20:"B",
+ q21:"A", q22:"D", q23:"B", q24:"C", q25:"A"
+};
+
+const totalQuestions = 25;
+let submitted = false;
+
+function updateProgress(){
+ let answered = 0;
+ for(let i=1;i<=totalQuestions;i++){
+  if(document.querySelector('input[name="q'+i+'"]:checked')) answered++;
+ }
+ document.getElementById("progressText").textContent =
+  "उत्तर दिए गए: "+answered+" / "+totalQuestions;
+ document.getElementById("progressBar").style.width =
+  (answered/totalQuestions*100)+"%";
+}
+
+document.getElementById("quizForm").addEventListener("change",updateProgress);
+
+function submitTest(){
+ if(submitted){
+  alert("टेस्ट जमा हो चुका है। दोबारा प्रयास करने के लिए Reset दबाएँ।");
+  return;
+ }
+
+ let score = 0;
+ let reviewHTML = "";
+
+ for(let i=1;i<=totalQuestions;i++){
+  const name = "q"+i;
+  const selected = document.querySelector('input[name="'+name+'"]:checked');
+  const correct = answerKey[name];
+  const question = document.querySelector('input[name="'+name+'"]').closest(".question");
+  const questionText = question.querySelector("h3").textContent;
+  const correctOption = question.querySelector('input[value="'+correct+'"]');
+
+  let chosenText = "उत्तर नहीं दिया";
+  let chosenValue = "";
+
+  if(selected){
+   chosenValue = selected.value;
+   chosenText = selected.parentElement.textContent.trim();
+   if(chosenValue === correct) score++;
+  }
+
+  const correctText = correctOption.parentElement.textContent.trim();
+  const isCorrect = chosenValue === correct;
+
+  reviewHTML += `
+   <div class="review-item">
+    <strong>${questionText}</strong><br>
+    ${isCorrect ? "✅ सही उत्तर" : "❌ गलत / छोड़ा गया"}<br>
+    आपका उत्तर: ${chosenText}<br>
+    सही उत्तर: ${correctText}
+   </div>`;
+ }
+
+ const percentage = Math.round(score/totalQuestions*100);
+ let grade, message;
+
+ if(percentage>=90){
+  grade="Gold A+ 🥇"; message="शानदार! आपकी तैयारी बहुत अच्छी है।";
+ }else if(percentage>=75){
+  grade="Silver A 🥈"; message="बहुत अच्छा! अभ्यास जारी रखें।";
+ }else if(percentage>=60){
+  grade="Bronze B 🥉"; message="अच्छा प्रयास! थोड़ा और अभ्यास करें।";
+ }else{
+  grade="Keep Practicing C 📚"; message="दोबारा पढ़ें और फिर प्रयास करें।";
+ }
+
+ document.getElementById("score").textContent="आपका स्कोर: "+score+" / "+totalQuestions;
+ document.getElementById("percentage").textContent="प्रतिशत: "+percentage+"%";
+ document.getElementById("grade").textContent="ग्रेड: "+grade;
+ document.getElementById("message").textContent=message;
+ document.getElementById("answerReview").innerHTML=reviewHTML;
+ document.getElementById("result").style.display="block";
+
+ submitted=true;
+ document.querySelectorAll("#quizForm input").forEach(input=>input.disabled=true);
+ document.querySelector(".submit").disabled=true;
+ document.querySelector(".submit").style.opacity=".6";
+
+ document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+
+function resetTest(){
+ document.getElementById("quizForm").reset();
+ document.querySelectorAll("#quizForm input").forEach(input=>input.disabled=false);
+ submitted=false;
+ document.querySelector(".submit").disabled=false;
+ document.querySelector(".submit").style.op
