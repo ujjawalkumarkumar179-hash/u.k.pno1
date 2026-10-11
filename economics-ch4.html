@@ -1,1 +1,414 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Chapter 4 | U.K.P NO1 Education</title>
 
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:linear-gradient(135deg,#e8f5e9,#e3f2fd);
+  color:#222;
+}
+header{
+  background:linear-gradient(135deg,#063970,#087f8c);
+  color:white;text-align:center;padding:22px 12px;
+}
+header img{
+  width:90px;height:90px;object-fit:contain;
+  background:white;border-radius:50%;padding:5px;
+}
+header h1{font-size:22px;margin:10px 0}
+.container{max-width:850px;margin:20px auto;padding:0 12px}
+.info,.question,.result{
+  background:white;border-radius:12px;padding:16px;
+  margin-bottom:15px;box-shadow:0 3px 12px #00000012;
+}
+.info{text-align:center;line-height:1.8}
+.question h3{font-size:17px;margin-top:0}
+.option{
+  display:block;background:#f4f7fb;border:1px solid #dce4ed;
+  border-radius:8px;padding:11px;margin:8px 0;cursor:pointer;
+}
+.option:hover{background:#e4f2ff}
+.option input{margin-right:8px}
+button{
+  border:0;border-radius:9px;padding:13px 18px;
+  font-size:16px;font-weight:bold;cursor:pointer;margin:5px;
+}
+.submit{background:#087f23;color:white}
+.reset{background:#e53935;color:white}
+.buttons{text-align:center;margin:20px 0}
+.progress-box{background:#ddd;height:10px;border-radius:10px;overflow:hidden}
+#progress{height:100%;width:0;background:#08a045;transition:width .2s}
+#result{display:none}
+#result h2{text-align:center;color:#087f23}
+.review-item{padding:12px;border-bottom:1px solid #ddd;line-height:1.7}
+.correct{color:green;font-weight:bold}
+.wrong{color:#d32f2f;font-weight:bold}
+footer{
+  text-align:center;padding:20px;background:#063970;
+  color:white;line-height:1.8;
+}
+@media(max-width:600px){
+  header h1{font-size:19px}
+  .question h3{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="assets/logo.png" alt="U.K.P NO1 Education Logo"
+       onerror="this.style.display='none'">
+  <h1>U.K.P NO1 Education</h1>
+  <p>📚 Class 10 Economics</p>
+  <p>Chapter 4: वैश्वीकरण और भारतीय अर्थव्यवस्था</p>
+  <p>सीखो आज, सफलता पाओ कल! 🌟</p>
+</header>
+
+<main class="container">
+
+<div class="info">
+  <h2>वैश्वीकरण — MCQ टेस्ट</h2>
+  <p>कुल प्रश्न: <b>25</b> | प्रत्येक प्रश्न: <b>1 अंक</b></p>
+  <div class="progress-box"><div id="progress"></div></div>
+  <p id="progressText">उत्तर दिए गए: 0 / 25</p>
+</div>
+
+<form id="quizForm">
+
+<div class="question">
+<h3>1. वैश्वीकरण का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A. देशों के बीच आर्थिक संपर्क और एकीकरण बढ़ना</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. सभी देशों का व्यापार बंद होना</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. केवल स्थानीय बाजार में खरीदारी</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. देशों के बीच संपर्क समाप्त होना</label>
+</div>
+
+<div class="question">
+<h3>2. बहुराष्ट्रीय कंपनी (MNC) किसे कहते हैं?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A. जो केवल एक गाँव में काम करे</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. जो एक से अधिक देशों में उत्पादन या कारोबार करे</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. जो केवल सरकारी विद्यालय चलाए</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. जो व्यापार न करे</label>
+</div>
+
+<div class="question">
+<h3>3. बहुराष्ट्रीय कंपनियाँ उत्पादन कहाँ स्थापित कर सकती हैं?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A. केवल अपने देश में</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. केवल गाँवों में</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. उन देशों में जहाँ उत्पादन की अनुकूल परिस्थितियाँ हों</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. केवल समुद्र में</label>
+</div>
+
+<div class="question">
+<h3>4. विदेशी व्यापार का एक प्रमुख लाभ क्या है?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A. बाजार के विकल्पों में कमी</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. वस्तुओं की आवाजाही बंद होना</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. सभी प्रतिस्पर्धियों का समाप्त होना</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. उत्पादकों और उपभोक्ताओं को नए बाजार मिलना</label>
+</div>
+
+<div class="question">
+<h3>5. आयात का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A. विदेश से वस्तुएँ या सेवाएँ खरीदना</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. विदेश में वस्तुएँ बेचना</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. वस्तुओं को नष्ट करना</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. उत्पादन बंद करना</label>
+</div>
+
+<div class="question">
+<h3>6. निर्यात का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A. विदेश से वस्तुएँ खरीदना</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. अपने देश से दूसरे देश में वस्तुएँ या सेवाएँ बेचना</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. केवल स्थानीय खरीदारी</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. वस्तुओं का उपयोग न करना</label>
+</div>
+
+<div class="question">
+<h3>7. विदेशी निवेश का क्या अर्थ है?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A. केवल घरेलू बचत</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. केवल कर भुगतान</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. किसी दूसरे देश में निवेश करना</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. वस्तुओं का आदान-प्रदान बंद करना</label>
+</div>
+
+<div class="question">
+<h3>8. वैश्वीकरण को बढ़ावा देने वाला एक महत्वपूर्ण कारक कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A. संचार पर पूर्ण प्रतिबंध</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. परिवहन का समाप्त होना</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. देशों के बीच संपर्क बंद होना</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. परिवहन और सूचना प्रौद्योगिकी में सुधार</label>
+</div>
+
+<div class="question">
+<h3>9. उदारीकरण का सामान्य अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A. व्यापार और निवेश पर अनावश्यक प्रतिबंध कम करना</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. सभी उद्योग बंद करना</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. विदेशी व्यापार पर पूर्ण रोक लगाना</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. उत्पादन समाप्त करना</label>
+</div>
+
+<div class="question">
+<h3>10. व्यापार अवरोध का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A. इंटरनेट सुविधा</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. आयात पर लगाया गया सीमा शुल्क</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. तेज परिवहन</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. संचार सुविधा</label>
+</div>
+
+<div class="question">
+<h3>11. भारत में 1991 के बाद आर्थिक सुधारों में किस पर विशेष जोर दिया गया?</h3>
+<label class="option"><input type="radio" name="q11" value="A"> A. सभी व्यापार समाप्त करने पर</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. सभी निजी उद्यम बंद करने पर</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. उदारीकरण और अर्थव्यवस्था को अधिक खुला बनाने पर</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. विदेशी निवेश पर हमेशा पूर्ण प्रतिबंध पर</label>
+</div>
+
+<div class="question">
+<h3>12. वैश्वीकरण से उपभोक्ताओं को क्या लाभ हो सकता है?</h3>
+<label class="option"><input type="radio" name="q12" value="A"> A. वस्तुओं के विकल्प समाप्त होना</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. सभी वस्तुओं की कमी</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. बाजार बंद होना</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. वस्तुओं के अधिक विकल्प और प्रतिस्पर्धी कीमतें</label>
+</div>
+
+<div class="question">
+<h3>13. वैश्वीकरण से छोटे उत्पादकों को कौन-सी चुनौती मिल सकती है?</h3>
+<label class="option"><input type="radio" name="q13" value="A"> A. बड़ी कंपनियों से प्रतिस्पर्धा</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. सभी बाजारों का मुफ्त मिलना</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. प्रतिस्पर्धा का समाप्त होना</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. उत्पादन की जरूरत समाप्त होना</label>
+</div>
+
+<div class="question">
+<h3>14. वैश्वीकरण से कुछ श्रमिकों को किस समस्या का सामना करना पड़ सकता है?</h3>
+<label class="option"><input type="radio" name="q14" value="A"> A. काम के घंटे हमेशा कम होना</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. नौकरी की असुरक्षा और कम वेतन का दबाव</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. सभी को समान वेतन मिलना</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. काम की जरूरत समाप्त होना</label>
+</div>
+
+<div class="question">
+<h3>15. विश्व व्यापार संगठन (WTO) का मुख्य उद्देश्य क्या है?</h3>
+<label class="option"><input type="radio" name="q15" value="A"> A. सभी देशों में चुनाव कराना</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. सभी देशों की मुद्रा जारी करना</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. अंतरराष्ट्रीय व्यापार के नियमों से संबंधित व्यवस्था को बढ़ावा देना</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. सभी उद्योगों का स्वामित्व लेना</label>
+</div>
+
+<div class="question">
+<h3>16. उत्पादन को अलग-अलग देशों में बाँटने का एक कारण क्या है?</h3>
+<label class="option"><input type="radio" name="q16" value="A"> A. उत्पादन की लागत और संसाधनों का लाभ लेना</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. बाजार से बचना</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. सभी तकनीकें छोड़ देना</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. व्यापार रोकना</label>
+</div>
+
+<div class="question">
+<h3>17. विदेशी कंपनियाँ स्थानीय कंपनियों के साथ किस प्रकार जुड़ सकती हैं?</h3>
+<label class="option"><input type="radio" name="q17" value="A"> A. केवल प्रतिस्पर्धा करके</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. स्थानीय उत्पादन बंद करके ही</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. व्यापार न करके</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. निवेश, साझेदारी या उत्पादन के अनुबंधों के माध्यम से</label>
+</div>
+
+<div class="question">
+<h3>18. वैश्वीकरण के लाभ सभी लोगों तक समान रूप से क्यों नहीं पहुँचते?</h3>
+<label class="option"><input type="radio" name="q18" value="A"> A. सभी लोगों की आय और अवसर समान हैं</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. लोगों और कंपनियों की संसाधनों तथा अवसरों तक पहुँच अलग-अलग होती है</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. व्यापार का अर्थ हमेशा नुकसान है</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. वैश्वीकरण में कोई बदलाव नहीं आता</label>
+</div>
+
+<div class="question">
+<h3>19. विदेशी व्यापार से उत्पादकों को क्या अवसर मिल सकता है?</h3>
+<label class="option"><input type="radio" name="q19" value="A"> A. उत्पादन बंद करना</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. सभी बाजार खो देना</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. अपने उत्पाद दूसरे देशों में बेचना</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. वस्तुओं की गुणवत्ता घटाना अनिवार्य होना</label>
+</div>
+
+<div class="question">
+<h3>20. बहुराष्ट्रीय कंपनियाँ निवेश करने से पहले क्या देख सकती हैं?</h3>
+<label class="option"><input type="radio" name="q20" value="A"> A. बाजार की उपलब्धता</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. श्रमिक और संसाधन</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. परिवहन और सरकारी नीतियाँ</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. उपर्युक्त सभी</label>
+</div>
+
+<div class="question">
+<h3>21. विदेशी निवेश से किसी देश को कौन-सा संभावित लाभ हो सकता है?</h3>
+<label class="option"><input type="radio" name="q21" value="A"> A. पूँजी और रोजगार के अवसर बढ़ सकते हैं</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. सभी उद्योग अनिवार्य रूप से बंद हो जाते हैं</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. तकनीक का उपयोग असंभव हो जाता है</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. व्यापार समाप्त हो जाता है</label>
+</div>
+
+<div class="question">
+<h3>22. वैश्वीकरण के दौर में श्रमिकों के हितों की रक्षा के लिए क्या महत्वपूर्ण है?</h3>
+<label class="option"><input type="radio" name="q22" value="A"> A. सुरक्षा नियम हटाना</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. उचित मजदूरी, सुरक्षित कार्यस्थल और श्रम कानूनों का पालन</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. सभी श्रमिकों को काम से हटाना</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. वेतन देना बंद करना</label>
+</div>
+
+<div class="question">
+<h3>23. वैश्वीकरण में सूचना प्रौद्योगिकी की भूमिका क्या है?</h3>
+<label class="option"><input type="radio" name="q23" value="A"> A. संचार को असंभव बनाना</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. देशों के बीच संपर्क रोकना</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. सूचना और सेवाओं का तेजी से आदान-प्रदान संभव बनाना</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. व्यापार को हमेशा समाप्त करना</label>
+</div>
+
+<div class="question">
+<h3>24. वैश्वीकरण को अधिक न्यायसंगत बनाने के लिए क्या किया जा सकता है?</h3>
+<label class="option"><input type="radio" name="q24" value="A"> A. श्रमिकों के अधिकारों की रक्षा</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. छोटे उत्पादकों को सहायता</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. उचित व्यापार नियम और अवसर</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. उपर्युक्त सभी</label>
+</div>
+
+<div class="question">
+<h3>25. वैश्वीकरण का संतुलित मूल्यांकन कैसे करना चाहिए?</h3>
+<label class="option"><input type="radio" name="q25" value="A"> A. केवल लाभ देखकर</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. केवल नुकसान देखकर</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. लाभ, चुनौतियों और अलग-अलग समूहों पर प्रभाव देखकर</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. बिना किसी जानकारी के</label>
+</div>
+
+</form>
+
+<div class="buttons">
+  <button type="button" class="submit" onclick="submitTest()">✅ Submit Test</button>
+  <button type="button" class="reset" onclick="resetTest()">🔄 फिर से टेस्ट दें</button>
+</div>
+
+<section class="result" id="result">
+  <h2>🎉 आपका रिजल्ट</h2>
+  <div id="scoreDetails"></div>
+  <h3>📋 उत्तरों की समीक्षा</h3>
+  <div id="review"></div>
+</section>
+
+</main>
+
+<footer>
+  <b>U.K.P NO1 Education</b><br>
+  Learn Smart • Score Better 🚀<br>
+  मेहनत करते रहो, सफलता जरूर मिलेगी! 🌟
+</footer>
+
+<script>
+const answerKey={
+  q1:"A",q2:"B",q3:"C",q4:"D",q5:"A",
+  q6:"B",q7:"C",q8:"D",q9:"A",q10:"B",
+  q11:"C",q12:"D",q13:"A",q14:"B",q15:"C",
+  q16:"A",q17:"D",q18:"B",q19:"C",q20:"D",
+  q21:"A",q22:"B",q23:"C",q24:"D",q25:"C"
+};
+
+const form=document.getElementById("quizForm");
+const total=25;
+
+form.addEventListener("change",updateProgress);
+
+function updateProgress(){
+  const answered=new Set(
+    [...form.querySelectorAll('input[type="radio"]:checked')]
+      .map(input=>input.name)
+  ).size;
+
+  document.getElementById("progress").style.width=
+    (answered/total*100)+"%";
+
+  document.getElementById("progressText").textContent=
+    `उत्तर दिए गए: ${answered} / ${total}`;
+}
+
+function submitTest(){
+  let score=0,answered=0,reviewHTML="";
+
+  for(let i=1;i<=total;i++){
+    const name="q"+i;
+    const selected=form.querySelector(
+      `input[name="${name}"]:checked`
+    );
+    const question=form.querySelector(
+      `input[name="${name}"]`
+    ).closest(".question");
+
+    const questionText=question.querySelector("h3").textContent;
+    const correct=answerKey[name];
+    const labels=[...question.querySelectorAll(".option")];
+
+    if(selected)answered++;
+
+    let selectedText="उत्तर नहीं दिया";
+    let correctText="";
+
+    labels.forEach(label=>{
+      const input=label.querySelector("input");
+      if(input.value===correct)correctText=label.textContent.trim();
+      if(selected&&input.value===selected.value)
+        selectedText=label.textContent.trim();
+    });
+
+    const isCorrect=!!selected&&selected.value===correct;
+    if(isCorrect)score++;
+
+    reviewHTML+=`
+      <div class="review-item">
+        <b>${questionText}</b><br>
+        आपका उत्तर:
+        <span class="${isCorrect?"correct":"wrong"}">${selectedText}</span><br>
+        सही उत्तर: <span class="correct">${correctText}</span>
+      </div>`;
+  }
+
+  const percent=(score/total*100).toFixed(2);
+  let grade,message;
+
+  if(percent>=90){
+    grade="Gold A+";
+    message="शानदार प्रदर्शन! 🥇";
+  }else if(percent>=75){
+    grade="Silver A";
+    message="बहुत बढ़िया! 🥈";
+  }else if(percent>=60){
+    grade="Bronze B";
+    message="अच्छा प्रयास, अभ्यास जारी रखो! 🥉";
+  }else{
+    grade="Keep Practicing C";
+    message="फिर से अभ्यास करो, तुम बेहतर कर सकते हो! 💪";
+  }
+
+  document.getElementById("scoreDetails").innerHTML=`
+    <p><b>कुल प्रश्न:</b> ${total}</p>
+    <p><b>उत्तर दिए:</b> ${answered}/${total}</p>
+    <p><b>सही उत्तर:</b> ${score}</p>
+    <p><b>गलत या छोड़े गए:</b> ${total-score}</p>
+    <p><b>प्रतिशत:</b> ${percent}%</p>
+    <p><b>ग्रेड:</b> ${grade}</p>
+    <p>${message}</p>`;
+
+  document.getElementById("review").innerHTML=reviewHTML;
+  document.getElementById("result").style.display="block";
+  document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+
+function resetTest(){
+  form.reset();
+  document.getElementById("result").style.display="none";
+  updateProgress();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+  </html>
