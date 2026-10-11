@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Chapter 5 | U.K.P NO1 Education</title>
 
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:linear-gradient(135deg,#e8f5e9,#e3f2fd);
+  color:#222;
+}
+header{
+  background:linear-gradient(135deg,#063970,#087f8c);
+  color:white;text-align:center;padding:22px 12px;
+}
+header img{
+  width:90px;height:90px;object-fit:contain;
+  background:white;border-radius:50%;padding:5px;
+}
+header h1{font-size:22px;margin:10px 0}
+.container{max-width:850px;margin:20px auto;padding:0 12px}
+.info,.question,.result{
+  background:white;border-radius:12px;padding:16px;
+  margin-bottom:15px;box-shadow:0 3px 12px #00000012;
+}
+.info{text-align:center;line-height:1.8}
+.question h3{font-size:17px;margin-top:0}
+.option{
+  display:block;background:#f4f7fb;border:1px solid #dce4ed;
+  border-radius:8px;padding:11px;margin:8px 0;cursor:pointer;
+}
+.option:hover{background:#e4f2ff}
+.option input{margin-right:8px}
+button{
+  border:0;border-radius:9px;padding:13px 18px;
+  font-size:16px;font-weight:bold;cursor:pointer;margin:5px;
+}
+.submit{background:#087f23;color:white}
+.reset{background:#e53935;color:white}
+.buttons{text-align:center;margin:20px 0}
+.progress-box{background:#ddd;height:10px;border-radius:10px;overflow:hidden}
+#progress{height:100%;width:0;background:#08a045;transition:width .2s}
+#result{display:none}
+#result h2{text-align:center;color:#087f23}
+.review-item{padding:12px;border-bottom:1px solid #ddd;line-height:1.7}
+.correct{color:green;font-weight:bold}
+.wrong{color:#d32f2f;font-weight:bold}
+footer{
+  text-align:center;padding:20px;background:#063970;
+  color:white;line-height:1.8;
+}
+@media(max-width:600px){
+  header h1{font-size:19px}
+  .question h3{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="assets/logo.png" alt="U.K.P NO1 Education Logo"
+       onerror="this.style.display='none'">
+  <h1>U.K.P NO1 Education</h1>
+  <p>📚 Class 10 Economics</p>
+  <p>Chapter 5: उपभोक्ता अधिकार</p>
+  <p>सीखो आज, सफलता पाओ कल! 🌟</p>
+</header>
+
+<main class="container">
+
+<div class="info">
+  <h2>उपभोक्ता अधिकार — MCQ टेस्ट</h2>
+  <p>कुल प्रश्न: <b>25</b> | प्रत्येक प्रश्न: <b>1 अंक</b></p>
+  <div class="progress-box"><div id="progress"></div></div>
+  <p id="progressText">उत्तर दिए गए: 0 / 25</p>
+</div>
+
+<form id="quizForm">
+
+<div class="question"><h3>1. उपभोक्ता किसे कहते हैं?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A. वस्तुओं और सेवाओं का उपयोग करने वाला व्यक्ति</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. केवल वस्तुएँ बनाने वाला व्यक्ति</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. केवल दुकानदार</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. केवल निर्माता</label></div>
+
+<div class="question"><h3>2. उपभोक्ता शोषण का उदाहरण क्या है?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A. सही वजन देना</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. निर्धारित मूल्य से अधिक कीमत लेना</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. सही बिल देना</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. गुणवत्ता की जानकारी देना</label></div>
+
+<div class="question"><h3>3. उपभोक्ता को सामान खरीदते समय क्या लेना चाहिए?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A. केवल दुकानदार का नाम</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. केवल मौखिक आश्वासन</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. पक्का बिल या रसीद</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. कोई प्रमाण नहीं</label></div>
+
+<div class="question"><h3>4. उपभोक्ता का सुरक्षा का अधिकार किससे बचाता है?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A. उचित विज्ञापन से</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. सही बिल से</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. सही वजन से</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. खतरनाक वस्तुओं और सेवाओं से</label></div>
+
+<div class="question"><h3>5. सूचना पाने के अधिकार में क्या शामिल है?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A. कीमत, गुणवत्ता और मात्रा की जानकारी</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. दुकानदार की निजी जानकारी</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. केवल विज्ञापन देखना</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. किसी भी जानकारी से वंचित रहना</label></div>
+
+<div class="question"><h3>6. चुनाव का अधिकार उपभोक्ता को क्या देता है?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A. केवल एक वस्तु खरीदने की बाध्यता</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. उपलब्ध विकल्पों में से उचित वस्तु या सेवा चुनने का अवसर</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. बिना भुगतान सामान लेने का अधिकार</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. दुकानदार की हर बात मानना</label></div>
+
+<div class="question"><h3>7. शिकायत सुने जाने का अधिकार क्या सुनिश्चित करता है?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A. उपभोक्ता कभी शिकायत न करे</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. केवल दुकानदार की बात सुनी जाए</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. उपभोक्ता की शिकायत पर विचार किया जाए</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. सभी शिकायतें बिना जाँच खारिज हों</label></div>
+
+<div class="question"><h3>8. उपभोक्ता शिक्षा का अधिकार क्यों जरूरी है?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A. ताकि उपभोक्ता अधिकारों और जिम्मेदारियों को समझ सके</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. ताकि वह बिल न ले</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. ताकि वह कीमत न पूछे</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. ताकि वह शिकायत न करे</label></div>
+
+<div class="question"><h3>9. भारत में राष्ट्रीय उपभोक्ता दिवस कब मनाया जाता है?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A. 15 अगस्त</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. 26 जनवरी</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. 5 जून</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. 24 दिसंबर</label></div>
+
+<div class="question"><h3>10. भारत में विश्व उपभोक्ता अधिकार दिवस कब मनाया जाता है?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A. 1 मई</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. 15 मार्च</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. 2 अक्टूबर</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. 14 नवंबर</label></div>
+
+<div class="question"><h3>11. भारत में उपभोक्ता संरक्षण अधिनियम पहली बार किस वर्ष बना?</h3>
+<label class="option"><input type="radio" name="q11" value="A"> A. 1986</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. 1950</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. 2005</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. 2015</label></div>
+
+<div class="question"><h3>12. वर्तमान उपभोक्ता संरक्षण अधिनियम किस वर्ष पारित हुआ?</h3>
+<label class="option"><input type="radio" name="q12" value="A"> A. 1991</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. 2000</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. 2019</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. 1986</label></div>
+
+<div class="question"><h3>13. ISI चिह्न सामान्यतः किससे संबंधित है?</h3>
+<label class="option"><input type="radio" name="q13" value="A"> A. केवल खाद्य पदार्थों की ताजगी</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. औद्योगिक उत्पादों के मानक से</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. बैंक खाते से</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. परिवहन टिकट से</label></div>
+
+<div class="question"><h3>14. AGMARK चिह्न मुख्यतः किन उत्पादों से जुड़ा है?</h3>
+<label class="option"><input type="radio" name="q14" value="A"> A. मोबाइल फोन</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. जूते</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. कृषि उत्पाद</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. कंप्यूटर सॉफ्टवेयर</label></div>
+
+<div class="question"><h3>15. सोने के आभूषण खरीदते समय कौन-सा चिह्न उपयोगी है?</h3>
+<label class="option"><input type="radio" name="q15" value="A"> A. हॉलमार्क</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. रेलवे टिकट</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. वाहन नंबर</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. डाक टिकट</label></div>
+
+<div class="question"><h3>16. पैकेट पर MRP का क्या अर्थ है?</h3>
+<label class="option"><input type="radio" name="q16" value="A"> A. न्यूनतम खुदरा मूल्य</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. अधिकतम खुदरा मूल्य</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. निर्माण की तारीख</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. उत्पाद का वजन</label></div>
+
+<div class="question"><h3>17. एक्सपायरी डेट क्यों देखनी चाहिए?</h3>
+<label class="option"><input type="radio" name="q17" value="A"> A. पैकेट का रंग जानने के लिए</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. दुकान का पता जानने के लिए</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. वस्तु का विज्ञापन देखने के लिए</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. यह जानने के लिए कि उत्पाद उपयोग के लिए कब तक उपयुक्त है</label></div>
+
+<div class="question"><h3>18. मिलावट का एक उदाहरण क्या है?</h3>
+<label class="option"><input type="radio" name="q18" value="A"> A. सही मात्रा देना</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. पक्का बिल देना</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. खाद्य पदार्थ में अनुचित पदार्थ मिलाना</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. सही लेबल लगाना</label></div>
+
+<div class="question"><h3>19. उपभोक्ता शिकायत करते समय कौन-सा प्रमाण उपयोगी हो सकता है?</h3>
+<label class="option"><input type="radio" name="q19" value="A"> A. बिल या खरीद की रसीद</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. उत्पाद की वारंटी</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. भुगतान का प्रमाण</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>20. उपभोक्ता विवाद निवारण आयोग का उद्देश्य क्या है?</h3>
+<label class="option"><input type="radio" name="q20" value="A"> A. केवल वस्तुएँ बेचना</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. उपभोक्ता विवादों का निपटारा करना</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. विज्ञापन बनाना</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. दुकान चलाना</label></div>
+
+<div class="question"><h3>21. भ्रामक विज्ञापन क्या करता है?</h3>
+<label class="option"><input type="radio" name="q21" value="A"> A. हमेशा पूरी जानकारी देता है</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. वस्तु की सही कीमत ही बताता है</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. गलत या भ्रमित करने वाले दावे करता है</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. उपभोक्ता को बिल देता है</label></div>
+
+<div class="question"><h3>22. उपभोक्ता की जिम्मेदारी क्या है?</h3>
+<label class="option"><input type="radio" name="q22" value="A"> A. खरीद से पहले लेबल और जरूरी जानकारी पढ़ना</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. बिल लेना</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. वस्तु की गुणवत्ता जाँचना</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>23. ऑनलाइन खरीदारी में उपभोक्ता को क्या करना चाहिए?</h3>
+<label class="option"><input type="radio" name="q23" value="A"> A. विक्रेता की जानकारी जाँचना</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. रिटर्न और रिफंड नीति पढ़ना</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. भुगतान और ऑर्डर का रिकॉर्ड रखना</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>24. अनुचित व्यापार व्यवहार का उदाहरण क्या है?</h3>
+<label class="option"><input type="radio" name="q24" value="A"> A. सही बिल देना</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. गलत जानकारी देकर वस्तु बेचना</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. सही वजन देना</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. उत्पाद की सही जानकारी देना</label></div>
+
+<div class="question"><h3>25. जागरूक उपभोक्ता बनने का सबसे अच्छा तरीका क्या है?</h3>
+<label class="option"><input type="radio" name="q25" value="A"> A. बिना जाँच सामान खरीदना</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. बिल और लेबल को अनदेखा करना</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. अधिकारों को जानना और सोच-समझकर खरीदारी करना</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. हर विज्ञापन पर भरोसा करना</label></div>
+
+</form>
+
+<div class="buttons">
+  <button type="button" class="submit" onclick="submitTest()">✅ Submit Test</button>
+  <button type="button" class="reset" onclick="resetTest()">🔄 फिर से टेस्ट दें</button>
+</div>
+
+<section class="result" id="result">
+  <h2>🎉 आपका रिजल्ट</h2>
+  <div id="scoreDetails"></div>
+  <h3>📋 उत्तरों की समीक्षा</h3>
+  <div id="review"></div>
+</section>
+
+</main>
+
+<footer>
+  <b>U.K.P NO1 Education</b><br>
+  Learn Smart • Score Better 🚀<br>
+  मेहनत करते रहो, सफलता जरूर मिलेगी! 🌟
+</footer>
+
+<script>
+const answerKey={
+  q1:"A",q2:"B",q3:"C",q4:"D",q5:"A",
+  q6:"B",q7:"C",q8:"A",q9:"D",q10:"B",
+  q11:"A",q12:"C",q13:"B",q14:"C",q15:"A",
+  q16:"B",q17:"D",q18:"C",q19:"D",q20:"B",
+  q21:"C",q22:"D",q23:"D",q24:"B",q25:"C"
+};
+
+const form=document.getElementById("quizForm");
+const total=25;
+
+form.addEventListener("change",updateProgress);
+
+function updateProgress(){
+  const answered=new Set(
+    [...form.querySelectorAll('input[type="radio"]:checked')]
+      .map(input=>input.name)
+  ).size;
+
+  document.getElementById("progress").style.width=
+    (answered/total*100)+"%";
+
+  document.getElementById("progressText").textContent=
+    `उत्तर दिए गए: ${answered} / ${total}`;
+}
+
+function submitTest(){
+  let score=0,answered=0,reviewHTML="";
+
+  for(let i=1;i<=total;i++){
+    const name="q"+i;
+    const selected=form.querySelector(
+      `input[name="${name}"]:checked`
+    );
+    const question=form.querySelector(
+      `input[name="${name}"]`
+    ).closest(".question");
+
+    const questionText=question.querySelector("h3").textContent;
+    const correct=answerKey[name];
+    const labels=[...question.querySelectorAll(".option")];
+
+    if(selected)answered++;
+
+    let selectedText="उत्तर नहीं दिया";
+    let correctText="";
+
+    labels.forEach(label=>{
+      const input=label.querySelector("input");
+      if(input.value===correct)correctText=label.textContent.trim();
+      if(selected&&input.value===selected.value)
+        selectedText=label.textContent.trim();
+    });
+
+    const isCorrect=!!selected&&selected.value===correct;
+    if(isCorrect)score++;
+
+    reviewHTML+=`
+      <div class="review-item">
+        <b>${questionText}</b><br>
+        आपका उत्तर:
+        <span class="${isCorrect?"correct":"wrong"}">${selectedText}</span><br>
+        सही उत्तर: <span class="correct">${correctText}</span>
+      </div>`;
+  }
+
+  const percent=(score/total*100).toFixed(2);
+  let grade,message;
+
+  if(percent>=90){
+    grade="Gold A+";
+    message="शानदार प्रदर्शन! 🥇";
+  }else if(percent>=75){
+    grade="Silver A";
+    message="बहुत बढ़िया! 🥈";
+  }else if(percent>=60){
+    grade="Bronze B";
+    message="अच्छा प्रयास, अभ्यास जारी रखो! 🥉";
+  }else{
+    grade="Keep Practicing C";
+    message="फिर से अभ्यास करो, तुम बेहतर कर सकते हो! 💪";
+  }
+
+  document.getElementById("scoreDetails").innerHTML=`
+    <p><b>कुल प्रश्न:</b> ${total}</p>
+    <p><b>उत्तर दिए:</b> ${answered}/${total}</p>
+    <p><b>सही उत्तर:</b> ${score}</p>
+    <p><b>गलत या छोड़े गए:</b> ${total-score}</p>
+    <p><b>प्रतिशत:</b> ${percent}%</p>
+    <p><b>ग्रेड:</b> ${grade}</p>
+    <p>${message}</p>`;
+
+  document.getElementById("review").innerHTML=reviewHTML;
+  document.getElementById("result").style.display="block";
+  document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+
+function resetTest(){
+  form.reset();
+  document.getElementById("result").style.display="none";
+  updateProgress();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+                        </html>
