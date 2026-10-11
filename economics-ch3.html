@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Chapter 3 | U.K.P NO1 Education</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);color:#222}
+header{background:linear-gradient(135deg,#063970,#087f8c);color:white;text-align:center;padding:22px 12px}
+header img{width:90px;height:90px;object-fit:contain;background:white;border-radius:50%;padding:5px}
+header h1{font-size:22px;margin:10px 0}
+.container{max-width:850px;margin:20px auto;padding:0 12px}
+.info,.question,.result{background:white;border-radius:12px;padding:16px;margin-bottom:15px;box-shadow:0 3px 12px #00000012}
+.info{text-align:center;line-height:1.8}
+.question h3{font-size:17px;margin-top:0}
+.option{display:block;background:#f4f7fb;border:1px solid #dce4ed;border-radius:8px;padding:11px;margin:8px 0;cursor:pointer}
+.option:hover{background:#e4f2ff}
+.option input{margin-right:8px}
+button{border:0;border-radius:9px;padding:13px 18px;font-size:16px;font-weight:bold;cursor:pointer;margin:5px}
+.submit{background:#087f23;color:white}
+.reset{background:#e53935;color:white}
+.buttons{text-align:center;margin:20px 0}
+.progress-box{background:#ddd;height:10px;border-radius:10px;overflow:hidden}
+#progress{height:100%;width:0;background:#08a045;transition:width .2s}
+#result{display:none}
+#result h2{text-align:center;color:#087f23}
+.review-item{padding:12px;border-bottom:1px solid #ddd;line-height:1.7}
+.correct{color:green;font-weight:bold}
+.wrong{color:#d32f2f;font-weight:bold}
+footer{text-align:center;padding:20px;background:#063970;color:white;line-height:1.8}
+@media(max-width:600px){header h1{font-size:19px}.question h3{font-size:16px}}
+</style>
+</head>
+<body>
 
+<header>
+<img src="assets/logo.png" alt="U.K.P NO1 Education Logo" onerror="this.style.display='none'">
+<h1>U.K.P NO1 Education</h1>
+<p>📚 Class 10 Economics</p>
+<p>Chapter 3: मुद्रा और क्रेडिट</p>
+<p>सीखो आज, सफलता पाओ कल! 🌟</p>
+</header>
+
+<main class="container">
+<div class="info">
+<h2>मुद्रा और क्रेडिट — MCQ टेस्ट</h2>
+<p>कुल प्रश्न: <b>25</b> | प्रत्येक प्रश्न: <b>1 अंक</b></p>
+<div class="progress-box"><div id="progress"></div></div>
+<p id="progressText">उत्तर दिए गए: 0 / 25</p>
+</div>
+
+<form id="quizForm">
+
+<div class="question"><h3>1. मुद्रा का प्रमुख कार्य क्या है?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A. विनिमय का माध्यम बनना</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. केवल सजावट करना</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. वर्षा कराना</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. उत्पादन रोकना</label></div>
+
+<div class="question"><h3>2. वस्तु-विनिमय प्रणाली में क्या होता है?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A. केवल डिजिटल भुगतान</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. वस्तु के बदले वस्तु का आदान-प्रदान</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. केवल चेक से भुगतान</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. केवल बैंक से लेन-देन</label></div>
+
+<div class="question"><h3>3. वस्तु-विनिमय प्रणाली की प्रमुख कठिनाई क्या थी?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A. मुद्रा की अधिकता</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. बैंक की अधिकता</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. आवश्यकताओं का दोहरा संयोग</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. डिजिटल भुगतान</label></div>
+
+<div class="question"><h3>4. आधुनिक मुद्रा का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A. केवल अनाज</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. केवल नमक</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. केवल लकड़ी</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. नोट और सिक्के</label></div>
+
+<div class="question"><h3>5. भारत में करेंसी नोट कौन जारी करता है?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A. भारतीय रिजर्व बैंक, एक रुपये के नोट को छोड़कर</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. सभी निजी बैंक</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. ग्राम पंचायत</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. निजी दुकानें</label></div>
+
+<div class="question"><h3>6. भारतीय रिजर्व बैंक का संक्षिप्त नाम क्या है?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A. SBI</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. RBI</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. SEBI</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. NABARD</label></div>
+
+<div class="question"><h3>7. बैंक में जमा धन का कौन-सा प्रकार माँगने पर निकाला जा सकता है?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A. केवल सावधि जमा</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. केवल ऋण</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. माँग जमा</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. केवल सरकारी कर</label></div>
+
+<div class="question"><h3>8. चेक क्या है?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A. एक प्रकार का ऋण</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. एक प्रकार का कर</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. एक प्रकार की वस्तु</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. बैंक को भुगतान करने का लिखित आदेश</label></div>
+
+<div class="question"><h3>9. ऋण का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A. उधार लिया गया धन जिसे शर्तों के अनुसार लौटाना होता है</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. मुफ्त उपहार</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. केवल वेतन</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. केवल बचत</label></div>
+
+<div class="question"><h3>10. ऋण पर अतिरिक्त भुगतान को क्या कहते हैं?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A. वेतन</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. ब्याज</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. कर</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. अनुदान</label></div>
+
+<div class="question"><h3>11. औपचारिक ऋण का प्रमुख स्रोत कौन है?</h3>
+<label class="option"><input type="radio" name="q11" value="A"> A. साहूकार</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. मित्र से निजी उधार</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. बैंक</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. दुकानदार से उधार</label></div>
+
+<div class="question"><h3>12. अनौपचारिक ऋणदाता का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q12" value="A"> A. भारतीय रिजर्व बैंक</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. वाणिज्यिक बैंक</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. सहकारी बैंक</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. साहूकार</label></div>
+
+<div class="question"><h3>13. जमानत (Collateral) का क्या अर्थ है?</h3>
+<label class="option"><input type="radio" name="q13" value="A"> A. ऋण के बदले सुरक्षा के रूप में दी गई संपत्ति</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. मुफ्त मिलने वाला धन</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. बैंक की इमारत</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. वेतन पर्ची ही हमेशा</label></div>
+
+<div class="question"><h3>14. ऋण की शर्तों में क्या शामिल हो सकता है?</h3>
+<label class="option"><input type="radio" name="q14" value="A"> A. ब्याज दर</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. जमानत</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. भुगतान की अवधि</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>15. स्वयं सहायता समूह (SHG) का प्रमुख उद्देश्य क्या है?</h3>
+<label class="option"><input type="radio" name="q15" value="A"> A. केवल बड़े उद्योगों को ऋण देना</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. सदस्यों की बचत और ऋण की जरूरतों में सहायता करना</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. सभी बैंक बंद करना</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. केवल कर वसूलना</label></div>
+
+<div class="question"><h3>16. सस्ता और सुलभ ऋण क्यों महत्वपूर्ण है?</h3>
+<label class="option"><input type="radio" name="q16" value="A"> A. आर्थिक गतिविधियों में मदद करता है</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. छोटे व्यवसायों को सहायता दे सकता है</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. लोगों को महँगे ऋण से बचा सकता है</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>17. बैंक जमा धन का एक हिस्सा किस रूप में रखते हैं?</h3>
+<label class="option"><input type="radio" name="q17" value="A"> A. केवल सोना</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. केवल जमीन</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. नकद, ताकि निकासी की माँग पूरी की जा सके</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. केवल अनाज</label></div>
+
+<div class="question"><h3>18. बैंक जमा धन का उपयोग किस काम में करते हैं?</h3>
+<label class="option"><input type="radio" name="q18" value="A"> A. योग्य उधारकर्ताओं को ऋण देने में</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. सभी जमा धन को नष्ट करने में</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. केवल भवन बनाने में</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. केवल नोट छापने में</label></div>
+
+<div class="question"><h3>19. अधिक ब्याज वाला ऋण उधारकर्ता पर क्या प्रभाव डाल सकता है?</h3>
+<label class="option"><input type="radio" name="q19" value="A"> A. चुकाने का बोझ बढ़ा सकता है</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. ऋण हमेशा मुफ्त बना देता है</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. सभी जोखिम समाप्त करता है</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. भुगतान की जरूरत समाप्त करता है</label></div>
+
+<div class="question"><h3>20. ऋण कब लाभदायक हो सकता है?</h3>
+<label class="option"><input type="radio" name="q20" value="A"> A. जब उधारकर्ता भुगतान की क्षमता न देखे</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. जब ऋण से आय बढ़े और चुकाने की उचित योजना हो</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. जब ब्याज की शर्तें न समझी जाएँ</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. जब ऋण बिना जरूरत लिया जाए</label></div>
+
+<div class="question"><h3>21. डिजिटल भुगतान का उदाहरण कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q21" value="A"> A. केवल वस्तु-विनिमय</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. केवल अनाज देना</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. UPI से भुगतान</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. केवल उधार लिखना</label></div>
+
+<div class="question"><h3>22. मुद्रा को विनिमय का माध्यम क्यों कहा जाता है?</h3>
+<label class="option"><input type="radio" name="q22" value="A"> A. इससे वस्तुओं और सेवाओं की खरीद-बिक्री की जा सकती है</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. इससे वर्षा होती है</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. इससे वस्तुएँ अपने आप बनती हैं</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. इससे उत्पादन रुकता है</label></div>
+
+<div class="question"><h3>23. औपचारिक ऋण व्यवस्था की निगरानी भारत में मुख्यतः कौन करता है?</h3>
+<label class="option"><input type="radio" name="q23" value="A"> A. स्थानीय दुकानदार</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. निजी साहूकार</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. ग्राम के सभी परिवार</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. भारतीय रिजर्व बैंक</label></div>
+
+<div class="question"><h3>24. स्वयं सहायता समूहों में सदस्य सामान्यतः क्या करते हैं?</h3>
+<label class="option"><input type="radio" name="q24" value="A"> A. नियमित बचत करते हैं</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. जरूरत पर समूह से ऋण ले सकते हैं</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. सामूहिक निर्णय लेते हैं</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. उपर्युक्त सभी</label></div>
+
+<div class="question"><h3>25. जिम्मेदारी से ऋण लेने का सही तरीका क्या है?</h3>
+<label class="option"><input type="radio" name="q25" value="A"> A. बिना शर्तें पढ़े हस्ताक्षर करना</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. ब्याज, भुगतान अवधि और अपनी क्षमता समझकर ऋण लेना</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. जरूरत से अधिक ऋण लेना</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. भुगतान योजना न बनाना</label></div>
+
+</form>
+
+<div class="buttons">
+<button type="button" class="submit" onclick="submitTest()">✅ Submit Test</button>
+<button type="button" class="reset" onclick="resetTest()">🔄 फिर से टेस्ट दें</button>
+</div>
+
+<section class="result" id="result">
+<h2>🎉 आपका रिजल्ट</h2>
+<div id="scoreDetails"></div>
+<h3>📋 उत्तरों की समीक्षा</h3>
+<div id="review"></div>
+</section>
+</main>
+
+<footer>
+<b>U.K.P NO1 Education</b><br>
+Learn Smart • Score Better 🚀<br>
+मेहनत करते रहो, सफलता जरूर मिलेगी! 🌟
+</footer>
+
+<script>
+const answerKey={
+q1:"A",q2:"B",q3:"C",q4:"D",q5:"A",
+q6:"B",q7:"C",q8:"D",q9:"A",q10:"B",
+q11:"C",q12:"D",q13:"A",q14:"D",q15:"B",
+q16:"D",q17:"C",q18:"A",q19:"A",q20:"B",
+q21:"C",q22:"A",q23:"D",q24:"D",q25:"B"
+};
+
+const form=document.getElementById("quizForm");
+const total=25;
+
+form.addEventListener("change",updateProgress);
+
+function updateProgress(){
+ const answered=new Set(
+  [...form.querySelectorAll('input[type="radio"]:checked')]
+  .map(input=>input.name)
+ ).size;
+
+ document.getElementById("progress").style.width=
+  (answered/total*100)+"%";
+
+ document.getElementById("progressText").textContent=
+  `उत्तर दिए गए: ${answered} / ${total}`;
+}
+
+function submitTest(){
+ let score=0,answered=0,reviewHTML="";
+
+ for(let i=1;i<=total;i++){
+  const name="q"+i;
+  const selected=form.querySelector(
+   `input[name="${name}"]:checked`
+  );
+  const question=form.querySelector(
+   `input[name="${name}"]`
+  ).closest(".question");
+
+  const questionText=question.querySelector("h3").textContent;
+  const correct=answerKey[name];
+  const labels=[...question.querySelectorAll(".option")];
+
+  if(selected)answered++;
+
+  let selectedText="उत्तर नहीं दिया";
+  let correctText="";
+
+  labels.forEach(label=>{
+   const input=label.querySelector("input");
+   if(input.value===correct)correctText=label.textContent.trim();
+   if(selected&&input.value===selected.value)
+    selectedText=label.textContent.trim();
+  });
+
+  const isCorrect=!!selected&&selected.value===correct;
+  if(isCorrect)score++;
+
+  reviewHTML+=`
+   <div class="review-item">
+    <b>${questionText}</b><br>
+    आपका उत्तर:
+    <span class="${isCorrect?"correct":"wrong"}">${selectedText}</span><br>
+    सही उत्तर: <span class="correct">${correctText}</span>
+   </div>`;
+ }
+
+ const percent=(score/total*100).toFixed(2);
+ let grade,message;
+
+ if(percent>=90){
+  grade="Gold A+";message="शानदार प्रदर्शन! 🥇";
+ }else if(percent>=75){
+  grade="Silver A";message="बहुत बढ़िया! 🥈";
+ }else if(percent>=60){
+  grade="Bronze B";message="अच्छा प्रयास, अभ्यास जारी रखो! 🥉";
+ }else{
+  grade="Keep Practicing C";message="फिर से अभ्यास करो, तुम बेहतर कर सकते हो! 💪";
+ }
+
+ document.getElementById("scoreDetails").innerHTML=`
+  <p><b>कुल प्रश्न:</b> ${total}</p>
+  <p><b>उत्तर दिए:</b> ${answered}/${total}</p>
+  <p><b>सही उत्तर:</b> ${score}</p>
+  <p><b>गलत या छोड़े गए:</b> ${total-score}</p>
+  <p><b>प्रतिशत:</b> ${percent}%</p>
+  <p><b>ग्रेड:</b> ${grade}</p>
+  <p>${message}</p>`;
+
+ document.getElementById("review").innerHTML=reviewHTML;
+ document.getElementById("result").style.display="block";
+ document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+
+function resetTest(){
+ form.reset();
+ document.getElementById("result").style.display="none";
+ updateProgress();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+                        </html>
