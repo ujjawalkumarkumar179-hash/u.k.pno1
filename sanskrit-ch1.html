@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>संस्कृत अध्याय 1 - मङ्गलम् | U.K.P NO1 Education</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#f0f4ff;
+    color:#202840;
+}
+header{
+    background:linear-gradient(135deg,#071b55,#174cc7);
+    color:white;
+    text-align:center;
+    padding:25px 12px;
+}
+header h1{
+    margin:5px 0;
+    font-size:27px;
+}
+header p{
+    margin:8px 0 0;
+}
+.logo{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+    padding:4px;
+}
+.container{
+    max-width:850px;
+    margin:20px auto;
+    padding:12px;
+}
+.info,.question,.result{
+    background:white;
+    padding:17px;
+    border-radius:14px;
+    margin-bottom:15px;
+    box-shadow:0 3px 12px #00000010;
+}
+.info{
+    border-left:5px solid #1455d9;
+}
+.question h3{
+    margin-top:0;
+    line-height:1.7;
+    font-size:17px;
+}
+.option{
+    display:block;
+    padding:11px;
+    margin:8px 0;
+    background:#f4f6fb;
+    border:1px solid #e0e5ef;
+    border-radius:9px;
+    cursor:pointer;
+    line-height:1.6;
+}
+.option:hover{
+    background:#e6efff;
+}
+.option input{
+    margin-right:8px;
+}
+.correct{
+    background:#d8f8df!important;
+    border-color:#16883b!important;
+}
+.incorrect{
+    background:#ffe0e0!important;
+    border-color:#d52b2b!important;
+}
+button{
+    border:0;
+    padding:13px 19px;
+    margin:5px;
+    border-radius:9px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.submit{
+    background:#1455d9;
+    color:white;
+    width:100%;
+}
+.reset{
+    background:#e7ebf4;
+    color:#202840;
+}
+#result{
+    display:none;
+}
+.score{
+    font-size:25px;
+    font-weight:bold;
+    color:#1455d9;
+}
+.progress-box{
+    background:#dce5fa;
+    height:10px;
+    border-radius:10px;
+    overflow:hidden;
+    margin:12px 0;
+}
+#progress{
+    height:100%;
+    width:0%;
+    background:#1455d9;
+    transition:width .3s;
+}
+footer{
+    text-align:center;
+    background:#071b55;
+    color:white;
+    padding:20px 10px;
+    margin-top:30px;
+}
+.small{
+    color:#667085;
+    font-size:13px;
+}
+@media(max-width:500px){
+    header h1{font-size:22px}
+    .container{padding:9px}
+    .question{padding:13px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/logo.png" class="logo"
+         alt="U.K.P NO1 Education Logo"
+         onerror="this.style.display='none'">
+
+    <h1>U.K.P NO1 Education</h1>
+    <p>बिहार बोर्ड कक्षा 10वीं — संस्कृत</p>
+    <h2>अध्याय 1 : मङ्गलम्</h2>
+    <p>Online MCQ Practice Test</p>
+</header>
+
+<div class="container">
+
+    <div class="info">
+        <h3>📚 टेस्ट के बारे में</h3>
+        <p>विषय: संस्कृत | पाठ: मङ्गलम्</p>
+        <p>कुल प्रश्न: <b>50</b> | प्रत्येक प्रश्न: <b>1 अंक</b></p>
+        <p>सभी प्रश्नों का उत्तर चुनकर <b>Submit Test</b> दबाएँ।</p>
+        <div class="progress-box">
+            <div id="progress"></div>
+        </div>
+        <p id="answered">उत्तर दिए गए: 0/50</p>
+    </div>
+
+    <div id="quiz">
+
+        <div class="question" data-answer="2">
+            <h3>1. 'मङ्गलम्' पाठ मुख्य रूप से किससे संकलित है?</h3>
+            <label class="option"><input type="radio" name="q1" value="0"> रामायण</label>
+            <label class="option"><input type="radio" name="q1" value="1"> महाभारत</label>
+            <label class="option"><input type="radio" name="q1" value="2"> उपनिषद्</label>
+            <label class="option"><input type="radio" name="q1" value="3"> पंचतंत्र</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>2. उपनिषद् वैदिक साहित्य के किस भाग में माने जाते हैं?</h3>
+            <label class="option"><input type="radio" name="q2" value="0"> प्रारंभिक भाग</label>
+            <label class="option"><input type="radio" name="q2" value="1"> अंतिम भाग</label>
+            <label class="option"><input type="radio" name="q2" value="2"> केवल मध्य भाग</label>
+            <label class="option"><input type="radio" name="q2" value="3"> इनमें से कोई नहीं</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>3. उपनिषद् मुख्य रूप से किसके सिद्धांतों को प्रकट करते हैं?</h3>
+            <label class="option"><input type="radio" name="q3" value="0"> राजनीति</label>
+            <label class="option"><input type="radio" name="q3" value="1"> गणित</label>
+            <label class="option"><input type="radio" name="q3" value="2"> दर्शनशास्त्र</label>
+            <label class="option"><input type="radio" name="q3" value="3"> युद्धकला</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>4. 'मङ्गलम्' पाठ में कितने मंत्र संकलित हैं?</h3>
+            <label class="option"><input type="radio" name="q4" value="0"> पाँच</label>
+            <label class="option"><input type="radio" name="q4" value="1"> तीन</label>
+            <label class="option"><input type="radio" name="q4" value="2"> आठ</label>
+            <label class="option"><input type="radio" name="q4" value="3"> दस</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>5. 'हिरण्मयेन पात्रेण' का सामान्य अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q5" value="0"> मिट्टी के पात्र से</label>
+            <label class="option"><input type="radio" name="q5" value="1"> स्वर्णमय पात्र से</label>
+            <label class="option"><input type="radio" name="q5" value="2"> जल से</label>
+            <label class="option"><input type="radio" name="q5" value="3"> वायु से</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>6. 'सत्यस्य मुखम्' का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q6" value="0"> असत्य का मुख</label>
+            <label class="option"><input type="radio" name="q6" value="1"> सूर्य का मुख</label>
+            <label class="option"><input type="radio" name="q6" value="2"> सत्य का मुख</label>
+            <label class="option"><input type="radio" name="q6" value="3"> पृथ्वी का मुख</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>7. 'सत्यमेव जयते नानृतम्' में किसकी विजय बताई गई है?</h3>
+            <label class="option"><input type="radio" name="q7" value="0"> सत्य की</label>
+            <label class="option"><input type="radio" name="q7" value="1"> असत्य की</label>
+            <label class="option"><input type="radio" name="q7" value="2"> क्रोध की</label>
+            <label class="option"><input type="radio" name="q7" value="3"> मोह की</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>8. 'अनृतम्' शब्द का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q8" value="0"> सत्य</label>
+            <label class="option"><input type="radio" name="q8" value="1"> धर्म</label>
+            <label class="option"><input type="radio" name="q8" value="2"> ज्ञान</label>
+            <label class="option"><input type="radio" name="q8" value="3"> असत्य</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>9. 'जयते' का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q9" value="0"> हारता है</label>
+            <label class="option"><input type="radio" name="q9" value="1"> जीतता है</label>
+            <label class="option"><input type="radio" name="q9" value="2"> सोता है</label>
+            <label class="option"><input type="radio" name="q9" value="3"> चलता है</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>10. 'सत्यमेव जयते' में 'एव' का भाव क्या है?</h3>
+            <label class="option"><input type="radio" name="q10" value="0"> ही</label>
+            <label class="option"><input type="radio" name="q10" value="1"> नहीं</label>
+            <label class="option"><input type="radio" name="q10" value="2"> कब</label>
+            <label class="option"><input type="radio" name="q10" value="3"> कहाँ</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>11. 'यथा नद्यः स्यन्दमानाः समुद्रे...' में नदियाँ कहाँ मिलती हैं?</h3>
+            <label class="option"><input type="radio" name="q11" value="0"> पर्वत पर</label>
+            <label class="option"><input type="radio" name="q11" value="1"> जंगल में</label>
+            <label class="option"><input type="radio" name="q11" value="2"> समुद्र में</label>
+            <label class="option"><input type="radio" name="q11" value="3"> मरुस्थल में</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>12. नदी के समुद्र में मिलने का उदाहरण किस बात को समझाता है?</h3>
+            <label class="option"><input type="radio" name="q12" value="0"> धन कमाने को</label>
+            <label class="option"><input type="radio" name="q12" value="1"> नाम-रूप से मुक्त होकर परम सत्य को पाने को</label>
+            <label class="option"><input type="radio" name="q12" value="2"> युद्ध करने को</label>
+            <label class="option"><input type="radio" name="q12" value="3"> खेती करने को</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>13. 'नामरूपे' का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q13" value="0"> नाम और रूप</label>
+            <label class="option"><input type="radio" name="q13" value="1"> जल और वायु</label>
+            <label class="option"><input type="radio" name="q13" value="2"> दिन और रात</label>
+            <label class="option"><input type="radio" name="q13" value="3"> सुख और दुख</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>14. 'समुद्रे' शब्द किस विभक्ति का रूप है?</h3>
+            <label class="option"><input type="radio" name="q14" value="0"> प्रथमा</label>
+            <label class="option"><input type="radio" name="q14" value="1"> द्वितीया</label>
+            <label class="option"><input type="radio" name="q14" value="2"> तृतीया</label>
+            <label class="option"><input type="radio" name="q14" value="3"> सप्तमी</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>15. 'नद्यः' शब्द का एकवचन क्या है?</h3>
+            <label class="option"><input type="radio" name="q15" value="0"> नदी</label>
+            <label class="option"><input type="radio" name="q15" value="1"> नद्यम्</label>
+            <label class="option"><input type="radio" name="q15" value="2"> नदः</label>
+            <label class="option"><input type="radio" name="q15" value="3"> नदीनि</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>16. 'आत्मा' शब्द का संबंध किससे है?</h3>
+            <label class="option"><input type="radio" name="q16" value="0"> केवल वस्त्र से</label>
+            <label class="option"><input type="radio" name="q16" value="1"> जीव के आंतरिक स्वरूप से</label>
+            <label class="option"><input type="radio" name="q16" value="2"> केवल घर से</label>
+            <label class="option"><input type="radio" name="q16" value="3"> पेड़ की शाखा से</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>17. 'अणोरणीयान्' का भावार्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q17" value="0"> सबसे ऊँचा</label>
+            <label class="option"><input type="radio" name="q17" value="1"> सबसे भारी</label>
+            <label class="option"><input type="radio" name="q17" value="2"> अणु से भी छोटा</label>
+            <label class="option"><input type="radio" name="q17" value="3"> सबसे तेज</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>18. 'महतो महीयान्' का भावार्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q18" value="0"> महान से भी महान</label>
+            <label class="option"><input type="radio" name="q18" value="1"> अणु से छोटा</label>
+            <label class="option"><input type="radio" name="q18" value="2"> कमजोर</label>
+            <label class="option"><input type="radio" name="q18" value="3"> अंधकारमय</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>19. 'गुहायाम्' का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q19" value="0"> आकाश में</label>
+            <label class="option"><input type="radio" name="q19" value="1"> समुद्र में</label>
+            <label class="option"><input type="radio" name="q19" value="2"> पर्वत के ऊपर</label>
+            <label class="option"><input type="radio" name="q19" value="3"> गुफा में</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>20. उपनिषदों में परमात्मा का वर्णन किस रूप में किया जाता है?</h3>
+            <label class="option"><input type="radio" name="q20" value="0"> केवल धन के रूप में</label>
+            <label class="option"><input type="radio" name="q20" value="1"> परम सत्य और परम सत्ता के रूप में</label>
+            <label class="option"><input type="radio" name="q20" value="2"> केवल भोजन के रूप में</label>
+            <label class="option"><input type="radio" name="q20" value="3"> केवल वस्त्र के रूप में</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>21. 'मङ्गलम्' पाठ का प्रमुख उद्देश्य क्या है?</h3>
+            <label class="option"><input type="radio" name="q21" value="0"> व्यापार सिखाना</label>
+            <label class="option"><input type="radio" name="q21" value="1"> खेल के नियम बताना</label>
+            <label class="option"><input type="radio" name="q21" value="2"> आध्यात्मिक ज्ञान और सत्य का महत्व बताना</label>
+            <label class="option"><input type="radio" name="q21" value="3"> युद्ध का वर्णन करना</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>22. 'पूषन्' शब्द का संबंध किससे है?</h3>
+            <label class="option"><input type="radio" name="q22" value="0"> सूर्य देव से</label>
+            <label class="option"><input type="radio" name="q22" value="1"> समुद्र से</label>
+            <label class="option"><input type="radio" name="q22" value="2"> पर्वत से</label>
+            <label class="option"><input type="radio" name="q22" value="3"> नदी से</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>23. 'अपावृणु' का भाव क्या है?</h3>
+            <label class="option"><input type="radio" name="q23" value="0"> छिपा दो</label>
+            <label class="option"><input type="radio" name="q23" value="1"> हटा दो या खोल दो</label>
+            <label class="option"><input type="radio" name="q23" value="2"> रोक दो</label>
+            <label class="option"><input type="radio" name="q23" value="3"> भूल जाओ</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>24. 'दृष्टये' शब्द का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q24" value="0"> सुनने के लिए</label>
+            <label class="option"><input type="radio" name="q24" value="1"> चलने के लिए</label>
+            <label class="option"><input type="radio" name="q24" value="2"> खाने के लिए</label>
+            <label class="option"><input type="radio" name="q24" value="3"> देखने के लिए</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>25. 'सत्यधर्माय' का भाव क्या है?</h3>
+            <label class="option"><input type="radio" name="q25" value="0"> सत्य धर्म के लिए</label>
+            <label class="option"><input type="radio" name="q25" value="1"> असत्य के लिए</label>
+            <label class="option"><input type="radio" name="q25" value="2"> युद्ध के लिए</label>
+            <label class="option"><input type="radio" name="q25" value="3"> धन के लिए</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>26. 'वेदाहमेतं पुरुषं महान्तम्' का भाव क्या है?</h3>
+            <label class="option"><input type="radio" name="q26" value="0"> मैं जल को जानता हूँ</label>
+            <label class="option"><input type="radio" name="q26" value="1"> मैं पर्वत को जानता हूँ</label>
+            <label class="option"><input type="radio" name="q26" value="2"> मैं उस महान पुरुष को जानता हूँ</label>
+            <label class="option"><input type="radio" name="q26" value="3"> मैं वन को जानता हूँ</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>27. 'तमसः परस्तात्' का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q27" value="0"> अंधकार के भीतर</label>
+            <label class="option"><input type="radio" name="q27" value="1"> अंधकार से परे</label>
+            <label class="option"><input type="radio" name="q27" value="2"> जल के नीचे</label>
+            <label class="option"><input type="radio" name="q27" value="3"> पर्वत के पीछे</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>28. 'तरति' का सामान्य अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q28" value="0"> लिखता है</label>
+            <label class="option"><input type="radio" name="q28" value="1"> हँसता है</label>
+            <label class="option"><input type="radio" name="q28" value="2"> सोता है</label>
+            <label class="option"><input type="radio" name="q28" value="3"> पार करता है</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>29. 'मृत्युम्' शब्द का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q29" value="0"> मृत्यु</label>
+            <label class="option"><input type="radio" name="q29" value="1"> जीवन</label>
+            <label class="option"><input type="radio" name="q29" value="2"> प्रकाश</label>
+            <label class="option"><input type="radio" name="q29" value="3"> आनंद</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>30. 'परमात्मा' शब्द का सामान्य अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q30" value="0"> साधारण वस्तु</label>
+            <label class="option"><input type="radio" name="q30" value="1"> नदी</label>
+            <label class="option"><input type="radio" name="q30" value="2"> परम सत्ता</label>
+            <label class="option"><input type="radio" name="q30" value="3"> पर्वत</label>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>31. 'ज्ञान' का विपरीतार्थक शब्द क्या है?</h3>
+            <label class="option"><input type="radio" name="q31" value="0"> विद्या</label>
+            <label class="option"><input type="radio" name="q31" value="1"> अज्ञान</label>
+            <label class="option"><input type="radio" name="q31" value="2"> बुद्धि</label>
+            <label class="option"><input type="radio" name="q31" value="3"> विवेक</label>
+        </div>
+
+        <div class="question" data-answer="3">
+            <h3>32. 'सत्यम्' का विपरीतार्थक शब्द कौन-सा है?</h3>
+            <label class="option"><input type="radio" name="q32" value="0"> धर्मः</label>
+            <label class="option"><input type="radio" name="q32" value="1"> ज्ञानम्</label>
+            <label class="option"><input type="radio" name="q32" value="2"> प्रकाशः</label>
+            <label class="option"><input type="radio" name="q32" value="3"> अनृतम्</label>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>33. 'नदी' शब्द का बहुवचन रूप कौन-सा है?</h3>
+            <label class="option"><input type="radio" name="q33" value="0"> नद्यः</label>
+            <label class="option"><input type="radio" name="q33" value="1"> नदीम्</label>
+            <label class="option"><input type="radio" name="q33" value="2"> नद्या</label>
+            <label class="option"><input type="radio" name="q33" value="3"> नद्याम्</label>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>34. 'सत्येन' शब्द का अर्थ क्या है?</h3>
+            <label class="option"><input type="radio" name="q34" value="0"> असत्य से</label>
+            <label class="
