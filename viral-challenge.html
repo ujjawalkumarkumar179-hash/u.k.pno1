@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viral Challenge Zone | U.K.P NO1 Education</title>
+<meta name="description" content="U.K.P NO1 Education पर Daily Mystery Question हल करें, अपना ज्ञान जाँचें और दोस्तों को चुनौती दें।">
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,sans-serif;
+ background:#071426;color:#fff;
+}
+header{
+ text-align:center;padding:25px 12px;
+ background:linear-gradient(135deg,#102c50,#071426);
+ border-bottom:2px solid #d9ad48;
+}
+header h1{color:#f5ce70;margin:5px}
+header p{color:#dce8f7}
+.container{max-width:850px;margin:auto;padding:16px}
+.card{
+ background:#10233c;border:1px solid #29496e;
+ border-radius:17px;padding:20px;margin:17px 0;
+ box-shadow:0 5px 20px #0005;
+}
+h2{color:#f5ce70;margin-top:0}
+input{
+ width:100%;padding:14px;border-radius:9px;
+ border:1px solid #58718e;font-size:16px;
+ margin:8px 0;background:#fff;color:#111;
+}
+button{
+ border:0;border-radius:9px;padding:13px 16px;
+ font-size:15px;font-weight:bold;cursor:pointer;
+ margin:5px 3px;background:#e9bb55;color:#172033;
+}
+button.secondary{background:#1976d2;color:white}
+button.green{background:#168b58;color:white}
+button:disabled{opacity:.5;cursor:not-allowed}
+.option{
+ display:block;width:100%;text-align:left;
+ background:#1b3656;color:white;
+ border:1px solid #42658b;margin:9px 0;
+}
+.option.selected{background:#176b53;border-color:#5ee0a4}
+.small{font-size:13px;color:#b9cce0;line-height:1.6}
+.hidden{display:none}
+.question{font-size:19px;line-height:1.5}
+#progress{color:#f5ce70;font-weight:bold}
+.result-score{font-size:45px;color:#f5ce70;font-weight:bold}
+footer{text-align:center;padding:25px;color:#a9bdd3}
+a{color:#f5ce70}
+</style>
+</head>
+<body>
+
+<header>
+ <div style="font-size:32px">🔥 🏆 🔥</div>
+ <h1>U.K.P NO1 EDUCATION</h1>
+ <h2>VIRAL CHALLENGE ZONE</h2>
+ <p>Challenge Yourself • Challenge Your Friends</p>
+</header>
+
+<main class="container">
+
+<section class="card" id="welcome">
+ <h2>🚀 Welcome to Challenge Zone!</h2>
+ <p>अपना नाम या निकनेम लिखिए और ज्ञान की चुनौती शुरू कीजिए।</p>
+ <input id="studentName" maxlength="25"
+ placeholder="अपना नाम या Nickname लिखें">
+ <button class="green" onclick="startQuiz()">START CHALLENGE 🚀</button>
+ <p class="small">कृपया अपना पूरा पता, फोन नंबर या दूसरी निजी जानकारी न लिखें।</p>
+ <p id="inviteMessage" class="small"></p>
+</section>
+
+<section class="card">
+ <h2>🧩 TODAY'S MYSTERY QUESTION</h2>
+ <p class="small">हर दिन एक नया ज्ञान प्रश्न!</p>
+ <h3 id="mysteryQuestion"></h3>
+ <div id="mysteryOptions"></div>
+ <p id="mysteryResult"></p>
+</section>
+
+<section class="card hidden" id="quiz">
+ <p id="progress">Question 1 / 5</p>
+ <h2>⚡ Beat Your Friend Challenge</h2>
+ <p class="question" id="questionText"></p>
+ <div id="options"></div>
+ <button id="nextButton" onclick="nextQuestion()" disabled>
+ अगला सवाल →
+ </button>
+</section>
+
+<section class="card hidden" id="result">
+ <h2>🏆 आपका रिजल्ट</h2>
+ <p id="resultName"></p>
+ <div class="result-score" id="scoreText"></div>
+ <p id="resultMessage"></p>
+ <p id="friendComparison"></p>
+ <button class="green" onclick="makeCard()">📸 RESULT CARD बनाएँ</button>
+ <button class="secondary" onclick="challengeFriend()">🔥 दोस्त को चुनौती दें</button>
+ <button onclick="inviteFriend()">📱 वेबसाइट शेयर करें</button>
+ <div id="cardArea" class="hidden">
+  <h3>आपका Shareable Result Card</h3>
+  <canvas id="resultCanvas" width="900" height="600"
+   style="width:100%;border-radius:12px"></canvas>
+  <button class="green" onclick="downloadCard()">कार्ड सेव करें</button>
+ </div>
+ <button onclick="location.reload()">फिर से खेलें</button>
+</section>
+
+<section class="card">
+ <h2>🌟 U.K.P NO1 Education</h2>
+ <p>सीखिए, अपना ज्ञान जाँचिए और अपने दोस्तों के साथ पढ़ाई का मजा लीजिए!</p>
+ <a href="index.html">← मुख्य वेबसाइट पर जाएँ</a>
+</section>
+
+</main>
+
+<footer>
+ © 2026 U.K.P NO1 Education<br>
+ Learn Smart • Score Better • Keep Improving
+</footer>
+
+<script>
+const questions = [
+ {
+  q:"भारत की राजधानी क्या है?",
+  o:["मुंबई","नई दिल्ली","पटना","कोलकाता"],a:1
+ },
+ {
+  q:"पौधे अपना भोजन किस प्रक्रिया से बनाते हैं?",
+  o:["श्वसन","पाचन","प्रकाश संश्लेषण","वाष्पीकरण"],a:2
+ },
+ {
+  q:"12 × 8 का मान कितना है?",
+  o:["86","96","108","88"],a:1
+ },
+ {
+  q:"भारत का संविधान कब लागू हुआ?",
+  o:["15 अगस्त 1947","26 जनवरी 1950","2 अक्टूबर 1950","26 नवंबर 1949"],a:1
+ },
+ {
+  q:"जल का रासायनिक सूत्र क्या है?",
+  o:["CO2","O2","H2O","NaCl"],a:2
+ }
+];
+
+let current=0;
+let score=0;
+let selected=-1;
+let student="";
+let finished=false;
+
+const params=new URLSearchParams(location.search);
+const friendName=params.get("from");
+const friendScore=Number(params.get("score"));
+
+if(friendName && Number.isFinite(friendScore) &&
+ friendScore>=0 && friendScore<=questions.length){
+ document.getElementById("inviteMessage").textContent=
+ friendName+" ने आपको चुनौती दी है! उनका स्कोर "+friendScore+
+ "/"+questions.length+" है। क्या आप उन्हें हरा सकते हैं?";
+}
+
+function startQuiz(){
+ student=document.getElementById("studentName").value.trim();
+ if(!student){
+  alert("कृपया अपना नाम या निकनेम लिखें।");
+  return;
+ }
+ current=0;score=0;finished=false;
+ document.getElementById("welcome").classList.add("hidden");
+ document.getElementById("mysteryOptions").parentElement.classList.add("hidden");
+ document.getElementById("quiz").classList.remove("hidden");
+ showQuestion();
+}
+
+function showQuestion(){
+ selected=-1;
+ const q=questions[current];
+ document.getElementById("progress").textContent=
+ "Question "+(current+1)+" / "+questions.length;
+ document.getElementById("questionText").textContent=q.q;
+ const area=document.getElementById("options");
+ area.innerHTML="";
+ q.o.forEach((option,i)=>{
+  const b=document.createElement("button");
+  b.className="option";
+  b.textContent=String.fromCharCode(65+i)+". "+option;
+  b.onclick=()=>{
+   if(selected!==-1)return;
+   selected=i;
+   if(i===q.a)score++;
+   b.classList.add("selected");
+   [...area.children].forEach(x=>x.disabled=true);
+   document.getElementById("nextButton").disabled=false;
+  };
+  area.appendChild(b);
+ });
+ document.getElementById("nextButton").textContent=
+ current===questions.length-1?"रिजल्ट देखें 🏆":"अगला सवाल →";
+ document.getElementById("nextButton").disabled=true;
+}
+
+function nextQuestion(){
+ if(selected===-1)return;
+ current++;
+ if(current<questions.length){
+  showQuestion();
+ }else{
+  showResult();
+ }
+}
+
+function showResult(){
+ finished=true;
+ document.getElementById("quiz").classList.add("hidden");
+ document.getElementById("result").classList.remove("hidden");
+ document.getElementById("resultName").textContent=
+ "विद्यार्थी: "+student;
+ document.getElementById("scoreText").textContent=
+ score+" / "+questions.length;
+ document.getElementById("resultMessage").textContent=
+ score===5?"शानदार! आपने सभी सवाल सही किए!":
+ score>=3?"बहुत अच्छा! अभ्यास जारी रखिए।":
+ "अच्छी कोशिश! दोबारा अभ्यास करें।";
+
+ const comparison=document.getElementById("friendComparison");
+ if(friendName && Number.isFinite(friendScore)){
+  comparison.textContent=score>friendScore?
+   "🎉 आपने "+friendName+" को हरा दिया!":
+   score===friendScore?
+   "🤝 आपका और "+friendName+" का स्कोर बराबर है!":
+   friendName+" का स्कोर आपसे ज्यादा है। फिर कोशिश करें!";
+ }else{
+  comparison.textContent="अब अपना स्कोर दोस्त के साथ शेयर करें!";
+ }
+}
+
+function challengeFriend(){
+ if(!finished)return;
+ const url=new URL(location.href);
+ url.search="";
+ url.searchParams.set("from",student);
+ url.searchParams.set("score",score);
+ const text="मैंने U.K.P NO1 Education Challenge में "+
+ score+"/"+questions.length+" अंक पाए। क्या आप मुझे हरा सकते हैं? "+
+ url.toString();
+ window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank");
+}
+
+function inviteFriend(){
+ const url=new URL(location.href);
+ url.search="";
+ const text="U.K.P NO1 Education पर अपना ज्ञान जाँचिए और मुझे Challenge दीजिए! "+url.toString();
+ window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank");
+}
+
+function makeCard(){
+ if(!finished)return;
+ const c=document.getElementById("resultCanvas");
+ const ctx=c.getContext("2d");
+ const g=ctx.createLinearGradient(0,0,900,600);
+ g.addColorStop(0,"#102d50");
+ g.addColorStop(1,"#050d1a");
+ ctx.fillStyle=g;ctx.fillRect(0,0,900,600);
+ ctx.strokeStyle="#e9bd58";ctx.lineWidth=10;
+ ctx.strokeRect(22,22,856,556);
+ ctx.textAlign="center";
+ ctx.fillStyle="#f5ce70";
+ ctx.font="bold 43px Arial";
+ ctx.fillText("U.K.P NO1 EDUCATION",450,110);
+ ctx.fillStyle="#ffffff";
+ ctx.font="bold 38px Arial";
+ ctx.fillText("CHALLENGE RESULT",450,195);
+ ctx.font="30px Arial";
+ ctx.fillText(student,450,280);
+ ctx.fillStyle="#f5ce70";
+ ctx.font="bold 90px Arial";
+ ctx.fillText(score+"/"+questions.length,450,405);
+ ctx.fillStyle="#ffffff";
+ ctx.font="25px Arial";
+ ctx.fillText("LEARN • PLAY • IMPROVE",450,490);
+ ctx.font="19px Arial";
+ ctx.fillText("Practice Challenge - Not an official rank",450,535);
+ document.getElementById("cardArea").classList.remove("hidden");
+}
+
+function downloadCard(){
+ const c=document.getElementById("resultCanvas");
+ const a=document.createElement("a");
+ a.download="UKP-Challenge-Result.png";
+ a.href=c.toDataURL("image/png");
+ a.click();
+}
+
+// Daily mystery question: rotates by date
+const mysteries=[
+ {q:"सूर्य किस दिशा से उगता है?",o:["उत्तर","दक्षिण","पूर्व","पश्चिम"],a:2},
+ {q:"एक सप्ताह में कितने दिन होते हैं?",o:["5","6","7","8"],a:2},
+ {q:"मानव शरीर में रक्त पंप कौन करता है?",o:["फेफड़े","हृदय","मस्तिष्क","गुर्दा"],a:1},
+ {q:"भारत का राष्ट्रीय पशु कौन है?",o:["शेर","हाथी","बाघ","हिरण"],a:2},
+ {q:"त्रिभुज में कितनी भुजाएँ होती हैं?",o:["2","3","4","5"],a:1},
+ {q:"पृथ्वी का प्राकृतिक उपग्रह कौन है?",o:["सूर्य","मंगल","चंद्रमा","शुक्र"],a:2},
+ {q:"हिंदी वर्णमाला में स्वर किसका उदाहरण हैं?",o:["अ","क","त","म"],a:0}
+];
+
+const today=new Date();
+const dayNumber=Math.floor(Date.UTC(
+ today.getFullYear(),today.getMonth(),today.getDate()
+ )/86400000);
+const mystery=mysteries[((dayNumber% mysteries.length)+mysteries.length)%mysteries.length];
+
+document.getElementById("mysteryQuestion").textContent=mystery.q;
+const mysteryArea=document.getElementById("mysteryOptions");
+mystery.o.forEach((option,i)=>{
+ const b=document.createElement("button");
+ b.className="option";
+ b.textContent=String.fromCharCode(65+i)+". "+option;
+ b.onclick=()=>{
+  if(mysteryArea.dataset.done)return;
+  mysteryArea.dataset.done="yes";
+  document.getElementById("mysteryResult").textContent=
+   i===mystery.a?"✅ बिल्कुल सही जवाब!":
+   "❌ सही जवाब: "+mystery.o[mystery.a];
+  [...mysteryArea.children].forEach(x=>x.disabled=true);
+ };
+ mysteryArea.appendChild(b);
+});
+</script>
+</body>
+</html>
