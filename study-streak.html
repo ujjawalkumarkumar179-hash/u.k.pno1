@@ -1,1 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 Education - Study Streak</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#071426;color:white;font-family:Arial,sans-serif;text-align:center}
+header{padding:25px 10px;background:linear-gradient(135deg,#071426,#19416b);border-bottom:3px solid #d5ad55}
+header h1{color:#ffd36b}
+.container{max-width:750px;margin:25px auto;padding:15px}
+.panel{background:#102744;border:1px solid #c9a34d;border-radius:15px;padding:22px;margin-bottom:20px}
+.fire{font-size:48px}
+.number{font-size:55px;color:#ffd36b;font-weight:bold}
+button{padding:13px 20px;border:0;border-radius:9px;background:#d5ad55;color:#111;font-weight:bold;margin:8px;cursor:pointer}
+button:disabled{background:#777;color:white}
+input{width:90%;max-width:400px;padding:13px;border-radius:8px;border:1px solid #c9a34d;margin:12px 0;font-size:16px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:18px}
+.day{background:#203c5c;padding:12px 2px;border-radius:8px}
+.done{background:#c69b3d;color:#111;font-weight:bold}
+.stats{display:flex;justify-content:space-around;gap:10px;flex-wrap:wrap}
+.stat{background:#203c5c;padding:15px;border-radius:10px;min-width:130px}
+.stat strong{display:block;color:#ffd36b;font-size:25px}
+#certificateArea{display:none;margin:25px 0}
+.certificate{background:#fff8e8;color:#171717;padding:12px;border:9px double #bd9134}
+.cert-inner{border:2px solid #bd9134;padding:25px 12px}
+.cert-title{font-family:Georgia,serif;font-size:30px;color:#102b4c}
+.cert-logo{width:100px;height:100px;object-fit:contain}
+.cert-top{color:#a47a24;font-weight:bold;letter-spacing:2px}
+.candidate{display:inline-block;color:#a57922;font-size:29px;font-family:Georgia,serif;font-weight:bold;border-bottom:1px solid #bd9134;padding:8px;overflow-wrap:anywhere}
+.cert-message{line-height:1.7;max-width:500px;margin:18px auto}
+.cert-award{font-size:20px;color:#9b711d;font-weight:bold}
+.cert-footer{display:flex;justify-content:space-around;gap:12px;margin-top:35px;font-size:12px;flex-wrap:wrap}
+.signature{border-top:1px solid #333;padding-top:7px;margin-top:7px}
+.cert-border-text{color:#9b711d;font-size:11px;font-weight:bold;letter-spacing:1px;margin:8px}
+.hidden{display:none}
+footer{padding:20px;color:#aaa}
+@media print{
+ @page{size:A4 landscape;margin:10mm}
+ body{background:white}
+ header,.container>.panel,footer,#certificateHeading,#printButton{display:none!important}
+ .container{margin:0;padding:0}
+ #certificateArea{display:block!important;margin:0}
+ .certificate{min-height:175mm}
+ .cert-inner{min-height:155mm}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>U.K.P NO1 Education</h1>
+<p>🌟 Learn Smart • Score Better • Every Day One Step Closer To Success 🚀</p>
+</header>
+
+<div class="container">
+<div class="panel">
+<div class="fire">🔥</div>
+<h2>Daily Study Streak</h2>
+<p>हर दिन पढ़ें और अपनी लगातार पढ़ाई का रिकॉर्ड बनाएँ।</p>
+<div class="number" id="streak">0</div>
+<p>लगातार पढ़ाई के दिन</p>
+<button id="completeBtn" onclick="completeToday()">आज की पढ़ाई पूरी करें</button>
+<div class="days" id="weekDays"></div>
+</div>
+
+<div class="panel">
+<h3>📊 आपका Study Record</h3>
+<div class="stats">
+<div class="stat"><strong id="total">0</strong>कुल पढ़ाई के दिन</div>
+<div class="stat"><strong id="best">0</strong>सबसे लंबी Streak</div>
+</div>
+</div>
+
+<div class="panel">
+<h3>🏆 Certificate Achievement</h3>
+<p id="unlockMessage">लगातार 3 दिन पढ़ाई पूरी करें और Certificate पाएँ।</p>
+<div id="nameArea" class="hidden">
+<input id="studentName" placeholder="विद्यार्थी का पूरा नाम">
+<br>
+<button onclick="makeCertificate()">Certificate देखें</button>
+</div>
+</div>
+
+<div id="certificateArea">
+<h2 id="certificateHeading">🎓 आपका Certificate</h2>
+<div class="certificate">
+<div class="cert-border-text">U.K.P NO1 EDUCATION ✦ U.K.P NO1 EDUCATION ✦ U.K.P NO1 EDUCATION</div>
+<div class="cert-inner">
+<img class="cert-logo" src="assets/UKP-A4.png" alt="U.K.P NO1 Education Logo" onerror="this.style.display='none'">
+<div class="cert-top">I AM PROUD TO BE A PART OF</div>
+<h2 style="color:#102b4c">U.K.P NO1 EDUCATION</h2>
+<p style="letter-spacing:2px">CERTIFICATE OF ACHIEVEMENT</p>
+<h1 class="cert-title">Proudly Presented To</h1>
+<div class="candidate" id="printedName">Candidate Name</div>
+<p class="cert-message">This certificate is awarded in recognition of dedication, consistency and commitment to learning. The student has completed a 3-day continuous study streak.</p>
+<div class="cert-award">🥉 BRONZE ACHIEVEMENT</div>
+<h3 style="color:#102b4c">3 DAYS STUDY STREAK</h3>
+<div class="cert-footer">
+<div><div id="issueDate"></div><div class="signature">Date</div></div>
+<div><div>U.K.P NO1 Team</div><div class="signature">Authorized Signature</div></div>
+<div><div>Ujjawal Kumar Pandey</div><div class="signature">Founder</div></div>
+</div>
+</div>
+<div class="cert-border-text">✦ U.K.P NO1 EDUCATION ✦ LEARN SMART • SCORE BETTER ✦ U.K.P NO1 EDUCATION ✦</div>
+</div>
+<button id="printButton" onclick="window.print()">🖨️ Print / Save PDF</button>
+</div>
+</div>
+<footer>© 2026 U.K.P NO1 Education</footer>
+  
