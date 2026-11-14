@@ -246,4 +246,423 @@ FOUNDER: UJJAWAL KUMAR PANDEY
 © 2026 U.K.P NO1 Education | Learn Smart • Score Better
 </footer>
  
+<script>
+const KEY = "ukpStudyStreak_v1";
+
+let data = {
+  dates: [],
+  name: ""
+};
+
+let selectedDays = 3;
+
+function dateKey(date = new Date()) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function shiftDate(key, amount) {
+  const [y, m, d] = key.split("-").map(Number);
+  const date = new Date(y, m - 1, d);
+  date.setDate(date.getDate() + amount);
+  return dateKey(date);
+}
+
+function loadData() {
+  try {
+    const old = JSON.parse(localStorage.getItem(KEY) || "{}");
+
+    const dates = old.dates || old.completedDates || [];
+
+    data.dates = [...new Set(
+      dates.filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x))
+    )].sort();
+
+    data.name = old.name || old.candidateName || "";
+  } catch (e) {
+    data = { dates: [], name: "" };
+  }
+}
+
+function saveData() {
+  localStorage.setItem(KEY, JSON.stringify(data));
+}
+
+function currentStreak() {
+  const set = new Set(data.dates);
+  let day = dateKey();
+
+  if (!set.has(day)) {
+    day = shiftDate(day, -1);
+  }
+
+  let count = 0;
+
+  while (set.has(day)) {
+    count++;
+    day = shiftDate(day, -1);
+  }
+
+  return count;
+}
+
+function bestStreak() {
+  const set = new Set(data.dates);
+  let best = 0;
+
+  data.dates.forEach(date => {
+    if (!set.has(shiftDate(date, -1))) {
+      let count = 0;
+      let day = date;
+
+      while (set.has(day)) {
+        count++;
+        day = shiftDate(day, 1);
+      }
+
+      best = Math.max(best, count);
+    }
+  });
+
+  return best;
+}
+
+function completeToday() {
+  const today = dateKey();
+
+  if (data.dates.includes(today)) {
+    alert("आज की पढ़ाई पहले ही पूरी दर्ज हो चुकी है!");
+    return;
+  }
+
+  data.dates.push(today);
+  data.dates.sort();
+
+  saveData();
+  render();
+
+  alert("🎉 आज की पढ़ाई दर्ज हो गई!");
+}
+
+function updateAchievements(best) {
+  const milestones = [3, 7, 30, 90];
+
+  milestones.forEach(days => {
+    const unlocked = best >= days;
+
+    const status = document.getElementById("status" + days);
+    const button = document.getElementById("btn" + days);
+
+    if (status) {
+      status.textContent = unlocked
+        ? "🔓 UNLOCKED"
+        : `🔒 ${days} DAYS REQUIRED`;
+    }
+
+    if (button) {
+      button.disabled = !unlocked;
+      button.textContent = unlocked
+        ? "🏆 VIEW CERTIFICATE"
+        : "🔒 LOCKED";
+    }
+  });
+}
+
+function renderWeek() {
+  const container = document.getElementById("weekDays");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const today = new Date();
+  const weekday = today.getDay();
+  const mondayOffset = (weekday + 6) % 7;
+
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - mondayOffset);
+
+  const labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  for (let i = 0; i < 7; i++) {
+    const day = new Date(monday);
+    day.setDate(monday.getDate() + i);
+
+    const key = dateKey(day);
+    const done = data.dates.includes(key);
+
+    const cell = document.createElement("div");
+    cell.className = "day-box";
+    cell.innerHTML =
+      `<strong>${labels[i]}</strong><br>${day.getDate()}<br>${done ? "✅" : "○"}`;
+
+    container.appendChild(cell);
+  }
+}
+
+function render() {
+  const streak = currentStreak();
+  const best = bestStreak();
+
+  const streakEl = document.getElementById("streakCount");
+  const totalEl = document.getElementById("totalDays");
+  const bestEl = document.getElementById("bestStreak");
+  const button = document.getElementById("completeButton");
+
+  if (streakEl) streakEl.textContent = streak;
+  if (totalEl) totalEl.textContent = data.dates.length;
+  if (bestEl) bestEl.textContent = best;
+
+  if (button) {
+    const done = data.dates.includes(dateKey());
+    button.disabled = done;
+    button.textContent = done
+      ? "✅ आज की पढ़ाई पूरी"
+      : "🔥 आज की पढ़ाई पूरी करें";
+  }
+
+  const nameInput = document.getElementById("studentName");
+  if (nameInput && !nameInput.value) {
+    nameInput.value = data.name;
+  }
+
+  updateAchievements(best);
+  renderWeek();
+}
+
+function showCertificate(days) {
+  if (bestStreak() < days) {
+    alert("यह Certificate अभी अनलॉक नहीं हुआ है!");
+    return;
+  }
+
+  const nameInput = document.getElementById("studentName");
+  const name = nameInput ? nameInput.value.trim() : "";
+
+  if (!name) {
+    alert("पहले अपना नाम लिखिए!");
+    if (nameInput) nameInput.focus();
+    return;
+  }
+
+  data.name = name;
+  saveData();
+
+  selectedDays = days;
+
+  const titles = {
+    3: "🥉 BRONZE ACHIEVEMENT",
+    7: "🥈 SILVER ACHIEVEMENT",
+    30: "🥇 GOLD ACHIEVEMENT",
+    90: "💎 PLATINUM ACHIEVEMENT"
+  };
+
+  document.getElementById("printedName").textContent = name;
+  document.getElementById("certificateMedal").textContent = titles[days];
+  document.getElementById("certificateDays").textContent =
+    days + " DAYS STUDY STREAK";
+
+  document.getElementById("certificateMessage").textContent =
+    `This certificate is proudly presented to ${name} for completing a study streak of ${days} consecutive days and showing dedication, discipline and consistency in learning.`;
+
+  document.getElementById("issueDate").textContent =
+    new Date().toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
+    });
+
+  document.getElementById("certificateHeading").textContent =
+    titles[days] + " CERTIFICATE";
+
+  document.getElementById("certificateArea").style.display = "block";
+
+  document.getElementById("certificateArea").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function hideCertificate() {
+  document.getElementById("certificateArea").style.display = "none";
+  document.getElementById("studentPanel").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+document.getElementById("completeButton")
+  ?.addEventListener("click", completeToday);
+
+document.getElementById("studentName")
+  ?.addEventListener("input", function() {
+    data.name = this.value.trim();
+    saveData();
+  });
+
+loadData();
+render();
+
+document.getElementById("certificateArea").style.display = "none";
+</script>
+
+<style>
+.certificate {
+  background: #07162f;
+  color: #e8c66b;
+  padding: 12px;
+  margin: 15px auto;
+  max-width: 900px;
+  border: 5px double #d9b34f;
+  box-shadow: 0 0 18px rgba(218,179,79,.3);
+  text-align: center;
+}
+
+.cert-inner {
+  border: 2px solid #d9b34f;
+  padding: 25px 15px;
+  background: linear-gradient(135deg,#07162f,#142b4c,#07162f);
+}
+
+.cert-logo {
+  display: block;
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+}
+
+.cert-top {
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.cert-brand {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cert-heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #fff0b0;
+}
+
+.presented {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.cert-name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f6d77c;
+  margin: 12px;
+  border-bottom: 1px solid #d9b34f;
+  display: inline-block;
+  padding: 5px 30px;
+}
+
+.cert-message {
+  color: #fff;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 15px auto;
+}
+
+.cert-award {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 18px;
+}
+
+.cert-days {
+  font-size: 17px;
+  color: white;
+}
+
+.cert-motto {
+  font-style: italic;
+  line-height: 1.8;
+  margin: 20px;
+}
+
+.cert-footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 30px 0 20px;
+  color: white;
+}
+
+.cert-sign {
+  border-top: 1px solid #d9b34f;
+  margin-top: 8px;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.founder {
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.cert-border {
+  font-size: 11px;
+  padding: 10px 2px;
+  letter-spacing: 1px;
+}
+
+#certificateArea {
+  display: none;
+}
+
+button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #certificateArea,
+  #certificateArea * {
+    visibility: visible !important;
+  }
+
+  #certificateArea {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  #certificateArea h2,
+  #certificateArea button {
+    display: none !important;
+  }
+
+  .certificate {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+}
+</style>
+</body>
+</html>
+
   
