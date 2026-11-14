@@ -150,4 +150,100 @@ input{width:100%;max-width:420px;padding:13px;border-radius:8px;border:1px solid
 
 </div>
 </section>
+ 
+<section class="panel" id="studentPanel">
+<h2 class="gold">🎓 STUDENT DETAILS</h2>
+<p>Certificate पर अपना नाम लिखें।</p>
+<input type="text" id="studentName" placeholder="विद्यार्थी का पूरा नाम">
+<p id="nameMessage"></p>
+</section>
+
+<section id="certificateArea">
+
+<h2 id="certificateHeading" class="gold">🏆 YOUR ACHIEVEMENT CERTIFICATE</h2>
+
+<div class="certificate">
+<div class="cert-border">
+✦ U.K.P NO1 EDUCATION ✦ LEARN SMART ✦ SCORE BETTER ✦
+</div>
+
+<div class="cert-inner">
+
+<img class="cert-logo"
+src="assets/UKP-A4.png"
+alt="U.K.P NO1 Education Logo"
+onerror="this.style.display='none'">
+
+<div class="cert-top">
+I AM PROUD TO BE A PART OF
+</div>
+
+<div class="cert-brand">U.K.P NO1 EDUCATION</div>
+
+<div class="cert-heading">CERTIFICATE OF ACHIEVEMENT</div>
+
+<div class="presented">Proudly Presented To</div>
+
+<div class="cert-name" id="printedName">Student Name</div>
+
+<p class="cert-message" id="certificateMessage">
+This certificate is awarded in recognition of dedication,
+consistency and commitment to learning.
+</p>
+
+<div class="cert-award" id="certificateMedal">🥉 BRONZE ACHIEVEMENT</div>
+
+<div class="cert-days" id="certificateDays">
+3 DAYS STUDY STREAK
+</div>
+
+<p class="cert-motto">
+"LEARN TODAY • LEAD TOMORROW"
+<br>
+"Your dedication is your greatest achievement."
+</p>
+
+<div class="cert-footer">
+
+<div>
+<strong id="issueDate">Date</strong>
+<div class="cert-sign">Date of Achievement</div>
+</div>
+
+<div>
+<strong>U.K.P NO1 Team</strong>
+<div class="cert-sign">Authorized Signature</div>
+</div>
+
+</div>
+
+<div class="founder">
+FOUNDER: UJJAWAL KUMAR PANDEY
+</div>
+
+<div class="cert-border">
+✦ U.K.P NO1 EDUCATION ✦ EVERY DAY ONE STEP CLOSER TO SUCCESS ✦
+</div>
+
+</div>
+</div>
+
+<div style="text-align:center;margin:15px">
+<button id="printButton" onclick="window.print()">
+🖨️ PRINT / SAVE CERTIFICATE PDF
+</button>
+<br>
+<button id="backButton" onclick="hideCertificate()">
+⬅️ BACK TO ACHIEVEMENTS
+</button>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 U.K.P NO1 Education | Learn Smart • Score Better
+</footer>
+ 
   
