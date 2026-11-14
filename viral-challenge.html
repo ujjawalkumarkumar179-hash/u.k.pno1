@@ -132,4 +132,436 @@ footer{text-align:center;color:#b9cce0;padding:22px 5px}
 </div>
 
 <!-- PART 2 का JavaScript इसी जगह पेस्ट करें -->
+ <script>
+/* =====================================
+   U.K.P NO1 EDUCATION
+   VIRAL CHALLENGE ZONE
+===================================== */
+
+// 30 सवालों का Question Bank
+const questionBank = [
+ {q:"भारत की राजधानी क्या है?",o:["मुंबई","नई दिल्ली","पटना","कोलकाता"],a:1},
+ {q:"पौधे अपना भोजन किस प्रक्रिया से बनाते हैं?",o:["श्वसन","प्रकाश संश्लेषण","पाचन","उत्सर्जन"],a:1},
+ {q:"12 × 8 कितना होता है?",o:["86","92","96","108"],a:2},
+ {q:"भारत का संविधान कब लागू हुआ?",o:["15 अगस्त 1947","26 जनवरी 1950","2 अक्टूबर 1949","26 नवंबर 1947"],a:1},
+ {q:"पानी का रासायनिक सूत्र क्या है?",o:["CO2","O2","H2O","NaCl"],a:2},
+ {q:"सूर्य किस दिशा से निकलता है?",o:["पश्चिम","उत्तर","दक्षिण","पूर्व"],a:3},
+ {q:"एक सप्ताह में कितने दिन होते हैं?",o:["5","6","7","8"],a:2},
+ {q:"भारत का राष्ट्रीय पशु कौन है?",o:["शेर","बाघ","हाथी","हिरण"],a:1},
+ {q:"15 का वर्ग कितना है?",o:["125","200","225","250"],a:2},
+ {q:"मानव शरीर में रक्त पंप कौन करता है?",o:["फेफड़ा","हृदय","मस्तिष्क","गुर्दा"],a:1},
+ {q:"पृथ्वी का प्राकृतिक उपग्रह कौन है?",o:["सूर्य","मंगल","चंद्रमा","शुक्र"],a:2},
+ {q:"भारत का राष्ट्रीय फूल कौन है?",o:["गुलाब","कमल","चमेली","सूरजमुखी"],a:1},
+ {q:"1000 मीटर बराबर कितने किलोमीटर होते हैं?",o:["1","10","100","0.1"],a:0},
+ {q:"कंप्यूटर का मस्तिष्क किसे कहते हैं?",o:["माउस","कीबोर्ड","CPU","मॉनिटर"],a:2},
+ {q:"सबसे बड़ा महासागर कौन है?",o:["हिंद महासागर","प्रशांत महासागर","अटलांटिक","आर्कटिक"],a:1},
+ {q:"भारत के प्रथम राष्ट्रपति कौन थे?",o:["डॉ. राजेंद्र प्रसाद","डॉ. राधाकृष्णन","जवाहरलाल नेहरू","महात्मा गांधी"],a:0},
+ {q:"वायु में सबसे अधिक कौन-सी गैस होती है?",o:["ऑक्सीजन","नाइट्रोजन","कार्बन डाइऑक्साइड","हाइड्रोजन"],a:1},
+ {q:"त्रिभुज में कितनी भुजाएँ होती हैं?",o:["2","3","4","5"],a:1},
+ {q:"गंगा नदी का उद्गम कहाँ से होता है?",o:["यमुनोत्री","गंगोत्री हिमनद","अरावली","सतपुड़ा"],a:1},
+ {q:"प्रकाश की गति सबसे अधिक किसमें होती है?",o:["पानी","काँच","निर्वात","हवा"],a:2},
+ {q:"हिंदी दिवस कब मनाया जाता है?",o:["14 सितंबर","15 अगस्त","26 जनवरी","2 अक्टूबर"],a:0},
+ {q:"सौरमंडल का सबसे बड़ा ग्रह कौन है?",o:["पृथ्वी","मंगल","बृहस्पति","बुध"],a:2},
+ {q:"भारत का राष्ट्रीय गान किसने लिखा?",o:["प्रेमचंद","रवींद्रनाथ टैगोर","महात्मा गांधी","सुभाष चंद्र बोस"],a:1},
+ {q:"5 का घन कितना होता है?",o:["25","75","100","125"],a:3},
+ {q:"मानव शरीर में कितने फेफड़े होते हैं?",o:["1","2","3","4"],a:1},
+ {q:"लोकसभा का सामान्य कार्यकाल कितने वर्ष का होता है?",o:["3","4","5","6"],a:2},
+ {q:"पृथ्वी सूर्य की एक परिक्रमा लगभग कितने समय में करती है?",o:["24 घंटे","30 दिन","365 दिन","7 दिन"],a:2},
+ {q:"ध्वनि किसमें यात्रा नहीं कर सकती?",o:["हवा","पानी","निर्वात","ठोस"],a:2},
+ {q:"भारत का राष्ट्रीय पक्षी कौन है?",o:["तोता","मोर","कबूतर","हंस"],a:1},
+ {q:"साधारण नमक का रासायनिक सूत्र क्या है?",o:["H2O","NaCl","CO2","O2"],a:1}
+];
+
+let questions = [];
+let current = 0;
+let score = 0;
+let selectedAnswer = null;
+let studentPhotoData = null;
+let studentPhoto = null;
+let studentName = "";
+let finalScore = 0;
+let finalPercent = 0;
+
+// सवालों को रैंडम क्रम में मिलाना
+function shuffle(array) {
+ const copy = [...array];
+ for(let i=copy.length-1;i>0;i--){
+  const j=Math.floor(Math.random()*(i+1));
+  [copy[i],copy[j]]=[copy[j],copy[i]];
+ }
+ return copy;
+}
+
+// फोटो अपलोड और Preview
+document.getElementById("studentPhoto")
+.addEventListener("change",function(e){
+
+ const file=e.target.files[0];
+ if(!file) return;
+
+ if(!file.type.startsWith("image/")){
+  alert("कृपया सही फोटो चुनें।");
+  this.value="";
+  return;
+ }
+
+ if(file.size>5*1024*1024){
+  alert("फोटो 5 MB से छोटी रखें।");
+  this.value="";
+  return;
+ }
+
+ const reader=new FileReader();
+
+ reader.onload=function(event){
+  const img=new Image();
+
+  img.onload=function(){
+   studentPhoto=img;
+   studentPhotoData=event.target.result;
+
+   const preview=document.getElementById("photoPreview");
+   preview.src=studentPhotoData;
+   preview.style.display="block";
+  };
+
+  img.onerror=function(){
+   alert("यह फोटो खुल नहीं पाई। दूसरी फोटो चुनें।");
+  };
+
+  img.src=event.target.result;
+ };
+
+ reader.readAsDataURL(file);
+});
+
+// Quiz शुरू
+function startQuiz(){
+
+ const name=document.getElementById("studentName").value.trim();
+
+ if(!name){
+  alert("पहले अपना नाम या Nickname लिखें।");
+  return;
+ }
+
+ studentName=name;
+
+ // हर बार 5 अलग-अलग रैंडम सवाल
+ questions=shuffle(questionBank).slice(0,5);
+
+ current=0;
+ score=0;
+
+ document.getElementById("welcomeCard").classList.add("hidden");
+ document.getElementById("mysteryCard").classList.add("hidden");
+ document.getElementById("quizCard").classList.remove("hidden");
+
+ showQuestion();
+}
+
+// सवाल दिखाना
+function showQuestion(){
+
+ selectedAnswer=null;
+
+ const q=questions[current];
+
+ document.getElementById("questionNumber").textContent=
+ "सवाल "+(current+1)+" / 5";
+
+ document.getElementById("scoreLive").textContent=
+ "स्कोर: "+score;
+
+ document.getElementById("questionText").textContent=q.q;
+
+ document.getElementById("progressBar").style.width=
+ (current/5*100)+"%";
+
+ const options=document.getElementById("options");
+ options.innerHTML="";
+
+ q.o.forEach((option,index)=>{
+
+  const btn=document.createElement("button");
+  btn.className="option";
+  btn.textContent=String.fromCharCode(65+index)+". "+option;
+
+  btn.onclick=function(){
+
+   if(selectedAnswer!==null) return;
+
+   selectedAnswer=index;
+   const all=options.querySelectorAll("button");
+
+   all.forEach((b,i)=>{
+    b.disabled=true;
+
+    if(i===q.a) b.classList.add("correct");
+    else if(i===index) b.classList.add("wrong");
+   });
+
+   if(index===q.a){
+    score++;
+   }
+
+   document.getElementById("scoreLive").textContent=
+   "स्कोर: "+score;
+
+   document.getElementById("nextButton").disabled=false;
+  };
+
+  options.appendChild(btn);
+ });
+
+ const next=document.getElementById("nextButton");
+ next.disabled=true;
+
+ next.textContent=current===4?"रिजल्ट देखें 🏆":"अगला सवाल →";
+}
+
+// अगला सवाल
+function nextQuestion(){
+
+ if(selectedAnswer===null) return;
+
+ current++;
+
+ if(current<5){
+  showQuestion();
+ }else{
+  showResult();
+ }
+}
+
+// रिजल्ट दिखाना
+function showResult(){
+
+ finalScore=score;
+ finalPercent=(score/5)*100;
+
+ document.getElementById("quizCard").classList.add("hidden");
+ document.getElementById("resultCard").classList.remove("hidden");
+
+ let message="अच्छी कोशिश! अभ्यास जारी रखें।";
+
+ if(score===5) message="🏆 शानदार! पूरे अंक!";
+ else if(score>=4) message="🌟 बहुत बढ़िया प्रदर्शन!";
+ else if(score>=3) message="👏 अच्छा प्रयास!";
+
+ document.getElementById("resultMessage").textContent=
+ studentName+" — "+message;
+
+ document.getElementById("progressBar").style.width="100%";
+
+ makeCard();
+}
+
+// Result Card बनाना
+function makeCard(){
+
+ const canvas=document.getElementById("resultCanvas");
+ const ctx=canvas.getContext("2d");
+
+ const w=canvas.width;
+ const h=canvas.height;
+
+ // Background
+ const bg=ctx.createLinearGradient(0,0,w,h);
+ bg.addColorStop(0,"#071a35");
+ bg.addColorStop(0.5,"#123b68");
+ bg.addColorStop(1,"#06152c");
+
+ ctx.fillStyle=bg;
+ ctx.fillRect(0,0,w,h);
+
+ // Gold Border
+ ctx.strokeStyle="#e7bd59";
+ ctx.lineWidth=14;
+ ctx.strokeRect(18,18,w-36,h-36);
+
+ ctx.strokeStyle="#fff0b0";
+ ctx.lineWidth=3;
+ ctx.strokeRect(38,38,w-76,h-76);
+
+ // Text
+ ctx.textAlign="center";
+
+ ctx.fillStyle="#ffd76c";
+ ctx.font="bold 58px Arial";
+ ctx.fillText("U.K.P NO1 EDUCATION",w/2,120);
+
+ ctx.fillStyle="#ffffff";
+ ctx.font="bold 54px Arial";
+ ctx.fillText("CHALLENGE RESULT",w/2,205);
+
+ ctx.fillStyle="#ffd76c";
+ ctx.font="bold 42px Arial";
+ ctx.fillText("🏆 CERTIFICATE OF PERFORMANCE",w/2,275);
+
+ // Student photo or logo
+ const cx=w/2;
+ const cy=420;
+ const radius=85;
+
+ ctx.save();
+ ctx.beginPath();
+ ctx.arc(cx,cy,radius,0,Math.PI*2);
+ ctx.closePath();
+ ctx.clip();
+
+ if(studentPhoto){
+  const size=Math.min(studentPhoto.width,studentPhoto.height);
+  const sx=(studentPhoto.width-size)/2;
+  const sy=(studentPhoto.height-size)/2;
+  ctx.drawImage(studentPhoto,sx,sy,size,size,
+   cx-radius,cy-radius,radius*2,radius*2);
+ }else{
+  ctx.fillStyle="#e4b64d";
+  ctx.fillRect(cx-radius,cy-radius,radius*2,radius*2);
+  ctx.fillStyle="#102b4b";
+  ctx.font="bold 68px Arial";
+  ctx.fillText("UKP",cx,cy+22);
+ }
+
+ ctx.restore();
+
+ ctx.beginPath();
+ ctx.arc(cx,cy,radius+7,0,Math.PI*2);
+ ctx.strokeStyle="#ffd76c";
+ ctx.lineWidth=9;
+ ctx.stroke();
+
+ // Name
+ ctx.fillStyle="#ffffff";
+ ctx.font="bold 52px Arial";
+ ctx.fillText(studentName,w/2,570);
+
+ // Score
+ ctx.fillStyle="#ffd76c";
+ ctx.font="bold 68px Arial";
+ ctx.fillText(finalScore+" / 5",w/2,665);
+
+ ctx.fillStyle="#ffffff";
+ ctx.font="bold 38px Arial";
+ ctx.fillText("SCORE: "+finalPercent+"%",w/2,720);
+
+ ctx.fillStyle="#e7d7ad";
+ ctx.font="28px Arial";
+ ctx.fillText("Keep Learning • Keep Growing",w/2,765);
+}
+
+// कार्ड डाउनलोड
+function downloadCard(){
+
+ const canvas=document.getElementById("resultCanvas");
+
+ const link=document.createElement("a");
+ link.download="UKP-Result-"+studentName.replace(/\s+/g,"-")+".png";
+ link.href=canvas.toDataURL("image/png");
+ link.click();
+}
+
+// WhatsApp पर रिजल्ट शेयर
+function shareResult(){
+
+ const text=
+ "🏆 U.K.P NO1 Education Challenge Result\n\n"+
+ "विद्यार्थी: "+studentName+"\n"+
+ "स्कोर: "+finalScore+"/5\n"+
+ "प्रतिशत: "+finalPercent+"%\n\n"+
+ "अब आप भी Quiz खेलिए!\n"+
+ window.location.href;
+
+ window.open(
+  "https://wa.me/?text="+encodeURIComponent(text),
+  "_blank"
+ );
+}
+
+// दोस्त को चैलेंज
+function challengeFriend(){
+
+ const url=new URL(window.location.href);
+ url.searchParams.set("from",studentName);
+ url.searchParams.set("score",finalScore);
+
+ const text=
+ "🔥 मैंने U.K.P NO1 Challenge में "+finalScore+"/5 अंक पाए हैं। "+
+ "क्या तुम मुझे हरा सकते हो?\n\n"+url.toString();
+
+ window.open(
+  "https://wa.me/?text="+encodeURIComponent(text),
+  "_blank"
+ );
+}
+
+// Daily Mystery Question
+const mysteryBank=[
+ {q:"भारत का राष्ट्रीय फल कौन-सा है?",o:["सेब","आम","केला","अंगूर"],a:1},
+ {q:"2 का घन कितना होता है?",o:["4","6","8","10"],a:2},
+ {q:"सूर्य एक क्या है?",o:["ग्रह","तारा","उपग्रह","धूमकेतु"],a:1},
+ {q:"भारत में गणतंत्र दिवस कब मनाया जाता है?",o:["15 अगस्त","26 जनवरी","2 अक्टूबर","14 नवंबर"],a:1},
+ {q:"किस गैस से पौधे भोजन बनाते हैं?",o:["ऑक्सीजन","नाइट्रोजन","कार्बन डाइऑक्साइड","हाइड्रोजन"],a:2},
+ {q:"एक घंटे में कितने मिनट होते हैं?",o:["30","45","60","100"],a:2},
+ {q:"भारत का राष्ट्रीय वृक्ष कौन-सा है?",o:["नीम","बरगद","पीपल","आम"],a:1}
+];
+
+function loadMystery(){
+
+ const day=Math.floor(Date.now()/86400000);
+ const q=mysteryBank[day%mysteryBank.length];
+
+ document.getElementById("mysteryQuestion").textContent=q.q;
+
+ const area=document.getElementById("mysteryOptions");
+ area.innerHTML="";
+
+ q.o.forEach((option,index)=>{
+
+  const btn=document.createElement("button");
+  btn.className="option";
+  btn.textContent=option;
+
+  btn.onclick=function(){
+
+   if(area.dataset.answered==="yes") return;
+
+   area.dataset.answered="yes";
+
+   if(index===q.a){
+    document.getElementById("mysteryFeedback").textContent=
+    "🎉 सही जवाब! बहुत बढ़िया!";
+   }else{
+    document.getElementById("mysteryFeedback").textContent=
+    "सही जवाब: "+q.o[q.a];
+   }
+
+   area.querySelectorAll("button").forEach(b=>b.disabled=true);
+  };
+
+  area.appendChild(btn);
+ });
+}
+
+loadMystery();
+
+// यदि दोस्त के चैलेंज लिंक से आए हैं
+const params=new URLSearchParams(window.location.search);
+const inviter=params.get("from");
+const invitedScore=params.get("score");
+
+if(inviter){
+ const intro=document.querySelector("#welcomeCard h2");
+ intro.textContent="🔥 "+inviter+" ने आपको चैलेंज किया है!";
+
+ const note=document.createElement("p");
+ note.textContent=
+ "उनका साझा किया गया स्कोर: "+invitedScore+"/5. अब अपना स्कोर बनाइए!";
+ intro.after(note);
+}
+</script>
+
+</body>
+</html>
   
