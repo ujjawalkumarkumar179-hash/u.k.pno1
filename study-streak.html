@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 Education | Achievement Center</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#071426;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:25px 12px;background:linear-gradient(135deg,#071426,#173c62);border-bottom:3px solid #d5ad55}
+header h1{color:#f4cf70;margin:5px}
+header p{font-size:13px}
+.container{max-width:850px;margin:auto;padding:16px}
+.panel{background:#102744;border:1px solid #a9843c;border-radius:16px;padding:20px;margin:18px 0;text-align:center}
+.gold{color:#f4cf70}
+.fire{font-size:48px}
+.counter{font-size:60px;font-weight:bold;color:#f4cf70;margin:8px}
+button{border:0;border-radius:9px;padding:13px 17px;margin:6px;background:linear-gradient(135deg,#d5ad55,#ffe6a2);color:#17120a;font-weight:bold;font-size:14px;cursor:pointer}
+button:disabled{background:#58616c;color:#ddd;cursor:not-allowed}
+input{width:100%;max-width:420px;padding:13px;border-radius:8px;border:1px solid #d5ad55;font-size:16px;margin:12px 0}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:18px}
+.day{background:#203d5e;padding:10px 2px;border-radius:8px;font-size:12px}
+.day.done{background:#c49a43;color:#111;font-weight:bold}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{background:#203d5e;padding:15px;border-radius:10px}
+.stat strong{display:block;color:#f4cf70;font-size:27px}
+.achievement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.achievement{background:#172f4b;border:1px solid #6c592f;border-radius:13px;padding:15px}
+.achievement .medal{font-size:35px}
+.achievement h3{margin:7px;color:#f4cf70}
+.achievement p{font-size:13px}
+.status{font-size:12px;color:#e7c778}
+#nameArea{margin-top:18px}
+#certificateArea{display:none;margin:25px 0}
+.certificate{
+ background:#061326;color:#fff;
+ border:9px double #e6b943;padding:9px;
+ font-family:Georgia,serif;text-align:center;
+}
+.cert-inner{
+ border:2px solid #d6a932;padding:20px 12px;
+ background:radial-gradient(ellipse at center,#17365a 0%,#071426 75%);
+}
+.cert-border{color:#f8d66c;font-size:11px;font-weight:bold;letter-spacing:2px;padding:5px}
+.cert-logo{width:105px;height:105px;object-fit:contain;margin:4px auto}
+.cert-top{color:#f5d16b;font-weight:bold;font-size:19px}
+.cert-brand{font-size:clamp(24px,5vw,43px);color:#f5cf62;font-weight:bold;margin:10px 0}
+.cert-heading{font-size:clamp(24px,5vw,39px);color:#f7d46e;border-top:2px solid #d6a932;border-bottom:2px solid #d6a932;padding:12px 2px;margin:16px 0}
+.presented{font-size:24px;font-style:italic}
+.cert-name{display:block;max-width:95%;overflow-wrap:anywhere;margin:12px auto;padding:10px;color:#251800;background:linear-gradient(90deg,#bd8724,#fff0a5,#bd8724);font-size:clamp(23px,5vw,34px);font-weight:bold;border:3px double #fff0a5}
+.cert-award{font-size:clamp(22px,5vw,32px);color:#f4d06b;font-weight:bold;margin:12px}
+.cert-days{display:inline-block;padding:9px 20px;background:linear-gradient(90deg,#b27a20,#ffe38a,#b27a20);color:#160f05;font-size:18px;font-weight:bold}
+.cert-message{max-width:600px;margin:18px auto;line-height:1.7;font-size:15px}
+.cert-motto{font-style:italic;color:#f4d36f;font-size:14px;line-height:1.7}
+.cert-footer{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;font-size:13px}
+.cert-sign{border-top:1px solid #d9b34e;padding-top:7px;margin-top:8px}
+.founder{margin:20px auto 5px;padding:9px;background:linear-gradient(90deg,#a87420,#ffe18a,#a87420);color:#171000;font-weight:bold;max-width:430px}
+#certificateArea button{font-family:Arial,sans-serif}
+@media(max-width:480px){
+ .container{padding:9px}
+ .panel{padding:14px}
+ .achievement-grid{gap:8px}
+ .achievement{padding:10px 5px}
+ .cert-inner{padding:12px 7px}
+ .cert-footer{gap:10px}
+}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ body{background:#fff!important}
+ header,.container>.panel,footer,#certificateTitle,#printButton,#backButton{display:none!important}
+ .container{max-width:none;margin:0;padding:0}
+ #certificateArea{display:block!important;margin:0}
+ .certificate{min-height:190mm;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .cert-inner{min-height:170mm}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌟 U.K.P NO1 Education</h1>
+<p>Learn Smart • Score Better • Every Day One Step Closer To Success 🚀</p>
+</header>
+
+<main class="container">
+
+<section class="panel">
+<div class="fire">🔥</div>
+<h2 class="gold">DAILY STUDY STREAK</h2>
+<p>हर दिन पढ़ें, अपना रिकॉर्ड बनाएँ और उपलब्धियाँ हासिल करें।</p>
+<div class="counter" id="streak">0</div>
+<p>लगातार पढ़ाई के दिन</p>
+<button id="completeBtn" onclick="completeToday()">📚 आज की पढ़ाई पूरी करें</button>
+<div class="days" id="weekDays"></div>
+</section>
+
+<section class="panel">
+<h2 class="gold">📊 YOUR STUDY RECORD</h2>
+<div class="stats">
+<div class="stat">
+<strong id="total">0</strong>
+कुल पढ़ाई के दिन
+</div>
+<div class="stat">
+<strong id="best">0</strong>
+सबसे लंबी Streak
+</div>
+</div>
+</section>
+
+<section class="panel">
+<h2 class="gold">🏆 ACHIEVEMENT CENTER</h2>
+<p>अपनी लगातार पढ़ाई से चारों उपलब्धियाँ हासिल करें।</p>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<div class="medal">🥉</div>
+<h3>BRONZE</h3>
+<p>3 Days Study Streak</p>
+<div class="status" id="status3">🔒 Locked</div>
+<button id="btn3" onclick="showCertificate(3)" disabled>Certificate देखें</button>
+</div>
+
+<div class="achievement">
+<div class="medal">🥈</div>
+<h3>SILVER</h3>
+<p>7 Days Study Streak</p>
+<div class="status" id="status7">🔒 Locked</div>
+<button id="btn7" onclick="showCertificate(7)" disabled>Certificate देखें</button>
+</div>
+
+<div class="achievement">
+<div class="medal">🥇</div>
+<h3>GOLD</h3>
+<p>30 Days Study Streak</p>
+<div class="status" id="status30">🔒 Locked</div>
+<button id="btn30" onclick="showCertificate(30)" disabled>Certificate देखें</button>
+</div>
+
+<div class="achievement">
+<div class="medal">💎</div>
+<h3>PLATINUM</h3>
+<p>90 Days Study Streak</p>
+<div class="status" id="status90">🔒 Locked</div>
+<button id="btn90" onclick="showCertificate(90)" disabled>Certificate देखें</button>
+</div>
+
+</div>
+</section>
+  
