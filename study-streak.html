@@ -110,4 +110,141 @@ footer{padding:20px;color:#aaa}
 </div>
 </div>
 <footer>© 2026 U.K.P NO1 Education</footer>
-  
+ 
+<script>
+const KEY="ukpStudyStreak_v1";
+const REQUIRED_DAYS=3;
+
+function dateKey(d=new Date()){
+ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+
+function previousDate(s){
+ const d=new Date(s+"T12:00:00");
+ d.setDate(d.getDate()-1);
+ return dateKey(d);
+}
+
+function load(){
+ try{
+  const old=JSON.parse(localStorage.getItem(KEY));
+  if(old){
+   return {
+    dates:Array.isArray(old.dates)?old.dates:(old.completedDates||[]),
+    name:old.name||old.candidateName||""
+   };
+  }
+ }catch(e){}
+ return {dates:[],name:""};
+}
+
+function save(data){
+ localStorage.setItem(KEY,JSON.stringify(data));
+}
+
+function getStats(){
+ const data=load();
+ const dates=[...new Set(data.dates)].sort();
+ const t=dateKey();
+ let current=0,best=0,run=0,previous="";
+
+ dates.forEach(d=>{
+  run=(previous&&previousDate(d)===previous)?run+1:1;
+  best=Math.max(best,run);
+  previous=d;
+ });
+
+ let check=dates.includes(t)?t:previousDate(t);
+ while(dates.includes(check)){
+  current++;
+  check=previousDate(check);
+ }
+
+ return {data,dates,current,best,t};
+}
+
+function completeToday(){
+ const data=load();
+ const t=dateKey();
+
+ if(data.dates.includes(t)){
+  alert("आज की पढ़ाई पहले ही दर्ज हो चुकी है!");
+  return;
+ }
+
+ data.dates.push(t);
+ save(data);
+ render();
+ alert("शाबाश! आज की पढ़ाई दर्ज हो गई।");
+}
+
+function render(){
+ const s=getStats();
+
+ document.getElementById("streak").textContent=s.current;
+ document.getElementById("total").textContent=s.dates.length;
+ document.getElementById("best").textContent=s.best;
+
+ const btn=document.getElementById("completeBtn");
+ btn.disabled=s.dates.includes(s.t);
+ btn.textContent=btn.disabled?"आज की पढ़ाई पूरी हो गई ✓":"आज की पढ़ाई पूरी करें";
+
+ const names=["रवि","सोम","मंगल","बुध","गुरु","शुक्र","शनि"];
+ const day=new Date().getDay();
+ let html="";
+
+ for(let i=0;i<7;i++){
+  const d=new Date();
+  d.setDate(d.getDate()-(day-i));
+  const key=dateKey(d);
+  const done=s.dates.includes(key);
+  html+=`<div class="day ${done?"done":""}">${names[i]}<br>${done?"✓":"○"}</div>`;
+ }
+
+ document.getElementById("weekDays").innerHTML=html;
+
+ const unlocked=s.current>=REQUIRED_DAYS;
+
+ document.getElementById("unlockMessage").textContent=unlocked
+ ?"🎉 बधाई हो! आपका 3 Days Certificate अनलॉक हो गया है।"
+ :`Certificate पाने के लिए लगातार 3 दिन पढ़ाई करें। अभी ${s.current} दिन पूरे हुए हैं।`;
+
+ document.getElementById("nameArea").classList.toggle("hidden",!unlocked);
+
+ if(s.data.name){
+  document.getElementById("studentName").value=s.data.name;
+ }
+
+ if(!unlocked){
+  document.getElementById("certificateArea").style.display="none";
+ }
+}
+
+function makeCertificate(){
+ const name=document.getElementById("studentName").value.trim();
+
+ if(!name){
+  alert("कृपया विद्यार्थी का नाम लिखें।");
+  return;
+ }
+
+ if(getStats().current<REQUIRED_DAYS){
+  alert("पहले 3 दिन लगातार पढ़ाई पूरी करें।");
+  return;
+ }
+
+ const data=load();
+ data.name=name;
+ save(data);
+
+ document.getElementById("printedName").textContent=name;
+ document.getElementById("issueDate").textContent=new Date().toLocaleDateString("en-IN");
+ document.getElementById("certificateArea").style.display="block";
+ document.getElementById("certificateArea").scrollIntoView({behavior:"smooth"});
+}
+
+render();
+</script>
+</body>
+</html>
+
