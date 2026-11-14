@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 Education | Viral Challenge</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,sans-serif;
+ background:linear-gradient(135deg,#07172d,#102f55,#07172d);
+ color:#fff;padding:15px
+}
+.container{max-width:760px;margin:auto}
+header{text-align:center;padding:22px 10px}
+.logo{
+ display:inline-block;padding:10px 20px;border:2px solid #e8bd55;
+ border-radius:14px;color:#ffd76c;font-size:22px;font-weight:bold
+}
+header h1{color:#ffd76c;margin:15px 0 5px}
+header p{color:#d8e6f7}
+.card{
+ background:#102b4b;border:1px solid #bd9846;
+ border-radius:18px;padding:20px;margin:16px 0;
+ box-shadow:0 8px 25px #0005
+}
+h2{color:#ffd76c;margin-top:0}
+label{display:block;margin:12px 0 7px}
+input[type=text],input[type=file]{
+ width:100%;padding:13px;border-radius:10px;
+ border:1px solid #d5b45e;background:#f5f7fb;color:#111
+}
+button{
+ border:0;border-radius:11px;padding:13px 17px;
+ font-weight:bold;font-size:15px;cursor:pointer;
+ margin:6px 3px
+}
+.primary{background:linear-gradient(90deg,#e4b64d,#ffe18a);color:#17263c}
+.secondary{background:#fff;color:#17304e}
+.whatsapp{background:#20c76a;color:#062b17}
+button:disabled{opacity:.5;cursor:not-allowed}
+.hidden{display:none!important}
+#photoPreview{
+ display:none;width:100px;height:100px;object-fit:cover;
+ border-radius:50%;border:3px solid #ffd76c;margin-top:12px
+}
+.progress{
+ height:9px;background:#334b66;border-radius:20px;overflow:hidden;
+ margin:14px 0
+}
+#progressBar{height:100%;width:0;background:#ffd15b}
+.option{
+ display:block;width:100%;text-align:left;background:#f5f7fb;
+ color:#142c49;margin:9px 0;padding:14px;border:2px solid transparent
+}
+.option.selected{border-color:#ffd15b;background:#fff1c9}
+.option.correct{background:#c9f5d6;border-color:#1c9b50}
+.option.wrong{background:#ffd6d6;border-color:#d33}
+#questionText{font-size:20px;line-height:1.5}
+#resultCanvas{
+ display:block;width:100%;max-width:600px;height:auto;
+ margin:15px auto;border-radius:12px;background:#fff
+}
+.small{font-size:13px;color:#c9d9eb;line-height:1.6}
+footer{text-align:center;color:#b9cce0;padding:22px 5px}
+</style>
+</head>
 
+<body>
+<div class="container">
+
+<header>
+ <div class="logo">U.K.P NO1</div>
+ <h1>🔥 VIRAL CHALLENGE ZONE</h1>
+ <p>खेलो • सीखो • अपना स्कोर दोस्तों के साथ शेयर करो</p>
+</header>
+
+<section class="card" id="welcomeCard">
+ <h2>🎯 अपना Quiz शुरू करें</h2>
+
+ <label for="studentName">विद्यार्थी का नाम या Nickname</label>
+ <input type="text" id="studentName" maxlength="25"
+ placeholder="अपना नाम लिखें">
+
+ <label for="studentPhoto">📸 अपनी फोटो अपलोड करें (वैकल्पिक)</label>
+ <input type="file" id="studentPhoto" accept="image/*">
+ <img id="photoPreview" alt="आपकी फोटो">
+
+ <p class="small">फोटो लगाना जरूरी नहीं है। फोटो नहीं लगाने पर कार्ड पर UKP का लोगो दिखेगा।</p>
+
+ <button class="primary" onclick="startQuiz()">🚀 START CHALLENGE</button>
+</section>
+
+<section class="card hidden" id="quizCard">
+ <div style="display:flex;justify-content:space-between;gap:10px">
+  <b id="questionNumber">सवाल 1 / 5</b>
+  <b id="scoreLive">स्कोर: 0</b>
+ </div>
+ <div class="progress"><div id="progressBar"></div></div>
+ <h2 id="questionText"></h2>
+ <div id="options"></div>
+ <button class="primary" id="nextButton" onclick="nextQuestion()" disabled>
+  अगला सवाल →
+ </button>
+</section>
+
+<section class="card hidden" id="resultCard">
+ <h2>🏆 आपका रिजल्ट</h2>
+ <p id="resultMessage"></p>
+ <canvas id="resultCanvas" width="1200" height="800"></canvas>
+ <button class="primary" onclick="downloadCard()">⬇️ Download Result Card</button>
+ <button class="whatsapp" onclick="shareResult()">📲 WhatsApp पर शेयर करें</button>
+ <button class="secondary" onclick="challengeFriend()">🔥 दोस्त को चैलेंज करें</button>
+ <button class="secondary" onclick="location.reload()">🔄 फिर से खेलें</button>
+ <p class="small">यह अभ्यास क्विज़ का परिणाम है। साझा किया गया स्कोर स्वयं-रिपोर्टेड है, आधिकारिक रैंक नहीं।</p>
+</section>
+
+<section class="card" id="mysteryCard">
+ <h2>🧩 आज का Mystery Question</h2>
+ <p id="mysteryQuestion"></p>
+ <div id="mysteryOptions"></div>
+ <p id="mysteryFeedback" class="small"></p>
+</section>
+
+<section class="card">
+ <h2>🌟 U.K.P NO1 Education</h2>
+ <p>Learn Smart • Score Better • Every Day One Step Closer To Success 🚀</p>
+ <a href="https://youtube.com/@theujjawalkumar" target="_blank" style="color:#ffd76c">▶ YouTube Channel</a>
+</section>
+
+<footer>© U.K.P NO1 Education | U.K.P NO1 Team</footer>
+</div>
+
+<!-- PART 2 का JavaScript इसी जगह पेस्ट करें -->
+  
