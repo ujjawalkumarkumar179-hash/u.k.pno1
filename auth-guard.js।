@@ -1,1 +1,113 @@
 
+/* ==========================================
+   U.K.P NO1 EDUCATION
+   MANDATORY LOGIN SYSTEM
+   ========================================== */
+
+(function () {
+  "use strict";
+
+  // Account page को हमेशा खुला रहने दें
+  const currentPage = window.location.pathname;
+  const isAccountPage = currentPage.endsWith("/account.html") ||
+                        currentPage.endsWith("account.html");
+
+  if (isAccountPage) return;
+
+  // Login page का पता
+  const LOGIN_PAGE = "account.html";
+
+  // Firebase उपलब्ध है या नहीं
+  function checkFirebase() {
+
+    if (typeof firebase === "undefined" ||
+        !firebase.apps ||
+        !firebase.apps.length) {
+
+      document.body.innerHTML = `
+        <div style="
+          min-height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          text-align:center;
+          padding:25px;
+          background:#071b3a;
+          color:white;
+          font-family:Arial;
+        ">
+          <div>
+            <h2>🔐 U.K.P NO1 Education</h2>
+            <p>Security system load नहीं हुआ।</p>
+            <p>कृपया Firebase setup जाँचें।</p>
+            <button onclick="location.reload()"
+              style="padding:12px 20px;border:0;border-radius:8px;">
+              Retry
+            </button>
+          </div>
+        </div>
+      `;
+
+      return false;
+    }
+
+    return true;
+  }
+
+  // Login की जाँच
+  function startSecurity() {
+
+    if (!checkFirebase()) return;
+
+    const auth = firebase.auth();
+
+    // जब तक Login verify नहीं होता, पेज छिपा रहेगा
+    document.documentElement.style.visibility = "hidden";
+
+    auth.onAuthStateChanged(function (user) {
+
+      if (user) {
+
+        // Login सफल
+        document.documentElement.style.visibility = "visible";
+
+      } else {
+
+        // Login नहीं है, Account Page पर भेजें
+        const nextPage = encodeURIComponent(
+          window.location.pathname +
+          window.location.search +
+          window.location.hash
+        );
+
+        window.location.replace(
+          LOGIN_PAGE + "?next=" + nextPage
+        );
+
+      }
+
+    }, function (error) {
+
+      console.error("Authentication Error:", error);
+
+      document.documentElement.style.visibility = "visible";
+
+      alert("Login Security में समस्या है। कृपया फिर कोशिश करें।");
+
+    });
+
+  }
+
+  // Firebase तैयार होने के बाद सुरक्षा चालू करें
+  if (document.readyState === "loading") {
+
+    document.addEventListener("DOMContentLoaded", startSecurity);
+
+  } else {
+
+    startSecurity();
+
+  }
+
+})();
+
