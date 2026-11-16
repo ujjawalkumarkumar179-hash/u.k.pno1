@@ -252,3 +252,298 @@ function showDashboard(){
 
 // PART 2 इसी के नीचे जोड़ें
   
+// =====================================
+// U.K.P NO1 EDUCATION - PART 2
+// LOGIN + REGISTER + DASHBOARD
+// =====================================
+
+// Switch between Login and Register
+document.getElementById("showRegister").onclick = showRegister;
+document.getElementById("showLogin").onclick = showLogin;
+
+
+// =====================================
+// CREATE NEW ACCOUNT
+// =====================================
+
+document.getElementById("registerBtn").onclick = async function(){
+
+  const name = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("registerEmail").value.trim();
+  const password = document.getElementById("registerPassword").value;
+  const role = document.getElementById("userRole").value;
+
+  if(!name || !email || !password){
+    msg("कृपया सभी जानकारी भरें।");
+    return;
+  }
+
+  if(password.length < 6){
+    msg("Password कम से कम 6 अक्षरों का होना चाहिए।");
+    return;
+  }
+
+  if(!["student","creator"].includes(role)){
+    msg("Invalid account type.");
+    return;
+  }
+
+  const btn = document.getElementById("registerBtn");
+  btn.disabled = true;
+  btn.textContent = "Creating Account...";
+
+  try{
+
+    const result = await auth.createUserWithEmailAndPassword(
+      email,
+      password
+    );
+
+    const user = result.user;
+
+    try{
+
+      await db.collection("users").doc(user.uid).set({
+        fullName: name,
+        email: user.email,
+        role: role,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+    }catch(databaseError){
+
+      msg(
+        "Account बन गया, लेकिन Profile सेव नहीं हुई। कृपया सहायता लें।"
+      );
+
+      return;
+    }
+
+    try{
+      await user.sendEmailVerification();
+    }catch(verificationError){
+      console.error(verificationError);
+    }
+
+    msg(
+      "Account बन गया! Email Verification के लिए अपना Email चेक करें।",
+      "green"
+    );
+
+    await auth.signOut();
+    showLogin();
+
+  }catch(error){
+
+    let errorMessage = error.message;
+
+    if(error.code === "auth/email-already-in-use"){
+      errorMessage = "यह Email पहले से Registered है।";
+    }
+
+    if(error.code === "auth/invalid-email"){
+      errorMessage = "कृपया सही Email डालें।";
+    }
+
+    if(error.code === "auth/weak-password"){
+      errorMessage = "Password कमजोर है।";
+    }
+
+    msg(errorMessage);
+
+  }finally{
+
+    btn.disabled = false;
+    btn.textContent = "Create Account";
+
+  }
+
+};
+
+
+// =====================================
+// LOGIN SYSTEM
+// =====================================
+
+document.getElementById("loginBtn").onclick = async function(){
+
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  if(!email || !password){
+    msg("Email और Password दोनों भरें।");
+    return;
+  }
+
+  const btn = document.getElementById("loginBtn");
+  btn.disabled = true;
+  btn.textContent = "Logging in...";
+
+  try{
+
+    const result = await auth.signInWithEmailAndPassword(
+      email,
+      password
+    );
+
+    await loadUserProfile(result.user);
+
+  }catch(error){
+
+    let errorMessage = error.message;
+
+    if(error.code === "auth/invalid-credential"){
+      errorMessage = "Email या Password गलत है।";
+    }
+
+    if(error.code === "auth/user-not-found"){
+      errorMessage = "इस Email से Account नहीं मिला।";
+    }
+
+    if(error.code === "auth/too-many-requests"){
+      errorMessage = "बहुत प्रयास हुए हैं। कुछ समय बाद कोशिश करें।";
+    }
+
+    msg(errorMessage);
+
+  }finally{
+
+    btn.disabled = false;
+    btn.textContent = "Login";
+
+  }
+
+};
+
+
+// =====================================
+// LOAD USER PROFILE
+// =====================================
+
+async function loadUserProfile(user){
+
+  try{
+
+    const doc = await db.collection("users")
+      .doc(user.uid)
+      .get();
+
+    if(!doc.exists){
+
+      msg("आपकी Profile नहीं मिली। सहायता लें।");
+      await auth.signOut();
+      return;
+
+    }
+
+    const data = doc.data();
+
+    document.getElementById("profileName").textContent =
+      data.fullName || "Student";
+
+    document.getElementById("profileEmail").textContent =
+      user.email || "";
+
+    document.getElementById("profileRole").textContent =
+      data.role === "creator" ? "Creator" : "Student";
+
+    document.getElementById("verificationStatus").textContent =
+      user.emailVerified
+      ? "✅ Email Verified"
+      : "⚠️ Email Verification बाकी है।";
+
+    showDashboard();
+
+  }catch(error){
+
+    msg("Profile Load नहीं हुई: " + error.message);
+    await auth.signOut();
+
+  }
+
+}
+
+
+// =====================================
+// FORGOT PASSWORD
+// =====================================
+
+document.getElementById("forgotBtn").onclick = async function(){
+
+  const email = document.getElementById("loginEmail").value.trim();
+
+  if(!email){
+    msg("पहले Login Email डालें।");
+    return;
+  }
+
+  try{
+
+    await auth.sendPasswordResetEmail(email);
+
+    msg(
+      "Password Reset Link आपके Email पर भेज दिया गया है।",
+      "green"
+    );
+
+  }catch(error){
+
+    msg(error.message);
+
+  }
+
+};
+
+
+// =====================================
+// LOGOUT SYSTEM
+// =====================================
+
+document.getElementById("logoutBtn").onclick = async function(){
+
+  try{
+
+    await auth.signOut();
+    showLogin();
+
+    document.getElementById("loginPassword").value = "";
+
+    msg("आप सफलतापूर्वक Logout हो गए।","green");
+
+  }catch(error){
+
+    msg(error.message);
+
+  }
+
+};
+
+
+// =====================================
+// CHECK LOGIN STATUS
+// =====================================
+
+auth.onAuthStateChanged(async function(user){
+
+  if(user){
+
+    await loadUserProfile(user);
+
+  }else{
+
+    showLogin();
+
+  }
+
+});
+
+
+// =====================================
+// END OF ACCOUNT SYSTEM
+// =====================================
+
+</script>
+
+</body>
+</html>
+
