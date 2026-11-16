@@ -1,1 +1,254 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 Education | Account</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#071b3a,#123e70);
+  color:#fff;
+  min-height:100vh;
+}
+header{
+  text-align:center;
+  padding:22px 12px;
+  background:#06152d;
+  border-bottom:3px solid #e8b923;
+}
+header h1{margin:0;color:#ffd34d;font-size:25px}
+header p{margin:8px 0 0;color:#dceaff}
+.container{
+  width:92%;
+  max-width:480px;
+  margin:28px auto;
+}
+.card{
+  background:#fff;
+  color:#17243a;
+  padding:24px;
+  border-radius:17px;
+  box-shadow:0 8px 25px #0005;
+}
+.card h2{
+  text-align:center;
+  color:#123e70;
+  margin-top:0;
+}
+input,select{
+  width:100%;
+  padding:13px;
+  margin:8px 0;
+  border:1px solid #ccd4df;
+  border-radius:9px;
+  font-size:15px;
+}
+button{
+  width:100%;
+  padding:13px;
+  margin-top:10px;
+  border:0;
+  border-radius:9px;
+  background:#123e70;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover{background:#0a2850}
+.switch{
+  text-align:center;
+  margin-top:17px;
+  color:#123e70;
+  cursor:pointer;
+  font-weight:bold;
+}
+#message{
+  text-align:center;
+  font-size:14px;
+  margin-top:12px;
+  overflow-wrap:anywhere;
+}
+.hidden{display:none!important}
+.dashboard-title{
+  color:#123e70;
+  text-align:center;
+}
+.info{
+  background:#eef5ff;
+  padding:13px;
+  border-radius:9px;
+  margin:10px 0;
+  overflow-wrap:anywhere;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  color:#dceaff;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌟 U.K.P NO1 Education</h1>
+  <p>Learn Smart • Score Better • Every Day</p>
+</header>
+
+<div class="container">
+
+  <!-- LOGIN SECTION -->
+  <div class="card" id="loginSection">
+    <h2>🔐 Student Login</h2>
+
+    <input type="email" id="loginEmail"
+      placeholder="Enter your email" autocomplete="email">
+
+    <input type="password" id="loginPassword"
+      placeholder="Enter your password"
+      autocomplete="current-password">
+
+    <button type="button" id="loginBtn">Login</button>
+
+    <div class="switch" id="forgotBtn">
+      Forgot Password?
+    </div>
+
+    <div class="switch" id="showRegister">
+      Create New Account
+    </div>
+  </div>
+
+  <!-- REGISTER SECTION -->
+  <div class="card hidden" id="registerSection">
+    <h2>📝 Create Account</h2>
+
+    <input type="text" id="fullName"
+      placeholder="Enter your full name"
+      autocomplete="name">
+
+    <input type="email" id="registerEmail"
+      placeholder="Enter your email"
+      autocomplete="email">
+
+    <input type="password" id="registerPassword"
+      placeholder="Create password (minimum 6 characters)"
+      autocomplete="new-password">
+
+    <select id="userRole">
+      <option value="student">Student</option>
+      <option value="creator">Creator</option>
+    </select>
+
+    <button type="button" id="registerBtn">
+      Create Account
+    </button>
+
+    <div class="switch" id="showLogin">
+      Already have an account? Login
+    </div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div class="card hidden" id="dashboardSection">
+    <h2 class="dashboard-title">🎉 Welcome to U.K.P NO1</h2>
+
+    <div class="info">
+      <b>Name:</b>
+      <span id="profileName"></span>
+    </div>
+
+    <div class="info">
+      <b>Email:</b>
+      <span id="profileEmail"></span>
+    </div>
+
+    <div class="info">
+      <b>Account Type:</b>
+      <span id="profileRole"></span>
+    </div>
+
+    <p id="verificationStatus"></p>
+
+    <button type="button" id="logoutBtn">
+      Logout
+    </button>
+  </div>
+
+  <p id="message"></p>
+
+</div>
+
+<footer>
+  © U.K.P NO1 Education | U.K.P NO1 Team
+</footer>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script>
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDv1tOYiuQAYAtOa85-9-9ZvM-fCrjWow6E",
+  authDomain: "ukp-no1-education.firebaseapp.com",
+  projectId: "ukp-no1-education",
+  storageBucket: "ukp-no1-education.firebasestorage.app",
+  messagingSenderId: "983226412948",
+  appId: "1:983226412948:web:7d332914d26850085ca981",
+  measurementId: "G-HPJLJLQBVX"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+// Page elements
+const loginSection = document.getElementById("loginSection");
+const registerSection = document.getElementById("registerSection");
+const dashboardSection = document.getElementById("dashboardSection");
+const messageBox = document.getElementById("message");
+
+// Show message
+function msg(text, color="red"){
+  messageBox.textContent = text;
+  messageBox.style.color = color;
+}
+
+// Show login page
+function showLogin(){
+  loginSection.classList.remove("hidden");
+  registerSection.classList.add("hidden");
+  dashboardSection.classList.add("hidden");
+  msg("");
+}
+
+// Show registration page
+function showRegister(){
+  loginSection.classList.add("hidden");
+  registerSection.classList.remove("hidden");
+  dashboardSection.classList.add("hidden");
+  msg("");
+}
+
+// Show dashboard
+function showDashboard(){
+  loginSection.classList.add("hidden");
+  registerSection.classList.add("hidden");
+  dashboardSection.classList.remove("hidden");
+  msg("");
+}
+
+// PART 2 इसी के नीचे जोड़ें
+  
