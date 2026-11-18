@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subject Dashboard | U.K.P NO1</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#071328;color:white;
+ font-family:Arial,sans-serif;min-height:100vh
+}
+header{
+ text-align:center;padding:22px 12px;
+ background:linear-gradient(130deg,#102e54,#071328);
+ border-bottom:2px solid #d8b451
+}
+header h2{color:#ffdc86;margin:8px}
+header p{font-size:12px;color:#c5d7ed}
+.back{
+ display:inline-block;margin-top:13px;
+ color:#ffdf91;text-decoration:none;
+ border:1px solid #b9974b;
+ padding:9px 18px;border-radius:25px
+}
+.hero{text-align:center;padding:35px 15px}
+.planet{
+ font-size:65px;
+ filter:drop-shadow(0 0 18px #d5ad55)
+}
+.hero h1{
+ color:#ffda78;font-size:30px;margin:12px 0
+}
+.hero p{color:#c7d8ef;line-height:1.7}
+.tag{
+ display:inline-block;margin-top:14px;
+ padding:9px 17px;border-radius:25px;
+ background:#172d4d;border:1px solid #94753c;
+ color:#ffdf91;font-size:12px
+}
+.container{max-width:850px;margin:auto;padding:12px}
+.info{
+ background:#122a49;border:1px solid #665638;
+ padding:20px;border-radius:15px;text-align:center;
+ margin-bottom:20px
+}
+.info h2{color:#ffdc83;margin-bottom:10px}
+.info p{color:#cbd9ed;line-height:1.7;font-size:14px}
+.grid{
+ display:grid;grid-template-columns:repeat(2,1fr);
+ gap:13px;margin:18px 0
+}
+.card{
+ display:block;text-decoration:none;color:white;
+ text-align:center;padding:22px 12px;
+ border:1px solid #62563b;border-radius:15px;
+ background:linear-gradient(145deg,#17365a,#10213d);
+ transition:.2s
+}
+.card:active{transform:scale(.97)}
+.card .icon{font-size:37px}
+.card h3{color:#ffda78;margin:12px 0 7px;font-size:16px}
+.card p{font-size:12px;color:#c8d8ed;line-height:1.6}
+.card span{
+ display:inline-block;margin-top:13px;
+ padding:8px 13px;border-radius:20px;
+ background:linear-gradient(120deg,#bd913b,#ffe5a0);
+ color:#17120a;font-size:11px;font-weight:bold
+}
+.main-button{
+ display:block;text-align:center;
+ background:linear-gradient(120deg,#c49a43,#ffe4a0);
+ color:#17120a;text-decoration:none;
+ padding:15px;border-radius:30px;
+ font-weight:bold;margin:20px 0
+}
+footer{
+ text-align:center;padding:25px;
+ color:#aab9cf;font-size:12px
+}
+@media(max-width:370px){
+ .grid{gap:8px}
+ .card{padding:16px 7px}
+ .hero h1{font-size:25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🌟 U.K.P NO1 Education</h2>
+<p>LEARN SMART • SCORE BETTER • ACHIEVE MORE</p>
+<a href="knowledge-galaxy.html" class="back">
+← Back To Galaxy
+</a>
+</header>
+
+<section class="hero">
+<div class="planet" id="planetIcon">🌍</div>
+<h1 id="subjectTitle">SUBJECT DASHBOARD</h1>
+<p id="subjectDescription">
+आपका अपना Learning Universe
+</p>
+<div class="tag">🚀 YOUR PERSONAL LEARNING ZONE</div>
+</section>
+
+<main class="container">
+
+<section class="info">
+<h2>📚 Welcome Student!</h2>
+<p>
+अपने विषय का अध्ययन शुरू करें।
+अध्याय पढ़ें, MCQ हल करें और
+हर दिन अपने ज्ञान को आगे बढ़ाएँ।
+</p>
+</section>
+
+<div class="grid">
+
+<a href="#" class="card" id="chapters">
+<div class="icon">📖</div>
+<h3>Chapter Explorer</h3>
+<p>सभी उपलब्ध अध्याय और पाठ खोलें।</p>
+<span>OPEN CHAPTERS →</span>
+</a>
+
+<a href="#" class="card" id="mcq">
+<div class="icon">📝</div>
+<h3>MCQ Practice</h3>
+<p>अध्यायों में उपलब्ध प्रश्नों का अभ्यास करें।</p>
+<span>START PRACTICE →</span>
+</a>
+
+<a href="#" class="card" id="notes">
+<div class="icon">📚</div>
+<h3>Study Materials</h3>
+<p>उपलब्ध Notes और अध्ययन सामग्री देखें।</p>
+<span>EXPLORE NOTES →</span>
+</a>
+
+<a href="study-streak.html" class="card">
+<div class="icon">🔥</div>
+<h3>Study Streak</h3>
+<p>अपनी पढ़ाई की निरंतरता और उपलब्धियाँ देखें।</p>
+<span>VIEW PROGRESS →</span>
+</a>
+
+</div>
+
+<a href="knowledge-galaxy.html" class="main-button">
+🌌 RETURN TO KNOWLEDGE GALAXY
+</a>
+
+</main>
+
+<footer>
+<p>© 2026 U.K.P NO1 Education</p>
+<p>FOUNDER: UJJAWAL KUMAR PANDEY</p>
+</footer>
+
+<script>
+const subjects = {
+ hindi:{
+  name:"Hindi Planet",
+  icon:"🌍",
+  desc:"हिंदी साहित्य और व्याकरण की दुनिया",
+  page:"hindi.html"
+ },
+ english:{
+  name:"English Planet",
+  icon:"🪐",
+  desc:"English Grammar और Language Learning",
+  page:"english-grammar.html"
+ },
+ math:{
+  name:"Mathematics Planet",
+  icon:"🔵",
+  desc:"गणित, सूत्र और अभ्यास",
+  page:"math.html",
+  notes:"math-formula.html"
+ },
+ science:{
+  name:"Science Planet",
+  icon:"🔬",
+  desc:"Physics, Chemistry और Biology",
+  page:"science.html"
+ },
+ social:{
+  name:"Social Science Planet",
+  icon:"🌏",
+  desc:"History, Geography, Civics और Economics",
+  page:"social-science.html"
+ },
+ sanskrit:{
+  name:"Sanskrit Planet",
+  icon:"🕉️",
+  desc:"संस्कृत भाषा, श्लोक और व्याकरण",
+  page:"Sanskrit.html"
+ }
+};
+
+const params=new URLSearchParams(location.search);
+const key=params.get("subject")||"hindi";
+const subject=subjects[key]||subjects.hindi;
+
+document.title=subject.name+" | U.K.P NO1";
+
+document.getElementById("planetIcon").textContent=subject.icon;
+document.getElementById("subjectTitle").textContent=subject.name;
+document.getElementById("subjectDescription").textContent=subject.desc;
+
+document.getElementById("chapters").href=subject.page;
+document.getElementById("mcq").href=subject.page;
+document.getElementById("notes").href=subject.notes||subject.page;
+</script>
+
+</body>
+</html>
