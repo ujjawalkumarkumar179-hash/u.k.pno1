@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.K.P NO1 Education | Achievement Center</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#071426;color:white;
+ font-family:Arial,sans-serif
+}
+header{
+ text-align:center;padding:22px 10px;
+ background:linear-gradient(135deg,#071426,#173c62);
+ border-bottom:3px solid #d5ad55
+}
+header h1{color:#f4cf70}
+header p{font-size:12px}
+.container{max-width:850px;margin:auto;padding:12px}
+.panel{
+ background:#102744;border:1px solid #a9843c;
+ border-radius:15px;padding:18px;margin:15px 0;
+ text-align:center
+}
+.gold{color:#f4cf70}
+.fire{font-size:45px}
+.counter{
+ font-size:55px;font-weight:bold;
+ color:#f4cf70;margin:8px
+}
+button{
+ border:0;border-radius:9px;padding:13px 16px;
+ margin:6px;background:linear-gradient(135deg,#d5ad55,#ffe6a2);
+ color:#17120a;font-weight:bold;cursor:pointer
+}
+button:disabled{background:#58616c;color:#ddd}
+.days{
+ display:grid;grid-template-columns:repeat(7,1fr);
+ gap:6px;margin-top:18px
+}
+.day{
+ background:#203d5e;padding:10px 2px;
+ border-radius:8px;font-size:12px
+}
+.day.done{background:#c49a43;color:#111;font-weight:bold}
+.stats,.achievement-grid{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+}
+.stat{background:#203d5e;padding:15px;border-radius:10px}
+.stat strong{
+ display:block;color:#f4cf70;font-size:27px
+}
+.achievement{
+ background:#172f4b;border:1px solid #6c592f;
+ border-radius:13px;padding:15px
+}
+.medal{font-size:35px}
+.achievement h3{color:#f4cf70}
+.achievement p,.status{font-size:13px}
+.status{color:#e7c778}
+input{
+ width:100%;max-width:420px;padding:13px;
+ border-radius:8px;border:1px solid #d5ad55;
+ font-size:16px;margin:12px 0
+}
+footer{text-align:center;padding:20px;font-size:12px}
+#certificateArea{display:none;margin:20px auto}
+.certificate{
+ background:#07162f;color:#e8c66b;
+ padding:12px;max-width:900px;margin:auto;
+ border:7px double #d9b34f;text-align:center
+}
+.cert-inner{
+ border:2px solid #d9b34f;padding:22px 12px;
+ background:linear-gradient(135deg,#07162f,#142b4c,#07162f)
+}
+.cert-logo{
+ width:90px;height:90px;object-fit:contain
+}
+.cert-brand{font-size:30px;font-weight:bold;margin:12px}
+.cert-heading{
+ font-size:clamp(22px,5vw,38px);
+ border-top:2px solid #d6a932;
+ border-bottom:2px solid #d6a932;padding:12px 2px
+}
+.cert-name{
+ display:block;color:#f6d77c;font-size:27px;
+ font-weight:bold;margin:15px
+}
+.cert-message{line-height:1.7;color:white}
+.cert-award{font-size:23px;font-weight:bold}
+.cert-days{
+ display:inline-block;background:#d5ad55;
+ color:#111;padding:10px;margin:10px
+}
+.cert-footer{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:15px;margin-top:30px;color:white
+}
+.cert-sign{border-top:1px solid #d9b34f;padding-top:8px}
+.founder{
+ background:#d5ad55;color:#171000;
+ padding:10px;margin:20px;font-weight:bold
+}
+@media(max-width:480px){
+ .panel{padding:13px}
+ .achievement{padding:10px 5px}
+ .days{gap:3px}
+}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ body *{visibility:hidden!important}
+ #certificateArea,#certificateArea *{
+  visibility:visible!important
+ }
+ #certificateArea{
+  display:block!important;position:absolute;
+  left:0;top:0;width:100%;margin:0
+ }
+ #certificateArea h2,#certificateArea button{
+  display:none!important
+ }
+ .certificate{
+  max-width:none;width:100%;
+  print-color-adjust:exact;
+  -webkit-print-color-adjust:exact
+ }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌟 U.K.P NO1 Education</h1>
+<p>Learn Smart • Score Better • Every Day One Step Closer To Success 🚀</p>
+</header>
+
+<main class="container">
+
+<section class="panel">
+<div class="fire">🔥</div>
+<h2 class="gold">DAILY STUDY STREAK</h2>
+<p>हर दिन पढ़ें, अपना रिकॉर्ड बनाएँ और उपलब्धियाँ हासिल करें।</p>
+
+<div class="counter" id="streak">0</div>
+<p>लगातार पढ़ाई के दिन</p>
+
+<button id="completeBtn" onclick="completeToday()">
+📚 आज की पढ़ाई पूरी करें
+</button>
+
+<div class="days" id="weekDays"></div>
+</section>
+
+<section class="panel">
+<h2 class="gold">📊 YOUR STUDY RECORD</h2>
+<div class="stats">
+<div class="stat">
+<strong id="total">0</strong>
+कुल पढ़ाई के दिन
+</div>
+<div class="stat">
+<strong id="best">0</strong>
+सबसे लंबी Streak
+</div>
+</div>
+</section>
+
+<section class="panel">
+<h2 class="gold">🏆 ACHIEVEMENT CENTER</h2>
+<p>अपनी लगातार पढ़ाई से चारों उपलब्धियाँ हासिल करें।</p>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<div class="medal">🥉</div>
+<h3>BRONZE</h3>
+<p>3 Days Study Streak</p>
+<div class="status" id="status3">🔒 Locked</div>
+<button id="btn3" onclick="showCertificate(3)" disabled>
+VIEW CERTIFICATE
+</button>
+</div>
+
+<div class="achievement">
+<div class="medal">🥈</div>
+<h3>SILVER</h3>
+<p>7 Days Study Streak</p>
+<div class="status" id="status7">🔒 Locked</div>
+<button id="btn7" onclick="showCertificate(7)" disabled>
+VIEW CERTIFICATE
+</button>
+</div>
+
+<div class="achievement">
+<div class="medal">🥇</div>
+<h3>GOLD</h3>
+<p>30 Days Study Streak</p>
+<div class="status" id="status30">🔒 Locked</div>
+<button id="btn30" onclick="showCertificate(30)" disabled>
+VIEW CERTIFICATE
+</button>
+</div>
+
+<div class="achievement">
+<div class="medal">💎</div>
+<h3>PLATINUM</h3>
+<p>90 Days Study Streak</p>
+<div class="status" id="status90">🔒 Locked</div>
+<button id="btn90" onclick="showCertificate(90)" disabled>
+VIEW CERTIFICATE
+</button>
+</div>
+
+</div>
+</section>
+
+<section class="panel" id="studentPanel">
+<h2 class="gold">🎓 STUDENT DETAILS</h2>
+<p>Certificate पर अपना नाम लिखें।</p>
+<input type="text" id="studentName"
+placeholder="विद्यार्थी का पूरा नाम">
+</section>
+
+<section id="certificateArea">
+<h2 id="certificateHeading" class="gold">
+🏆 YOUR ACHIEVEMENT CERTIFICATE
+</h2>
+
+<div class="certificate">
+<div class="cert-inner">
+
+<img class="cert-logo"
+src="assets/UKP-A4.png"
+alt="U.K.P NO1 Education Logo"
+onerror="this.style.display='none'">
+
+<p>I AM PROUD TO BE A PART OF</p>
+<div class="cert-brand">U.K.P NO1 EDUCATION</div>
+
+<h2 class="cert-heading">CERTIFICATE OF ACHIEVEMENT</h2>
+
+<p>Proudly Presented To</p>
+<div class="cert-name" id="printedName">Student Name</div>
+
+<p class="cert-message" id="certificateMessage">
+This certificate is awarded in recognition of dedication.
+</p>
+
+<div class="cert-award" id="certificateMedal"></div>
+<div class="cert-days" id="certificateDays"></div>
+
+<p>LEARN TODAY • LEAD TOMORROW</p>
+
+<div class="cert-footer">
+<div>
+<strong id="issueDate"></strong>
+<div class="cert-sign">Date of Achievement</div>
+</div>
+<div>
+<strong>U.K.P NO1 Team</strong>
+<div class="cert-sign">Authorized Signature</div>
+</div>
+</div>
+
+<div class="founder">
+FOUNDER: UJJAWAL KUMAR PANDEY
+</div>
+
+</div>
+</div>
+
+<div style="text-align:center">
+<button id="printButton" onclick="window.print()">
+🖨️ PRINT / SAVE CERTIFICATE PDF
+</button>
+<button onclick="hideCertificate()">
+⬅️ BACK TO ACHIEVEMENTS
+</button>
+</div>
+</section>
+
+</main>
+
+<footer>
+© 2026 U.K.P NO1 Education | Learn Smart • Score Better
+</footer>
+
+<script>
+
+// पुरानी Storage Key सुरक्षित रखी गई है
+const KEY = "ukpStudyStreak_v1";
+
+let data = {dates:[],name:""};
+
+let selectedDays = 3;
+
+function dateKey(date=new Date()){
+ const y=date.getFullYear();
+ const m=String(date.getMonth()+1).padStart(2,"0");
+ const d=String(date.getDate()).padStart(2,"0");
+ return `${y}-${m}-${d}`;
+}
+
+function shiftDate(key,amount){
+ const [y,m,d]=key.split("-").map(Number);
+ const date=new Date(y,m-1,d);
+ date.setDate(date.getDate()+amount);
+ return dateKey(date);
+}
+
+function loadData(){
+ try{
+  const old=JSON.parse(localStorage.getItem(KEY)||"{}");
+
+  const dates=Array.isArray(old.dates)
+   ?old.dates
+   :Array.isArray(old.completedDates)
+   ?old.completedDates
+   :[];
+
+  data.dates=[...new Set(
+   dates.filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x))
+  )].sort();
+
+  data.name=old.name||old.candidateName||"";
+
+ }catch(e){
+  console.error("Study data loading error:",e);
+  data={dates:[],name:""};
+ }
+}
+
+function saveData(){
+ localStorage.setItem(KEY,JSON.stringify(data));
+}
+
+function currentStreak(){
+ const set=new Set(data.dates);
+ let day=dateKey();
+
+ if(!set.has(day)){
+  day=shiftDate(day,-1);
+ }
+
+ let count=0;
+
+ while(set.has(day)){
+  count++;
+  day=shiftDate(day,-1);
+ }
+
+ return count;
+}
+
+function bestStreak(){
+ const set=new Set(data.dates);
+ let best=0;
+
+ data.dates.forEach(date=>{
+  if(!set.has(shiftDate(date,-1))){
+   let count=0;
+   let day=date;
+
+   while(set.has(day)){
+    count++;
+    day=shiftDate(day,1);
+   }
+
+   best=Math.max(best,count);
+  }
+ });
+
+ return best;
+}
+
+function completeToday(){
+ const today=dateKey();
+
+ if(data.dates.includes(today)){
+  alert("आज की पढ़ाई पहले ही दर्ज हो चुकी है!");
+  return;
+ }
+
+ data.dates.push(today);
+ data.dates.sort();
+
+ saveData();
+ render();
+
+ alert("🎉 आज की पढ़ाई दर्ज हो गई!");
+}
+
+function updateAchievements(best){
+ [3,7,30,90].forEach(days=>{
+  const unlocked=best>=days;
+
+  const status=document.getElementById("status"+days);
+  const button=document.getElementById("btn"+days);
+
+  if(status){
+   status.textContent=unlocked
+    ?"🔓 UNLOCKED"
+    :`🔒 ${days} DAYS REQUIRED`;
+  }
+
+  if(button){
+   button.disabled=!unlocked;
+   button.textContent=unlocked
+    ?"🏆 VIEW CERTIFICATE"
+    :"🔒 LOCKED";
+  }
+ });
+}
+
+function renderWeek(){
+ const container=document.getElementById("weekDays");
+ if(!container)return;
+
+ container.innerHTML="";
+
+ const today=new Date();
+ const offset=(today.getDay()+6)%7;
+
+ const monday=new Date(today);
+ monday.setDate(today.getDate()-offset);
+
+ const labels=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+ for(let i=0;i<7;i++){
+  const day=new Date(monday);
+  day.setDate(monday.getDate()+i);
+
+  const key=dateKey(day);
+  const done=data.dates.includes(key);
+
+  const cell=document.createElement("div");
+  cell.className=done?"day done":"day";
+
+  cell.innerHTML=
+   `<strong>${labels[i]}</strong><br>
+    ${day.getDate()}<br>
+    ${done?"✅":"○"}`;
+
+  container.appendChild(cell);
+ }
+}
+
+// मुख्य सुधार: सभी IDs अब HTML से सही मेल खाते हैं
+function render(){
+ const streak=currentStreak();
+ const best=bestStreak();
+
+ document.getElementById("streak").textContent=streak;
+ document.getElementById("total").textContent=data.dates.length;
+ document.getElementById("best").textContent=best;
+
+ const button=document.getElementById("completeBtn");
+ const done=data.dates.includes(dateKey());
+
+ button.disabled=done;
+ button.textContent=done
+  ?"✅ आज की पढ़ाई पूरी"
+  :"📚 आज की पढ़ाई पूरी करें";
+
+ const nameInput=document.getElementById("studentName");
+ if(nameInput && !nameInput.value){
+  nameInput.value=data.name;
+ }
+
+ updateAchievements(best);
+ renderWeek();
+}
+
+function showCertificate(days){
+ if(bestStreak()<days){
+  alert("यह Certificate अभी अनलॉक नहीं हुआ है!");
+  return;
+ }
+
+ const nameInput=document.getElementById("studentName");
+ const name=nameInput.value.trim();
+
+ if(!name){
+  alert("पहले अपना नाम लिखिए!");
+  nameInput.focus();
+  return;
+ }
+
+ data.name=name;
+ saveData();
+
+ const titles={
+  3:"🥉 BRONZE ACHIEVEMENT",
+  7:"🥈 SILVER ACHIEVEMENT",
+  30:"🥇 GOLD ACHIEVEMENT",
+  90:"💎 PLATINUM ACHIEVEMENT"
+ };
+
+ document.getElementById("printedName").textContent=name;
+ document.getElementById("certificateMedal").textContent=titles[days];
+
+ document.getElementById("certificateDays").textContent=
+  days+" DAYS STUDY STREAK";
+
+ document.getElementById("certificateMessage").textContent=
+  `This certificate is proudly presented to ${name} for completing a study streak of ${days} consecutive days.`;
+
+ document.getElementById("issueDate").textContent=
+  new Date().toLocaleDateString("en-IN",{
+   day:"2-digit",month:"long",year:"numeric"
+  });
+
+ document.getElementById("certificateHeading").textContent=
+  titles[days]+" CERTIFICATE";
+
+ document.getElementById("certificateArea").style.display="block";
+
+ document.getElementById("certificateArea").scrollIntoView({
+  behavior:"smooth"
+ });
+}
+
+function hideCertificate(){
+ document.getElementById("certificateArea").style.display="none";
+ document.getElementById("studentPanel").scrollIntoView({
+  behavior:"smooth"
+ });
+}
+
+// नाम सेव करना
+document.getElementById("studentName")
+.addEventListener("input",function(){
+ data.name=this.value.trim();
+ saveData();
+});
+
+// वेबसाइट शुरू करना
+loadData();
+render();
+
+</script>
+</body>
+  </html>
+  
