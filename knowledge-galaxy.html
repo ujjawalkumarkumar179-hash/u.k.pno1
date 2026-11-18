@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Galaxy | U.K.P NO1 Education</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:#050d20;
+ color:white;
+ font-family:Arial,sans-serif;
+ min-height:100vh;
+ overflow-x:hidden;
+}
+
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-1;
+ background:
+ radial-gradient(circle at 15% 20%,#18376c 0,transparent 25%),
+ radial-gradient(circle at 85% 60%,#21164e 0,transparent 28%),
+ radial-gradient(circle at 50% 90%,#123b51 0,transparent 30%);
+}
+
+header{
+ text-align:center;
+ padding:22px 12px;
+ background:linear-gradient(120deg,#102a50,#071226);
+ border-bottom:2px solid #d9b451;
+}
+
+.logo{
+ color:#ffda78;
+ font-size:25px;
+ font-weight:bold;
+}
+
+header p{
+ color:#c5d8f4;
+ font-size:12px;
+ margin-top:8px;
+}
+
+.back{
+ display:inline-block;
+ margin-top:14px;
+ color:#ffdf91;
+ text-decoration:none;
+ border:1px solid #b9974b;
+ padding:9px 18px;
+ border-radius:25px;
+}
+
+.hero{
+ text-align:center;
+ padding:38px 15px 20px;
+}
+
+.hero h1{
+ font-size:clamp(27px,6vw,45px);
+ color:#ffda78;
+ text-shadow:0 0 20px #b88d38;
+}
+
+.hero p{
+ color:#c6d8f4;
+ margin:12px auto;
+ line-height:1.7;
+ max-width:550px;
+}
+
+.galaxy-tag{
+ display:inline-block;
+ margin-top:10px;
+ padding:9px 18px;
+ border-radius:25px;
+ background:#152e50;
+ border:1px solid #8c733f;
+ color:#ffdf91;
+ font-size:13px;
+}
+
+.section-title{
+ text-align:center;
+ margin:24px 10px;
+ color:#ffdb81;
+ font-size:23px;
+}
+
+.planet-grid{
+ width:min(100%,950px);
+ margin:auto;
+ padding:10px 15px 30px;
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:16px;
+}
+
+.planet{
+ position:relative;
+ min-height:215px;
+ padding:17px 10px;
+ text-align:center;
+ border-radius:18px;
+ overflow:hidden;
+ background:linear-gradient(145deg,#152e50,#0b1932);
+ border:1px solid #665a3b;
+ transition:.3s;
+ cursor:pointer;
+}
+
+.planet:hover{
+ transform:translateY(-5px);
+ border-color:#ffdc83;
+ box-shadow:0 0 25px #b98c3d55;
+}
+
+.orbit{
+ width:105px;
+ height:105px;
+ margin:5px auto 12px;
+ border:1px solid #ffffff44;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ position:relative;
+}
+
+.orbit:after{
+ content:"";
+ position:absolute;
+ width:125px;
+ height:35px;
+ border:1px solid #ffffff66;
+ border-radius:50%;
+ transform:rotate(-25deg);
+}
+
+.planet-icon{
+ font-size:57px;
+ filter:drop-shadow(0 0 13px #ffffff66);
+ animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-7px)}
+}
+
+.planet h3{
+ color:#ffdc85;
+ font-size:18px;
+ margin:7px 0;
+}
+
+.planet p{
+ color:#d2def0;
+ font-size:12px;
+ line-height:1.5;
+}
+
+.open-btn{
+ display:inline-block;
+ margin-top:12px;
+ padding:9px 17px;
+ border-radius:20px;
+ background:linear-gradient(120deg,#b88a35,#ffe39a);
+ color:#15100a;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.search-box{
+ display:block;
+ width:min(90%,480px);
+ margin:20px auto;
+ padding:14px 18px;
+ border:1px solid #b9964b;
+ border-radius:30px;
+ background:#10233f;
+ color:white;
+ outline:none;
+ font-size:15px;
+}
+
+.search-box::placeholder{color:#a8b9d2}
+
+.mission{
+ width:min(90%,900px);
+ margin:10px auto 35px;
+ padding:23px;
+ text-align:center;
+ border:1px solid #94763c;
+ border-radius:18px;
+ background:linear-gradient(130deg,#142b4c,#111c3b);
+}
+
+.mission h2{
+ color:#ffda78;
+ margin-bottom:12px;
+}
+
+.mission p{
+ color:#d4e1f2;
+ line-height:1.7;
+ font-size:14px;
+}
+
+.mission-btn{
+ display:inline-block;
+ margin-top:15px;
+ padding:11px 22px;
+ border-radius:25px;
+ color:#15100a;
+ background:linear-gradient(120deg,#c69b42,#ffe5a1);
+ text-decoration:none;
+ font-weight:bold;
+}
+
+footer{
+ text-align:center;
+ padding:22px 10px;
+ border-top:1px solid #6c5934;
+ color:#9eacc2;
+ font-size:12px;
+}
+
+.no-result{
+ display:none;
+ text-align:center;
+ color:#ffdc85;
+ padding:20px;
+ grid-column:1/-1;
+}
+
+@media(max-width:380px){
+ .planet-grid{gap:10px;padding:8px}
+ .planet{min-height:205px;padding:12px 5px}
+ .orbit{width:85px;height:85px}
+ .planet-icon{font-size:47px}
+ .planet h3{font-size:15px}
+}
+
+@media(min-width:700px){
+ .planet-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">🌟 U.K.P NO1 Education</div>
+ <p>Learn Smart • Score Better • Every Day One Step Closer To Success 🚀</p>
+ <a href="index.html" class="back">← Back To Home</a>
+</header>
+
+<section class="hero">
+ <h1>🌌 KNOWLEDGE GALAXY</h1>
+ <p>
+ Welcome to the Universe of Knowledge!
+ हर विषय एक नया ग्रह है और हर ग्रह पर
+ आपके लिए नई सीख और नई खोज है।
+ </p>
+ <div class="galaxy-tag">🚀 EXPLORE • LEARN • ACHIEVE</div>
+</section>
+
+<h2 class="section-title">🪐 EXPLORE YOUR SUBJECT PLANETS</h2>
+
+<input
+ type="search"
+ id="planetSearch"
+ class="search-box"
+ placeholder="🔍 अपना विषय खोजें..."
+>
+
+<section class="planet-grid" id="planetGrid">
+
+<a href="hindi.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🌍</span>
+ </div>
+ <h3>📘 Hindi Planet</h3>
+ <p>हिंदी साहित्य, व्याकरण और पाठ</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<a href="english-grammar.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🪐</span>
+ </div>
+ <h3>✍️ English Planet</h3>
+ <p>English Grammar और Language</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<a href="math.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🔵</span>
+ </div>
+ <h3>📐 Mathematics Planet</h3>
+ <p>गणित, सूत्र और अभ्यास</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<a href="science.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🔬</span>
+ </div>
+ <h3>🧪 Science Planet</h3>
+ <p>Physics, Chemistry और Biology</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<a href="social-science.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🌏</span>
+ </div>
+ <h3>🌍 Social Science Planet</h3>
+ <p>History, Geography, Civics और Economics</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<a href="Sanskrit.html" class="planet" style="text-decoration:none;color:white">
+ <div class="orbit">
+  <span class="planet-icon">🕉️</span>
+ </div>
+ <h3>✨ Sanskrit Planet</h3>
+ <p>संस्कृत भाषा, श्लोक और व्याकरण</p>
+ <span class="open-btn">EXPLORE PLANET →</span>
+</a>
+
+<div class="no-result" id="noResult">
+ कोई विषय नहीं मिला।
+</div>
+
+</section>
+
+<section class="mission">
+ <h2>🚀 YOUR LEARNING MISSION</h2>
+ <p>
+ आपका मिशन है हर दिन कुछ नया सीखना।
+ एक ग्रह चुनिए, अपने अध्याय पढ़िए और
+ अपने ज्ञान को मजबूत बनाइए।
+ </p>
+ <a href="study-streak.html" class="mission-btn">
+ 🔥 MY STUDY STREAK
+ </a>
+</section>
+
+<footer>
+ <p>© 2026 U.K.P NO1 Education</p>
+ <p>Created with ❤️ for Every Student</p>
+ <p>FOUNDER: UJJAWAL KUMAR PANDEY</p>
+</footer>
+
+<script>
+const search = document.getElementById("planetSearch");
+const planets = [...document.querySelectorAll(".planet")];
+const noResult = document.getElementById("noResult");
+
+search.addEventListener("input", function(){
+ const value = this.value.toLowerCase().trim();
+ let visible = 0;
+
+ planets.forEach(planet => {
+  const match = planet.textContent.toLowerCase().includes(value);
+  planet.style.display = match ? "" : "none";
+  if(match) visible++;
+ });
+
+ noResult.style.display = visible ? "none" : "block";
+});
+</script>
+
+</body>
+</html>
