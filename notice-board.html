@@ -641,6 +641,86 @@ const shayariList = [
 ];
 
 </script>
+   
+<script>
+
+// ===== PART 5: AUTO SHAYARI SYSTEM =====
+
+(function () {
+
+    const shayariText = document.getElementById("shayari-text");
+
+    if (!shayariText || !Array.isArray(shayariList)) {
+        console.error("Shayari system not found!");
+        return;
+    }
+
+    let currentIndex = -1;
+
+    // Animation CSS
+    const style = document.createElement("style");
+
+    style.textContent = `
+        #shayari-text {
+            transition: opacity 0.7s ease,
+                        transform 0.7s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #shayari-text.shayari-hide {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        #shayari-text.shayari-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    `;
+
+    document.head.appendChild(style);
+
+    // Random Shayari
+    function changeShayari() {
+
+        if (shayariList.length === 0) return;
+
+        let newIndex;
+
+        do {
+            newIndex = Math.floor(
+                Math.random() * shayariList.length
+            );
+        } while (
+            shayariList.length > 1 &&
+            newIndex === currentIndex
+        );
+
+        currentIndex = newIndex;
+
+        shayariText.classList.remove("shayari-show");
+        shayariText.classList.add("shayari-hide");
+
+        setTimeout(function () {
+
+            shayariText.textContent = shayariList[currentIndex];
+
+            shayariText.classList.remove("shayari-hide");
+            shayariText.classList.add("shayari-show");
+
+        }, 700);
+    }
+
+    // First Shayari
+    changeShayari();
+
+    // Change every 5 seconds
+    setInterval(changeShayari, 5000);
+
+})();
+
+</script>
     
 
 </body>
