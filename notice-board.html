@@ -311,6 +311,124 @@ body {
     animation: goldenGlow 3s infinite;
 }
 
+/* ===== PART 3: ROYAL WELCOME EFFECTS ===== */
+
+/* Golden Border Animation */
+.notice-container {
+    border: 4px double #ffd76a;
+    animation: royalBorder 4s infinite alternate;
+}
+
+@keyframes royalBorder {
+    0% {
+        border-color: #b88624;
+        box-shadow: 0 0 10px #b88624;
+    }
+    100% {
+        border-color: #fff0a6;
+        box-shadow: 0 0 25px #e9c45b;
+    }
+}
+
+/* Welcome Heading Animation */
+.welcome-title {
+    animation: welcomeGlow 3s infinite alternate;
+}
+
+@keyframes welcomeGlow {
+    from {
+        text-shadow: 0 0 5px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #ffd966,
+                     0 0 35px #e9c45b;
+    }
+}
+
+/* Brand Title Effect */
+.brand-title {
+    animation: brandShine 3s infinite alternate;
+}
+
+@keyframes brandShine {
+    from {
+        text-shadow: 0 0 8px #e9c45b;
+    }
+    to {
+        text-shadow: 0 0 20px #ffd966,
+                     0 0 40px #d9a52c;
+    }
+}
+
+/* Decorative Stars */
+.welcome-star {
+    animation: starTwinkle 2s infinite alternate;
+}
+
+@keyframes starTwinkle {
+    from {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+}
+
+/* Royal Notice Heading */
+.notice-heading {
+    position: relative;
+    overflow: hidden;
+}
+
+.notice-heading::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #ffd966;
+    margin: 0 auto 12px;
+    box-shadow: 0 0 15px #ffd966;
+}
+
+/* Golden Corner Decorations */
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before,
+.welcome-section::after {
+    content: "✦";
+    position: absolute;
+    color: #ffd966;
+    font-size: 25px;
+    text-shadow: 0 0 15px #ffd966;
+}
+
+.welcome-section::before {
+    top: 12px;
+    left: 15px;
+}
+
+.welcome-section::after {
+    bottom: 12px;
+    right: 15px;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+    .welcome-star {
+        font-size: 20px;
+    }
+
+    .welcome-section::before,
+    .welcome-section::after {
+        font-size: 18px;
+    }
+        }
+    
     </style>
     
 
