@@ -724,5 +724,78 @@ const shayariList = [
     
 
 </body>
+    <!-- FIREBASE NOTICE SYSTEM -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+const noticeFirebaseConfig = {
+    apiKey: "अपनी-सही-Firebase-apiKey-यहाँ-डालें",
+    authDomain: "ukp-no1-education.firebaseapp.com",
+    projectId: "ukp-no1-education",
+    storageBucket: "ukp-no1-education.firebasestorage.app",
+    messagingSenderId: "983226412948",
+    appId: "1:983226412948:web:7d332914d26850085ca981"
+};
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(noticeFirebaseConfig);
+}
+
+const noticeDb = firebase.firestore();
+const noticeList = document.getElementById("notice-list");
+
+noticeDb.collection("notices").onSnapshot(function(snapshot) {
+    noticeList.innerHTML = "";
+
+    if (snapshot.empty) {
+        noticeList.textContent = "अभी कोई नया Notice नहीं है।";
+        return;
+    }
+
+    const notices = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+    }));
+
+    notices.sort((a, b) => {
+        if (!!a.pinned !== !!b.pinned) {
+            return Number(!!b.pinned) - Number(!!a.pinned);
+        }
+        return (b.createdAt?.toMillis?.() || 0) -
+               (a.createdAt?.toMillis?.() || 0);
+    });
+
+    notices.forEach(notice => {
+        const card = document.createElement("div");
+        card.className = "notice-card";
+
+        const badge = document.createElement("span");
+        badge.className = "notice-badge";
+        badge.textContent = notice.pinned
+            ? "📌 IMPORTANT NOTICE"
+            : "🔔 NEW NOTICE";
+
+        const heading = document.createElement("h3");
+        heading.textContent = notice.title || "U.K.P NO1 Notice";
+
+        const message = document.createElement("p");
+        message.textContent = notice.message || "";
+
+        const date = document.createElement("small");
+        date.textContent = notice.createdAt?.toDate
+            ? "📅 " + notice.createdAt.toDate().toLocaleDateString("en-IN")
+            : "📅 नया Notice";
+
+        card.append(badge, heading, message, date);
+        noticeList.appendChild(card);
+    });
+
+}, function(error) {
+    console.error("Notice Error:", error);
+    noticeList.textContent = "Notices लोड नहीं हो सके।";
+});
+</script>
 </html>
 
