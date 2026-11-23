@@ -436,6 +436,11 @@ async function loadUserProfile(user){
     }
 
     const data = doc.data();
+    // ADMIN REDIRECT
+if(user.uid === ADMIN_UID){
+  window.location.href = "admin-notices.html";
+  return;
+}
 
     document.getElementById("profileName").textContent =
       data.fullName || "Student";
